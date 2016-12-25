@@ -7,21 +7,17 @@
             <h3 class="masthead-brand">{{ title }}</h3>
             <nav>
               <ul class="nav masthead-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Features</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><router-link to="/home">Home</li>
+                <li><a href="#" class="not-active">Ingame</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Wiki</a></li>
+                <li><a href="#">People</a></li>
               </ul>
             </nav>
           </div>
         </div>
 
-        <div class="inner cover">
-          <h1 class="cover-heading">Cover your page.</h1>
-          <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-          <p class="lead">
-            <a href="#" class="btn btn-lg btn-default">Learn more</a>
-          </p>
-        </div>
+        <router-view></router-view>
 
         <div class="mastfoot">
           <div class="inner">
@@ -77,7 +73,7 @@ export default {
   html,
   body {
     height: 100%;
-    background-image: url('/assets/img/banner.png');
+    background-image: url('/src/assets/banner.png');
     background-size: cover;
     background-color: #333;
   }
@@ -212,5 +208,11 @@ export default {
     .cover-container {
       width: 700px;
     }
+  }
+
+  /* For links that are not yet active, but might be in the future */
+  .not-active {
+   pointer-events: none;
+   cursor: default;
   }
 </style>
