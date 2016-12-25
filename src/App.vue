@@ -1,13 +1,10 @@
 <template>
   <div class="site-wrapper">
-
     <div class="site-wrapper-inner">
-
       <div class="cover-container">
-
         <div class="masthead clearfix">
           <div class="inner">
-            <h3 class="masthead-brand">Cover</h3>
+            <h3 class="masthead-brand">{{ title }}</h3>
             <nav>
               <ul class="nav masthead-nav">
                 <li class="active"><a href="#">Home</a></li>
@@ -28,16 +25,27 @@
 
         <div class="mastfoot">
           <div class="inner">
-            <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            <p>
+              <a href="https://github.com/inexor-game/"><i class="fa fa-github"></i></a>
+            </p>
           </div>
         </div>
-
       </div>
-
     </div>
-
   </div>
 </template>
+
+<script>
+export default {
+  name: 'app',
+  data() {
+    return {
+      title: 'Inexor'
+    }
+  }
+}
+
+</script>
 
 <style>
   /*
@@ -69,6 +77,8 @@
   html,
   body {
     height: 100%;
+    background-image: url('/assets/img/banner.png');
+    background-size: cover;
     background-color: #333;
   }
   body {
