@@ -1,10 +1,16 @@
 <template>
-  <div>
-    <li v-for="member in members">
-      {{ member.login }}
-    </li>
+  <div class="container-fluid">
+    <div class="col-sm-4" v-for="member in members">
+      <div class="card people">
+        <img class="card-img" v-bind:src="member.avatar_url" width="150px" height="120px"/>
+        <div class="card-img-overlay">
+          <h4 class="card-title">{{ member.login }}</h4>
+          <a v-bind:href="member.html_url"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
     <div class="loading" v-if="loading">
-      Gathering folks...
+      <strong>Gathering folks...</strong>
     </div>
 
     <div v-if="error" class="error">
@@ -46,3 +52,10 @@ export default {
   }
 }
 </script>
+
+<style>
+.people {
+  background-color: transparent;
+  border-color: transparent;
+}
+</style>

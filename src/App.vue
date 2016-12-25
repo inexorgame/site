@@ -22,7 +22,11 @@
         <div class="mastfoot">
           <div class="inner">
             <p>
-              <a href="https://github.com/inexor-game/"><i class="fa fa-github"></i></a>
+              <a href="https://github.com/inexor-game/"><i class="fa fa-github fa-2x" area-hidden="true"></i></a>
+              <a href="https://www.facebook.com/inexorgame"><i class="fa fa-facebook fa-2x" area-hidden="true"></i></a>
+              <a href="https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw"><i class="fa fa-youtube fa-2x" area-hidden="true"></i></a>
+              <a href="https://twitter.com/inexorgame"><i class="fa fa-twitter fa-2x" area-hidden="true"></i></a>
+              <a href="https://docs.inexor.org/"><i class="fa fa-book fa-2x" area-hidden="true"></i></a>
             </p>
           </div>
         </div>
@@ -215,4 +219,10 @@ export default {
    pointer-events: none;
    cursor: default;
   }
+
+  /* For site loading / navigation */
+  .loading {
+
+  }
+
 </style>
