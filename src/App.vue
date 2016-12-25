@@ -11,7 +11,7 @@
                 <li><a href="#" class="not-active">Ingame</a></li>
                 <li><a href="#">Blog</a></li>
                 <li><a href="#">Wiki</a></li>
-                <li><a href="#">People</a></li>
+                <li><router-link to="/people">People</router-link></li>
               </ul>
             </nav>
           </div>
