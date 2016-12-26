@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container i-container">
     <form class="form-inline float-xs-top">
       <input class="form-control" type="text" v-model="query" placeholder="Search">
       <button class="btn btn-outline-success" v-on:click="filterBlogEntries" type="button">Search</button>

@@ -2,7 +2,7 @@
   <div class="site-wrapper">
     <div class="site-wrapper-inner">
       <div class="cover-container">
-        <div class="masthead clearfix">
+        <div class="masthead i-masthead clearfix">
           <div class="inner">
             <h3 class="masthead-brand">{{ title }}</h3>
             <nav>
@@ -19,7 +19,7 @@
 
         <router-view></router-view>
 
-        <div class="mastfoot">
+        <div class="mastfoot i-mastfoot">
           <div class="inner">
             <p>
               <a href="https://github.com/inexor-game/"><i class="fa fa-github fa-2x" area-hidden="true"></i></a>
@@ -223,6 +223,16 @@ export default {
   /* For site loading / navigation */
   .loading {
 
+  }
+
+  .i-masthead, .i-mastfoot {
+    background-color: black;
+    opacity: 0.5;
+  }
+
+  .i-container {
+    margin-top: 100px;
+    margin-bottom: 100px;
   }
 
 </style>
