@@ -9,9 +9,9 @@
               <ul class="nav masthead-nav">
                 <li><router-link to="/home">Home</li>
                 <li><a href="#" class="not-active">Ingame</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><router-link to="/blog">Blog</li>
                 <li><a href="#">Wiki</a></li>
-                <li><router-link to="/people">People</router-link></li>
+                <li><router-link to="/people">People</li>
               </ul>
             </nav>
           </div>

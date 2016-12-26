@@ -36,9 +36,8 @@ export default {
   },
   methods: {
     fetchMembers () {
-      this.error = this.members = null
-      this.loading = true
-      // replace getPost with your data fetching util / API wrapper
+      this.error = this.members = null;
+      this.loading = true;
       this.$http.get('https://api.github.com/orgs/inexor-game/members').then((response) => {
         this.loading = false;
         response.json();
