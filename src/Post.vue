@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container" v-html="post">
     <div class="loading" v-if="loading">
       <strong>Drinking enough coffee until release...</strong>
     </div>
@@ -30,7 +30,22 @@ export default {
       this.error = this.post = null;
       this.loading = true;
 
-
+      console.log(this.$route);
+      this.$http.get('https://api.github.com/repos/inexor-game/blog-data/contents/' + this.$route.path, {
+        headers: {
+          'Accept': 'application/vnd.github.v3.html'
+        }
+      }).then((response) => {
+        this.loading = false;
+        let reader = new FileReader();
+        reader.onloadend = () => {
+          this.post = reader.result;
+        }
+        reader.readAsText(response.body);
+      }, (response) => {
+        this.loading = false;
+        this.error = response.statusText;
+      })
     }
   }
 }
