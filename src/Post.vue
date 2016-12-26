@@ -1,11 +1,13 @@
 <template>
-  <div class="container" v-html="post">
-    <div class="loading" v-if="loading">
-      <strong>Drinking enough coffee until release...</strong>
-    </div>
+  <div class="container">
+    <div v-html="post">
+      <div class="loading" v-if="loading">
+        <strong>Drinking enough coffee until release...</strong>
+      </div>
 
-    <div v-if="error" class="error">
-      {{ error }}
+      <div v-if="error" class="error">
+        {{ error }}
+      </div>
     </div>
   </div>
 </template>
@@ -30,7 +32,6 @@ export default {
       this.error = this.post = null;
       this.loading = true;
 
-      console.log(this.$route);
       this.$http.get('https://api.github.com/repos/inexor-game/blog-data/contents/' + this.$route.path, {
         headers: {
           'Accept': 'application/vnd.github.v3.html'
