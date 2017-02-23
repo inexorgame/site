@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid i-container">
+  <div class="container i-container">
     <div class="col-sm-4" v-for="member in members">
       <div class="card people">
         <img class="card-img" v-bind:src="member.avatar_url" width="150px" height="120px"/>

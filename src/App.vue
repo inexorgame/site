@@ -2,7 +2,7 @@
   <div class="site-wrapper">
     <div class="site-wrapper-inner">
       <div class="cover-container">
-        <div class="masthead i-masthead clearfix">
+        <header id="navbar" class="masthead clearfix">
           <div class="inner">
             <h3 class="masthead-brand">{{ title }}</h3>
             <nav>
@@ -15,21 +15,23 @@
               </ul>
             </nav>
           </div>
+        </header>
+
+        <div class="inner cover">
+          <router-view></router-view>
         </div>
 
-        <router-view></router-view>
-
-        <div class="mastfoot i-mastfoot">
-          <div class="inner">
-            <p>
-              <a href="https://github.com/inexor-game/"><i class="fa fa-github fa-2x" area-hidden="true"></i></a>
-              <a href="https://www.facebook.com/inexorgame"><i class="fa fa-facebook fa-2x" area-hidden="true"></i></a>
-              <a href="https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw"><i class="fa fa-youtube fa-2x" area-hidden="true"></i></a>
-              <a href="https://twitter.com/inexorgame"><i class="fa fa-twitter fa-2x" area-hidden="true"></i></a>
-              <a href="https://docs.inexor.org/"><i class="fa fa-book fa-2x" area-hidden="true"></i></a>
-            </p>
-          </div>
-        </div>
+        <footer class="footer">
+          <p>
+            <a href="https://github.com/inexor-game/"><i class="fa fa-github fa-2x" area-hidden="true"></i></a>
+            <a href="https://www.facebook.com/inexorgame"><i class="fa fa-facebook fa-2x" area-hidden="true"></i></a>
+            <a href="https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw"><i class="fa fa-youtube fa-2x" area-hidden="true"></i></a>
+            <a href="https://twitter.com/inexorgame"><i class="fa fa-twitter fa-2x" area-hidden="true"></i></a>
+            <a href="https://webchat.freenode.net/?channels=#inexor"><i class="fa fa-comments-o fa-2x" aria-hidden="true"></i></a>
+            <a href="https://t.me/inexor"><i class="fa fa-telegram fa-2x" area-hidden="true"></i></a>
+            <a href="https://docs.inexor.org/"><i class="fa fa-book fa-2x" area-hidden="true"></i></a>
+          </p>
+        </footer>
       </div>
     </div>
   </div>
@@ -73,14 +75,11 @@ export default {
   /*
    * Base structure
    */
+   html,
+   body {
+     height: 100%;
+   }
 
-  html,
-  body {
-    height: 100%;
-    background-image: url('/src/assets/banner.png');
-    background-size: cover;
-    background-color: #333;
-  }
   body {
     color: #fff;
     text-align: center;
@@ -93,6 +92,10 @@ export default {
     width: 100%;
     height: 100%; /* For at least Firefox */
     min-height: 100%;
+
+    background-image: url('/src/assets/banner.png');
+    background-size: 100% 100%;
+    background-attachment: fixed;
     -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
             box-shadow: inset 0 0 100px rgba(0,0,0,.5);
   }
@@ -100,6 +103,7 @@ export default {
     display: table-cell;
     vertical-align: top;
   }
+
   .cover-container {
     margin-right: auto;
     margin-left: auto;
