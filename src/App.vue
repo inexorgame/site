@@ -58,7 +58,7 @@ export default {
   a,
   a:focus,
   a:hover {
-    color: #fff;
+    color: black;
   }
 
   /* Custom default button */

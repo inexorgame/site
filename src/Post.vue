@@ -1,13 +1,20 @@
 <template>
-  <div>
-    <div v-html="post" class="container i-container">
-      <div class="loading" v-if="loading">
-        <strong>Drinking enough coffee until release...</strong>
-      </div>
+  <div class="container i-container">
+    <div class="post-header">
+      <h4>{{ postMeta.title }} </h4>
+      <p>written by {{ postMeta.author }} on {{ postMeta.date }}</p>
+    </div>
 
-      <div v-if="error" class="error">
-        {{ error }}
-      </div>
+    <div v-html="post">
+
+    </div>
+
+    <div class="loading" v-if="loading">
+      <strong>Drinking enough coffee until release...</strong>
+    </div>
+
+    <div v-if="error" class="error">
+      {{ error }}
     </div>
   </div>
 </template>
@@ -17,6 +24,11 @@ export default {
   data () {
     return {
       loading: false,
+      postMeta: {
+        title: 'Awesome Inexor news',
+        author: 'Inexor Team',
+        date: '11/12/2013'
+      },
       post: null,
       error: null
     }
@@ -40,14 +52,34 @@ export default {
         this.loading = false;
         let reader = new FileReader();
         reader.onloadend = () => {
-          this.post = reader.result;
+          let parser = new DOMParser();
+          let doc = parser.parseFromString(reader.result, 'text/html')
+          let metadata = doc.querySelector('table');
+          metadata.parentNode.removeChild(metadata)
+          this.parseMetaData(metadata)
+          this.post = doc.querySelector('#file').outerHTML;
         }
         reader.readAsText(response.body);
       }, (response) => {
         this.loading = false;
         this.error = response.statusText;
       })
+    },
+    // Since this is a really fast operation and we don't want our user to hang/wait for the title of the post, synchronous request is o.k.
+    parseMetaData(table) {
+      let tbody = table.querySelectorAll('tbody tr td');
+      table.querySelectorAll('thead tr th').forEach((item) => {
+        // IE9 < breaks this. That's bad luck.
+        this.postMeta[item.textContent] = tbody[item.cellIndex].textContent
+      })
     }
   }
 }
 </script>
+
+<style>
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+</style>
