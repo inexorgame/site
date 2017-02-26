@@ -73,6 +73,7 @@ export default {
           this.parseBlogArray(response.body.tree).then((posts) => {
             this.posts = posts;
             this.filteredPosts = this.posts;
+            this.sortPosts(); // Default sort descendingly
           })
         }, (response) => {
         this.loading = false;
@@ -125,11 +126,34 @@ export default {
         }
       })
     },
-    sortPosts(order='asc') {
+    sortPosts(order='desc') {
+      // Maybe outsource this
+      let compare_asc = (a, b) => {
+        if (b.year <= a.year && b.month <= a.month && b.day < a.day) {
+          return -1
+        } else if (a.year == b.year && a.month == b.month && a.day == b.day) {
+          return 0;
+        } else {
+          return 1;
+        }
+      }
+
+      let compare_desc = (a, b) => {
+        if (a.year <= b.year && a.month <= b.month && a.day < b.day) {
+          return -1
+        } else if (a.year == b.year && a.month == b.month && a.day == b.day) {
+          return 0;
+        } else {
+          return 1;
+        }
+      }
+
       if (this.filteredPosts.length > 0) {
-        this.filteredPosts.sort(() => {
-          
-        })
+        if (order == 'asc') {
+          this.filteredPosts = this.filteredPosts.sort(compare_asc);
+        } else if (order == 'desc') {
+          this.filteredPosts = this.filteredPosts.sort(compare_desc);
+        }
       }
     }
   }
