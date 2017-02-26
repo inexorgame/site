@@ -20,7 +20,16 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha384-3ceskX3iaEnIogmQchP8opvBy3Mi7Ce34nWjpBIwVTHfGYWQS9jwHDVRnpKKHJg7" crossorigin="anonymous"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
-    <!-- Headroom plugin for nice headers -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.3/headroom.min.js" integrity="sha256-ceKdyAW+lHYh5CLb/OWeqA64sAZBh0J1tjk8RB8ORNE=" crossorigin="anonymous"></script>
+
+    <script>
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 500) {
+            $('#navbar').fadeOut();
+        }
+        else {
+            $('#navbar').fadeIn();
+        }
+    },false);
+    </script>
   </body>
 </html>
