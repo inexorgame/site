@@ -7,11 +7,11 @@
             <h3 class="masthead-brand">{{ title }}</h3>
             <nav>
               <ul class="nav masthead-nav">
-                <li><router-link to="/home">Home</li>
+                <li><router-link to="/home">Home</router-link></li>
                 <li><a href="#" class="not-active">Ingame</a></li>
-                <li><router-link to="/blog">Blog</li>
-                <li><a href="#">Wiki</a></li>
-                <li><router-link to="/people">People</li>
+                <li><router-link to="/blog">Blog</router-link></li>
+                <li><a href="https://github.com/inexor-game/code/wiki">Wiki</a></li>
+                <li><router-link to="/people">People</router-link></li>
               </ul>
             </nav>
           </div>
