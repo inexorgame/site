@@ -4,9 +4,8 @@
       <div class="cover-container">
         <header id="navbar" class="masthead clearfix">
           <div class="inner">
-            <h3 class="masthead-brand">{{ title }}</h3>
             <nav>
-              <ul class="nav masthead-nav">
+              <ul class="nav masthead-nav inexor_nav">
                 <li><router-link to="/home">Home</router-link></li>
                 <li><a href="#" class="not-active">Ingame</a></li>
                 <li><router-link to="/blog">Blog</router-link></li>
@@ -21,7 +20,7 @@
           <router-view></router-view>
         </div>
 
-        <footer class="footer">
+        <footer class="footer" id="inexor_footer">
           <p>
             <a href="https://github.com/inexor-game/"><i class="fa fa-github fa-2x" area-hidden="true"></i></a>
             <a href="https://www.facebook.com/inexorgame"><i class="fa fa-facebook fa-2x" area-hidden="true"></i></a>
@@ -83,7 +82,7 @@ export default {
   body {
     color: #fff;
     text-align: center;
-    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    text-shadow: 1px 1px 3px rgba(0,0,0,.5), 1px 1px 3px rgba(0,0,0,.5);
   }
 
   /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -118,10 +117,6 @@ export default {
   /*
    * Header
    */
-  .masthead-brand {
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
 
   .masthead-nav > li {
     display: inline-block;
@@ -134,8 +129,7 @@ export default {
     padding-left: 0;
     font-size: 16px;
     font-weight: bold;
-    color: #fff; /* IE8 proofing */
-    color: rgba(255,255,255,.75);
+    color:white;
     border-bottom: 2px solid transparent;
   }
   .masthead-nav > li > a:hover,
@@ -143,12 +137,25 @@ export default {
     background-color: transparent;
     border-bottom-color: #a9a9a9;
     border-bottom-color: rgba(255,255,255,.25);
+    text-decoration:none;
   }
   .masthead-nav > .active > a,
   .masthead-nav > .active > a:hover,
   .masthead-nav > .active > a:focus {
     color: #fff;
     border-bottom-color: #fff;
+  }
+
+  /**
+   * Hacked inexor navigation
+   */
+  .inexor_nav {
+    position:absolute;
+    left:50%;
+    top:15px;
+    width:500px;
+    height:30px;
+    margin-left:-250px;
   }
 
   @media (min-width: 768px) {
@@ -177,6 +184,29 @@ export default {
   /*
    * Footer
    */
+
+   /*
+    * Make icons white
+    */
+    a {
+       color:white;
+       margin-right:20px;
+    }
+    a:hover {
+      color:white;
+      text-shadow:1px 1px 4px black;
+    }
+
+    #inexor_footer {
+      position:absolute;
+      left:50%;
+      top:100%;
+      height:50px;
+      width:400px;
+      margin-top:-50px;
+      margin-left:-200px;
+    }
+
 
   .mastfoot {
     color: #999; /* IE8 proofing */
@@ -214,7 +244,7 @@ export default {
     .masthead,
     .mastfoot,
     .cover-container {
-      width: 700px;
+      width: 900px;
     }
   }
 
