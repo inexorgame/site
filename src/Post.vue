@@ -1,6 +1,6 @@
 <template>
-  <div class="container i-container">
-    <div v-html="post">
+  <div>
+    <div v-html="post" class="container i-container">
       <div class="loading" v-if="loading">
         <strong>Drinking enough coffee until release...</strong>
       </div>
