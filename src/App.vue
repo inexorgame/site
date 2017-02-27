@@ -22,13 +22,13 @@
 
         <footer class="footer" id="inexor_footer">
           <p>
-            <a href="https://github.com/inexor-game/"><i class="fa fa-github fa-2x" area-hidden="true"></i></a>
-            <a href="https://www.facebook.com/inexorgame"><i class="fa fa-facebook fa-2x" area-hidden="true"></i></a>
-            <a href="https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw"><i class="fa fa-youtube fa-2x" area-hidden="true"></i></a>
-            <a href="https://twitter.com/inexorgame"><i class="fa fa-twitter fa-2x" area-hidden="true"></i></a>
-            <a href="https://webchat.freenode.net/?channels=#inexor"><i class="fa fa-comments-o fa-2x" aria-hidden="true"></i></a>
-            <a href="https://t.me/inexor"><i class="fa fa-telegram fa-2x" area-hidden="true"></i></a>
-            <a href="https://docs.inexor.org/"><i class="fa fa-book fa-2x" area-hidden="true"></i></a>
+            <a href="https://github.com/inexor-game/" title="GitHub"><i class="fa fa-github fa-2x" area-hidden="true"></i></a>
+            <a href="https://www.facebook.com/inexorgame" title="Facebook"><i class="fa fa-facebook fa-2x" area-hidden="true"></i></a>
+            <a href="https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw" title="YouTube"><i class="fa fa-youtube fa-2x" area-hidden="true"></i></a>
+            <a href="https://twitter.com/inexorgame" title="Twitter"><i class="fa fa-twitter fa-2x" area-hidden="true"></i></a>
+            <a href="https://webchat.freenode.net/?channels=#inexor" title="IRC"><i class="fa fa-comments-o fa-2x" aria-hidden="true"></i></a>
+            <a href="https://t.me/inexor" title="Telegram"><i class="fa fa-telegram fa-2x" area-hidden="true"></i></a>
+            <a href="https://docs.inexor.org/" title="Inexor API Docs"><i class="fa fa-book fa-2x" area-hidden="true"></i></a>
           </p>
         </footer>
       </div>
