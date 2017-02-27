@@ -22,13 +22,13 @@
 
         <footer class="footer" id="inexor_footer">
           <p>
-            <a href="https://github.com/inexor-game/" title="GitHub"><i class="fa fa-github fa-2x" area-hidden="true"></i></a>
-            <a href="https://www.facebook.com/inexorgame" title="Facebook"><i class="fa fa-facebook fa-2x" area-hidden="true"></i></a>
-            <a href="https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw" title="YouTube"><i class="fa fa-youtube fa-2x" area-hidden="true"></i></a>
-            <a href="https://twitter.com/inexorgame" title="Twitter"><i class="fa fa-twitter fa-2x" area-hidden="true"></i></a>
-            <a href="https://webchat.freenode.net/?channels=#inexor" title="IRC"><i class="fa fa-comments-o fa-2x" aria-hidden="true"></i></a>
-            <a href="https://t.me/inexor" title="Telegram"><i class="fa fa-telegram fa-2x" area-hidden="true"></i></a>
-            <a href="https://docs.inexor.org/" title="Inexor API Docs"><i class="fa fa-book fa-2x" area-hidden="true"></i></a>
+            <a href="https://github.com/inexor-game/" title="GitHub"><i class="fa fa-github fa-2x inexor_link" area-hidden="true"></i></a>
+            <a href="https://www.facebook.com/inexorgame" title="Facebook"><i class="fa fa-facebook fa-2x inexor_link" area-hidden="true"></i></a>
+            <a href="https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw" title="YouTube"><i class="fa fa-youtube fa-2x inexor_link" area-hidden="true"></i></a>
+            <a href="https://twitter.com/inexorgame" title="Twitter"><i class="fa fa-twitter fa-2x inexor_link" area-hidden="true"></i></a>
+            <a href="https://webchat.freenode.net/?channels=#inexor" title="IRC"><i class="fa fa-comments-o fa-2x inexor_link" aria-hidden="true"></i></a>
+            <a href="https://t.me/inexor" title="Telegram"><i class="fa fa-telegram fa-2x inexor_link" area-hidden="true"></i></a>
+            <a href="https://docs.inexor.org/" title="Inexor API Docs"><i class="fa fa-book fa-2x inexor_link" area-hidden="true"></i></a>
           </p>
         </footer>
       </div>
@@ -82,7 +82,8 @@ export default {
   body {
     color: #fff;
     text-align: center;
-    text-shadow: 1px 1px 3px rgba(0,0,0,.5), 1px 1px 3px rgba(0,0,0,.5);
+    text-shadow: 1px 1px 3px #000000FF, 1px 1px 3px #000000FF;
+    font-weight: bold;
   }
 
   /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -149,9 +150,12 @@ export default {
     position:absolute;
     left:50%;
     top:15px;
-    width:500px;
+    width:600px;
     height:30px;
-    margin-left:-250px;
+    margin-left:-300px;
+  }
+  .inexor_nav > li {
+      margin-right:40px;
   }
 
   @media (min-width: 768px) {
@@ -182,13 +186,21 @@ export default {
    */
 
    /*
-    * Make icons white
+    * Make social media icons white
     */
     a {
        color:white;
-       margin-right:20px;
     }
     a:hover {
+       color:white;
+       text-decoration:underline;
+    }
+
+    .inexor_link {
+       color:white;
+       margin-right:50px;
+    }
+    .inexor_link:hover {
       color:white;
       text-shadow:1px 1px 4px black;
     }
@@ -198,9 +210,9 @@ export default {
       left:50%;
       top:100%;
       height:50px;
-      width:400px;
+      width:600px;
       margin-top:-50px;
-      margin-left:-200px;
+      margin-left:-300px;
     }
 
 
