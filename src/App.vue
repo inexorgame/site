@@ -46,12 +46,6 @@ export default {
   }
 }
 
-/*
-$(document).ready(function(){
-    $("body").css("background-image","url(assets/background/haze.jpg");
-});
-*/
-
 </script>
 
 <style>
@@ -97,12 +91,8 @@ $(document).ready(function(){
     width: 100%;
     height: 100%; /* For at least Firefox */
     min-height: 100%;
-
-    background-image: url('/src/assets/background/dust6.jpg');
-    background-size: 100% 100%;
-    background-attachment: fixed;
-    -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-            box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+    -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,1);
+            box-shadow: inset 0 0 100px rgba(0,0,0,1);
   }
   .site-wrapper-inner {
     display: table-cell;

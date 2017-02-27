@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
 
-    <link rel="shortcut icon" href="/src/assets/inexor.ico">
+    <link rel="shortcut icon" href="/src/assets/favicon/inexor.ico">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css" integrity="sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi" crossorigin="anonymous">
@@ -13,6 +13,10 @@
     <title>Inexor | Stays sauer, becomes better.</title>
   </head>
   <body>
+    <div class="inexor_background" id="inexor_bg_outer">
+    </div>
+    <div class="inexor_background" id="inexor_bg_inner">
+    </div>
     <div id="app"></div>
     <script src="/dist/build.js"></script>
 
@@ -21,7 +25,45 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js" integrity="sha384-BLiI7JTZm+JWlgKa0M0kGRpJbF2J8q+qreVrKBC47e3K6BW78kGLrCkeRX6I9RoK" crossorigin="anonymous"></script>
 
+    <style>
+      .inexor_background {
+         position:absolute;
+         left:0px;
+         top:0px;
+         width:100%;
+         height:100%;
+      }
+      #inexor_bg_outer {
+         background-image:url('src/assets/background_blur/dust6.jpg');
+         z-index:-1;
+      }
+      #inexor_bg_inner {
+         background-image:url('src/assets/background/dust6.jpg');
+         z-index:-2;
+      }
+    </style>
+
     <script>
+    var i =0 ;
+    var bg_images = [
+        "dust2.jpg",
+        "haze.jpg",
+        "averas.jpg",
+        "cartel.jpg",
+        "lager.jpg",
+        "legacy.jpg",
+        "laucin.jpg",
+        "pandora.jpg",
+        "star.jpg",
+        ];
+
+    function loopThroughBackgroundImages() {
+        if(i > bg_images.length -1) i = 0;
+        $('#inexor_bg_outer').animate({opacity: '0'}, 2000);
+        i++;
+    }
+    window.setInterval("loopThroughBackgroundImages()", 4000);
+
     window.addEventListener('scroll', function() {
         if (window.scrollY > 500) {
             $('#navbar').fadeOut();
@@ -30,6 +72,7 @@
             $('#navbar').fadeIn();
         }
     },false);
+
     </script>
   </body>
 </html>
