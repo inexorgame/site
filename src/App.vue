@@ -46,6 +46,12 @@ export default {
   }
 }
 
+/*
+$(document).ready(function(){
+    $("body").css("background-image","url(assets/background/haze.jpg");
+});
+*/
+
 </script>
 
 <style>
@@ -92,7 +98,7 @@ export default {
     height: 100%; /* For at least Firefox */
     min-height: 100%;
 
-    background-image: url('/src/assets/banner.png');
+    background-image: url('/src/assets/background/dust6.jpg');
     background-size: 100% 100%;
     background-attachment: fixed;
     -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
