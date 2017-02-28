@@ -36,11 +36,17 @@ const Post = resolve => {
   })
 }
 
+// This is kinda hacky but works well without breaking the engine.
+function redirect_to_youtube() {
+  location.href = 'https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw'
+}
+
 const routes = [
     { path: '/home', component: Home , alias: '/' },
     { path: '/people', component: People },
     { path: '/blog', component: Blog },
-    { path: '/post/:year/:title', component: Post }
+    { path: '/post/:year/:title', component: Post },
+    { path: '/yt', beforeEnter: redirect_to_youtube },
 ]
 
 const router = new VueRouter({
