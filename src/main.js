@@ -50,7 +50,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'history',
+  // mode: 'history', // Actually this is fucked up, see https://github.com/react-boilerplate/react-boilerplate/issues/113
   routes
 });
 
