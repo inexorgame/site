@@ -1,46 +1,56 @@
 <template>
   <div class="container i-container">
     <div class="row">
-      <form class="form-inline float-xs-top">
-        <div class="form-group">
-          <label for="date">Sort by date</label>
-          <select type="select" name="date" class="form-control" v-on:change="sortPosts(order)">
-            <option value="desc">Descending</option>
-            <option value="asc">Ascending</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <input v-validate="'required|min:4'" name="search" class="form-control" type="text" v-bind:class="{ 'has-warning': errors.has('search') }" v-model="query" placeholder="Search" @keydown.enter.prevent="filterBlogEntries">
-          <div class="form-control-feedback">{{ errors.first('search') }}</div>
-        </div>
-        <button class="btn btn-outline-success" v-bind:disabled="errors.has('search')" v-on:click="filterBlogEntries" type="button">Search</button>
+      <form class="form-inline">
+
+        <label for="date" class="sr-only">Sort by date</label>
+        <select type="select" name="date" class="form-control mb-2 mr-sm-2 mb-sm-0" v-on:change="sortPosts(order)">
+          <option value="desc">Descending</option>
+          <option value="asc">Ascending</option>
+        </select>
+
+        <input v-validate="'required|min:4'" name="search" class="form-control mb-2 mr-sm-2 mb-sm-0" type="text" v-bind:class="{ 'has-warning': errors.has('search') }" v-model="query" placeholder="Search" @keydown.enter.prevent="filterBlogEntries">
+        <button class="btn btn-outline-success mb-2 mr-sm-2 mb-sm-0" v-bind:disabled="errors.has('search')" v-on:click="filterBlogEntries" type="button">Search</button>
       </form>
     </div>
 
     <div class="row">
-    <div v-if="notfound" class="notfound">
-      <div class="col-md-12"><strong>We couldn't find the article you are looking for..</strong></div>
-      <div class="col-xs-12"><img src="/src/assets/sitting_ogro.jpg" style="border-radius: 5px;"/></div>
-    </div>
-    <div v-else v-for="post in filteredPosts" class="row">
-      <div class="col-md-12">
-        <div class="card">
-          <div class="card-block">
-            <h4 class="card-title">{{ post.display_name }}</h4>
-            <p class="card-text text-muted">written on {{ post.day }}.{{ post.month }}.{{ post.year }}</p>
-            <a class="btn btn-outline-primary" v-bind:href="/#/ + post.path">Read more</a>
+      <div v-if="notfound" class="card">
+        <div class="card-block">
+          <div class="card-title">
+            <h4>We couldn't find the article you are looking for..</h4>
+          </div>
+          <div class="card-text">
+            <img src="/src/assets/sitting_ogro.jpg" style="border-radius: 5px;"/>
           </div>
         </div>
       </div>
-    </div>
-    <div class="loading" v-if="loading">
-      <strong>Writing interesting articles...</strong>
-    </div>
 
-    <div v-if="error" class="error">
-      {{ error }}
+      <div v-else v-for="post in filteredPosts" class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-block">
+              <h4 class="card-title">{{ post.display_name }}</h4>
+              <p class="card-text text-muted">written on {{ post.day }}.{{ post.month }}.{{ post.year }}</p>
+              <a class="btn btn-outline-primary" v-bind:href="/#/ + post.path">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="loading card" v-if="loading">
+        <h4 class="card-title">Writing interesting articles...</h4>
+        <p class="card-text text-muted">Celebrate Inexor!</p>
+      </div>
+
+      <div v-if="error" class="card">
+        <div class="card-block">
+          <h4 class="card-title">Something went wrong</h4>
+          <p class="card-text text-muted">{{ error }}</p>
+        </div>
+      </div>
+
     </div>
-  </div>
   </div>
 </template>
 

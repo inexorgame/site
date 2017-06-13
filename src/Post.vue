@@ -80,6 +80,7 @@ export default {
           let metadata = doc.querySelector('table');
           metadata.parentNode.removeChild(metadata)
           vm.parseMetaData(metadata)
+          console.log(vm.postMeta)
           vm.post = doc.querySelector('#file').outerHTML;
           vm.loading = false;
         }

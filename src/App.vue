@@ -26,7 +26,7 @@
               <li><a href="https://www.facebook.com/inexorgame" title="Facebook"><i class="fa fa-facebook fa-2x" area-hidden="true"></i></a></li>
               <li><a href="https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw" title="YouTube"><i class="fa fa-youtube fa-2x" area-hidden="true"></i></a></li>
               <li><a href="https://twitter.com/inexorgame" title="Twitter"><i class="fa fa-twitter fa-2x" area-hidden="true"></i></a></li>
-              <li><a href="https://webchat.freenode.net/?channels=#inexor" title="IRC"><i class="fa fa-comments-o fa-2x " aria-hidden="true"></i></a></li>
+              <li><a href="https://riot.im/app/#/room/#inexor:matrix.org" title="Riot"><i class="fa fa-comments-o fa-2x " aria-hidden="true"></i></a></li>
               <li><a href="https://t.me/inexor" title="Telegram"><i class="fa fa-telegram fa-2x " area-hidden="true"></i></a></li>
               <li><a href="https://docs.inexor.org/" title="Inexor API Docs"><i class="fa fa-book fa-2x " area-hidden="true"></i></a></li>
             </ul>
@@ -156,6 +156,7 @@
     background-color:rgba(50, 50, 50, 0.8);
     border-radius: 5px;
   }
+
   .text-muted {
     color: #aaa !important;
   }
