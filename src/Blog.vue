@@ -17,12 +17,21 @@
       </form>
     </div>
 
+    <div class="row">
     <div v-if="notfound" class="notfound">
       <div class="col-md-12"><strong>We couldn't find the article you are looking for..</strong></div>
       <div class="col-xs-12"><img src="/src/assets/sitting_ogro.jpg" style="border-radius: 5px;"/></div>
     </div>
     <div v-else v-for="post in filteredPosts" class="row">
-      <div class="col-md-12"><h4 class="card-title"><a v-bind:href="/#/ + post.path">{{ post.display_name }}</a> written on {{ post.day }}.{{ post.month }}.{{ post.year }}</h4></div>
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-block">
+            <h3 class="card-title">{{ post.display_name }}</h3>
+            <p class="card-text">written on {{ post.day }}.{{ post.month }}.{{ post.year }}</p>
+            <a class="btn btn-outline-primary" v-bind:href="/#/ + post.path">Read more</a>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="loading" v-if="loading">
       <strong>Writing interesting articles...</strong>
@@ -31,6 +40,7 @@
     <div v-if="error" class="error">
       {{ error }}
     </div>
+  </div>
   </div>
 </template>
 
@@ -165,5 +175,10 @@ h4 {
 
 h4:first-letter {
     text-transform:capitalize;
+}
+.card {
+  margin: 50px;
+  background-color:rgba(50, 50, 50, 0.5);
+  border-radius: 0;
 }
 </style>

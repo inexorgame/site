@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container i-container">
     <img id="inexor_logo" src="src/assets/logo_rendered/inexor_logo_600.png">
     <h1 class="cover-heading" id="inexor_headline">An open-source first person shooter forked from Cube2</h1>
     <p class="lead" id="inexor_description">
@@ -7,7 +7,7 @@
        The task is to be more flexible and to create an environment where development is easy and fast and creativity can prosper.
     </p>
     <p class="lead">
-      <a href="#" class="btn btn-lg btn-default inexor_button">DOWNLOAD</a>
+      <a href="#" class="btn btn-lg btn-secondary inexor_button">DOWNLOAD</a>
     </p>
   </div>
 </template>
