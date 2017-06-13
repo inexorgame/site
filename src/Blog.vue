@@ -32,7 +32,7 @@
             <div class="card-block">
               <h4 class="card-title">{{ post.display_name }}</h4>
               <p class="card-text text-muted">written on {{ post.day }}.{{ post.month }}.{{ post.year }}</p>
-              <a class="btn btn-outline-primary" v-bind:href="/#/ + post.path">Read more</a>
+              <router-link :to="post.path">Read more</router-link>
             </div>
           </div>
         </div>
