@@ -58,7 +58,7 @@ export default {
 .people {
   background-color: rgba(50, 50, 50, 0.5);
   border-color: transparent;
-  border-radius: 0;
+  border-radius: 5px;
   margin: 50px;
 }
 .card img {

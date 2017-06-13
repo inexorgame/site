@@ -179,6 +179,6 @@ h4:first-letter {
 .card {
   margin: 50px;
   background-color:rgba(50, 50, 50, 0.5);
-  border-radius: 0;
+  border-radius: 5px;
 }
 </style>
