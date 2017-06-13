@@ -151,7 +151,14 @@
     text-shadow:1px 1px 4px black;
   }
 
-
+  .card {
+    margin: 50px;
+    background-color:rgba(50, 50, 50, 0.8);
+    border-radius: 5px;
+  }
+  .text-muted {
+    color: #aaa !important;
+  }
   </style>
 
   <script>

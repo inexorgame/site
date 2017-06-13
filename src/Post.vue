@@ -1,37 +1,43 @@
 <template>
   <div class="container i-container">
-    <div class="post-header">
-      <h4>{{ postMeta.title }} </h4>
-      <p>written by {{ postMeta.author }} on {{ postMeta.date }}</p>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="inexor-article">
+          <h1>{{ postMeta.title }}</h1>
+          <p class="text-muted">written by {{ postMeta.author }} on {{ postMeta.date }}</p>
+          <div class="loading" v-if="loading">
+            <strong>Drinking enough coffee until release...</strong>
+          </div>
+          <div v-html="post">
+          </div>
+        </div>
+      </div>
     </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="inexor-comments">
+          <h4> Toggle Comments </h4>
+          <label class="switch">
+            <input type="checkbox" name="switch" v-on:change="commentsEnabled = !commentsEnabled">
+            <div class="slider round"></div>
+          </label>
+          <div v-if="!(error === 'OK')" class="error">
+            {{ error }}
+          </div>
+          <div v-if="commentsEnabled">
+            <vue-disqus shortname="inexor-game"></vue-disqus>
+          </div>
+        </div>
 
-    <div v-html="post">
+      </div>
 
-    </div>
-
-    <div class="loading" v-if="loading">
-      <strong>Drinking enough coffee until release...</strong>
-    </div>
-
-    <div v-if="error" class="error">
-      {{ error }}
-    </div>
-
-    <label class="switch">
-      <label for="switch">Enable comments</label>
-      <input type="checkbox" name="switch" v-on:change="commentsEnabled = !commentsEnabled">
-      <div class="slider"></div>
-    </label>
-
-    <div v-if="commentsEnabled">
-      <vue-disqus shortname="inexor-game"></vue-disqus>
     </div>
   </div>
+</div>
 </template>
 
 <script>
 import VueDisqus from 'vue-disqus/VueDisqus.vue'
-
 export default {
   components: {
     VueDisqus
@@ -45,7 +51,7 @@ export default {
         date: '11/12/2013'
       },
       post: null,
-      error: null,
+      error: false,
       commentsEnabled: false
     }
   },
@@ -57,29 +63,28 @@ export default {
   },
   methods: {
     fetchBlogEntry() {
-      this.error = this.post = null;
-      this.loading = true;
-
-      this.$http.get('https://api.github.com/repos/inexor-game/blog-data/contents/' + this.$route.path, {
-        headers: {
-          'Accept': 'application/vnd.github.v3.html'
-        }
-      }).then((response) => {
-        this.loading = false;
-        let reader = new FileReader();
-        reader.onloadend = () => {
+      let vm = this;
+      vm.error = vm.post = null;
+      vm.loading = true;
+      let xhr= new XMLHttpRequest();
+      xhr.open('GET', 'https://api.github.com/repos/inexor-game/blog-data/contents' + this.$route.path, true);
+      xhr.setRequestHeader('Accept', 'application/vnd.github.v3.html');
+      xhr.onreadystatechange = function() {
+        let self = this;
+        if (self.readyState !== 4 || self.status != 200) {
+          vm.loading = false;
+          vm.error = this.statusText;
+        } else {
           let parser = new DOMParser();
-          let doc = parser.parseFromString(reader.result, 'text/html')
+          let doc = parser.parseFromString(self.responseText, 'text/html')
           let metadata = doc.querySelector('table');
           metadata.parentNode.removeChild(metadata)
-          this.parseMetaData(metadata)
-          this.post = doc.querySelector('#file').outerHTML;
+          vm.parseMetaData(metadata)
+          vm.post = doc.querySelector('#file').outerHTML;
+          vm.loading = false;
         }
-        reader.readAsText(response.body);
-      }, (response) => {
-        this.loading = false;
-        this.error = response.statusText;
-      })
+      }
+      xhr.send();
     },
     // Since this is a really fast operation and we don't want our user to hang/wait for the title of the post, synchronous request is o.k.
     parseMetaData(table) {
@@ -94,18 +99,36 @@ export default {
 </script>
 
 <style>
+
+.inexor-article h1, .inexor-article > p {
+  text-align: center;
+}
+.inexor-article {
+  padding: 50px;
+  background-color: rgba(50, 50, 50, 0.5);
+  text-align: left;
+  border-radius: 5px;
+}
+
+.inexor-comments {
+  padding: 50px;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(0, 0, 0, 0.8));
+}
+
+.inexor-comments > h4 {
+  text-align: center;
+}
+
 ul {
   padding: 0;
   list-style-type: none;
 }
-
 /*
- * Credit goes to W3C
- * https://www.w3schools.com/howto/howto_css_switch.asp
- * In the future this might be directly covered by Bootstrap 4
- * See related issue - https://github.com/twbs/bootstrap/issues/1935
- */
-
+* Credit goes to W3C
+* https://www.w3schools.com/howto/howto_css_switch.asp
+* In the future this might be directly covered by Bootstrap 4
+* See related issue - https://github.com/twbs/bootstrap/issues/1935
+*/
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -154,5 +177,14 @@ input:checked + .slider:before {
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 </style>

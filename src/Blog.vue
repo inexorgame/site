@@ -26,8 +26,8 @@
       <div class="col-md-12">
         <div class="card">
           <div class="card-block">
-            <h3 class="card-title">{{ post.display_name }}</h3>
-            <p class="card-text">written on {{ post.day }}.{{ post.month }}.{{ post.year }}</p>
+            <h4 class="card-title">{{ post.display_name }}</h4>
+            <p class="card-text text-muted">written on {{ post.day }}.{{ post.month }}.{{ post.year }}</p>
             <a class="btn btn-outline-primary" v-bind:href="/#/ + post.path">Read more</a>
           </div>
         </div>
@@ -175,10 +175,5 @@ h4 {
 
 h4:first-letter {
     text-transform:capitalize;
-}
-.card {
-  margin: 50px;
-  background-color:rgba(50, 50, 50, 0.5);
-  border-radius: 5px;
 }
 </style>
