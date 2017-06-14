@@ -7,7 +7,7 @@
        The task is to be more flexible and to create an environment where development is easy and fast and creativity can prosper.
     </p>
     <p class="lead">
-      <a href="https://github.com/inexor-game/code/wiki/Install-Inexor-in-five-minutes" class="btn btn-lg btn-secondary inexor_button">DOWNLOAD</a>
+      <a href="https://github.com/inexorgame/code/wiki/Install-Inexor-in-five-minutes" class="btn btn-lg btn-secondary inexor_button">DOWNLOAD</a>
     </p>
   </div>
 </template>

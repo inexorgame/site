@@ -40,7 +40,7 @@ export default {
     fetchMembers () {
       this.error = this.members = null;
       this.loading = true;
-      this.$http.get('https://api.github.com/orgs/inexor-game/members').then((response) => {
+      this.$http.get('https://api.github.com/orgs/inexorgame/members').then((response) => {
         this.loading = false;
         response.json();
 

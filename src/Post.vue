@@ -25,7 +25,7 @@
             {{ error }}
           </div>
           <div v-if="commentsEnabled">
-            <vue-disqus shortname="inexor-game"></vue-disqus>
+            <vue-disqus shortname="inexorgame"></vue-disqus>
           </div>
         </div>
 
@@ -67,7 +67,7 @@ export default {
       vm.error = vm.post = null;
       vm.loading = true;
       let xhr= new XMLHttpRequest();
-      xhr.open('GET', 'https://api.github.com/repos/inexor-game/blog-data/contents' + this.$route.path + '.md', true);
+      xhr.open('GET', 'https://api.github.com/repos/inexorgame/blog-data/contents' + this.$route.path + '.md', true);
       xhr.setRequestHeader('Accept', 'application/vnd.github.v3.html');
       xhr.onreadystatechange = function() {
         let self = this;

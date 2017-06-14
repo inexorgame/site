@@ -1,6 +1,6 @@
 {
   "sha": "5dd1ce6bf5711dd834e4b60783de198f067d3407",
-  "url": "https://api.github.com/repos/inexor-game/blog-data/git/trees/5dd1ce6bf5711dd834e4b60783de198f067d3407",
+  "url": "https://api.github.com/repos/inexorgame/blog-data/git/trees/5dd1ce6bf5711dd834e4b60783de198f067d3407",
   "tree": [
     {
       "path": "README.md",
@@ -8,14 +8,14 @@
       "type": "blob",
       "sha": "92df155bf0db45bb3cbb41dcbfbb66a0061aedc0",
       "size": 2089,
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/blobs/92df155bf0db45bb3cbb41dcbfbb66a0061aedc0"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/blobs/92df155bf0db45bb3cbb41dcbfbb66a0061aedc0"
     },
     {
       "path": "config",
       "mode": "040000",
       "type": "tree",
       "sha": "bf36a1f77def745b4e3ddc093754de97814a5753",
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/trees/bf36a1f77def745b4e3ddc093754de97814a5753"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/trees/bf36a1f77def745b4e3ddc093754de97814a5753"
     },
     {
       "path": "config/team.json",
@@ -23,7 +23,7 @@
       "type": "blob",
       "sha": "a69c193f571b79b07d51ce6daa11de683d9bb083",
       "size": 694,
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/blobs/a69c193f571b79b07d51ce6daa11de683d9bb083"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/blobs/a69c193f571b79b07d51ce6daa11de683d9bb083"
     },
     {
       "path": "post-example.md",
@@ -31,21 +31,21 @@
       "type": "blob",
       "sha": "7e781929ccd4123008cb8a0ebe5b301624124b2b",
       "size": 1218,
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/blobs/7e781929ccd4123008cb8a0ebe5b301624124b2b"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/blobs/7e781929ccd4123008cb8a0ebe5b301624124b2b"
     },
     {
       "path": "post",
       "mode": "040000",
       "type": "tree",
       "sha": "75bf79b2395e65ba905c4205675c224299b9b1ce",
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/trees/75bf79b2395e65ba905c4205675c224299b9b1ce"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/trees/75bf79b2395e65ba905c4205675c224299b9b1ce"
     },
     {
       "path": "post/2015",
       "mode": "040000",
       "type": "tree",
       "sha": "7e7891b43f52ff93684f058888c5d984a75d6309",
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/trees/7e7891b43f52ff93684f058888c5d984a75d6309"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/trees/7e7891b43f52ff93684f058888c5d984a75d6309"
     },
     {
       "path": "post/2015/04-26-alpha1-design-decisions.md",
@@ -53,7 +53,7 @@
       "type": "blob",
       "sha": "b76ad826a459da73cfbb913b3495a92a1802a5ed",
       "size": 6918,
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/blobs/b76ad826a459da73cfbb913b3495a92a1802a5ed"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/blobs/b76ad826a459da73cfbb913b3495a92a1802a5ed"
     },
     {
       "path": "post/2015/06-02-caffeine-edition.md",
@@ -61,7 +61,7 @@
       "type": "blob",
       "sha": "ea7387cd479cb11e694aac7272d17359cb1c0869",
       "size": 1109,
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/blobs/ea7387cd479cb11e694aac7272d17359cb1c0869"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/blobs/ea7387cd479cb11e694aac7272d17359cb1c0869"
     },
     {
       "path": "post/2015/08-17-new-services.md",
@@ -69,7 +69,7 @@
       "type": "blob",
       "sha": "189337fcdf1d3eed1699f5d7666c5de82235c7a4",
       "size": 2614,
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/blobs/189337fcdf1d3eed1699f5d7666c5de82235c7a4"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/blobs/189337fcdf1d3eed1699f5d7666c5de82235c7a4"
     },
     {
       "path": "post/2015/09-07-aquarust-edition.md",
@@ -77,7 +77,7 @@
       "type": "blob",
       "sha": "31090d9182342194ade6277a5ebbea1a8dd956fb",
       "size": 1929,
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/blobs/31090d9182342194ade6277a5ebbea1a8dd956fb"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/blobs/31090d9182342194ade6277a5ebbea1a8dd956fb"
     },
     {
       "path": "post/2015/11-09-pyrimethamine-edition.md",
@@ -85,7 +85,7 @@
       "type": "blob",
       "sha": "3d1a9e5c6a7ad62d20748929c627ea695a5bf0b4",
       "size": 3719,
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/blobs/3d1a9e5c6a7ad62d20748929c627ea695a5bf0b4"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/blobs/3d1a9e5c6a7ad62d20748929c627ea695a5bf0b4"
     },
     {
       "path": "post/2015/11-22-hackathon-stuttgart.md",
@@ -93,7 +93,7 @@
       "type": "blob",
       "sha": "c3f0475ebfcdc46f962183469352dd7bd9cf3171",
       "size": 1865,
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/blobs/c3f0475ebfcdc46f962183469352dd7bd9cf3171"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/blobs/c3f0475ebfcdc46f962183469352dd7bd9cf3171"
     },
     {
       "path": "post/2015/11-22-pyrimethamine-fix.md",
@@ -101,7 +101,7 @@
       "type": "blob",
       "sha": "325e7f765b9fde681918214f4253a868f477ba98",
       "size": 1252,
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/blobs/325e7f765b9fde681918214f4253a868f477ba98"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/blobs/325e7f765b9fde681918214f4253a868f477ba98"
     },
     {
       "path": "post/2015/12-17-hackathon-2015-report.md",
@@ -109,14 +109,14 @@
       "type": "blob",
       "sha": "5e6117e4a0e7f1eb9b6df3124034d361473654ff",
       "size": 3282,
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/blobs/5e6117e4a0e7f1eb9b6df3124034d361473654ff"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/blobs/5e6117e4a0e7f1eb9b6df3124034d361473654ff"
     },
     {
       "path": "post/2016",
       "mode": "040000",
       "type": "tree",
       "sha": "0c3cf3240d202c4ce97f3994e19aa4b551b0d780",
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/trees/0c3cf3240d202c4ce97f3994e19aa4b551b0d780"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/trees/0c3cf3240d202c4ce97f3994e19aa4b551b0d780"
     },
     {
       "path": "post/2016/03-19-doxylamine-alpha-edition.md",
@@ -124,14 +124,14 @@
       "type": "blob",
       "sha": "87d0cfb7105e7ba1c9980c5d8abe37e5738254da",
       "size": 1569,
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/blobs/87d0cfb7105e7ba1c9980c5d8abe37e5738254da"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/blobs/87d0cfb7105e7ba1c9980c5d8abe37e5738254da"
     },
     {
       "path": "post/2017",
       "mode": "040000",
       "type": "tree",
       "sha": "559ad461fd49e869852f8c951f0b2cdd90a3bf7a",
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/trees/559ad461fd49e869852f8c951f0b2cdd90a3bf7a"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/trees/559ad461fd49e869852f8c951f0b2cdd90a3bf7a"
     },
     {
       "path": "post/2017/02-19-a-breeze-of-2017.md",
@@ -139,7 +139,7 @@
       "type": "blob",
       "sha": "7b1c7c5f48b352b624c1fe5694e0278ded5a3cfa",
       "size": 4749,
-      "url": "https://api.github.com/repos/inexor-game/blog-data/git/blobs/7b1c7c5f48b352b624c1fe5694e0278ded5a3cfa"
+      "url": "https://api.github.com/repos/inexorgame/blog-data/git/blobs/7b1c7c5f48b352b624c1fe5694e0278ded5a3cfa"
     }
   ],
   "truncated": false

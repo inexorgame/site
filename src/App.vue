@@ -7,7 +7,7 @@
               <ul class="navbar-nav">
                 <li class="nav-item"><router-link class="nav-link" to="/home">Home</router-link></li>
                 <li class="nav-item"><router-link class="nav-link" to="/blog">Blog</router-link></li>
-                <li class="nav-item"><a href="https://github.com/inexor-game/code/wiki" class="nav-link">Wiki</a></li> <!-- We need to change that to a way to get the wiki directly from the website-->
+                <li class="nav-item"><a href="https://github.com/inexorgame/code/wiki" class="nav-link">Wiki</a></li> <!-- We need to change that to a way to get the wiki directly from the website-->
                 <li class="nav-item"><router-link class="nav-link" to="/people">People</router-link></li>
               </ul>
             </div>
@@ -21,7 +21,7 @@
           <footer class="footer">
             <div class="container">
             <ul>
-              <li><a href="https://github.com/inexor-game/" title="GitHub"><i class="fa fa-github fa-2x" area-hidden="true"></i></a></li>
+              <li><a href="https://github.com/inexorgame/" title="GitHub"><i class="fa fa-github fa-2x" area-hidden="true"></i></a></li>
               <li><a href="https://www.facebook.com/inexorgame" title="Facebook"><i class="fa fa-facebook fa-2x" area-hidden="true"></i></a></li>
               <li><a href="https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw" title="YouTube"><i class="fa fa-youtube fa-2x" area-hidden="true"></i></a></li>
               <li><a href="https://twitter.com/inexorgame" title="Twitter"><i class="fa fa-twitter fa-2x" area-hidden="true"></i></a></li>
