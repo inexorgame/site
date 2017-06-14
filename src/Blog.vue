@@ -32,7 +32,7 @@
             <div class="card-block">
               <h4 class="card-title">{{ post.display_name }}</h4>
               <p class="card-text text-muted">written on {{ post.day }}.{{ post.month }}.{{ post.year }}</p>
-              <router-link :to="post.path">Read more</router-link>
+              <router-link :to="post.post_path">Read more</router-link>
             </div>
           </div>
         </div>
@@ -156,6 +156,7 @@ export default {
             value.year = String(path.slice(1, 2));
             value.month = String(/\-/[Symbol.split](date_).slice(0, 1));
             value.day = String(/\-/[Symbol.split](date_).slice(1, 2));
+            value.post_path = value.path.replace('.md', ''); // Path to forward to the post component
             return value;
           })
           resolve(posts)

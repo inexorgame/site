@@ -67,7 +67,7 @@ export default {
       vm.error = vm.post = null;
       vm.loading = true;
       let xhr= new XMLHttpRequest();
-      xhr.open('GET', 'https://api.github.com/repos/inexor-game/blog-data/contents' + this.$route.path, true);
+      xhr.open('GET', 'https://api.github.com/repos/inexor-game/blog-data/contents' + this.$route.path + '.md', true);
       xhr.setRequestHeader('Accept', 'application/vnd.github.v3.html');
       xhr.onreadystatechange = function() {
         let self = this;
@@ -80,7 +80,6 @@ export default {
           let metadata = doc.querySelector('table');
           metadata.parentNode.removeChild(metadata)
           vm.parseMetaData(metadata)
-          console.log(vm.postMeta)
           vm.post = doc.querySelector('#file').outerHTML;
           vm.loading = false;
         }
