@@ -41,7 +41,7 @@
   */
 
   body {
-    background: url('//src/assets/background/laucin.jpg') fixed center center no-repeat;
+    background: url('/src/assets/background/laucin.jpg') fixed center center no-repeat;
     background-size: cover;
   }
 
