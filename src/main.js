@@ -49,10 +49,14 @@ const routes = [
     { path: '/yt', beforeEnter: redirect_to_youtube },
 ]
 
-const router = new VueRouter({
-  // mode: 'history', // Actually this is fucked up, see https://github.com/react-boilerplate/react-boilerplate/issues/113
-  routes
-});
+let routerConfig = {
+  mode: 'history', // PLEASE note that this is buggy with webpack-dev-server
+  routes: routes
+}
+
+if (process.env.NODE_ENV !== 'production') delete routerConfig['mode'] // This won't work in browsers, so it's fine
+
+const router = new VueRouter(routerConfig);
 
 // TODO: Add and make url-root working!
 const app = new Vue({
