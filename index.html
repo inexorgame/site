@@ -24,49 +24,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha256-gL1ibrbVcRIHKlCO5OXOPC/lZz/gpdApgQAzskqqXp8=" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
-  <script>
-  var i =0 ;
-  var bg_images = [
-    "dust6.jpg",
-    "haze.jpg",
-    "averas.jpg",
-    "cartel.jpg",
-    "lager.jpg",
-    "legacy.jpg",
-    "laucin.jpg",
-    "pandora.jpg",
-    "star.jpg",
-  ];
-
-  function loopThroughBackgroundImages() {
-    /* if(i > bg_images.length -1) i = 0;
-    $('#inexor_bg_outer').css('background-image', $('#inexor_bg_inner').css('background-image'));
-    $('#inexor_bg_outer').css('opacity', 1);
-    $('#inexor_bg_inner').css('background-image', 'url(src/assets/background/' + bg_images[i] + ')');
-    $('#inexor_bg_outer').animate({opacity: '0'}, 2000);
-    i++; */
-  }
-  loopThroughBackgroundImages();
-  window.setInterval(function () {loopThroughBackgroundImages();}, 10000);
-
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > 500) {
-      $('#navbar').fadeOut();
-    }
-    else {
-      $('#navbar').fadeIn();
-    }
-  },false);
-
-  </script>
-
-  <style>
-  body {
-    background: #111111 url('src/assets/background/dust6.jpg') fixed center center no-repeat;
-    background-size: cover;
-  }
-
-  </style>
-
+  
 </body>
 </html>
