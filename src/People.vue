@@ -61,6 +61,11 @@ export default {
   border-radius: 5px;
   margin: 50px;
 }
+
+.people h4:first-letter {
+  text-transform:none;
+}
+
 .card img {
   width: 100%;
     height: auto;

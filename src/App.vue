@@ -6,7 +6,6 @@
             <div class="navbar-collapse collapse">
               <ul class="navbar-nav">
                 <li class="nav-item"><router-link class="nav-link" to="/home">Home</router-link></li>
-                <li class="nav-item"><a href="#" class="nav-link disabled">Ingame</a></li>
                 <li class="nav-item"><router-link class="nav-link" to="/blog">Blog</router-link></li>
                 <li class="nav-item"><a href="https://github.com/inexor-game/code/wiki" class="nav-link">Wiki</a></li> <!-- We need to change that to a way to get the wiki directly from the website-->
                 <li class="nav-item"><router-link class="nav-link" to="/people">People</router-link></li>
@@ -40,6 +39,11 @@
   /*
   * Globals
   */
+
+  body {
+    background: #111111 url('/src/assets/background/laucin.jpg') fixed center center no-repeat;
+    background-size: cover;
+  }
 
   /* Links */
   a,
@@ -163,6 +167,39 @@
   </style>
 
   <script>
+
+  var i =0 ;
+  var bg_images = [
+    "dust6.jpg",
+    "haze.jpg",
+    "averas.jpg",
+    "cartel.jpg",
+    "lager.jpg",
+    "legacy.jpg",
+    "laucin.jpg",
+    "pandora.jpg",
+    "star.jpg",
+  ];
+
+  function loopThroughBackgroundImages() {
+    /* if(i > bg_images.length -1) i = 0;
+    $('#inexor_bg_outer').css('background-image', $('#inexor_bg_inner').css('background-image'));
+    $('#inexor_bg_outer').css('opacity', 1);
+    $('#inexor_bg_inner').css('background-image', 'url(src/assets/background/' + bg_images[i] + ')');
+    $('#inexor_bg_outer').animate({opacity: '0'}, 2000);
+    i++; */
+  }
+  loopThroughBackgroundImages();
+  window.setInterval(function () {loopThroughBackgroundImages();}, 10000);
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 500) {
+      $('#navbar').fadeOut();
+    }
+    else {
+      $('#navbar').fadeIn();
+    }
+  },false);
 
   export default {
     name: 'app',
