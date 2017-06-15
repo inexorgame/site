@@ -102,10 +102,10 @@ export default {
       this.error = this.posts = null;
       this.loading = true;
 
-      this.$http.get('https://api.github.com/repos/inexor-game/blog-data/commits/HEAD').then((response) => {
+      this.$http.get('https://api.github.com/repos/inexorgame/blog-data/commits/HEAD').then((response) => {
         response.json();
         let sha = response.body['sha']; // Get the HEAD sha
-        let tree = 'https://api.github.com/repos/inexor-game/blog-data/git/trees/' + sha + '?recursive=1';
+        let tree = 'https://api.github.com/repos/inexorgame/blog-data/git/trees/' + sha + '?recursive=1';
 
         this.$http.get(tree).then((response) => {
           this.loading = false;
@@ -122,7 +122,7 @@ export default {
       })
     },
     filterBlogEntries() {
-      let query = 'https://api.github.com/search/code?q=in:file+language:markdown+repo:inexor-game/blog-data+path:post/+' + this.query;
+      let query = 'https://api.github.com/search/code?q=in:file+language:markdown+repo:inexorgame/blog-data+path:post/+' + this.query;
       this.$http.get(query).then((response) => {
         response.json();
         if (response.body.total_count > 0) {
