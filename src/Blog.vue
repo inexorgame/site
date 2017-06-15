@@ -1,5 +1,5 @@
 <template>
-  <div class="container i-container">
+  <div class="container">
     <div class="row">
       <form class="form-inline">
 
@@ -25,19 +25,15 @@
           </div>
         </div>
       </div>
-
-      <div v-else v-for="post in filteredPosts" class="row">
-        <div class="col-md-12">
-          <div class="card">
+      <div v-else v-for="post in filteredPosts" class="col-lg-4 col-md-6">
+          <div class="card blog-card">
             <div class="card-block">
               <h4 class="card-title">{{ post.display_name }}</h4>
               <p class="card-text text-muted">written on {{ post.day }}.{{ post.month }}.{{ post.year }}</p>
               <router-link :to="post.post_path">Read more</router-link>
             </div>
           </div>
-        </div>
       </div>
-
       <div class="loading card" v-if="loading">
         <h4 class="card-title">Writing interesting articles...</h4>
         <p class="card-text text-muted">Celebrate Inexor!</p>
@@ -49,9 +45,8 @@
           <p class="card-text text-muted">{{ error }}</p>
         </div>
       </div>
-
     </div>
-  </div>
+    </div>
 </template>
 
 <script>
@@ -180,11 +175,23 @@ export default {
 </script>
 
 <style>
-h4 {
-  text-align: justify;
+
+.blog-card {
+  height: 10rem;
+}
+.blog-card h4 {
+  text-align: center;
+  vertical-align: middle;
 }
 
-h4:first-letter {
+.blog-card a {
+  position: absolute;
+  bottom: 1rem;
+  left: 10%;
+  right: 10%;
+}
+
+.blog-card h4:first-letter {
     text-transform:capitalize;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="container i-container">
+  <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="inexor-article">
@@ -107,12 +107,13 @@ export default {
   padding: 50px;
   background-color: rgba(50, 50, 50, 0.5);
   text-align: left;
-  border-radius: 5px;
+  border-radius: 5px 5px 0px 0px;
 }
 
 .inexor-comments {
   padding: 50px;
   background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(0, 0, 0, 0.8));
+  border-radius: 0px 0px 5px 5px;
 }
 
 .inexor-comments > h4 {
@@ -187,4 +188,5 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
 </style>

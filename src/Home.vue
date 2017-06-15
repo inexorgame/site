@@ -1,7 +1,7 @@
 <template>
-  <div class="container i-container">
+  <div class="container">
     <img id="inexor_logo" src="src/assets/logo_rendered/inexor_logo_600.png">
-    <h1 class="cover-heading" id="inexor_headline">An open-source first person shooter forked from Cube2</h1>
+    <h1 class="cover-heading" id="inexor_headline">An open-source first person shooter forked from Cube 2</h1>
     <p class="lead" id="inexor_description">
        It adds a lot of functionality and tries to stay open for improvements and suggestions.
        The task is to be more flexible and to create an environment where development is easy and fast and creativity can prosper.
@@ -13,11 +13,6 @@
 </template>
 
 <style>
-
-#inexor_div {
-   background:linear-gradient(to bottom, #11111199 0%, #00000099 100%);
-   padding:10px;
-}
 
 .inexor_button {
    margin-top:100px;
