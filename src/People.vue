@@ -1,7 +1,7 @@
 <template>
-  <div class="container i-container">
+  <div class="container">
     <div class="row">
-    <div class="col-sm-4" v-for="member in members">
+    <div class="col-lg-4 col-md-6" v-for="member in members">
       <div class="card people">
         <img class="card-img-top" v-bind:src="member.avatar_url" height="250" width="250">
         <div class="card-block">
@@ -66,22 +66,31 @@ export default {
   text-transform:none;
 }
 
-.card img {
+.people {
+  width: 10rem;
+  height: 18rem;
+  margin: 1rem auto;
+}
+.people img {
   width: 100%;
     height: auto;
 }
 
-.card a {
+.people a {
   color:white;
+    position: absolute;
+    bottom: 1rem;
+    left: 10%;
+    right: 10%;
 }
-.card a:hover {
+.people a:hover {
   color:white;
 }
 
-.card a {
+.people a {
   color:white;
 }
- .card a:hover {
+ .people a:hover {
   color:white;
   text-shadow:1px 1px 4px black;
 }
