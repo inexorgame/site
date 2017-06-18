@@ -58,6 +58,27 @@ if (process.env.NODE_ENV !== 'production') delete routerConfig['mode'] // This w
 
 const router = new VueRouter(routerConfig);
 
+router.afterEach((to, from) => {
+  var from_page = from.path.substr(1,1).toUpperCase() + from.path.substr(2)
+  var to_page = to.path.substr(1,1).toUpperCase() + to.path.substr(2)
+
+  if (to.path === "/home" ||  to.path === "/") {
+    document.title = "Inexor | Stays sauer, becomes better."
+  }
+  else {
+    document.title = "Inexor | " + to_page;
+  }
+
+  $( "nav li" ).each(function() {
+    if ( $( this ).text() === from_page || from.path === "/" ) {
+      $( this ).removeClass("active");
+    }
+    if ( $( this ).text() === to_page) {
+      $( this ).addClass("active");
+    }
+  });
+
+})
 // TODO: Add and make url-root working!
 const app = new Vue({
   el: '#app',
