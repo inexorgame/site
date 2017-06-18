@@ -3,7 +3,7 @@
     <div class="site-wrapper-inner">
       <div class="cover-container">
         <header>
-          <nav class="masthead navbar navbar-toggleable-md navbar-inverse navbar-toggleable-xl">
+          <nav class="navbar navbar-toggleable-md navbar-inverse navbar-toggleable-xl">
             <div class="navbar-collapse collapse">
               <ul class="navbar-nav">
                 <li class="nav-item"><router-link class="nav-link" to="/home">Home</router-link></li>
@@ -68,6 +68,11 @@ a:hover {
 /*
 * Base structure
 */
+
+*, *:before, *:after { /* https://css-tricks.com/box-sizing/ */
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -109,7 +114,7 @@ body {
 */
 
 .navbar-nav {
-  padding: 1rem;
+  padding: 1.5rem 1rem 1rem 1rem;
   position: fixed;
   left: 0%;
   right:0;
@@ -118,9 +123,17 @@ body {
   background-color: rgba(11, 11, 11, 0.5);
 }
 
-.navbar-nav .nav-link{
-  color: white;
-  padding: 1rem 1rem 3px 1rem;
+.navbar-nav > li> a {
+  border-bottom: thick solid rgba(255,255,255, 0);
+}
+.navbar-nav > li > a:hover {
+  border-bottom: thick solid rgba(255,255,255, 0.5);
+  transition: border-bottom, 0.2s;
+}
+.navbar-nav > .active > a,
+.navbar-nav > .active > a:hover,
+.navbar-nav > .active > a:focus {
+  border-bottom: thick solid rgba(255,255,255, 0.5);
 }
 
 /*

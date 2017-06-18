@@ -42,11 +42,11 @@ function redirect_to_youtube() {
 }
 
 const routes = [
-    { path: '/home', component: Home , alias: '/' },
-    { path: '/people', component: People },
-    { path: '/blog', component: Blog },
-    { path: '/post/:year/:title', component: Post },
-    { path: '/yt', beforeEnter: redirect_to_youtube },
+  { path: '/home', component: Home , alias: '/' },
+  { path: '/people', component: People },
+  { path: '/blog', component: Blog },
+  { path: '/post/:year/:title', component: Post },
+  { path: '/yt', beforeEnter: redirect_to_youtube },
 ]
 
 let routerConfig = {
@@ -58,6 +58,27 @@ if (process.env.NODE_ENV !== 'production') delete routerConfig['mode'] // This w
 
 const router = new VueRouter(routerConfig);
 
+router.afterEach((to, from) => {
+  let from_page = from.path.substr(1,1).toUpperCase() + from.path.substr(2)
+  let to_page = to.path.substr(1,1).toUpperCase() + to.path.substr(2)
+
+  if (to.path === "/home" ||  to.path === "/") {
+    document.title = "Inexor | Stays sauer, becomes better."
+  }
+  else if (to_page.substr(0, 4) !== "Post") {
+    document.title = `Inexor | ${to_page}`;
+  }
+
+  $( "nav li" ).each(function() {
+    if ( $( this ).text() === from_page || from_page === "" || ( $( this ).text() === "Blog" && from.path.substr(1,4) === "post" ) ) {
+      $( this ).removeClass("active");
+    }
+    if ( $( this ).text() === to_page ||  ( $( this ).text() === "Home" && to.path === "/" ) || ( $( this ).text() === "Blog" && to.path.substr(1,4) === "post" ) ) {
+      $( this ).addClass("active");
+    }
+  });
+
+})
 // TODO: Add and make url-root working!
 const app = new Vue({
   el: '#app',
