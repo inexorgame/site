@@ -126,8 +126,7 @@ body {
 .navbar-nav > li> a {
   border-bottom: thick solid rgba(255,255,255, 0);
 }
-.navbar-nav > li > a:hover,
-.navbar-nav > li > a:focus {
+.navbar-nav > li > a:hover {
   border-bottom: thick solid rgba(255,255,255, 0.5);
   transition: border-bottom, 0.2s;
 }
