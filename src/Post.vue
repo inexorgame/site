@@ -92,6 +92,9 @@ export default {
       table.querySelectorAll('thead tr th').forEach((item) => {
         // IE9 < breaks this. That's bad luck.
         this.postMeta[item.textContent] = tbody[item.cellIndex].textContent
+        if (item.textContent === "title") {
+          document.title = `Inexor | ${this.postMeta.title}`;
+        }
       })
     }
   }
