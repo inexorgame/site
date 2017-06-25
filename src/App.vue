@@ -42,8 +42,6 @@
 */
 
 body {
-  overflow-y: hidden !important;
-  overflow-x: hidden !important;
   background: url('/src/assets/background/laucin.jpg') no-repeat center center fixed;
   background-size: cover;
 }
