@@ -1,5 +1,4 @@
 <template>
-  <div class="container">
     <div class="row">
     <div class="col-lg-4 col-md-6" v-for="member in members">
       <div class="card people">
@@ -17,7 +16,6 @@
     <div v-if="error" class="error">
       {{ error }}
     </div>
-  </div>
   </div>
 </template>
 
