@@ -2,8 +2,15 @@
   <div class="site-wrapper">
     <div class="site-wrapper-inner">
       <div class="cover-container">
+
+      <transition name="fade" mode="in-out">
+        <div class="inexor_bg" v-if="!toggle_bg" v-bind:style='bg_inner' key="1">
+        </div>
+        <div class="inexor_bg" v-else v-bind:style='bg_outer' key="2">
+        </div>
+      </transition>
         <header>
-          <nav class="navbar navbar-toggleable-md navbar-inverse navbar-toggleable-xl">
+          <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top navbar-toggleable-xl">
             <div class="navbar-collapse collapse">
               <ul class="navbar-nav">
                 <li class="nav-item"><router-link class="nav-link" to="/home">Home</router-link></li>
@@ -19,15 +26,17 @@
         </div>
 
         <footer>
-            <ul>
-              <li><a href="https://github.com/inexorgame/" title="GitHub"><i class="fa fa-github fa-2x" area-hidden="true"></i></a></li>
-              <li><a href="https://www.facebook.com/inexorgame" title="Facebook"><i class="fa fa-facebook fa-2x" area-hidden="true"></i></a></li>
-              <li><a href="https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw" title="YouTube"><i class="fa fa-youtube fa-2x" area-hidden="true"></i></a></li>
-              <li><a href="https://twitter.com/inexorgame" title="Twitter"><i class="fa fa-twitter fa-2x" area-hidden="true"></i></a></li>
-              <li><a href="https://riot.im/app/#/room/#inexor:matrix.org" title="Riot"><i class="fa fa-comments-o fa-2x " aria-hidden="true"></i></a></li>
-              <li><a href="https://t.me/inexor" title="Telegram"><i class="fa fa-telegram fa-2x " area-hidden="true"></i></a></li>
-              <li><a href="https://docs.inexor.org/" title="Inexor API Docs"><i class="fa fa-book fa-2x " area-hidden="true"></i></a></li>
-            </ul>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-md-1 col-3 col-centered"><a href="https://github.com/inexorgame/" title="GitHub"><i class="fa fa-github fa-2x" area-hidden="true"></i></a></div>
+              <div class="col-md-1 col-3 col-centered"><a href="https://www.facebook.com/inexorgame" title="Facebook"><i class="fa fa-facebook fa-2x" area-hidden="true"></i></a></div>
+              <div class="col-md-1 col-3 col-centered"><a href="https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw" title="YouTube"><i class="fa fa-youtube fa-2x" area-hidden="true"></i></a></div>
+              <div class="col-md-1 col-3 col-centered"><a href="https://twitter.com/inexorgame" title="Twitter"><i class="fa fa-twitter fa-2x" area-hidden="true"></i></a></div>
+              <div class="col-md-1 col-3 col-centered"><a href="https://riot.im/app/#/room/#inexor:matrix.org" title="Riot"><i class="fa fa-comments-o fa-2x " aria-hidden="true"></i></a></div>
+              <div class="col-md-1 col-3 col-centered"><a href="https://t.me/inexor" title="Telegram"><i class="fa fa-telegram fa-2x " area-hidden="true"></i></a></div>
+              <div class="col-md-1 col-3 col-centered"><a href="https://docs.inexor.org/" title="Inexor API Docs"><i class="fa fa-book fa-2x " area-hidden="true"></i></a></div>
+            </div>
+          </div>
         </footer>
       </div>
     </div>
@@ -41,12 +50,6 @@
 * Globals
 */
 
-body {
-
-  background: url('/src/assets/background/laucin.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
 /* Links */
 a,
 a:focus,
@@ -55,11 +58,14 @@ a:hover {
 }
 
 /* Custom default button */
+
+.btn {
+  text-shadow: none; /* Prevent inheritance from `body` */
+}
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
   color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
   background-color: #fff;
   border: 1px solid #fff;
 }
@@ -69,19 +75,37 @@ a:hover {
 * Base structure
 */
 
+<<<<<<< HEAD
 *, *:before, *:after { /* https://css-tricks.com/box-sizing/ */
   box-sizing: border-box;
 }
 
+=======
+>>>>>>> 8fe84cecd559d24c5357717432644c39462e6086
 html,
 body {
-  height: 100%;
+  height: 100vh; /* https://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome/25020295#25020295 */
 }
 
 body {
   color: #fff;
   text-align: center;
-  font-weight: bold;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  background-color: #111;
+}
+
+
+.inexor_bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    top: 0;
+    left: 0;
+    z-index:-1;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -90,7 +114,6 @@ body {
   width: 100%;
   height: 100%; /* For at least Firefox */
   min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,1);
   box-shadow: inset 0 0 100px rgba(0,0,0,1);
 }
 .site-wrapper-inner {
@@ -105,25 +128,38 @@ body {
 
 /* Padding for spacing */
 .inner {
-  margin-top: 5rem;
-  padding: 2rem;
+  padding: 30px;
 }
 
 /*
 * Header
 */
 
+<<<<<<< HEAD
 .navbar-nav {
   padding: 1.5rem 1rem 1rem 1rem;
   position: fixed;
   left: 0%;
+=======
+.navbar {
+  padding: 1rem 1rem 1rem 1rem;
+>>>>>>> 8fe84cecd559d24c5357717432644c39462e6086
   right:0;
   top: 0;
 
   background-color: rgba(11, 11, 11, 0.5);
 }
 
+<<<<<<< HEAD
 .navbar-nav > li> a {
+=======
+@media (max-width: 600px) {
+
+}
+
+.navbar-nav > li> a {
+  padding-bottom: 0;
+>>>>>>> 8fe84cecd559d24c5357717432644c39462e6086
   border-bottom: thick solid rgba(255,255,255, 0);
 }
 .navbar-nav > li > a:hover {
@@ -141,7 +177,7 @@ body {
 */
 
 .cover {
-  min-height: 15em;
+  padding: 8rem 20px;
 }
 
 .cover .btn-lg {
@@ -154,17 +190,21 @@ body {
 * Footer
 */
 
-footer {
-  margin: 5rem 1rem 0rem 1rem;
+@media (min-width: 960px) {
+  footer {
+    margin-left: 20%;
+    margin-right: 20%;
+ }
+
 }
 
-footer ul {
-  margin: 0;
-  margin-bottom: 1rem;
+
+.col-centered {
+  margin: 0 auto;
+  float: none;
+  padding: 1rem;
 }
-footer ul li {
-  display: inline;
-}
+
 
 /*
 * Make social media icons white
@@ -180,7 +220,6 @@ footer a:hover {
 
 footer a {
   color:white;
-  margin-right:50px;
 }
 footer a:hover {
   color:white;
@@ -191,12 +230,6 @@ footer a:hover {
  * Affix and center
  */
 
-@media (min-width: 40em) {
-  /* Start the vertical centering */
- .site-wrapper-inner {
-   vertical-align: middle;
- }
-}
 
 @media (min-width: 82em) {
   .cover-container {
@@ -221,37 +254,63 @@ footer a:hover {
 .text-muted {
   color: #aaa !important;
 }
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 4s;
+}
+.fade-enter, .fade-leave-to  {
+  opacity: 0;
+}
+
 </style>
 
 <script>
 
-var i =0 ;
-var bg_images = [
-  "dust6.jpg",
-  "haze.jpg",
-  "averas.jpg",
-  "cartel.jpg",
-  "lager.jpg",
-  "legacy.jpg",
-  "laucin.jpg",
-  "pandora.jpg",
-  "star.jpg",
-];
+export default {
+  name: 'app',
+  data() {
+    return {
+      toggle_bg: true,
 
-function loopThroughBackgroundImages() {
-  /* if(i > bg_images.length -1) i = 0;
-  $('#inexor_bg_outer').css('background-image', $('#inexor_bg_inner').css('background-image'));
-  $('#inexor_bg_outer').css('opacity', 1);
-  $('#inexor_bg_inner').css('background-image', 'url(src/assets/background/' + bg_images[i] + ')');
-  $('#inexor_bg_outer').animate({opacity: '0'}, 2000);
-  i++; */
+      bg_inner: {
+        'background-image': "url('/src/assets/background/laucin.jpg') no-repeat center center fixed"
+      },
+      bg_outer: {
+        'background-image': "url('/src/assets/background/laucin.jpg')"
+      },
+
+      i: 0,
+      bg_images: [
+        "dust6.jpg",
+        "haze.jpg",
+        "averas.jpg",
+        "cartel.jpg",
+        "lager.jpg",
+        "legacy.jpg",
+        "laucin.jpg",
+        "pandora.jpg",
+        "star.jpg",
+      ]
+    }
+  },
+  created() {
+    this.loopThroughBackgroundImages();
+  },
+  methods: {
+     loopThroughBackgroundImages: function loopThroughBackgroundImages() {
+       let vm = this;
+       if(vm.i > vm.bg_images.length -1) vm.i = 0;
+
+       vm.$set( ( (vm.i % 2 === 0) ? vm.bg_inner : vm.bg_outer ), 'background-image', 'url(src/assets/background/' + vm.bg_images[vm.i] + ')' ) ;
+       vm.toggle_bg = !vm.toggle_bg;
+
+      vm.i++;
+      setTimeout(vm.loopThroughBackgroundImages, 8000);
+    }
+  }
 }
-loopThroughBackgroundImages();
-window.setInterval(function () {loopThroughBackgroundImages();}, 10000);
-
 
 window.addEventListener('scroll', function() {
-
   if (window.scrollY < 50) {
     $('nav').fadeIn();
   }
@@ -259,13 +318,5 @@ window.addEventListener('scroll', function() {
     $('nav').fadeOut();
   }
 });
-
-export default {
-  name: 'app',
-  data() {
-    return {
-    }
-  }
-}
 
 </script>
