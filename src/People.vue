@@ -2,7 +2,7 @@
     <div class="row">
     <div class="col-lg-4 col-md-6" v-for="member in members">
       <div class="card people">
-        <img class="card-img-top" v-bind:src="member.avatar_url" height="250" width="250">
+        <img class="card-img-top rounded-circle" v-bind:src="member.avatar_url" height="250" width="250">
         <div class="card-block">
           <h4 class="card-title">{{ member.login }}</h4>
           <a v-bind:href="member.html_url"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
@@ -56,7 +56,7 @@ export default {
 .people {
   background-color: rgba(50, 50, 50, 0.5);
   border-color: transparent;
-  border-radius: 5px;
+  border-radius: 100px 100px 20px 20px;
   margin: 50px;
 }
 

@@ -2,6 +2,13 @@
   <div class="site-wrapper">
     <div class="site-wrapper-inner">
       <div class="cover-container">
+
+      <transition name="fade" mode="in-out">
+        <div class="inexor_bg" v-if="!toggle_bg" v-bind:style='bg_inner' key="1">
+        </div>
+        <div class="inexor_bg" v-else v-bind:style='bg_outer' key="2">
+        </div>
+      </transition>
         <header>
           <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top navbar-toggleable-xl">
             <div class="navbar-collapse collapse">
@@ -43,11 +50,6 @@
 * Globals
 */
 
-body {
-  background: url('/src/assets/background/laucin.jpg') no-repeat center center fixed;
-  background-size: cover;
-}
-
 /* Links */
 a,
 a:focus,
@@ -75,13 +77,28 @@ a:hover {
 
 html,
 body {
-  height: 100%;
+  height: 100vh; /* https://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome/25020295#25020295 */
 }
 
 body {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  background-color: #111;
+}
+
+
+.inexor_bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    top: 0;
+    left: 0;
+    z-index:-1;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -113,7 +130,6 @@ body {
 
 .navbar {
   padding: 1rem 1rem 1rem 1rem;
-  width: 100%;
   right:0;
   top: 0;
 
@@ -156,10 +172,15 @@ body {
 * Footer
 */
 
-footer {
-  padding-left: 20%;
-  padding-right: 20%;
+@media (min-width: 960px) {
+  footer {
+    margin-left: 20%;
+    margin-right: 20%;
+ }
+
 }
+
+
 .col-centered {
   margin: 0 auto;
   float: none;
@@ -215,35 +236,61 @@ footer a:hover {
 .text-muted {
   color: #aaa !important;
 }
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 4s;
+}
+.fade-enter, .fade-leave-to  {
+  opacity: 0;
+}
+
 </style>
 
 <script>
 
-var i =0 ;
-var bg_images = [
-  "dust6.jpg",
-  "haze.jpg",
-  "averas.jpg",
-  "cartel.jpg",
-  "lager.jpg",
-  "legacy.jpg",
-  "laucin.jpg",
-  "pandora.jpg",
-  "star.jpg",
-];
+export default {
+  name: 'app',
+  data() {
+    return {
+      toggle_bg: true,
 
-/*
-function loopThroughBackgroundImages() {
- if(i > bg_images.length -1) i = 0;
-  $('#inexor_bg_outer').css('background-image', $('#inexor_bg_inner').css('background-image'));
-  $('#inexor_bg_outer').css('opacity', 1);
-  $('#inexor_bg_inner').css('background-image', 'url(src/assets/background/' + bg_images[i] + ')');
-  $('#inexor_bg_outer').animate({opacity: '0'}, 2000);
-  i++;
+      bg_inner: {
+        'background-image': "url('/src/assets/background/laucin.jpg') no-repeat center center fixed"
+      },
+      bg_outer: {
+        'background-image': "url('/src/assets/background/laucin.jpg')"
+      },
+
+      i: 0,
+      bg_images: [
+        "dust6.jpg",
+        "haze.jpg",
+        "averas.jpg",
+        "cartel.jpg",
+        "lager.jpg",
+        "legacy.jpg",
+        "laucin.jpg",
+        "pandora.jpg",
+        "star.jpg",
+      ]
+    }
+  },
+  created() {
+    this.loopThroughBackgroundImages();
+  },
+  methods: {
+     loopThroughBackgroundImages: function loopThroughBackgroundImages() {
+       let vm = this;
+       if(vm.i > vm.bg_images.length -1) vm.i = 0;
+
+       vm.$set( ( (vm.i % 2 === 0) ? vm.bg_inner : vm.bg_outer ), 'background-image', 'url(src/assets/background/' + vm.bg_images[vm.i] + ')' ) ;
+       vm.toggle_bg = !vm.toggle_bg;
+
+      vm.i++;
+      setTimeout(vm.loopThroughBackgroundImages, 8000);
+    }
+  }
 }
-loopThroughBackgroundImages();
-window.setInterval(function () {loopThroughBackgroundImages();}, 10000);
-*/
 
 window.addEventListener('scroll', function() {
   if (window.scrollY < 50) {
@@ -253,13 +300,5 @@ window.addEventListener('scroll', function() {
     $('nav').fadeOut();
   }
 });
-
-export default {
-  name: 'app',
-  data() {
-    return {
-    }
-  }
-}
 
 </script>
