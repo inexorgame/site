@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div class="row">
+      <div class="col-12">
       <form class="form-inline">
 
         <label for="date" class="sr-only">Sort by date</label>
@@ -13,10 +14,11 @@
         <button class="btn btn-outline-success mb-2 mr-sm-2 mb-sm-0" v-bind:disabled="errors.has('search')" v-on:click="filterBlogEntries" type="button">Search</button>
       </form>
     </div>
+    </div>
 
     <div class="row">
-      <div v-if="notfound" class="card">
-        <div class="card-block">
+      <div v-if="notfound" class="col-12">
+        <div class="card card-block">
           <div class="card-title">
             <h4>We couldn't find the article you are looking for..</h4>
           </div>
@@ -34,16 +36,13 @@
           </div>
         </div>
       </div>
-      <div class="loading card" v-if="loading">
-        <h4 class="card-title">Writing interesting articles...</h4>
-        <p class="card-text text-muted">Celebrate Inexor!</p>
+      <div class="loading" v-if="loading">
+        <h4>Writing interesting articles...</h4>
       </div>
 
-      <div v-if="error" class="card">
-        <div class="card-block">
-          <h4 class="card-title">Something went wrong</h4>
-          <p class="card-text text-muted">{{ error }}</p>
-        </div>
+      <div v-if="error">
+          <h4>Something went wrong</h4>
+          <p class="text-muted">{{ error }}</p>
       </div>
     </div>
   </div>
