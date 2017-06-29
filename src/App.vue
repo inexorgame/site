@@ -4,9 +4,9 @@
       <div class="cover-container">
 
       <transition name="fade" mode="in-out">
-        <div class="inexor_bg" v-if="!toggle_bg" v-bind:style='bg_inner' key="1">
+        <div class="inexor_bg" v-if="!toggle_bg" v-bind:style='bg_1' key="1">
         </div>
-        <div class="inexor_bg" v-else v-bind:style='bg_outer' key="2">
+        <div class="inexor_bg" v-else v-bind:style='bg_2' key="2">
         </div>
       </transition>
         <header>
@@ -254,22 +254,21 @@ export default {
     return {
       toggle_bg: true,
 
-      bg_inner: {
+      bg_1: {
         'background-image': "url('/src/assets/background/laucin.jpg')"
       },
-      bg_outer: {
-        'background-image': "url('/src/assets/background/laucin.jpg')"
+      bg_2: {
       },
 
       i: 0,
       bg_images: [
+        "laucin.jpg",
         "dust6.jpg",
         "haze.jpg",
         "averas.jpg",
         "cartel.jpg",
         "lager.jpg",
         "legacy.jpg",
-        "laucin.jpg",
         "pandora.jpg",
         "star.jpg",
       ]
@@ -281,13 +280,23 @@ export default {
   methods: {
      loopThroughBackgroundImages: function loopThroughBackgroundImages() {
        let vm = this;
-       if(vm.i > vm.bg_images.length -1) vm.i = 0;
-
-       vm.$set( ( (vm.i % 2 === 0) ? vm.bg_inner : vm.bg_outer ), 'background-image', 'url(src/assets/background/' + vm.bg_images[vm.i] + ')' ) ;
+       vm.$set( ( vm.toggle_bg ? vm.bg_1: vm.bg_2 ), 'background-image', 'url(src/assets/background/' + vm.bg_images[vm.i] + ')' ) ;
        vm.toggle_bg = !vm.toggle_bg;
 
       vm.i++;
-      setTimeout(vm.loopThroughBackgroundImages, 10000);
+      if(vm.i > vm.bg_images.length -1) vm.i = 0;
+
+      /*
+        make sure next image is loaded before cycling to it, otherwise cycle when it's done loading.
+      */
+      let next_img = new Image();
+      let t0 = performance.now();
+      next_img.src = '/src/assets/background/' + vm.bg_images[vm.i];
+
+      next_img.onload = function() {
+        let t1 = performance.now()
+        setTimeout(vm.loopThroughBackgroundImages, Math.max(0, 10000 - (t1 - t0)) );
+      }
     }
   }
 }
