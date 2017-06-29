@@ -237,10 +237,10 @@ footer a:hover {
   color: #aaa !important;
 }
 
-.fade-enter-active, .fade-leave-active {
+.fade-enter-active {
   transition: opacity 4s;
 }
-.fade-enter, .fade-leave-to  {
+.fade-enter {
   opacity: 0;
 }
 
