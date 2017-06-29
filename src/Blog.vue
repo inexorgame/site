@@ -26,13 +26,13 @@
         </div>
       </div>
       <div v-else v-for="post in filteredPosts" class="col-lg-4 col-md-6">
-          <div class="card blog-card">
-            <div class="card-block">
-              <h4 class="card-title">{{ post.display_name }}</h4>
-              <p class="card-text text-muted">written on {{ post.day }}.{{ post.month }}.{{ post.year }}</p>
-              <router-link :to="post.post_path">Read more</router-link>
-            </div>
+        <div class="card blog-card">
+          <div class="card-block">
+            <h4 class="card-title">{{ post.display_name }}</h4>
+            <p class="card-text text-muted">written on {{ post.day }}.{{ post.month }}.{{ post.year }}</p>
+            <router-link :to="post.post_path">Read more</router-link>
           </div>
+        </div>
       </div>
       <div class="loading card" v-if="loading">
         <h4 class="card-title">Writing interesting articles...</h4>
@@ -46,7 +46,7 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
@@ -111,8 +111,8 @@ export default {
             this.sortPosts(); // Default sort descendingly
           })
         }, (response) => {
-        this.loading = false;
-        this.error = response.statusText;
+          this.loading = false;
+          this.error = response.statusText;
         })
       })
     },
@@ -192,6 +192,6 @@ export default {
 }
 
 .blog-card h4:first-letter {
-    text-transform:capitalize;
+  text-transform:capitalize;
 }
 </style>
