@@ -26,7 +26,7 @@
         </div>
 
         <footer>
-          <div class="container-fluid">
+          <div class="container">
             <div class="row">
               <div class="col-md-1 col-3 col-centered"><a href="https://github.com/inexorgame/" title="GitHub"><i class="fa fa-github fa-2x" area-hidden="true"></i></a></div>
               <div class="col-md-1 col-3 col-centered"><a href="https://www.facebook.com/inexorgame" title="Facebook"><i class="fa fa-facebook fa-2x" area-hidden="true"></i></a></div>
@@ -224,7 +224,7 @@ footer a:hover {
 */
 
 .card {
-  margin: 50px;
+  margin: 10%;
   background-color:rgba(50, 50, 50, 0.8);
   border-radius: 5px;
 }
@@ -255,7 +255,7 @@ export default {
       toggle_bg: true,
 
       bg_inner: {
-        'background-image': "url('/src/assets/background/laucin.jpg') no-repeat center center fixed"
+        'background-image': "url('/src/assets/background/laucin.jpg')"
       },
       bg_outer: {
         'background-image': "url('/src/assets/background/laucin.jpg')"

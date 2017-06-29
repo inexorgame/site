@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <img id="inexor_logo" class="img-fluid" src="src/assets/logo_rendered/inexor_logo_600.png">
     <h1 class="cover-heading" id="inexor_headline">An open-source first person shooter forked from Cube 2</h1>
     <p class="lead" id="inexor_description">
