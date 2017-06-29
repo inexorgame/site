@@ -5,8 +5,8 @@
       <form class="form-inline">
 
         <label for="date" class="sr-only">Sort by date</label>
-        <select type="select" name="date" class="form-control mb-2 mr-sm-2 mb-sm-0" v-on:change="sortPosts(order)">
-          <option value="desc">Descending</option>
+        <select type="select" name="date" class="form-control mb-2 mr-sm-2 mb-sm-0" v-on:change="sortPosts(order)" v-model="order">
+          <option value="desc" selected>Descending</option>
           <option value="asc">Ascending</option>
         </select>
 
@@ -77,7 +77,8 @@ export default {
       posts: null,
       filteredPosts: null,
       error: null,
-      notfound: null
+      notfound: null,
+      order: 'desc',
     }
   },
   created () {
@@ -159,12 +160,12 @@ export default {
         }
       })
     },
-    sortPosts(order='desc') {
+    sortPosts(order) {
       // NOTE: Lol. Actually this is a bug, and JavaScript should not compare strings that way. Anyhow, nice that it works.
       if (this.filteredPosts.length > 0) {
-        if (order == 'asc') {
+        if (order == "asc") {
           this.filteredPosts = this.filteredPosts.sort(compare_asc);
-        } else if (order == 'desc') {
+        } else if (order == "desc") {
           this.filteredPosts = this.filteredPosts.sort(compare_desc);
         }
       }
