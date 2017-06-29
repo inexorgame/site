@@ -280,7 +280,7 @@ export default {
   methods: {
      loopThroughBackgroundImages: function loopThroughBackgroundImages() {
        let vm = this;
-       vm.$set( ( vm.toggle_bg ? vm.bg_1: vm.bg_2 ), 'background-image', 'url(src/assets/background/' + vm.bg_images[vm.i] + ')' ) ;
+       vm.$set( ( vm.toggle_bg ? vm.bg_1: vm.bg_2 ), 'background-image', 'url(/src/assets/background/' + vm.bg_images[vm.i] + ')' ) ;
        vm.toggle_bg = !vm.toggle_bg;
 
       vm.i++;
