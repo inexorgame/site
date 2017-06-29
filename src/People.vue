@@ -1,4 +1,5 @@
 <template>
+  <div class="container">
     <div class="row">
     <div class="col-lg-4 col-md-6" v-for="member in members">
       <div class="card people">
@@ -9,12 +10,14 @@
         </div>
       </div>
     </div>
+  </div>
     <div class="loading" v-if="loading">
       <strong>Gathering folks...</strong>
     </div>
 
     <div v-if="error" class="error">
-      {{ error }}
+      <h4>Something went wrong</h4>
+      <p class="text-muted">{{ error }}</p>
     </div>
   </div>
 </template>
@@ -65,21 +68,22 @@ export default {
 }
 
 .people {
-  width: 10rem;
-  height: 18rem;
+  padding: 10px;
+  width: 12rem;
+  height: 20rem;
   margin: 1rem auto;
 }
 .people img {
   width: 100%;
-    height: auto;
+  height: auto;
 }
 
 .people a {
   color:white;
-    position: absolute;
-    bottom: 1rem;
-    left: 10%;
-    right: 10%;
+  position: absolute;
+  bottom: 1rem;
+  left: 10%;
+  right: 10%;
 }
 .people a:hover {
   color:white;
@@ -88,7 +92,7 @@ export default {
 .people a {
   color:white;
 }
- .people a:hover {
+.people a:hover {
   color:white;
   text-shadow:1px 1px 4px black;
 }
