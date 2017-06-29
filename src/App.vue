@@ -238,7 +238,7 @@ footer a:hover {
 }
 
 .fade-enter-active {
-  transition: opacity 4s;
+  transition: opacity 2s;
 }
 .fade-enter {
   opacity: 0;
@@ -287,7 +287,7 @@ export default {
        vm.toggle_bg = !vm.toggle_bg;
 
       vm.i++;
-      setTimeout(vm.loopThroughBackgroundImages, 8000);
+      setTimeout(vm.loopThroughBackgroundImages, 10000);
     }
   }
 }
