@@ -10,7 +10,7 @@
           <option value="asc">Ascending</option>
         </select>
 
-        <input v-validate="'required|min:4'" name="search" class="form-control mb-2 mr-sm-2 mb-sm-0" type="text" v-bind:class="{ 'has-warning': errors.has('search') }" v-model="query" placeholder="Search" @keydown.enter.prevent="filterBlogEntries">
+        <input v-validate="'required|min:4'" name="search" class="form-control mb-2 mr-sm-2 mb-sm-0" type="text" v-bind:class="{ 'has-warning': errors.has('search') }" v-model="query" placeholder="Search" @keydown.enter.prevent="filterBlogEntries(order)">
         <button class="btn btn-outline-success mb-2 mr-sm-2 mb-sm-0" v-bind:disabled="errors.has('search')" v-on:click="filterBlogEntries" type="button">Search</button>
       </form>
     </div>
@@ -108,7 +108,7 @@ export default {
           this.parseBlogArray(response.body.tree).then((posts) => {
             this.posts = posts;
             this.filteredPosts = this.posts;
-            this.sortPosts(); // Default sort descendingly
+            this.sortPosts('desc'); // Default sort descendingly
           })
         }, (response) => {
           this.loading = false;
