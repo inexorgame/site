@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import VeeValidate from 'vee-validate'
 import App from './App.vue'
+import 'bootstrap'
 
 Vue.use(VueRouter);
 Vue.use(VueResource);

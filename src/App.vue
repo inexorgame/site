@@ -10,7 +10,7 @@
         </div>
       </transition>
         <header>
-          <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top navbar-toggleable-xl">
+          <nav class="navbar navbar-expand-md navbar-inverse fixed-top navbar-expand-xl">
             <div class="navbar-collapse collapse">
               <ul class="navbar-nav">
                 <li class="nav-item"><router-link class="nav-link" to="/home">Home</router-link></li>
