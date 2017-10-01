@@ -74,7 +74,11 @@ export default {
   },
   methods: {
     compare_asc (a, b) {
-        if (a.year <= b.year && a.month <= b.month && a.day < b.day) {
+        if (
+            (b.year > a.year) ||
+            (b.year == a.year && b.month > a.month) ||
+            (b.year == a.year && b.month == a.month && b.day > a.day)
+        ) {
             return -1;
         } else if (b.year == a.year && b.month == a.month && b.day == a.day) {
             return 0;
@@ -83,12 +87,16 @@ export default {
         }
     },
     compare_desc (a, b) {
-        if (b.year <= a.year && b.month <= a.month && b.day < a.day) {
-            return -1;
+        if (
+            (b.year > a.year) ||
+            (b.year == a.year && b.month > a.month) ||
+            (b.year == a.year && b.month == a.month && b.day > a.day)
+        ) {
+            return 1;
         } else if (b.year == a.year && b.month == a.month && b.day == a.day) {
             return 0;
         } else {
-            return 1;
+            return -1;
         }
     },
     fetchBlogEntries () {
