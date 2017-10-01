@@ -49,26 +49,6 @@
 </template>
 
 <script>
-const compare_asc = (a, b) => {
-  if (b.year <= a.year && b.month <= a.month && b.day < a.day) {
-    return 1
-  } else if (a.year == b.year && a.month == b.month && a.day == b.day) {
-    return 0;
-  } else {
-    return -1;
-  }
-}
-
-const compare_desc = (a, b) => {
-  if (a.year <= b.year && a.month <= b.month && a.day < b.day) {
-    return -1
-  } else if (a.year == b.year && a.month == b.month && a.day == b.day) {
-    return 0;
-  } else {
-    return 1;
-  }
-}
-
 export default {
   data () {
     return {
@@ -90,9 +70,27 @@ export default {
         this.filteredPosts = this.posts;
         this.notfound = false;
       }
-    }
+    },
   },
   methods: {
+    compare_asc (a, b) {
+        if (a.year <= b.year && a.month <= b.month && a.day < b.day) {
+            return -1;
+        } else if (b.year == a.year && b.month == a.month && b.day == a.day) {
+            return 0;
+        } else {
+            return 1;
+        }
+    },
+    compare_desc (a, b) {
+        if (b.year <= a.year && b.month <= a.month && b.day < a.day) {
+            return -1;
+        } else if (b.year == a.year && b.month == a.month && b.day == a.day) {
+            return 0;
+        } else {
+            return 1;
+        }
+    },
     fetchBlogEntries () {
       this.error = this.posts = null;
       this.loading = true;
@@ -161,12 +159,13 @@ export default {
       })
     },
     sortPosts(order) {
+      const vm = this
       // NOTE: Lol. Actually this is a bug, and JavaScript should not compare strings that way. Anyhow, nice that it works.
       if (this.filteredPosts.length > 0) {
-        if (order == "asc") {
-          this.filteredPosts = this.filteredPosts.sort(compare_asc);
-        } else if (order == "desc") {
-          this.filteredPosts = this.filteredPosts.sort(compare_desc);
+        if (order === "asc") {
+          this.filteredPosts = this.filteredPosts.sort(vm.compare_asc);
+        } else if (order === "desc") {
+          this.filteredPosts = this.filteredPosts.sort(vm.compare_desc);
         }
       }
     }
