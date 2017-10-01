@@ -9,6 +9,7 @@ module.exports = function (config) {
     config.set({
         browsers: ['Chrome'], // PhantomJS fails with many desired ES6 features
         frameworks: ['jasmine'],
+        reporters: ['verbose'],
         // this is the entry file for all our tests.
         files: ['test/index.js'],
         // we will pass the entry file to webpack for bundling.
