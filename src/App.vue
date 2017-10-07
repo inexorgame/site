@@ -139,7 +139,7 @@ body {
 
 .navbar {
   padding:0;
-  border-top:solid 5px rgba(0, 0, 0, 0.5);
+  border-top:solid 5px rgba(0, 0, 0, 0.7);
 }
 
 .navbar-nav > li > a {
@@ -153,7 +153,7 @@ body {
 .navbar-nav > .active > a:hover,
 .navbar-nav > .active > a:focus {
   height:60px;
-  background-color:rgba(0, 0, 0, 0.5);
+  background-color:rgba(0, 0, 0, 0.7);
 }
 
 /*
@@ -173,6 +173,10 @@ body {
 /*
 * Footer
 */
+
+footer {
+  margin-top:1000px;
+}
 
 @media (min-width: 960px) {
   footer {
@@ -264,8 +268,8 @@ export default {
 
       i: 0,
       bg_images: [
-        "laucin.jpg",
         "dust6.jpg",
+        "laucin.jpg",
         "haze.jpg",
         "averas.jpg",
         "cartel.jpg",
