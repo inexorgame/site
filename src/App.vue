@@ -230,7 +230,7 @@ footer a:hover {
 */
 
 .card {
-  margin: 10%;
+  margin: 10% 10% 10% 0px;
   padding:10px;
   background-color:rgba(0,0,0,0.7);
   border-radius: 5px;
