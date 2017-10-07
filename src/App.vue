@@ -3,28 +3,32 @@
     <div class="site-wrapper-inner">
       <div class="cover-container">
 
-      <transition name="fade" mode="in-out">
-        <div class="inexor_bg" v-if="!toggle_bg" v-bind:style='bg_1' key="1">
-        </div>
-        <div class="inexor_bg" v-else v-bind:style='bg_2' key="2">
-        </div>
-      </transition>
-        <header>
-          <nav class="navbar navbar-expand-md navbar-inverse fixed-top navbar-expand-xl">
-            <div class="navbar-collapse">
-              <ul class="navbar-nav">
-                <li class="nav-item"><router-link class="nav-link" to="/home">Home</router-link></li>
-                <li class="nav-item"><router-link class="nav-link" to="/blog">Blog</router-link></li>
-                <li class="nav-item"><router-link class="nav-link" to="/people">People</router-link></li>
-                <li class="nav-item"><a href="https://github.com/inexorgame/code/wiki" target="_blank" class="nav-link">Wiki</a></li> <!-- We need to change that to a way to get the wiki directly from the website-->
-              </ul>
-            </div>
-          </nav>
-        </header>
-        <div class="inner cover">
-          <router-view></router-view>
-        </div>
+        <transition name="fade" mode="in-out">
+          <div class="inexor_bg" v-if="!toggle_bg" v-bind:style='bg_1' key="1">
+          </div>
+          <div class="inexor_bg" v-else v-bind:style='bg_2' key="2">
+          </div>
+        </transition>
 
+        <nav class="navbar navbar-expand-md navbar-inverse fixed-top navbar-expand-xl">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            &#9776;
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item"><router-link class="nav-link" to="/home">Home</router-link></li>
+              <li class="nav-item"><router-link class="nav-link" to="/blog">Blog</router-link></li>
+              <li class="nav-item"><router-link class="nav-link" to="/people">People</router-link></li>
+              <li class="nav-item"><a href="https://github.com/inexorgame/code/wiki" target="_blank" class="nav-link">Wiki</a></li> <!-- We need to change that to a way to get the wiki directly from the website-->
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <router-view></router-view>
+
+      <div class="cover-container">
         <footer>
           <div class="container">
             <div class="row">
@@ -93,17 +97,17 @@ body {
 */
 
 .inexor_bg {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index:-1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index:-1;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -133,13 +137,22 @@ body {
 * Header
 */
 
-@media (max-width: 600px) {
 
+.navbar-toggler {
+  color: #FFF;
+  width: 100%;
+  padding: 10px
 }
 
 .navbar {
   padding:0;
   border-top:solid 5px rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 767px) {
+  .navbar {
+    border-top: none;
+    background: rgba(0, 0, 0, 0.7);
+  }
 }
 
 .navbar-nav > li > a {
@@ -163,6 +176,9 @@ body {
 .cover {
   padding: 8rem 20px;
 }
+.cover-top {
+  padding: 8rem 20px 0 20px;
+}
 
 .cover .btn-lg {
   padding: 10px 20px;
@@ -173,10 +189,6 @@ body {
 /*
 * Footer
 */
-
-footer {
-  margin-top:1000px;
-}
 
 @media (min-width: 960px) {
   footer {
@@ -312,7 +324,7 @@ export default {
 
       next_img.onload = function() {
         let t1 = performance.now()
-        setTimeout(vm.loopThroughBackgroundImages, Math.max(0, 5000 - (t1 - t0)) );
+        // setTimeout(vm.loopThroughBackgroundImages, Math.max(0, 5000 - (t1 - t0)) );
       }
     },
   }

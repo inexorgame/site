@@ -1,25 +1,27 @@
 .<template>
-  <div class="container">
-    <div class="row">
-    <div class="col-lg-4 col-md-6" v-for="member in members">
-      <div class="card people">
-        <img class="card-img-top rounded-circle" v-bind:src="member.avatar_url" height="250" width="250">
-        <div class="card-block">
-          <h4 class="card-title">{{ member.login }}</h4>
-          <a v-bind:href="member.html_url"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+  <div class="inner cover">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6" v-for="member in members">
+          <div class="card people">
+            <img class="card-img-top rounded-circle" v-bind:src="member.avatar_url" height="250" width="250">
+            <div class="card-block">
+              <h4 class="card-title">{{ member.login }}</h4>
+              <a v-bind:href="member.html_url"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="loading" v-if="loading">
+          <strong>Gathering folks...</strong>
+        </div>
+
+        <div v-if="error" class="error">
+          <h4>Something went wrong</h4>
+          <p class="text-muted">{{ error }}</p>
         </div>
       </div>
     </div>
-  </div>
-    <div class="loading" v-if="loading">
-      <strong>Gathering folks...</strong>
-    </div>
-
-    <div v-if="error" class="error">
-      <h4>Something went wrong</h4>
-      <p class="text-muted">{{ error }}</p>
-    </div>
-  </div>
 </template>
 
 <script>
