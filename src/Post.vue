@@ -108,14 +108,14 @@ export default {
 }
 .inexor_article {
   padding: 10%;
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: rgba(0,0,0,0.7);
   text-align: left;
   border-radius: 5px 5px 0px 0px;
 }
 
 .inexor_comments {
   padding: 10%;
-  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(0, 0, 0, 0.8));
+  background: rgba(0,0,0,0.7);
   border-radius: 0px 0px 5px 5px;
 }
 

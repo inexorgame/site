@@ -5,13 +5,13 @@
       <form class="form-inline">
 
         <label for="date" class="sr-only">Sort by date</label>
-        <select type="select" id="inexor_select" name="date" class="form-control mb-2 mr-sm-2 mb-sm-0" v-on:change="sortPosts(order)" v-model="order">
+        <select id="inexor_select_sort_order" type="select" name="date" class="inexor_search_style form-control mb-2 mr-sm-2 mb-sm-0" v-on:change="sortPosts(order)" v-model="order">
           <option value="desc" selected>Descending</option>
           <option value="asc">Ascending</option>
         </select>
 
-        <input v-validate="'required|min:4'" name="search" class="form-control mb-2 mr-sm-2 mb-sm-0" type="text" v-bind:class="{ 'has-warning': errors.has('search') }" v-model="query" placeholder="Search" @keydown.enter.prevent="filterBlogEntries(order)">
-        <button class="btn btn-outline-success mb-2 mr-sm-2 mb-sm-0" v-bind:disabled="errors.has('search')" v-on:click="filterBlogEntries" type="button">Search</button>
+        <input id="inexor_search_bar" v-validate="'required|min:4'" name="search" class="inexor_search_style form-control mb-2 mr-sm-2 mb-sm-0" type="text" v-bind:class="{ 'has-warning': errors.has('search') }" v-model="query" placeholder="Search" @keydown.enter.prevent="filterBlogEntries(order)">
+        <button id="inexor_search_button" class="inexor_search_style btn btn-outline-success mb-2 mr-sm-2 mb-sm-0" v-bind:disabled="errors.has('search')" v-on:click="filterBlogEntries" type="button">Search</button>
       </form>
     </div>
     </div>
@@ -182,6 +182,28 @@ export default {
 </script>
 
 <style>
+
+.loading {
+  padding:15px;
+}
+
+.inexor_search_style {
+    background: rgba(0,0,0,0.7);
+    color: white;
+}
+
+#inexor_select_sort_order {
+  padding:0px;
+  width:120px;
+}
+
+#inexor_search_bar {
+  width:300px;
+}
+
+#inexor_search_button {
+  border:white 1px solid;
+}
 
 .blog-card {
   height: 10rem;
