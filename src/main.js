@@ -37,6 +37,13 @@ const Post = resolve => {
   })
 }
 
+// Detail page (blog post)
+const Download = resolve => {
+  require.ensure(['./Download.vue'], () => {
+    resolve(require('./Download.vue'))
+  })
+}
+
 // This is kinda hacky but works well without breaking the engine.
 function redirect_to_youtube() {
   location.href = 'https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw'
@@ -46,6 +53,7 @@ const routes = [
   { path: '/home', component: Home , alias: '/' },
   { path: '/people', component: People },
   { path: '/blog', component: Blog },
+  { path: '/download', component: Download },
   { path: '/post/:year/:title', component: Post },
   { path: '/yt', beforeEnter: redirect_to_youtube },
 ]
