@@ -88,4 +88,36 @@
   animation-direction: reverse;
 }
 
+/*
+* styles small displays
+*/
+@media (max-width: 900px) {
+  #inexor_logo {
+    top:300px;
+  }
+
+  #inexor_headline {
+    top:500px;
+    width:300px;
+    left:50%;
+    margin-left:-150px;
+  }
+
+  #inexor_blackbox {
+    top:700px;
+    height:200px;
+  }
+
+  #inexor_ident {
+    top:700px;
+    text-align:center;
+    margin-left:-200px;
+    width:400px;
+  }
+
+  #inexor_downloadbutton {
+    top:800px;
+  }
+}
+
 </style>
