@@ -87,6 +87,9 @@ body {
   background-color: #111;
 }
 
+/*
+* Inexor classes
+*/
 
 .inexor_bg {
     position: fixed;
@@ -130,11 +133,8 @@ body {
 */
 
 .navbar {
-  padding: 1rem 1rem 1rem 1rem;
   right:0;
   top: 0;
-
-  background-color: rgba(11, 11, 11, 0.5);
 }
 
 @media (max-width: 600px) {
@@ -142,17 +142,15 @@ body {
 }
 
 .navbar-nav > li> a {
-  padding-bottom: 0;
-  border-bottom: thick solid rgba(255,255,255, 0);
+  padding:0px;
+  line-height:30px;
 }
 .navbar-nav > li > a:hover {
-  border-bottom: thick solid rgba(255,255,255, 0.5);
   transition: border-bottom, 0.2s;
 }
 .navbar-nav > .active > a,
 .navbar-nav > .active > a:hover,
 .navbar-nav > .active > a:focus {
-  border-bottom: thick solid rgba(255,255,255, 0.5);
 }
 
 /*
