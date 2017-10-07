@@ -190,6 +190,7 @@ export default {
 .inexor_search_style {
     background: rgba(0,0,0,0.7);
     color: white;
+    border:rgba(255,255,255,0.5) 1px solid;
 }
 
 #inexor_select_sort_order {
@@ -202,7 +203,6 @@ export default {
 }
 
 #inexor_search_button {
-  border:white 1px solid;
 }
 
 .blog-card {

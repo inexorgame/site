@@ -45,6 +45,8 @@
   width:100%;
   height:165px;
   background-color:rgba(0,0,0,0.7);
+  border-top:rgba(255,255,255,0.5) 1px solid;
+  border-bottom:rgba(255,255,255,0.5) 1px solid;
 }
 
 #inexor_ident {
