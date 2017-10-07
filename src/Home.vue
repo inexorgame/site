@@ -35,6 +35,7 @@
   top:280px;
   font-size:37.6px;
   margin-left:-440px;
+  text-shadow:1px 1px 4px black;
 }
 
 #inexor_blackbox {
@@ -66,7 +67,6 @@
   margin-left:-100px;
 }
 
-/* The animation code */
 @keyframes inexor_blink {
   0%   {box-shadow:0px 0px 10px 1px white;}
   50%  {box-shadow:none;}

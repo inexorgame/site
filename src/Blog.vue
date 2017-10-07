@@ -5,7 +5,7 @@
       <form class="form-inline">
 
         <label for="date" class="sr-only">Sort by date</label>
-        <select type="select" name="date" class="form-control mb-2 mr-sm-2 mb-sm-0" v-on:change="sortPosts(order)" v-model="order">
+        <select type="select" id="inexor_select" name="date" class="form-control mb-2 mr-sm-2 mb-sm-0" v-on:change="sortPosts(order)" v-model="order">
           <option value="desc" selected>Descending</option>
           <option value="asc">Ascending</option>
         </select>
