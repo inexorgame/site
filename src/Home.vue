@@ -6,7 +6,7 @@
     </div>
     <p class="lead">
       <ul id="inexor_ident">
-        <li>Cooperatively craft levels with the built-in map editor.</li>
+        <li>Cooperatively create levels with the built-in map editor.</li>
         <li>Master manic multiplayer matches.</li>
         <li>Made with love, not money.</li>
         <li>It's free and open source.</li>
