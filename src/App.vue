@@ -230,6 +230,7 @@ footer a:hover {
 */
 
 .card {
+  border:rgba(255,255,255,0.5) 1px solid;
   margin: 10% 10% 10% 0px;
   padding:10px;
   background-color:rgba(0,0,0,0.7);
@@ -262,7 +263,7 @@ export default {
       toggle_bg: true,
 
       bg_1: {
-        'background-image': "url('/src/assets/background/laucin.jpg')"
+        'background-image': "url('/src/assets/background_blur/laucin.jpg')"
       },
       bg_2: {
       },
@@ -296,7 +297,7 @@ export default {
   methods: {
      loopThroughBackgroundImages: function loopThroughBackgroundImages() {
        let vm = this;
-       vm.$set( ( vm.toggle_bg ? vm.bg_1: vm.bg_2 ), 'background-image', 'url(/src/assets/background/' + vm.bg_images[vm.i] + ')' ) ;
+       vm.$set( ( vm.toggle_bg ? vm.bg_1: vm.bg_2 ), 'background-image', 'url(/src/assets/background_blur/' + vm.bg_images[vm.i] + ')' ) ;
        vm.toggle_bg = !vm.toggle_bg;
 
       vm.i++;
