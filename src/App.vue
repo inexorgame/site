@@ -15,8 +15,8 @@
               <ul class="navbar-nav">
                 <li class="nav-item"><router-link class="nav-link" to="/home">Home</router-link></li>
                 <li class="nav-item"><router-link class="nav-link" to="/blog">Blog</router-link></li>
-                <li class="nav-item"><a href="https://github.com/inexorgame/code/wiki" class="nav-link">Wiki</a></li> <!-- We need to change that to a way to get the wiki directly from the website-->
                 <li class="nav-item"><router-link class="nav-link" to="/people">People</router-link></li>
+                <li class="nav-item"><a href="https://github.com/inexorgame/code/wiki" target="_blank" class="nav-link">Wiki</a></li> <!-- We need to change that to a way to get the wiki directly from the website-->
               </ul>
             </div>
           </nav>
@@ -139,7 +139,7 @@ body {
 
 .navbar {
   padding:0;
-  border-top:solid 5px rgba(74, 74, 74, 0.5);
+  border-top:solid 5px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-nav > li > a {
@@ -153,7 +153,7 @@ body {
 .navbar-nav > .active > a:hover,
 .navbar-nav > .active > a:focus {
   height:60px;
-  background-color:rgba(74, 74, 74, 0.5);
+  background-color:rgba(0, 0, 0, 0.5);
 }
 
 /*
