@@ -1,48 +1,50 @@
 <template>
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-      <form class="form-inline">
+  <div class="inner cover">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+        <form class="form-inline">
 
-        <label for="date" class="sr-only">Sort by date</label>
-        <select id="inexor_select_sort_order" type="select" name="date" class="inexor_search_style form-control mb-2 mr-sm-2 mb-sm-0" v-on:change="sortPosts(order)" v-model="order">
-          <option value="desc" selected>Descending</option>
-          <option value="asc">Ascending</option>
-        </select>
+          <label for="date" class="sr-only">Sort by date</label>
+          <select id="inexor_select_sort_order" type="select" name="date" class="inexor_search_style form-control mb-2 mr-sm-2 mb-sm-0" v-on:change="sortPosts(order)" v-model="order">
+            <option value="desc" selected>Descending</option>
+            <option value="asc">Ascending</option>
+          </select>
 
-        <input id="inexor_search_bar" v-validate="'required|min:4'" name="search" class="inexor_search_style form-control mb-2 mr-sm-2 mb-sm-0" type="text" v-bind:class="{ 'has-warning': errors.has('search') }" v-model="query" placeholder="Search" @keydown.enter.prevent="filterBlogEntries(order)">
-        <button id="inexor_search_button" class="inexor_search_style btn btn-outline-success mb-2 mr-sm-2 mb-sm-0" v-bind:disabled="errors.has('search')" v-on:click="filterBlogEntries" type="button">Search</button>
-      </form>
-    </div>
-    </div>
-
-    <div class="row">
-      <div v-if="notfound" class="col-12">
-        <div class="card card-block">
-          <div class="card-title">
-            <h4>We couldn't find the article you are looking for..</h4>
-          </div>
-          <div class="card-text">
-            <img src="/src/assets/sitting_ogro.jpg" style="border-radius: 5px;"/>
-          </div>
-        </div>
+          <input id="inexor_search_bar" v-validate="'required|min:4'" name="search" class="inexor_search_style form-control mb-2 mr-sm-2 mb-sm-0" type="text" v-bind:class="{ 'has-warning': errors.has('search') }" v-model="query" placeholder="Search" @keydown.enter.prevent="filterBlogEntries(order)">
+          <button id="inexor_search_button" class="inexor_search_style btn btn-outline-success mb-2 mr-sm-2 mb-sm-0" v-bind:disabled="errors.has('search')" v-on:click="filterBlogEntries" type="button">Search</button>
+        </form>
       </div>
-      <div v-else v-for="post in filteredPosts" class="col-lg-4 col-md-6">
-        <div class="card blog-card">
-          <div class="card-block">
-            <h4 class="card-title">{{ post.display_name }}</h4>
-            <p class="card-text text-muted">written on {{ post.day }}.{{ post.month }}.{{ post.year }}</p>
-            <router-link :to="post.post_path">Read more</router-link>
+      </div>
+
+      <div class="row">
+        <div v-if="notfound" class="col-12">
+          <div class="card card-block">
+            <div class="card-title">
+              <h4>We couldn't find the article you are looking for..</h4>
+            </div>
+            <div class="card-text">
+              <img src="/src/assets/sitting_ogro.jpg" style="border-radius: 5px;"/>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="loading" v-if="loading">
-        <h4>Writing interesting articles...</h4>
-      </div>
+        <div v-else v-for="post in filteredPosts" class="col-lg-4 col-md-6">
+          <div class="card blog-card">
+            <div class="card-block">
+              <h4 class="card-title">{{ post.display_name }}</h4>
+              <p class="card-text text-muted">written on {{ post.day }}.{{ post.month }}.{{ post.year }}</p>
+              <router-link :to="post.post_path">Read more</router-link>
+            </div>
+          </div>
+        </div>
+        <div class="loading" v-if="loading">
+          <h4>Writing interesting articles...</h4>
+        </div>
 
-      <div v-if="error">
-          <h4>Something went wrong</h4>
-          <p class="text-muted">{{ error }}</p>
+        <div v-if="error">
+            <h4>Something went wrong</h4>
+            <p class="text-muted">{{ error }}</p>
+        </div>
       </div>
     </div>
   </div>
