@@ -57,7 +57,7 @@ export default {
 
 <style>
 .people {
-  background-color: rgba(50, 50, 50, 0.5);
+  background-color: rgba(0,0,0, 0.5);
   border-color: transparent;
   border-radius: 100px 100px 20px 20px;
   margin: 50px;
