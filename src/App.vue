@@ -132,25 +132,26 @@ body {
 * Header
 */
 
-.navbar {
-  right:0;
-  top: 0;
-}
-
 @media (max-width: 600px) {
 
 }
 
-.navbar-nav > li> a {
-  padding:0px;
-  line-height:30px;
+.navbar {
+  padding:0;
 }
-.navbar-nav > li > a:hover {
-  transition: border-bottom, 0.2s;
+
+.navbar-nav > li > a {
+  line-height:60px;
+  padding:0 10px 0 10px;
+  min-width:100px;
 }
+
+.navbar-nav > li > a:hover,
 .navbar-nav > .active > a,
 .navbar-nav > .active > a:hover,
 .navbar-nav > .active > a:focus {
+  height:60px;
+  background-color:rgba(165,165,165,0.5);
 }
 
 /*
