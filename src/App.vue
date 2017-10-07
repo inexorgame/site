@@ -11,7 +11,7 @@
       </transition>
         <header>
           <nav class="navbar navbar-expand-md navbar-inverse fixed-top navbar-expand-xl">
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse">
               <ul class="navbar-nav">
                 <li class="nav-item"><router-link class="nav-link" to="/home">Home</router-link></li>
                 <li class="nav-item"><router-link class="nav-link" to="/blog">Blog</router-link></li>
