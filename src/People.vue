@@ -100,4 +100,8 @@ export default {
 .cardblock h4 {
   text-align: center;
 }
+
+.card-title {
+  margin-top:20px;
+}
 </style>
