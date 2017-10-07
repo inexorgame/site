@@ -138,6 +138,7 @@ body {
 
 .navbar {
   padding:0;
+  border-top:solid 5px rgba(74, 74, 74, 0.5);
 }
 
 .navbar-nav > li > a {
@@ -151,7 +152,7 @@ body {
 .navbar-nav > .active > a:hover,
 .navbar-nav > .active > a:focus {
   height:60px;
-  background-color:rgba(165,165,165,0.5);
+  background-color:rgba(74, 74, 74, 0.5);
 }
 
 /*
