@@ -64,7 +64,7 @@ router.afterEach((to, from) => {
   let to_page = to.path.substr(1,1).toUpperCase() + to.path.substr(2)
 
   if (to.path === "/home" ||  to.path === "/") {
-    document.title = "Inexor | Stays sauer, becomes better."
+    document.title = "Inexor"
   }
   else if (to_page.substr(0, 4) !== "Post") {
     document.title = `Inexor | ${to_page}`;
