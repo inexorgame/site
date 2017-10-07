@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
           <div class="col col-md-8">
             <img id="inexor_logo" class="img-fluid" src="src/assets/logo_rendered/inexor_logo_400.png">
-            <h1 class="cover-heading" id="inexor_headline">Fast classic gameplay crossed with modern technology.</h1>
+            <h1 class="cover-heading" id="inexor_headline">Get it!</h1>
           </div>
         </div>
       </div>
@@ -13,30 +13,31 @@
 
     <div id="blackbox">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col col-md-8">
-            <ul>
-              <li>Cooperatively create levels with the built-in map editor.</li>
-              <li>Master manic multiplayer matches.</li>
-              <li>Made with love, not money.</li>
-              <li>It's free and open source.</li>
-            </ul>
+        <div class="inexor_padding d-flex justify-content-center">
+          <div class="col col-md-4">
+            <img class="inexor_dl_icon" src="src/assets/os_icons/mac_download2.png" alt="Download for Mac OS"><br>
+            We are working on <u><a href="https://github.com/inexorgame/inexor-core/issues/385" target="_blank">MacOS support!</a></u>
+          </div>
+          <div class="col col-md-4">
+            <a href="#download" onclick="alert('Hello World!')"><img class="inexor_dl_icon" src="src/assets/os_icons/windows_download.png" alt="Download for Windows"><br>
+            Download for Windows</a>
+          </div>
+          <div class="col col-md-4">
+            <a href="#download" onclick="alert('Hello World!')"><img class="inexor_dl_icon" src="src/assets/os_icons/linux_download.png" alt="Download for Linux"><br>
+            Download for Linux</a>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col col-md-8">
-          <a href="https://github.com/inexorgame/code/wiki/Install-Inexor-in-five-minutes" id="inexor_button" class="btn btn-lg btn-secondary">Download</a>
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 
 <style>
+
+.inexor_padding {
+  padding:15px;
+}
 
 #inexor_headline {
   margin-top: 30px;
