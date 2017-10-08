@@ -29,7 +29,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col col-md-8">
-          <a href="https://github.com/inexorgame/code/wiki/Install-Inexor-in-five-minutes" id="inexor_button" class="btn btn-lg btn-secondary">Download</a>
+          <a href="/download" id="inexor_button" class="btn btn-lg btn-secondary">Download</a>
         </div>
       </div>
     </div>
