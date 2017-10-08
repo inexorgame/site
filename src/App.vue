@@ -3,30 +3,35 @@
     <div class="site-wrapper-inner">
       <div class="cover-container">
 
-      <transition name="fade" mode="in-out">
-        <div class="inexor_bg" v-if="!toggle_bg" v-bind:style='bg_inner' key="1">
-        </div>
-        <div class="inexor_bg" v-else v-bind:style='bg_outer' key="2">
-        </div>
-      </transition>
-        <header>
-          <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top navbar-toggleable-xl">
-            <div class="navbar-collapse collapse">
-              <ul class="navbar-nav">
-                <li class="nav-item"><router-link class="nav-link" to="/home">Home</router-link></li>
-                <li class="nav-item"><router-link class="nav-link" to="/blog">Blog</router-link></li>
-                <li class="nav-item"><a href="https://github.com/inexorgame/code/wiki" class="nav-link">Wiki</a></li> <!-- We need to change that to a way to get the wiki directly from the website-->
-                <li class="nav-item"><router-link class="nav-link" to="/people">People</router-link></li>
-              </ul>
-            </div>
-          </nav>
-        </header>
-        <div class="inner cover">
-          <router-view></router-view>
-        </div>
+        <transition name="fade" mode="in-out">
+          <div class="inexor_bg" v-if="!toggle_bg" v-bind:style='bg_1' key="1">
+          </div>
+          <div class="inexor_bg" v-else v-bind:style='bg_2' key="2">
+          </div>
+        </transition>
 
+        <nav class="navbar navbar-expand-md navbar-inverse fixed-top navbar-expand-xl">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            &#9776;
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="navbar-nav">
+              <li class="nav-item"><router-link class="nav-link" to="/home">Home</router-link></li>
+              <li class="nav-item"><router-link class="nav-link" to="/download">Download</router-link></li>
+              <li class="nav-item"><router-link class="nav-link" to="/blog">Blog</router-link></li>
+              <li class="nav-item"><router-link class="nav-link" to="/people">People</router-link></li>
+              <li class="nav-item"><a href="https://github.com/inexorgame/inexor-core/wiki" target="_blank" class="nav-link">Wiki</a></li> <!-- We need to change that to a way to get the wiki directly from the website-->
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <router-view></router-view>
+
+      <div class="cover-container">
         <footer>
-          <div class="container-fluid">
+          <div class="container">
             <div class="row">
               <div class="col-md-1 col-3 col-centered"><a href="https://github.com/inexorgame/" title="GitHub"><i class="fa fa-github fa-2x" area-hidden="true"></i></a></div>
               <div class="col-md-1 col-3 col-centered"><a href="https://www.facebook.com/inexorgame" title="Facebook"><i class="fa fa-facebook fa-2x" area-hidden="true"></i></a></div>
@@ -88,24 +93,29 @@ body {
 }
 
 body {
+  overflow-y:scroll;
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
   background-color: #111;
 }
 
+/*
+* Inexor classes
+*/
 
 .inexor_bg {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
-    top: 0;
-    left: 0;
-    z-index:-1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index:-1;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -140,36 +150,45 @@ body {
   padding: 1.5rem 1rem 1rem 1rem;
   position: fixed;
   left: 0%;
-=======
-.navbar {
-  padding: 1rem 1rem 1rem 1rem;
->>>>>>> 8fe84cecd559d24c5357717432644c39462e6086
   right:0;
   top: 0;
+=======
+>>>>>>> 3aee4319b53bc6e00a2f960ddec2e83c80a5a60e
 
-  background-color: rgba(11, 11, 11, 0.5);
+.navbar-toggler {
+  color: #FFF;
+  width: 100%;
+  padding: 10px
 }
 
 <<<<<<< HEAD
 .navbar-nav > li> a {
-=======
-@media (max-width: 600px) {
-
-}
-
-.navbar-nav > li> a {
-  padding-bottom: 0;
->>>>>>> 8fe84cecd559d24c5357717432644c39462e6086
   border-bottom: thick solid rgba(255,255,255, 0);
+=======
+.navbar {
+  padding:0;
+  border-top:solid 5px rgba(0, 0, 0, 0.7);
 }
-.navbar-nav > li > a:hover {
-  border-bottom: thick solid rgba(255,255,255, 0.5);
-  transition: border-bottom, 0.2s;
+@media (max-width: 767px) {
+  .navbar {
+    border-top: none;
+    background: rgba(0, 0, 0, 0.7);
+  }
+>>>>>>> 3aee4319b53bc6e00a2f960ddec2e83c80a5a60e
 }
+
+.navbar-nav > li > a {
+  line-height:60px;
+  padding:0 10px 0 10px;
+  min-width:100px;
+}
+
+.navbar-nav > li > a:hover,
 .navbar-nav > .active > a,
 .navbar-nav > .active > a:hover,
 .navbar-nav > .active > a:focus {
-  border-bottom: thick solid rgba(255,255,255, 0.5);
+  height:60px;
+  background-color:rgba(0, 0, 0, 0.7);
 }
 
 /*
@@ -178,6 +197,9 @@ body {
 
 .cover {
   padding: 8rem 20px;
+}
+.cover-top {
+  padding: 8rem 20px 0 20px;
 }
 
 .cover .btn-lg {
@@ -242,8 +264,10 @@ footer a:hover {
 */
 
 .card {
-  margin: 50px;
-  background-color:rgba(50, 50, 50, 0.8);
+  border:rgba(255,255,255,0.5) 1px solid;
+  margin: 10% 10% 10% 0px;
+  padding:10px;
+  background-color:rgba(0,0,0,0.7);
   border-radius: 5px;
 }
 
@@ -255,10 +279,10 @@ footer a:hover {
   color: #aaa !important;
 }
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 4s;
+.fade-enter-active {
+  transition: opacity 2s;
 }
-.fade-enter, .fade-leave-to  {
+.fade-enter {
   opacity: 0;
 }
 
@@ -272,51 +296,60 @@ export default {
     return {
       toggle_bg: true,
 
-      bg_inner: {
-        'background-image': "url('/src/assets/background/laucin.jpg') no-repeat center center fixed"
+      bg_1: {
+        'background-image': "url('/src/assets/background_blur/laucin.jpg')"
       },
-      bg_outer: {
-        'background-image': "url('/src/assets/background/laucin.jpg')"
+      bg_2: {
       },
 
       i: 0,
       bg_images: [
         "dust6.jpg",
+        "laucin.jpg",
         "haze.jpg",
         "averas.jpg",
         "cartel.jpg",
         "lager.jpg",
         "legacy.jpg",
-        "laucin.jpg",
         "pandora.jpg",
         "star.jpg",
       ]
     }
   },
   created() {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY < 50) {
+        $('nav').fadeIn();
+      }
+      else  {
+        $('nav').fadeOut();
+      }
+    });
+
     this.loopThroughBackgroundImages();
   },
   methods: {
      loopThroughBackgroundImages: function loopThroughBackgroundImages() {
        let vm = this;
-       if(vm.i > vm.bg_images.length -1) vm.i = 0;
-
-       vm.$set( ( (vm.i % 2 === 0) ? vm.bg_inner : vm.bg_outer ), 'background-image', 'url(src/assets/background/' + vm.bg_images[vm.i] + ')' ) ;
+       vm.$set( ( vm.toggle_bg ? vm.bg_1: vm.bg_2 ), 'background-image', 'url(/src/assets/background_blur/' + vm.bg_images[vm.i] + ')' ) ;
        vm.toggle_bg = !vm.toggle_bg;
 
       vm.i++;
-      setTimeout(vm.loopThroughBackgroundImages, 8000);
-    }
+      if(vm.i > vm.bg_images.length -1) vm.i = 0;
+
+      /*
+        make sure next image is loaded before cycling to it, otherwise cycle when it's done loading.
+      */
+      let next_img = new Image();
+      let t0 = performance.now();
+      next_img.src = '/src/assets/background/' + vm.bg_images[vm.i];
+
+      next_img.onload = function() {
+        let t1 = performance.now()
+        setTimeout(vm.loopThroughBackgroundImages, Math.max(0, 5000 - (t1 - t0)) );
+      }
+    },
   }
 }
-
-window.addEventListener('scroll', function() {
-  if (window.scrollY < 50) {
-    $('nav').fadeIn();
-  }
-  else  {
-    $('nav').fadeOut();
-  }
-});
 
 </script>
