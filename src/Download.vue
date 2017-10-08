@@ -33,7 +33,6 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col col-md-8">
-          <h1 class="cover-heading" id="inexor_headline">Want to do it yourself?</h1><br>
           <h3><a href="https://www.github.com/inexorgame" target="_blank">Use he source, Luke!</a></h3>
         </div>
       </div>
