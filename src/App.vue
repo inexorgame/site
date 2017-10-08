@@ -346,7 +346,7 @@ export default {
 
       next_img.onload = function() {
         let t1 = performance.now()
-        setTimeout(vm.loopThroughBackgroundImages, Math.max(0, 5000 - (t1 - t0)) );
+        // setTimeout(vm.loopThroughBackgroundImages, Math.max(0, 5000 - (t1 - t0)) );
       }
     },
   }
