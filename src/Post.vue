@@ -105,7 +105,11 @@ export default {
 
 <style>
 
-body {
+.inexor_article ul {
+  margin-left:20px;
+}
+
+.inexor_article p  {
   font-size:1.2rem;
 }
 
@@ -146,7 +150,6 @@ body {
 
 ul {
   padding: 0;
-  margin-left:20px;
 }
 /*
 * Credit goes to W3C
