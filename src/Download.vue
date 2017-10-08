@@ -6,7 +6,7 @@
           <div class="col col-md-8">
             <img id="inexor_logo" class="img-fluid" src="src/assets/logo_rendered/inexor_logo_400.png">
             <h1 class="cover-heading" id="inexor_headline">Get it!</h1>
-            <h4><a href="https://www.github.com/inexorgame" target="_blank">Or use he source, Luke!</a></h4>
+            <h4><a href="https://www.github.com/inexorgame" target="_blank">Or use the source, Luke!</a></h4>
           </div>
         </div>
       </div>
@@ -17,7 +17,7 @@
         <div class="inexor_padding d-flex justify-content-center">
           <div class="col col-md-4">
             <img class="inexor_dl_icon" src="src/assets/os_icons/mac_download2.png" alt="Download for Mac OS"><br>
-            We are working on <u><a href="https://github.com/inexorgame/inexor-core/issues/385" target="_blank">MacOS support!</a></u>
+            We are working on <u><a href="https://github.com/inexorgame/inexor-core/issues/385" target="_blank">macOS support!</a></u>
           </div>
           <div class="col col-md-4">
             <a href="#download" onclick="alert('Hello World!')"><img class="inexor_dl_icon" src="src/assets/os_icons/windows_download.png" alt="Download for Windows"><br>
