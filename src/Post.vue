@@ -105,9 +105,28 @@ export default {
 
 <style>
 
+body {
+  font-size:1.2rem;
+}
+
 .inexor_article h1, .inexor_article > p {
   text-align: center;
+  margin:30px 0px 30px 0px;
 }
+
+.inexor_article a {
+  color:rgb(0, 112, 222);
+}
+
+.inexor_article h2, .inexor_article h3, .inexor_article h4, .inexor_article h5, .inexor_article h6 {
+  margin:30px 0px 30px 0px;
+}
+
+.inexor_article code {
+  text-shadow:none;
+  color:black;
+}
+
 .inexor_article {
   padding: 10%;
   background-color: rgba(0,0,0,0.7);
@@ -127,7 +146,7 @@ export default {
 
 ul {
   padding: 0;
-  list-style-type: none;
+  margin-left:20px;
 }
 /*
 * Credit goes to W3C
