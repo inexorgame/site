@@ -6,6 +6,7 @@
           <div class="col col-md-8">
             <img id="inexor_logo" class="img-fluid" src="src/assets/logo_rendered/inexor_logo_400.png">
             <h1 class="cover-heading" id="inexor_headline">Get it!</h1>
+            <h4><a href="https://www.github.com/inexorgame" target="_blank">Or use he source, Luke!</a></h4>
           </div>
         </div>
       </div>
@@ -29,15 +30,6 @@
         </div>
       </div>
     </div>
-
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col col-md-8">
-          <h3><a href="https://www.github.com/inexorgame" target="_blank">Use he source, Luke!</a></h3>
-        </div>
-      </div>
-    </div>
-
   </div>
 </template>
 
