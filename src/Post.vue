@@ -1,38 +1,36 @@
 <template>
-  <div class="inner cover">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="inexor_article">
-            <h1>{{ postMeta.title }}</h1>
-            <p class="text-muted">written by {{ postMeta.author }} on {{ postMeta.date }}</p>
-            <div class="loading" v-if="loading">
-              <strong>Drinking enough coffee until release...</strong>
-            </div>
-            <div v-html="post">
-            </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="inexor-article">
+          <h1>{{ postMeta.title }}</h1>
+          <p class="text-muted">written by {{ postMeta.author }} on {{ postMeta.date }}</p>
+          <div class="loading" v-if="loading">
+            <strong>Drinking enough coffee until release...</strong>
+          </div>
+          <div v-html="post">
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="inexor_comments">
-            <h4> Toggle Comments </h4>
-            <label class="switch">
-              <input type="checkbox" name="switch" v-on:change="commentsEnabled = !commentsEnabled">
-              <div class="slider round"></div>
-            </label>
-            <div v-if="!(error === 'OK')" class="error">
-              {{ error }}
-            </div>
-            <div v-if="commentsEnabled">
-              <vue-disqus shortname="inexorgame"></vue-disqus>
-            </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="inexor-comments">
+          <h4> Toggle Comments </h4>
+          <label class="switch">
+            <input type="checkbox" name="switch" v-on:change="commentsEnabled = !commentsEnabled">
+            <div class="slider round"></div>
+          </label>
+          <div v-if="!(error === 'OK')" class="error">
+            {{ error }}
           </div>
-
+          <div v-if="commentsEnabled">
+            <vue-disqus shortname="inexorgame"></vue-disqus>
+          </div>
         </div>
 
       </div>
+
     </div>
   </div>
 </div>
@@ -105,51 +103,29 @@ export default {
 
 <style>
 
-.inexor_article ul {
-  margin-left:20px;
-}
-
-.inexor_article p  {
-  font-size:1.2rem;
-}
-
-.inexor_article h1, .inexor_article > p {
+.inexor-article h1, .inexor-article > p {
   text-align: center;
-  margin:30px 0px 30px 0px;
 }
-
-.inexor_article a {
-  color:rgb(0, 112, 222);
-}
-
-.inexor_article h2, .inexor_article h3, .inexor_article h4, .inexor_article h5, .inexor_article h6 {
-  margin:30px 0px 30px 0px;
-}
-
-.inexor_article code {
-  text-shadow:none;
-  color:black;
-}
-
-.inexor_article {
-  padding: 10%;
-  background-color: rgba(0,0,0,0.7);
+.inexor-article {
+  padding: 50px;
+  background-color: rgba(50, 50, 50, 0.5);
   text-align: left;
   border-radius: 5px 5px 0px 0px;
 }
 
-.inexor_comments {
-  padding: 10%;
-  background: rgba(0,0,0,0.7);
+.inexor-comments {
+  padding: 50px;
+  background: linear-gradient(rgba(50, 50, 50, 0.5), rgba(0, 0, 0, 0.8));
   border-radius: 0px 0px 5px 5px;
 }
 
-.inexor_comments > h4 {
+.inexor-comments > h4 {
   text-align: center;
 }
 
 ul {
   padding: 0;
+  list-style-type: none;
 }
 /*
 * Credit goes to W3C
