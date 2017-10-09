@@ -1,31 +1,27 @@
-module.exports = function(config) {
-  config.set({
-    // ... normal karma configuration
-    files: [
-      // all files ending in "_test"
-      {pattern: 'test/*_test.js', watched: false},
-      {pattern: 'test/**/*_test.js', watched: false}
-      // each file acts as entry point for the webpack configuration
-    ],
+// we can just use the exact same webpack config by requiring it
+// however, remember to delete the original entry since we don't
+// need it during tests
+var webpackConfig = require('./webpack.config.js')
+delete webpackConfig.entry
 
-    preprocessors: {
-      // add webpack as preprocessor
-      'test/*_test.js': ['webpack'],
-      'test/**/*_test.js': ['webpack']
-    },
-
-    webpack: {
-      // karma watches the test entry points
-      // (you don't need to specify the entry option)
-      // webpack watches dependencies
-
-      // webpack configuration
-    },
-
-    webpackMiddleware: {
-      // webpack-dev-middleware configuration
-      // i. e.
-      stats: 'errors-only'
-    }
-  });
-};
+// karma.conf.js
+module.exports = function (config) {
+    config.set({
+        browsers: ['Chrome'], // PhantomJS fails with many desired ES6 features
+        frameworks: ['jasmine'],
+        reporters: ['verbose'],
+        // this is the entry file for all our tests.
+        files: ['test/index.js'],
+        // we will pass the entry file to webpack for bundling.
+        preprocessors: {
+            'test/index.js': ['webpack']
+        },
+        // use the webpack config
+        webpack: webpackConfig,
+        // avoid walls of useless text
+        webpackMiddleware: {
+            noInfo: true
+        },
+        singleRun: true
+    })
+}

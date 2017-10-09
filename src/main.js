@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import VeeValidate from 'vee-validate'
 import App from './App.vue'
+import 'bootstrap'
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
@@ -36,6 +37,13 @@ const Post = resolve => {
   })
 }
 
+// Detail page (blog post)
+const Download = resolve => {
+  require.ensure(['./Download.vue'], () => {
+    resolve(require('./Download.vue'))
+  })
+}
+
 // This is kinda hacky but works well without breaking the engine.
 function redirect_to_youtube() {
   location.href = 'https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw'
@@ -45,6 +53,7 @@ const routes = [
   { path: '/home', component: Home , alias: '/' },
   { path: '/people', component: People },
   { path: '/blog', component: Blog },
+  { path: '/download', component: Download },
   { path: '/post/:year/:title', component: Post },
   { path: '/yt', beforeEnter: redirect_to_youtube },
 ]
@@ -63,7 +72,7 @@ router.afterEach((to, from) => {
   let to_page = to.path.substr(1,1).toUpperCase() + to.path.substr(2)
 
   if (to.path === "/home" ||  to.path === "/") {
-    document.title = "Inexor | Stays sauer, becomes better."
+    document.title = "Inexor"
   }
   else if (to_page.substr(0, 4) !== "Post") {
     document.title = `Inexor | ${to_page}`;
