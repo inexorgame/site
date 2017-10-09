@@ -75,13 +75,6 @@ a:hover {
 * Base structure
 */
 
-<<<<<<< HEAD
-*, *:before, *:after { /* https://css-tricks.com/box-sizing/ */
-  box-sizing: border-box;
-}
-
-=======
->>>>>>> 8fe84cecd559d24c5357717432644c39462e6086
 html,
 body {
   height: 100vh; /* https://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome/25020295#25020295 */
@@ -135,31 +128,28 @@ body {
 * Header
 */
 
-<<<<<<< HEAD
 .navbar-nav {
   padding: 1.5rem 1rem 1rem 1rem;
   position: fixed;
   left: 0%;
-=======
-.navbar {
-  padding: 1rem 1rem 1rem 1rem;
->>>>>>> 8fe84cecd559d24c5357717432644c39462e6086
-  right:0;
-  top: 0;
-
   background-color: rgba(11, 11, 11, 0.5);
 }
 
-<<<<<<< HEAD
-.navbar-nav > li> a {
-=======
-@media (max-width: 600px) {
+.navbar {
+  padding:0;
+  border-top:solid 5px rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 767px) {
+  .navbar {
+    border-top: none;
+    background: rgba(0, 0, 0, 0.7);
+  }
+}
 
 }
 
 .navbar-nav > li> a {
   padding-bottom: 0;
->>>>>>> 8fe84cecd559d24c5357717432644c39462e6086
   border-bottom: thick solid rgba(255,255,255, 0);
 }
 .navbar-nav > li > a:hover {
