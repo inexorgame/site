@@ -103,7 +103,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 .inexor_article ul {
   margin-left:20px;

@@ -36,7 +36,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 
 #inexor_headline {
   margin-top: 30px;

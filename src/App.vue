@@ -29,7 +29,7 @@
 
       <router-view></router-view>
 
-      <div class="cover-container">
+      <div class="cover-container footer-wrapper">
         <footer>
           <div class="container">
             <div class="row">
@@ -122,11 +122,28 @@ body {
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
+  top: 0;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 65px; /* height of the footer */
+}
+
+@media (max-width: 767px) {
+  .site-wrapper-inner {
+    padding-bottom: 130px; /* height of the footer */
+  }
 }
 
 .cover-container {
   margin-right: auto;
   margin-left: auto;
+  position: relative;
+}
+
+.footer-wrapper {
+  bottom: 0;
+  width: 100%;
+  position: absolute;
 }
 
 /* Padding for spacing */

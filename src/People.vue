@@ -57,7 +57,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .people {
   background-color: rgba(0,0,0, 0.5);
   border-color: transparent;
