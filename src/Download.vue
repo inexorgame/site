@@ -14,7 +14,7 @@
 
     <div id="blackbox">
       <div class="container">
-        <div class="inexor_padding d-flex justify-content-center">
+        <div class="inexor_padding d-flex justify-content-center row">
           <div class="col col-md-4">
             <img class="inexor_dl_icon" src="src/assets/os_icons/mac_download2.png" alt="Download for Mac OS"><br>
             We are working on <u><a href="https://github.com/inexorgame/inexor-core/issues/385" target="_blank">macOS support!</a></u>
