@@ -33,7 +33,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 
 .inexor_padding {
   padding:15px;
