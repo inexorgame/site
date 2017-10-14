@@ -44,9 +44,10 @@ const Download = resolve => {
   })
 }
 
-// This is kinda hacky but works well without breaking the engine.
-function redirect_to_youtube() {
-  location.href = 'https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw'
+const redirect = url => {
+  return () => {
+    window.location.href = url;
+  }
 }
 
 const routes = [
@@ -55,7 +56,7 @@ const routes = [
   { path: '/blog', component: Blog },
   { path: '/download', component: Download },
   { path: '/post/:year/:title', component: Post },
-  { path: '/yt', beforeEnter: redirect_to_youtube },
+  { path: '/yt', beforeEnter: redirect('https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw') },
 ]
 
 let routerConfig = {
