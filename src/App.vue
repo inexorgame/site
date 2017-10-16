@@ -252,6 +252,8 @@ footer a:hover {
 @media (min-width: 82em) {
   .cover-container {
     width: 80rem;
+    left: calc( 50% - 40rem );
+    right: calc( 50% - 40rem );
   }
 }
 
