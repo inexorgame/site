@@ -7,7 +7,7 @@ delete webpackConfig.entry
 // karma.conf.js
 module.exports = function (config) {
     config.set({
-        browsers: ['Chrome', 'ChromeHeadless'],
+        browsers: ['ChromeHeadless'],
         frameworks: ['jasmine'],
         reporters: ['verbose'],
         // this is the entry file for all our tests.

@@ -60,15 +60,12 @@ const defaultDownloadLinks = {
 const getLatestDownloadLinks = () => {
   return Vue.http
     .get(`https://api.github.com/repos/inexorgame/inexor-core/releases`)
-    .then(
-      response => {
+    .then((response) => {
         const { tag_name } = response.body[0];
         defaultDownloadLinks.windows_link = `https://github.com/inexorgame/inexor-core/releases/download/${tag_name}/Inexor-${tag_name}-win64.zip`;
         defaultDownloadLinks.linux_link = `https://github.com/inexorgame/inexor-core/releases/download/${tag_name}/Inexor-${tag_name}-Linux.zip`;
         this.loaded = true;
       },
-      response => {
-      }
     );
 };
 
