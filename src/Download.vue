@@ -20,11 +20,11 @@
             We are working on <u><a href="https://github.com/inexorgame/inexor-core/issues/385" target="_blank">macOS support!</a></u>
           </div>
           <div class="col col-md-4">
-            <a href="#download" onclick="alert('Hello World!')"><img class="inexor_dl_icon" src="src/assets/os_icons/windows_download.png" alt="Download for Windows"><br>
+            <a :href="windows_link"><img class="inexor_dl_icon" src="src/assets/os_icons/windows_download.png" alt="Download for Windows"><br>
             Download for Windows</a>
           </div>
           <div class="col col-md-4">
-            <a href="#download" onclick="alert('Hello World!')"><img class="inexor_dl_icon" src="src/assets/os_icons/linux_download.png" alt="Download for Linux"><br>
+            <a :href="linux_link"><img class="inexor_dl_icon" src="src/assets/os_icons/linux_download.png" alt="Download for Linux"><br>
             Download for Linux</a>
           </div>
         </div>
@@ -32,6 +32,11 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  props:["windows_link", "linux_link"]
+}
+</script>
 
 <style scoped>
 
