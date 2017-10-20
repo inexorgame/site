@@ -1,5 +1,6 @@
 # site
 
+[![Build Status](https://travis-ci.org/inexorgame/site.svg?branch=master)](https://travis-ci.org/inexorgame/site)
 > The inexor-website
 
 ## Build Setup
