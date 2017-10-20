@@ -283,6 +283,9 @@ footer a:hover {
 .fade-enter {
   opacity: 0;
 }
+.download-link{
+  margin-top: -1.6em
+}
 
 </style>
 

@@ -50,14 +50,48 @@ const redirect = url => {
   }
 }
 
+const defaultDownloadLinks = {
+  linux_link:
+    "https://github.com/inexorgame/inexor-core/releases/download/0.8.10-alpha/Inexor-0.8.10-alpha-Linux.zip",
+  windows_link:
+    "https://github.com/inexorgame/inexor-core/releases/download/0.8.10-alpha/Inexor-0.8.10-alpha-win64.zip"
+}
+
+const getLatestDownloadLinks = () => {
+  return Vue.http
+    .get(`https://api.github.com/repos/inexorgame/inexor-core/releases`)
+    .then(
+      response => {
+        const { tag_name } = response.body[0];
+        defaultDownloadLinks.windows_link = `https://github.com/inexorgame/inexor-core/releases/download/${tag_name}/Inexor-${tag_name}-win64.zip`;
+        defaultDownloadLinks.linux_link = `https://github.com/inexorgame/inexor-core/releases/download/${tag_name}/Inexor-${tag_name}-Linux.zip`;
+        this.loaded = true;
+      },
+      response => {
+      }
+    );
+};
+
+getLatestDownloadLinks()
+
 const routes = [
-  { path: '/home', component: Home , alias: '/' },
-  { path: '/people', component: People },
-  { path: '/blog', component: Blog },
-  { path: '/download', component: Download },
-  { path: '/post/:year/:title', component: Post },
-  { path: '/yt', beforeEnter: redirect('https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw') },
-]
+  {
+    path: "/home",
+    component: Home,
+    alias: "/",
+    props: defaultDownloadLinks
+  },
+  { path: "/people", component: People },
+  { path: "/blog", component: Blog },
+  { path: "/download", component: Download, props: defaultDownloadLinks },
+  { path: "/post/:year/:title", component: Post },
+  {
+    path: "/yt",
+    beforeEnter: redirect(
+      "https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw"
+    )
+  }
+];
 
 let routerConfig = {
   mode: 'history', // PLEASE note that this is buggy with webpack-dev-server
