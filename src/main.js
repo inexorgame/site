@@ -50,37 +50,11 @@ const redirect = url => {
   }
 }
 
-const defaultDownloadLinks = {
-  linux_link:
-    "https://github.com/inexorgame/inexor-core/releases/",
-  windows_link:
-    "https://github.com/inexorgame/inexor-core/releases/"
-}
-
-const getLatestDownloadLinks = () => {
-  return Vue.http
-    .get(`https://api.github.com/repos/inexorgame/inexor-core/releases`)
-    .then((response) => {
-        const { tag_name } = response.body[0];
-        defaultDownloadLinks.windows_link = `https://github.com/inexorgame/inexor-core/releases/download/${tag_name}/Inexor-${tag_name}-win64.zip`;
-        defaultDownloadLinks.linux_link = `https://github.com/inexorgame/inexor-core/releases/download/${tag_name}/Inexor-${tag_name}-Linux.zip`;
-        this.loaded = true;
-      },
-    );
-};
-
-getLatestDownloadLinks()
-
 const routes = [
-  {
-    path: "/home",
-    component: Home,
-    alias: "/",
-    props: defaultDownloadLinks
-  },
+  { path: "/home", component: Home, alias: "/", },
   { path: "/people", component: People },
   { path: "/blog", component: Blog },
-  { path: "/download", component: Download, props: defaultDownloadLinks },
+  { path: "/download", component: Download },
   { path: "/post/:year/:title", component: Post },
   {
     path: "/yt",
@@ -124,5 +98,5 @@ router.afterEach((to, from) => {
 const app = new Vue({ // eslint-disable-line no-unused-vars
   el: '#app',
   render: h => h(App),
-  router
+  router,
 }).$mount()

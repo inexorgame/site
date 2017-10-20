@@ -29,7 +29,7 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col col-md-8">
-          <a :href="getLink.link" id="inexor_button" class="btn btn-lg btn-secondary">Download <i :class="getLink.icon" aria-hidden="true"></i></a>
+          <a :href="downloadConfig.link" id="inexor_button" class="btn btn-lg btn-secondary">Download <i :class="downloadConfig.icon" aria-hidden="true"></i></a>
         </div>
          <div class="col col-md-8 download-link">
             <router-link class="nav-link" to="/download">Other Downloads</router-link>
@@ -40,12 +40,32 @@
 </template>
 
 <script>
+import downloadLinksMixin from './downloadLinksMixin.js'
+
 export default {
-  props: ["linux_link", "windows_link"],
+  mixins: [downloadLinksMixin],
   computed: {
-    getLink() {
-      const link = navigator.platform.toLocaleUpperCase() == "WIN32" ? {link: this.windows_link, icon: "fa fa-windows"}: {link: this.linux_link, icon: "fa fa-linux"};
-      return link;
+    downloadConfig() {
+      let downloadConfig;
+
+      if (navigator.platform.includes('Win')) {
+          downloadConfig = {
+              link: this.downloadLinks['windows'],
+              icon: 'fa fa-windows'
+          }
+      } else if (navigator.platform.includes("Mac")) {
+          downloadConfig = {
+              link: this.downloadLinks['osx'],
+              icon: 'fa fa-apple'
+          }
+      } else {
+          downloadConfig = {
+              link: this.downloadLinks['linux'],
+              icon: 'fa fa-linux'
+          }
+      }
+
+      return downloadConfig;
     }
   }
 };
