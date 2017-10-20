@@ -52,9 +52,9 @@ const redirect = url => {
 
 const defaultDownloadLinks = {
   linux_link:
-    "https://github.com/inexorgame/inexor-core/releases/download/0.8.10-alpha/Inexor-0.8.10-alpha-Linux.zip",
+    "https://github.com/inexorgame/inexor-core/releases/",
   windows_link:
-    "https://github.com/inexorgame/inexor-core/releases/download/0.8.10-alpha/Inexor-0.8.10-alpha-win64.zip"
+    "https://github.com/inexorgame/inexor-core/releases/"
 }
 
 const getLatestDownloadLinks = () => {
