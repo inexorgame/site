@@ -7,7 +7,7 @@ delete webpackConfig.entry
 // karma.conf.js
 module.exports = function (config) {
     config.set({
-        browsers: ['Chrome'], // PhantomJS fails with many desired ES6 features
+        browsers: ['Chrome', 'ChromeHeadless'],
         frameworks: ['jasmine'],
         reporters: ['verbose'],
         // this is the entry file for all our tests.

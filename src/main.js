@@ -113,18 +113,18 @@ router.afterEach((to, from) => {
     document.title = `Inexor | ${to_page}`;
   }
 
-  $( "nav li" ).each(function() {
-    if ( $( this ).text() === from_page || from_page === "" || ( $( this ).text() === "Blog" && from.path.substr(1,4) === "post" ) ) {
-      $( this ).removeClass("active");
+  $( "nav li" ).each(function() { // eslint-disable-line no-undef
+    if ( $( this ).text() === from_page || from_page === "" || ( $( this ).text() === "Blog" && from.path.substr(1,4) === "post" ) ) { // eslint-disable-line no-undef
+      $( this ).removeClass("active"); // eslint-disable-line no-undef
     }
-    if ( $( this ).text() === to_page ||  ( $( this ).text() === "Home" && to.path === "/" ) || ( $( this ).text() === "Blog" && to.path.substr(1,4) === "post" ) ) {
-      $( this ).addClass("active");
+    if ( $( this ).text() === to_page ||  ( $( this ).text() === "Home" && to.path === "/" ) || ( $( this ).text() === "Blog" && to.path.substr(1,4) === "post" ) ) { // eslint-disable-line no-undef
+      $( this ).addClass("active"); // eslint-disable-line no-undef
     }
   });
 
 })
-// TODO: Add and make url-root working!
-const app = new Vue({
+
+const app = new Vue({ // eslint-disable-line no-unused-vars
   el: '#app',
   render: h => h(App),
   router
