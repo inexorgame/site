@@ -31,7 +31,7 @@
         <div class="col-md-8">
           <a :href="downloadConfig.link" id="inexor_button" class="btn btn-lg btn-secondary">Download <i :class="downloadConfig.icon" aria-hidden="true"></i></a>
         </div>
-         <div class="ol-md-8 download-link">
+         <div class="col-md-8 download-link">
             <router-link class="nav-link" to="/download">Other Downloads</router-link>
         </div>
       </div>
