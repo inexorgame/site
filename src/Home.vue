@@ -11,6 +11,24 @@
       </div>
     </div>
 
+    <div id="videolist">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col col-md-8" >
+            <iframe 
+            width="100%" 
+            height="412em" 
+            src="https://www.youtube-nocookie.com/embed?list=PLCbZc-GgCGzLhkGS5l850tjCQrPUeapK6" 
+            frameborder="0" 
+            rel="0" 
+            allowfullscreen 
+            style="border: rgba(255, 255, 255, 0.5) 1px solid; background-color: #000000;">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="blackbox">
       <div class="container">
         <div class="row justify-content-center">
@@ -36,17 +54,6 @@
         </div>
       </div>
     </div>
-
-    <div id="videolist">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col col-md-8">
-            <iframe width="100%" height="413px" src="https://www.youtube-nocookie.com/embed?list=PLCbZc-GgCGzLhkGS5l850tjCQrPUeapK6" frameborder="1" rel="0" allowfullscreen list></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
   </div>
 </template>
 
