@@ -28,10 +28,10 @@
 
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col col-md-8">
+        <div class="col-md-8">
           <a :href="downloadConfig.link" id="inexor_button" class="btn btn-lg btn-secondary">Download <i :class="downloadConfig.icon" aria-hidden="true"></i></a>
         </div>
-         <div class="col col-md-8 download-link">
+         <div class="ol-md-8 download-link">
             <router-link class="nav-link" to="/download">Other Downloads</router-link>
         </div>
       </div>
