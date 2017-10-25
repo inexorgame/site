@@ -50,7 +50,7 @@ const Download = resolve => {
 // News page (community)
 const Feed = resolve => {
   require.ensure(['./Feed.vue'], () => {
-    resolve(require('./Feed.vue'))
+      resolve(require('./Feed.vue'))
   })
 }
 
@@ -110,7 +110,7 @@ const apolloClient = new ApolloClient({
     link: new HttpLink({
         uri: 'https://aggregator.inexor.org/',
     }),
-    cache: new InMemoryCache().restore({}),
+    cache: new InMemoryCache(),
 });
 
 const apolloProvider = new VueApollo({
