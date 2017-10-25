@@ -1,13 +1,16 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
+import VueApollo from 'vue-apollo'
 import VeeValidate from 'vee-validate'
+import ApolloClient, { HttpLink } from 'apollo-client-preset'
 import App from './App.vue'
 import 'bootstrap'
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
 Vue.use(VeeValidate);
+Vue.use(VueApollo);
 
 // Intro page
 const Home = resolve => {
@@ -44,6 +47,13 @@ const Download = resolve => {
   })
 }
 
+// News page (community)
+const News = resolve => {
+  require.ensure(['./News.vue'], () => {
+    resolve(require('./News.vue'))
+  })
+}
+
 const redirect = url => {
   return () => {
     window.location.href = url;
@@ -55,6 +65,7 @@ const routes = [
   { path: "/people", component: People },
   { path: "/blog", component: Blog },
   { path: "/download", component: Download },
+  { path: "/news", component: News },
   { path: "/post/:year/:title", component: Post },
   {
     path: "/yt",
@@ -95,8 +106,19 @@ router.afterEach((to, from) => {
 
 })
 
+const apolloClient = new ApolloClient({
+    link: new HttpLink({
+        uri: 'http://aggregator.inexor.org/',
+    }),
+});
+
+const apolloProvider = new VueApollo({
+  defaultClient: apolloClient
+});
+
 const app = new Vue({ // eslint-disable-line no-unused-vars
   el: '#app',
   render: h => h(App),
+  apolloProvider,
   router,
 }).$mount()
