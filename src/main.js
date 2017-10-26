@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import VueApollo from 'vue-apollo'
 import VeeValidate from 'vee-validate'
-import ApolloClient, { HttpLink } from 'apollo-client-preset'
+import ApolloClient, { HttpLink, InMemoryCache } from 'apollo-client-preset'
 import App from './App.vue'
 import 'bootstrap'
 
@@ -110,6 +110,7 @@ const apolloClient = new ApolloClient({
     link: new HttpLink({
         uri: 'https://aggregator.inexor.org/',
     }),
+    cache: new InMemoryCache().restore({}),
 });
 
 const apolloProvider = new VueApollo({
