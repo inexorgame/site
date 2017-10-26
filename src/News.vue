@@ -6,7 +6,7 @@
             </div>
             <ul class="timeline" v-for="(item, index) in items">
                 <li v-bind:class="{ 'timeline-inverted': (index % 2 == 0) }">
-                    <div class="timeline-badge"><i :class="chooseBadge()" aria-hidden="true"></i></div>
+                    <div :class="chooseBadge()"><i :class="chooseLogo()" aria-hidden="true"></i></div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <a :href="item.url"><h4 class="timeline-title">{{item.title}}</h4></a>
@@ -33,9 +33,13 @@ export default {
     },
     methods: {
       chooseBadge() {
-          let badges = ['newspaper-o', 'fire', 'font-awesome', 'comment']
-          return `fa fa-${badges[Math.floor(Math.random()*badges.length)]}`
-      }
+          let badges = ['', 'warning', 'info', 'success', 'danger']
+          return `timeline-badge ${badges[Math.floor(Math.random()*badges.length)]}`
+      },
+      chooseLogo() {
+          let logos = ['newspaper-o', 'fire', 'font-awesome', 'comment']
+          return `fa fa-${logos[Math.floor(Math.random()*logos.length)]}`
+      },
     },
     apollo: {
         items: gql`{ items { title, description, created, url, feed { name } } }`

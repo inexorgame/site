@@ -108,7 +108,7 @@ router.afterEach((to, from) => {
 
 const apolloClient = new ApolloClient({
     link: new HttpLink({
-        uri: 'http://aggregator.inexor.org/',
+        uri: 'https://aggregator.inexor.org/',
     }),
 });
 
