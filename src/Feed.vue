@@ -10,10 +10,14 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <a :href="item.url"><h4 class="timeline-title">{{item.title}}</h4></a>
-                            <p><small class="text-muted"><i class="fa fa-clock-o" aria-hidden="true"></i> {{item.created}} on {{item.feed.name}}</small></p>
+                            <p>
+                                <small class="text-muted"><i class="fa fa-clock-o" aria-hidden="true"></i>
+                                    {{item.created}} on {{item.feed.name}}
+                                </small>
+                            </p>
                         </div>
-                        <div class="timeline-body">
-                            {{ item.description }}
+                        <!-- tiny hack because v-html does not yet support filters. See https://github.com/vuejs/vue/issues/4352 -->
+                        <div class="timeline-body" v-html="$options.filters.decode(item.description)">
                         </div>
                     </div>
                 </li>
@@ -23,30 +27,38 @@
 </template>
 
 <script>
-import gql from 'graphql-tag'
+    import gql from 'graphql-tag'
 
-export default {
-    data() {
-        return {
-            items: [],
-            feeds: []
+    export default {
+        data() {
+            return {
+                items: [],
+                feeds: []
+            }
+        },
+        methods: {
+            chooseBadge() {
+                let badges = ['', 'warning', 'info', 'success', 'danger']
+                return `timeline-badge ${badges[Math.floor(Math.random() * badges.length)]}`
+            },
+            chooseLogo() {
+                let logos = ['newspaper-o', 'fire', 'font-awesome', 'comment']
+                return `fa fa-${logos[Math.floor(Math.random() * logos.length)]}`
+            },
+        },
+        filters: {
+            decode(value) {
+                // This is safe to XSS since we use text/html and the DOMParser will automatically strip JavaScript
+                let parser = new DOMParser()
+                let dom = parser.parseFromString(`<!doctype html><body>${value}`, 'text/html')
+                return dom.body.textContent
+            }
+        },
+        apollo: {
+            items: gql`{ items { title, description, created, url, feed { name } } }`,
+            feeds: gql`{ feeds { name } }`,
         }
-    },
-    methods: {
-      chooseBadge() {
-          let badges = ['', 'warning', 'info', 'success', 'danger']
-          return `timeline-badge ${badges[Math.floor(Math.random()*badges.length)]}`
-      },
-      chooseLogo() {
-          let logos = ['newspaper-o', 'fire', 'font-awesome', 'comment']
-          return `fa fa-${logos[Math.floor(Math.random()*logos.length)]}`
-      },
-    },
-    apollo: {
-        items: gql`{ items { title, description, created, url, feed { name } } }`,
-        feeds: gql`{ feeds { name } }`,
     }
-}
 </script>
 
 <style>
@@ -101,7 +113,7 @@ export default {
         position: relative;
         -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
-        background: rgba(0,0,0,0.7);
+        background: rgba(0, 0, 0, 0.7);
     }
 
     .timeline > li > .timeline-panel:before {
