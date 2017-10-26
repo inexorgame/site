@@ -48,9 +48,9 @@ const Download = resolve => {
 }
 
 // News page (community)
-const News = resolve => {
-  require.ensure(['./News.vue'], () => {
-    resolve(require('./News.vue'))
+const Feed = resolve => {
+  require.ensure(['./Feed.vue'], () => {
+    resolve(require('./Feed.vue'))
   })
 }
 
@@ -65,7 +65,7 @@ const routes = [
   { path: "/people", component: People },
   { path: "/blog", component: Blog },
   { path: "/download", component: Download },
-  { path: "/news", component: News },
+  { path: "/community/feed", component: Feed },
   { path: "/post/:year/:title", component: Post },
   {
     path: "/yt",

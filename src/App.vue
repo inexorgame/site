@@ -20,13 +20,12 @@
               <li class="nav-item"><router-link class="nav-link" to="/home">Home</router-link></li>
               <li class="nav-item"><router-link class="nav-link" to="/download">Download</router-link></li>
               <li class="nav-item"><router-link class="nav-link" to="/blog">Blog</router-link></li>
-              <li class="nav-item"><router-link class="nav-link" to="/news">News</router-link></li>
-              <!--<li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle disabled" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Community</a>
-                <div class="dropdown-menu show">
-                  <router-link class="dropdown-item" to="/news">News</router-link>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Community</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <router-link class="dropdown-item" to="/community/feed">Feed</router-link>
                 </div>
-              </li>-->
+              </li>
               <li class="nav-item"><router-link class="nav-link" to="/people">People</router-link></li>
               <li class="nav-item"><a href="https://github.com/inexorgame/inexor-core/wiki" target="_blank" class="nav-link">Wiki</a></li> <!-- We need to change that to a way to get the wiki directly from the website-->
             </ul>

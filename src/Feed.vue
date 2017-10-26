@@ -2,7 +2,7 @@
     <div class="inner cover">
         <div class="container">
             <div class="page-header">
-                <h1 id="timeline">News</h1>
+                <h1 id="timeline">Feed</h1>
             </div>
             <ul class="timeline" v-for="(item, index) in items">
                 <li v-bind:class="{ 'timeline-inverted': (index % 2 == 0) }">
@@ -28,7 +28,8 @@ import gql from 'graphql-tag'
 export default {
     data() {
         return {
-            items: []
+            items: [],
+            feeds: []
         }
     },
     methods: {
@@ -42,7 +43,8 @@ export default {
       },
     },
     apollo: {
-        items: gql`{ items { title, description, created, url, feed { name } } }`
+        items: gql`{ items { title, description, created, url, feed { name } } }`,
+        feeds: gql`{ feeds { name } }`,
     }
 }
 </script>
