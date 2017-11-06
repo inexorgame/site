@@ -33,6 +33,6 @@ export default {
 
         Promise.all(windowsDownload, linuxDownload).then(() => {
             this.loading = false;
-        })
+        })*/
     }
 }
