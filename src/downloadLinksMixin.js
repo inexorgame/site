@@ -3,7 +3,7 @@ export default {
         return {
             downloadLinks: {
                 linux:
-                    "https://github.com/inexorgame/snap-inexor-flex/releass",
+                    "https://github.com/inexorgame/snap-inexor-flex/releases/",
                 windows:
                     "https://github.com/inexorgame/windows-installer/releases/",
                 osx:
