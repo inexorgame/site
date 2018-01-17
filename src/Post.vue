@@ -9,7 +9,7 @@
             <div class="loading" v-if="loading">
               <strong>Drinking enough coffee until release...</strong>
             </div>
-            <div v-html="post">
+            <div v-html="post" class="text-muted">
             </div>
           </div>
         </div>
@@ -39,12 +39,12 @@
 </template>
 
 <script>
-import VueDisqus from 'vue-disqus/VueDisqus.vue'
+import VueDisqus from 'vue-disqus/VueDisqus.vue';
 export default {
   components: {
     VueDisqus
   },
-  data () {
+  data() {
     return {
       loading: false,
       postMeta: {
@@ -55,21 +55,27 @@ export default {
       post: null,
       error: false,
       commentsEnabled: false
-    }
+    };
   },
-  created () {
+  created() {
     this.fetchBlogEntry();
   },
   watch: {
-    '$route': 'fetchBlogEntry'
+    $route: 'fetchBlogEntry'
   },
   methods: {
     fetchBlogEntry() {
       let vm = this;
       vm.error = vm.post = null;
       vm.loading = true;
-      let xhr= new XMLHttpRequest();
-      xhr.open('GET', 'https://api.github.com/repos/inexorgame/blog-data/contents' + this.$route.path + '.md', true);
+      let xhr = new XMLHttpRequest();
+      xhr.open(
+        'GET',
+        'https://api.github.com/repos/inexorgame/blog-data/contents' +
+          this.$route.path +
+          '.md',
+        true
+      );
       xhr.setRequestHeader('Accept', 'application/vnd.github.v3.html');
       xhr.onreadystatechange = function() {
         let self = this;
@@ -78,29 +84,29 @@ export default {
           vm.error = this.statusText;
         } else {
           let parser = new DOMParser();
-          let doc = parser.parseFromString(self.responseText, 'text/html')
+          let doc = parser.parseFromString(self.responseText, 'text/html');
           let metadata = doc.querySelector('table');
-          metadata.parentNode.removeChild(metadata)
-          vm.parseMetaData(metadata)
+          metadata.parentNode.removeChild(metadata);
+          vm.parseMetaData(metadata);
           vm.post = doc.querySelector('#file').outerHTML;
           vm.loading = false;
         }
-      }
+      };
       xhr.send();
     },
     // Since this is a really fast operation and we don't want our user to hang/wait for the title of the post, synchronous request is o.k.
     parseMetaData(table) {
       let tbody = table.querySelectorAll('tbody tr td');
-      table.querySelectorAll('thead tr th').forEach((item) => {
+      table.querySelectorAll('thead tr th').forEach(item => {
         // IE9 < breaks this. That's bad luck.
-        this.postMeta[item.textContent] = tbody[item.cellIndex].textContent
-        if (item.textContent === "title") {
+        this.postMeta[item.textContent] = tbody[item.cellIndex].textContent;
+        if (item.textContent === 'title') {
           document.title = `Inexor | ${this.postMeta.title}`;
         }
-      })
+      });
     }
   }
-}
+};
 </script>
 
 <style scoped>
@@ -119,7 +125,7 @@ export default {
 }
 
 .inexor_article a {
-  color:rgb(0, 112, 222);
+  color:rgb(255, 255, 0);
 }
 
 .inexor_article h2, .inexor_article h3, .inexor_article h4, .inexor_article h5, .inexor_article h6 {
