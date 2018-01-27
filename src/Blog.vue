@@ -143,22 +143,22 @@ export default {
     parseBlogArray(arr) {
       return new Promise((resolve, reject) => {
         const path = /post\/\d{4}\/?.+\.md/; // Test for path containing /post/YEAR/*.md
-        const date = /\d{2}\-\d{2}/; // Test for 04-07 kind of dates
-        const number = /\d{2}/; // Test for 2-digit numbers
 
         try {
           let tree = arr.filter(value => path.test(value.path));
           let posts = tree.map((value) => {
             let path = value.path.split('/')
             let path_ = path.slice(2) // Select the third element, /POST/YEAR/ <-
-            let date_ = date[Symbol.match](path_)
-            let title_ = date[Symbol.split](path_)
+
+            path_ = path_.toString(); // form: 'post/2018/01-27-title.md'
+            let date_ = path_.substring(0, 5); // gets the date substring 
+            let title_ = path_.substring(5);   // gets title substring
 
             value.display_name = String(title_.slice(1)).replace('.md', ' ').trim();
             value.display_name = value.display_name.replace(/\-/g, ' ');
             value.year = String(path.slice(1, 2));
-            value.month = String(/\-/[Symbol.split](date_).slice(0, 1));
-            value.day = String(/\-/[Symbol.split](date_).slice(1, 2));
+            value.month = date_.substring(0, 2);
+            value.day = date_.substring(3, 5);
             value.post_path = value.path.replace('.md', ''); // Path to forward to the post component
             return value;
           })
