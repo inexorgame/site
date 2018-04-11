@@ -4,6 +4,7 @@ import VueResource from 'vue-resource'
 import VeeValidate from 'vee-validate'
 import App from './App.vue'
 import 'bootstrap'
+import "regenerator-runtime/runtime"
 
 Vue.use(VueRouter);
 Vue.use(VueResource);

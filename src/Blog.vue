@@ -101,28 +101,23 @@ export default {
             return -1;
         }
     },
-    fetchBlogEntries () {
+    async fetchBlogEntries () {
       this.error = this.posts = null;
       this.loading = true;
-
-      this.$http.get('https://api.github.com/repos/inexorgame/blog-data/commits/HEAD').then((response) => {
-        response.json();
-        let sha = response.body['sha']; // Get the HEAD sha
-        let tree = 'https://api.github.com/repos/inexorgame/blog-data/git/trees/' + sha + '?recursive=1';
-
-        this.$http.get(tree).then((response) => {
-          this.loading = false;
-          response.json()
-          this.parseBlogArray(response.body.tree).then((posts) => {
-            this.posts = posts;
-            this.filteredPosts = this.posts;
-            this.sortPosts('desc'); // Default sort descendingly
-          })
-        }, (response) => {
-          this.loading = false;
-          this.error = response.statusText;
-        })
-      })
+      try {
+        let response = await fetch('https://api.github.com/repos/inexorgame/blog-data/commits/HEAD');
+        let commit = await response.json();
+        response = await fetch(`https://api.github.com/repos/inexorgame/blog-data/git/trees/${commit.sha}?recursive=1`);
+        let tree = await response.json()
+        this.loading = false;
+        let posts = this.parseBlogArray(tree.tree);
+        this.posts = posts;
+        this.filteredPosts = posts;
+        // Default sort descendingly
+        this.sortPosts('desc');
+      } catch (error) {
+        this.loading = false;
+      }
     },
     filterBlogEntries() {
       let query = 'https://api.github.com/search/code?q=in:file+language:markdown+repo:inexorgame/blog-data+path:post/+' + this.query;
@@ -141,32 +136,25 @@ export default {
 
     },
     parseBlogArray(arr) {
-      return new Promise((resolve, reject) => {
-        const path = /post\/\d{4}\/?.+\.md/; // Test for path containing /post/YEAR/*.md
+      const path = /post\/\d{4}\/?.+\.md/; // Test for path containing /post/YEAR/*.md
+      let tree = arr.filter(value => path.test(value.path));
+      let posts = tree.map((value) => {
+        let path = value.path.split('/')
+        let path_ = path.slice(2) // Select the third element, /POST/YEAR/ <-
 
-        try {
-          let tree = arr.filter(value => path.test(value.path));
-          let posts = tree.map((value) => {
-            let path = value.path.split('/')
-            let path_ = path.slice(2) // Select the third element, /POST/YEAR/ <-
+        path_ = path_.toString(); // form: 'post/2018/01-27-title.md'
+        let date_ = path_.substring(0, 5); // gets the date substring 
+        let title_ = path_.substring(5);   // gets title substring
 
-            path_ = path_.toString(); // form: 'post/2018/01-27-title.md'
-            let date_ = path_.substring(0, 5); // gets the date substring 
-            let title_ = path_.substring(5);   // gets title substring
-
-            value.display_name = String(title_.slice(1)).replace('.md', ' ').trim();
-            value.display_name = value.display_name.replace(/\-/g, ' ');
-            value.year = String(path.slice(1, 2));
-            value.month = date_.substring(0, 2);
-            value.day = date_.substring(3, 5);
-            value.post_path = value.path.replace('.md', ''); // Path to forward to the post component
-            return value;
-          })
-          resolve(posts)
-        } catch (e) {
-          reject(e);
-        }
+        value.display_name = String(title_.slice(1)).replace('.md', ' ').trim();
+        value.display_name = value.display_name.replace(/\-/g, ' ');
+        value.year = String(path.slice(1, 2));
+        value.month = date_.substring(0, 2);
+        value.day = date_.substring(3, 5);
+        value.post_path = value.path.replace('.md', ''); // Path to forward to the post component
+        return value;
       })
+      return posts
     },
     sortPosts(order) {
       const vm = this
