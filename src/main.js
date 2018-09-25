@@ -4,10 +4,10 @@ import VueResource from 'vue-resource'
 import VeeValidate from 'vee-validate'
 import App from './App.vue'
 
-const $ = require('jquery')
+import $ from 'jquery'
 window.$ = $
 import 'popper.js'
-import 'bootstrap'
+import 'bootstrap/dist/js/bootstrap.min.js'
 import 'bootstrap/dist/css/bootstrap-grid.min.css'
 
 Vue.use(VueRouter);
