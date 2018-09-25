@@ -51,7 +51,7 @@
             </div>
             <div class="card-text">
               <img
-                src="/src/assets/sitting_ogro.jpg"
+                src="./assets/sitting_ogro.jpg"
                 style="border-radius: 5px;">
             </div>
           </div>

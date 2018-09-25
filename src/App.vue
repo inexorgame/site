@@ -354,7 +354,7 @@ export default {
       toggle_bg: true,
 
       bg_1: {
-        'background-image': "url('/src/assets/background_blur/laucin.jpg')"
+        'background-image': "url('./assets/background_blur/laucin.jpg')"
       },
       bg_2: {
       },

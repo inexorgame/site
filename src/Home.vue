@@ -4,12 +4,12 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col col-md-8">
-            <img 
-              id="inexor_logo" 
-              class="img-fluid" 
-              src="src/assets/logo_rendered/inexor_logo_400.png">
-            <h1 
-              id="inexor_headline" 
+            <img
+              id="inexor_logo"
+              class="img-fluid"
+              src="./assets/logo_rendered/inexor_logo_400.png">
+            <h1
+              id="inexor_headline"
               class="cover-heading">Fast classic gameplay crossed with modern technology.</h1>
           </div>
         </div>
@@ -20,13 +20,13 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col col-md-8" >
-            <iframe 
-              width="100%" 
-              height="412em" 
-              src="https://www.youtube-nocookie.com/embed?list=PLCbZc-GgCGzLhkGS5l850tjCQrPUeapK6" 
-              frameborder="0" 
-              rel="0" 
-              allowfullscreen 
+            <iframe
+              width="100%"
+              height="412em"
+              src="https://www.youtube-nocookie.com/embed?list=PLCbZc-GgCGzLhkGS5l850tjCQrPUeapK6"
+              frameborder="0"
+              rel="0"
+              allowfullscreen
               style="border: rgba(255, 255, 255, 0.5) 1px solid; background-color: #000000;"/>
           </div>
         </div>
@@ -51,16 +51,16 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8">
-          <a 
-            id="inexor_button" 
-            :href="downloadConfig.link" 
-            class="btn btn-lg btn-secondary">Download <i 
-              :class="downloadConfig.icon" 
+          <a
+            id="inexor_button"
+            :href="downloadConfig.link"
+            class="btn btn-lg btn-secondary">Download <i
+              :class="downloadConfig.icon"
               aria-hidden="true"/></a>
         </div>
         <div class="col-md-8 download-link">
-          <router-link 
-            class="nav-link" 
+          <router-link
+            class="nav-link"
             to="/download">Other Downloads</router-link>
         </div>
       </div>
