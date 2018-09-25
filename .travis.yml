@@ -10,5 +10,5 @@ cache:
     - node_modules
 
 script:
-  - npm test:unit
+  - npm run test:unit
   - npm run lint
