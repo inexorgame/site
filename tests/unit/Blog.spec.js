@@ -1,4 +1,4 @@
-const Blog = require('../../src/Blog.vue')
+import Blog from '../../src/Blog.vue'
 
 const test_array = require('./blog_array_test.json') // Test data
 
@@ -6,7 +6,7 @@ describe('Blog.vue', function() {
   describe('parseBlogArray', function() {
     it('should return 10 items on the test data set', function(done) {
       Blog.methods.parseBlogArray(test_array.tree).then((posts) => {
-        expect(posts.length).toBe(10)
+        expect(posts.length).to.equal(10)
         done()
       })
     });
@@ -35,14 +35,14 @@ describe('Blog.vue', function() {
 
       it('should sort the blog in ascending order', function() {
           times = times.sort(Blog.methods.compare_asc);
-          expect(times[0]).toBe(october_16)
-          expect(times).toEqual(sorted_asc)
+          expect(times[0]).to.equal(october_16)
+          expect(times).to.deep.equal(sorted_asc)
       })
 
       it('should sort the blog in descending order', function() {
           times = times.sort(Blog.methods.compare_desc);
-          expect(times[0]).toBe(february_17)
-          expect(times).toEqual(sorted_desc)
+          expect(times[0]).to.equal(february_17)
+          expect(times).to.deep.equal(sorted_desc)
       })
 
       afterEach(function() {
