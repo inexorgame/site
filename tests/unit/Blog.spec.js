@@ -15,7 +15,7 @@ describe('Blog.vue', function() {
   describe('sorting', function() {
       let october_16, january_17, february_17, times, sorted_asc, sorted_desc;
 
-      beforeAll(function() {
+      beforeEach(function() {
           class Time { // mock class
               constructor(year, month, day) {
                   this.year = year;
