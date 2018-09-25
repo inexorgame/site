@@ -3,7 +3,12 @@ import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import VeeValidate from 'vee-validate'
 import App from './App.vue'
+
+const $ = require('jquery')
+window.$ = $
+import 'popper.js'
 import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap-grid.min.css'
 
 Vue.use(VueRouter);
 Vue.use(VueResource);
@@ -84,12 +89,12 @@ router.afterEach((to, from) => {
     document.title = `Inexor | ${to_page}`;
   }
 
-  $( "nav li" ).each(function() { // eslint-disable-line no-undef
-    if ( $( this ).text() === from_page || from_page === "" || ( $( this ).text() === "Blog" && from.path.substr(1,4) === "post" ) ) { // eslint-disable-line no-undef
-      $( this ).removeClass("active"); // eslint-disable-line no-undef
+  $( "nav li" ).each(function() { // eslint-disable-line
+    if ( $( this ).text() === from_page || from_page === "" || ( $( this ).text() === "Blog" && from.path.substr(1,4) === "post" ) ) { // eslint-disable-line
+      $( this ).removeClass("active"); // eslint-disable-line
     }
-    if ( $( this ).text() === to_page ||  ( $( this ).text() === "Home" && to.path === "/" ) || ( $( this ).text() === "Blog" && to.path.substr(1,4) === "post" ) ) { // eslint-disable-line no-undef
-      $( this ).addClass("active"); // eslint-disable-line no-undef
+    if ( $( this ).text() === to_page ||  ( $( this ).text() === "Home" && to.path === "/" ) || ( $( this ).text() === "Blog" && to.path.substr(1,4) === "post" ) ) { // eslint-disable-line
+      $( this ).addClass("active"); // eslint-disable-line
     }
   });
 

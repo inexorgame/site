@@ -6,11 +6,14 @@
           <div class="inexor_article">
             <h1>{{ postMeta.title }}</h1>
             <p class="text-muted">written by {{ postMeta.author }} on {{ postMeta.date }}</p>
-            <div class="loading" v-if="loading">
+            <div
+              v-if="loading"
+              class="loading">
               <strong>Drinking enough coffee until release...</strong>
             </div>
-            <div v-html="post" class="text-muted">
-            </div>
+            <div
+              class="text-muted"
+              v-html="post"/>
           </div>
         </div>
       </div>
@@ -19,14 +22,19 @@
           <div class="inexor_comments">
             <h4> Toggle Comments </h4>
             <label class="switch">
-              <input type="checkbox" name="switch" v-on:change="commentsEnabled = !commentsEnabled">
-              <div class="slider round"></div>
+              <input
+                type="checkbox"
+                name="switch"
+                @change="commentsEnabled = !commentsEnabled">
+              <div class="slider round"/>
             </label>
-            <div v-if="!(error === 'OK')" class="error">
+            <div
+              v-if="!(error === 'OK')"
+              class="error">
               {{ error }}
             </div>
             <div v-if="commentsEnabled">
-              <vue-disqus shortname="inexorgame"></vue-disqus>
+              <vue-disqus shortname="inexorgame"/>
             </div>
           </div>
 
@@ -39,7 +47,8 @@
 </template>
 
 <script>
-import VueDisqus from 'vue-disqus/VueDisqus.vue';
+import VueDisqus from 'vue-disqus'
+
 export default {
   components: {
     VueDisqus
@@ -57,11 +66,11 @@ export default {
       commentsEnabled: false
     };
   },
-  created() {
-    this.fetchBlogEntry();
-  },
   watch: {
     $route: 'fetchBlogEntry'
+  },
+  created() {
+    this.fetchBlogEntry();
   },
   methods: {
     fetchBlogEntry() {

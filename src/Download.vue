@@ -4,9 +4,16 @@
       <div class="container">
         <div class="row justify-content-center">
           <div class="col col-md-8">
-            <img id="inexor_logo" class="img-fluid" src="src/assets/logo_rendered/inexor_logo_400.png">
-            <h1 class="cover-heading" id="inexor_headline">Get it!</h1>
-            <h4><a href="https://www.github.com/inexorgame" target="_blank">Or use the source, Luke!</a></h4>
+            <img 
+              id="inexor_logo" 
+              class="img-fluid" 
+              src="src/assets/logo_rendered/inexor_logo_400.png">
+            <h1 
+              id="inexor_headline" 
+              class="cover-heading">Get it!</h1>
+            <h4><a 
+              href="https://www.github.com/inexorgame" 
+              target="_blank">Or use the source, Luke!</a></h4>
           </div>
         </div>
       </div>
@@ -16,16 +23,27 @@
       <div class="container">
         <div class="inexor_padding d-flex justify-content-center row">
           <div class="col col-md-4">
-            <img class="inexor_dl_icon" src="src/assets/os_icons/mac_download2.png" alt="Download for Mac OS"><br>
-            We are working on <u><a :href="downloadLinks.osx" target="_blank">macOS support!</a></u>
+            <img 
+              class="inexor_dl_icon" 
+              src="src/assets/os_icons/mac_download2.png" 
+              alt="Download for Mac OS"><br>
+            We are working on <u><a 
+              :href="downloadLinks.osx" 
+              target="_blank">macOS support!</a></u>
           </div>
           <div class="col col-md-4">
-            <a :href="downloadLinks.windows"><img class="inexor_dl_icon" src="src/assets/os_icons/windows_download.png" alt="Download for Windows"><br>
-            Download for Windows</a>
+            <a :href="downloadLinks.windows"><img 
+              class="inexor_dl_icon" 
+              src="src/assets/os_icons/windows_download.png" 
+              alt="Download for Windows"><br>
+              Download for Windows</a>
           </div>
           <div class="col col-md-4">
-            <a :href="downloadLinks.linux"><img class="inexor_dl_icon" src="src/assets/os_icons/linux_download.png" alt="Download for Linux"><br>
-            Download for Linux</a>
+            <a :href="downloadLinks.linux"><img 
+              class="inexor_dl_icon" 
+              src="src/assets/os_icons/linux_download.png" 
+              alt="Download for Linux"><br>
+              Download for Linux</a>
           </div>
         </div>
       </div>

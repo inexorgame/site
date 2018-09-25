@@ -31,7 +31,7 @@ export default {
             return new Promise((resolve, reject) => reject())
         })
 
-        Promise.all(windowsDownload, linuxDownload).then(() => {
+        Promise.all([windowsDownload, linuxDownload]).then(() => {
             this.loading = false;
         })
     }

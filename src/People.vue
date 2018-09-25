@@ -2,26 +2,38 @@
   <div class="inner cover">
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-md-6" v-for="member in members">
+        <div 
+          v-for="member in members" 
+          class="col-lg-4 col-md-6">
           <div class="card people">
-            <img class="card-img-top rounded-circle" v-bind:src="member.avatar_url" height="250" width="250">
+            <img 
+              :src="member.avatar_url" 
+              class="card-img-top rounded-circle" 
+              height="250" 
+              width="250">
             <div class="card-block">
               <h4 class="card-title">{{ member.login }}</h4>
-              <a v-bind:href="member.html_url"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+              <a :href="member.html_url"><i 
+                class="fa fa-github fa-2x" 
+                aria-hidden="true"/></a>
             </div>
           </div>
         </div>
       </div>
-        <div class="loading" v-if="loading">
-          <strong>Gathering folks...</strong>
-        </div>
+      <div 
+        v-if="loading" 
+        class="loading">
+        <strong>Gathering folks...</strong>
+      </div>
 
-        <div v-if="error" class="error">
-          <h4>Something went wrong</h4>
-          <p class="text-muted">{{ error }}</p>
-        </div>
+      <div 
+        v-if="error" 
+        class="error">
+        <h4>Something went wrong</h4>
+        <p class="text-muted">{{ error }}</p>
       </div>
     </div>
+  </div>
 </template>
 
 <script>
@@ -33,11 +45,11 @@ export default {
       error: null
     }
   },
-  created () {
-    this.fetchMembers();
-  },
   watch: {
     '$route': 'fetchMembers'
+  },
+  created () {
+    this.fetchMembers();
   },
   methods: {
     fetchMembers () {
