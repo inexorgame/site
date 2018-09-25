@@ -1,4 +1,4 @@
-const Blog = require('../src/Blog.vue')
+const Blog = require('../../src/Blog.vue')
 
 const test_array = require('./blog_array_test.json') // Test data
 
