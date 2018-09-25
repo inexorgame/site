@@ -2,32 +2,33 @@
   <div class="inner cover">
     <div class="container">
       <div class="row">
-        <div 
-          v-for="member in members" 
+        <div
+          v-for="member in members"
+          :key="member.login"
           class="col-lg-4 col-md-6">
           <div class="card people">
-            <img 
-              :src="member.avatar_url" 
-              class="card-img-top rounded-circle" 
-              height="250" 
+            <img
+              :src="member.avatar_url"
+              class="card-img-top rounded-circle"
+              height="250"
               width="250">
             <div class="card-block">
               <h4 class="card-title">{{ member.login }}</h4>
-              <a :href="member.html_url"><i 
-                class="fa fa-github fa-2x" 
+              <a :href="member.html_url"><i
+                class="fa fa-github fa-2x"
                 aria-hidden="true"/></a>
             </div>
           </div>
         </div>
       </div>
-      <div 
-        v-if="loading" 
+      <div
+        v-if="loading"
         class="loading">
         <strong>Gathering folks...</strong>
       </div>
 
-      <div 
-        v-if="error" 
+      <div
+        v-if="error"
         class="error">
         <h4>Something went wrong</h4>
         <p class="text-muted">{{ error }}</p>

@@ -5,60 +5,61 @@
         <div class="col-12">
           <form class="form-inline">
 
-            <label 
-              for="date" 
+            <label
+              for="date"
               class="sr-only">Sort by date</label>
-            <select 
-              id="inexor_select_sort_order" 
-              v-model="order" 
-              type="select" 
-              name="date" 
-              class="inexor_search_style form-control mb-2 mr-sm-2 mb-sm-0" 
+            <select
+              id="inexor_select_sort_order"
+              v-model="order"
+              type="select"
+              name="date"
+              class="inexor_search_style form-control mb-2 mr-sm-2 mb-sm-0"
               @change="sortPosts(order)">
-              <option 
-                value="desc" 
+              <option
+                value="desc"
                 selected>Descending</option>
               <option value="asc">Ascending</option>
             </select>
 
-            <input 
-              v-validate="'required|min:4'" 
-              id="inexor_search_bar" 
-              :class="{ 'has-warning': errors.has('search') }" 
-              v-model="query" 
-              name="search" 
-              class="inexor_search_style form-control mb-2 mr-sm-2 mb-sm-0" 
-              type="text" 
-              placeholder="Search" 
+            <input
+              v-validate="'required|min:4'"
+              id="inexor_search_bar"
+              :class="{ 'has-warning': errors.has('search') }"
+              v-model="query"
+              name="search"
+              class="inexor_search_style form-control mb-2 mr-sm-2 mb-sm-0"
+              type="text"
+              placeholder="Search"
               @keydown.enter.prevent="filterBlogEntries(order)">
-            <button 
-              id="inexor_search_button" 
-              :disabled="errors.has('search')" 
-              class="inexor_search_style btn btn-outline-success mb-2 mr-sm-2 mb-sm-0" 
-              type="button" 
+            <button
+              id="inexor_search_button"
+              :disabled="errors.has('search')"
+              class="inexor_search_style btn btn-outline-success mb-2 mr-sm-2 mb-sm-0"
+              type="button"
               @click="filterBlogEntries">Search</button>
           </form>
         </div>
       </div>
 
       <div class="row">
-        <div 
-          v-if="notfound" 
+        <div
+          v-if="notfound"
           class="col-12">
           <div class="card card-block">
             <div class="card-title">
               <h4>We couldn't find the article you are looking for..</h4>
             </div>
             <div class="card-text">
-              <img 
-                src="/src/assets/sitting_ogro.jpg" 
+              <img
+                src="/src/assets/sitting_ogro.jpg"
                 style="border-radius: 5px;">
             </div>
           </div>
         </div>
-        <div 
-          v-for="post in filteredPosts" 
-          v-else 
+        <div
+          v-for="post in filteredPosts"
+          v-else
+          :key="post.display_name"
           class="col-lg-4 col-md-6">
           <div class="card blog-card">
             <div class="card-block">
@@ -68,8 +69,8 @@
             </div>
           </div>
         </div>
-        <div 
-          v-if="loading" 
+        <div
+          v-if="loading"
           class="loading">
           <h4>Writing interesting articles...</h4>
         </div>
@@ -184,11 +185,11 @@ export default {
             let path_ = path.slice(2) // Select the third element, /POST/YEAR/ <-
 
             path_ = path_.toString(); // form: 'post/2018/01-27-title.md'
-            let date_ = path_.substring(0, 5); // gets the date substring 
+            let date_ = path_.substring(0, 5); // gets the date substring
             let title_ = path_.substring(5);   // gets title substring
 
             value.display_name = String(title_.slice(1)).replace('.md', ' ').trim();
-            value.display_name = value.display_name.replace(/\-/g, ' ');
+            value.display_name = value.display_name.replace(/\-/g, ' '); // eslint-disable-line
             value.year = String(path.slice(1, 2));
             value.month = date_.substring(0, 2);
             value.day = date_.substring(3, 5);
