@@ -354,7 +354,7 @@ export default {
       toggle_bg: true,
 
       bg_1: {
-        'background-image': "url('./assets/background_blur/laucin.jpg')"
+        'background-image': "url('/img/background_blur/laucin.jpg')"
       },
       bg_2: {
       },
@@ -388,7 +388,7 @@ export default {
   methods: {
      loopThroughBackgroundImages: function loopThroughBackgroundImages() {
        let vm = this;
-       vm.$set( ( vm.toggle_bg ? vm.bg_1: vm.bg_2 ), 'background-image', 'url(/src/assets/background_blur/' + vm.bg_images[vm.i] + ')' ) ;
+       vm.$set( ( vm.toggle_bg ? vm.bg_1: vm.bg_2 ), 'background-image', 'url(/img/background_blur/' + vm.bg_images[vm.i] + ')' ) ;
        vm.toggle_bg = !vm.toggle_bg;
 
       vm.i++;
