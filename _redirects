@@ -1,4 +1,4 @@
 # Redirect everything
-/ https://github.com/inexorgame 307
-/* https://github.com/inexorgame 307
+# / https://github.com/inexorgame 307
+# /* https://github.com/inexorgame 307
 
