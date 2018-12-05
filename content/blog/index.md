@@ -1,8 +1,6 @@
 
 <div v-for="page in $site.pages">
-    <a style="display: block" :href="page.path">{{page.title}}</a>
+    <router-link :to="page.path" class="block">
+        {{page.title}}
+    </router-link>
 </div>
-
-<pre><code>
-{{$site.pages}}
-</code></pre>
