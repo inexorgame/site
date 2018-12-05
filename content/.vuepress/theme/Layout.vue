@@ -15,7 +15,8 @@
         <Home v-else-if="$page.frontmatter.home" />
 
         <Page v-else :sidebar-items="sidebarItems">
-            <slot name="page-top" slot="top" /> <slot name="page-bottom" slot="bottom" />
+            <slot name="page-top" slot="top" />
+			<slot name="page-bottom" slot="bottom" />
         </Page>
 
         <SWUpdatePopup :updateEvent="swUpdateEvent" />
@@ -25,15 +26,16 @@
 <script>
 import Vue from 'vue'
 import nprogress from 'nprogress'
-import Home from './Home.vue'
+import Home from './layouts/Home.vue'
 import Navbar from './Navbar.vue'
-import Page from './Page.vue'
+import Page from './layouts/Page.vue'
+import Post from './layouts/Post.vue'
 import Sidebar from './Sidebar.vue'
 import SWUpdatePopup from './SWUpdatePopup.vue'
 import { resolveSidebarItems } from './util'
 
 export default {
-    components: { Home, Page, Sidebar, Navbar, SWUpdatePopup },
+    components: { Home, Page, Sidebar, Navbar, SWUpdatePopup, Post },
 
     data() {
         return {
@@ -139,4 +141,4 @@ export default {
 </script>
 
 <style src="prismjs/themes/prism-tomorrow.css"></style>
-<style src="./styles/theme.styl" lang="stylus"></style>
+<style src="./styles/main.styl" lang="stylus"></style>
