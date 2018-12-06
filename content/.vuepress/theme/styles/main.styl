@@ -11,6 +11,20 @@
 
 @tailwind utilities
 
+@css {
+    .button {
+        @apply .bg-purple .inline-block .text-white .font-bold .py-2 .px-4 .border-b-4 .border-purple-dark .rounded;
+        cursor: pointer;
+    }
+
+    .subtitle {
+        @apply .text-shadow-dark .text-purple-light;
+    }
+}
+
+.text-shadow-dark
+    text-shadow 0 1px 1px rgba(16.1%, 16.1%, 16.1%, 0.75)
+
 html, body
     padding 0
     margin 0
@@ -62,6 +76,10 @@ body
     box-sizing border-box
     border-right 1px solid $borderColor
     overflow-y auto
+
+.content
+    p
+        margin 1em 0
 
 .content:not(.custom)
     @extend $wrapper

@@ -47,14 +47,24 @@ let colors = {
     transparent: 'transparent',
 
     black: '#22292f',
-    'grey-darkest': '#3d4852',
-    'grey-darker': '#606f7b',
-    'grey-dark': '#8795a1',
-    grey: '#b8c2cc',
-    'grey-light': '#dae1e7',
-    'grey-lighter': '#f1f5f8',
-    'grey-lightest': '#f8fafc',
+    'gray-darkest': '#3d4852',
+    'gray-darker': '#606f7b',
+    'gray-dark': '#8795a1',
+    gray: '#b8c2cc',
+    'gray-light': '#dae1e7',
+    'gray-lighter': '#f1f5f8',
+    'gray-lightest': '#f8fafc',
     white: '#ffffff',
+
+    'black-faded': 'rgba(13.3%, 16.1%, 18.4%, .75)',
+    'gray-darkest-faded': 'rgba(23.9%, 28.2%, 32.2%, .75)',
+    'gray-darker-faded': 'rgba(37.6%, 43.5%, 48.2%, .75)',
+    'gray-dark-faded': 'rgba(52.9%, 58.4%, 63.1%, .75)',
+    'gray-faded': 'rgba(72.2%, 76.1%, 80%, .75)',
+    'gray-light-faded': 'rgba(85.5%, 88.2%, 90.6%, .75)',
+    'gray-lighter-faded': 'rgba(94.5%, 96.1%, 97.3%, .75)',
+    'gray-lightest-faded': 'rgba(97.3%, 98%, 98.8%, .75)',
+    'white-faded': 'rgba(100%, 100%, 100%, .75)',
 
     'red-darkest': '#3b0d0c',
     'red-darker': '#621b18',
@@ -403,7 +413,7 @@ module.exports = {
     |
     */
 
-    borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
+    borderColors: global.Object.assign({ default: colors['gray-light'] }, colors),
 
 
     /*

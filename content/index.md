@@ -11,7 +11,7 @@ layout: home
         <img src="../assets/logo/inexor_cube_alpha.png" class="mr-8 w-24">
         <div class="text-left flex flex-col uppercase text-white">
             <span>Inexor</span>
-            <small class="text-lg text-purple-light">
+            <small class="text-lg subtitle">
                 Open Next Generation FPS Sandbox
             </small>
         </div>
@@ -19,7 +19,7 @@ layout: home
     <div class="w-3/4 flex">
         <div class="w-1/3 px-2">
             <h3>Blog</h3>
-            <div class="bg-purple-darkest-faded rounded p-4 my-4 text-left">
+            <div class="bg-gray-darkest-faded p-4 my-4 text-left">
                 <div v-for="post in latestPosts" class="my-4">
                     <h4>
                         <router-link :to="post.path">
@@ -35,7 +35,7 @@ layout: home
         </div>
         <div class="w-1/3 px-2">
             <h3>Docs</h3>
-            <div class="bg-purple-darkest-faded rounded p-4 my-4 text-left">
+            <div class="bg-gray-darkest-faded p-4 my-4 text-left">
                 <ul>
                     <li v-for="doc in docs">
                         <router-link :to="doc.link">
@@ -47,7 +47,7 @@ layout: home
         </div>
         <div class="w-1/3 px-2">
             <h3>Develop</h3>
-            <div class="bg-purple-darkest-faded rounded p-4 my-4 text-left">
+            <div class="bg-gray-darkest-faded p-4 my-4 text-left">
             </div>
         </div>
     </div>
@@ -55,15 +55,19 @@ layout: home
 
 ## The Vision
 There are opportunities only an open-source game can offer.
+
 There are paths only those can walk who do not fear theft of their work.
 
-We want to create a game which allows people to create the game.
-To have fun learning continuously more stuff as they dig deeper into making it their own.
-To develop the right mindset to attack challenging problems.
+We want to create a game which allows people to **create** the game.
+To have fun learning continuously more stuff as they dig deeper into making it their own. To develop the right mindset to attack challenging problems.
+
 To work and create cooperatively in a team rather than on your own.
 
 Those who see it as enhancement when someone else starts working with their creation will find their place in this project.
 Inexor will always try to bring people together.
+<div class="flex justify-end">
+    <router-link to="team.html" class="button my-4">Meet your teammates 👋</router-link>
+</div>
 
 <script>
 export default {
@@ -89,5 +93,3 @@ export default {
     }
 }
 </script>
-
-dam dam dam!!
