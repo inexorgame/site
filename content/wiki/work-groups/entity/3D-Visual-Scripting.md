@@ -1,8 +1,10 @@
+# 3D Visual Scripting
+
 Branches | Issues | Main developers
 --- | --- | --- 
 [hanni/3DVisualScripting](/inexorgame/code/tree/hanni/3DVisualScripting) |  [#99](/inexorgame/code/issues/99), [#111](/inexorgame/code/issues/111) | [@IAmNotHanni](/IAmNotHanni)
 
-# Introduction
+## Introduction
 This article was written for readers without any previous knowledge. It's objective is to introduce you to some important concepts of scripting languages and visual scripting. This lays the foundation for the understanding of Inexor's [visual scripting engine](https://github.com/inexorgame/inexor-core/wiki/%5BIntent%5D-Introduction).
 
 ## What is a script?
