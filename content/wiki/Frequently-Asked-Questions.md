@@ -1,3 +1,5 @@
+# FAQ
+
 ## Who are you?
 
 We're **currently** mostly people from the old Sauerbraten community. We are a group of programmers, mappers, artists..
@@ -11,10 +13,9 @@ For over one decade now the Sauerbraten community has seen astonishing projects 
 However the Sauerbraten project is regarded (by its very small circle of private developers) to better remain as stable as possible.
 The [bus factor](https://en.wikipedia.org/wiki/Bus_factor) was just not high enough to keep on going for them after the lead developer hasn't had enough time for the project anymore.
 
-## Why didn't you start with another engine?
+## Why another engine?
 
-We do not want to remain in the state of creating an engine, without providing the Sauerbraten people with something they can play.
-Hence its an iterative process to get the fundamental changes and renewals _ready enough_, adding features and still keep a playable state.
+We found that the underlying mecanics that make Sauerbraten the game it is, are not necessarily hard to implement. We want to create something flexible enough, so the first goal is to recreate Sauerbraten with our tooling more easily, and get going from there.
 
 ## Will Inexor stay compatible with Cube2:Sauerbraten?
 
@@ -63,8 +64,7 @@ The consequence is that the Inexor UI uses Javascript and HTML.
 It is nothing different than a browser in your game. In fact, we even use a version of the Chrome browser called [Chromium embedded framework](https://en.wikipedia.org/wiki/Chromium_Embedded_Framework) which is specifically tailored to be used in such scenarios.
 
 
-## Why did you chose node.js as scripting environment?
-#### Instead of Lua/Python/..?
+## Why did you chose node.js as scripting environment? Why not Lua/Python/..?
 
 This question comes up often in the IRC. Specifically people want to know why we want to move away from Cubescript and why not use some common gaming language like LUA.
 
