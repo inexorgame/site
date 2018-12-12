@@ -1,3 +1,5 @@
+# Licensing
+
 A big problem we had to deal with when forking off Sauerbraten has been licensing. Due to imprecise licensing **of the content** we were in need to throw all existing work aboard and take off. This is why we decided to introduce a strict guideline as following.
 
 In general we accept every wide acknowledged license, which allows to share, modify, share the modified work, make commercial use or any combination of these. In following you see a list of few licenses we accept and below a list of licenses we don't, if you can't find a license in these lists and still unsure, don't hesitate to ask us about it.

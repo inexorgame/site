@@ -219,10 +219,15 @@ th, td
         .page
             padding-left 0
 
-.break-out-full-width
+.break-out-full-width, .break-out-page-width
     position relative
-    width 100vw
     left 50%
     transform translateX(-50%)
+
+.break-out-full-width
+    width 100vw
+
+.break-out-page-width
+    width calc(100vw - 22em)
 
 @require './mobile'

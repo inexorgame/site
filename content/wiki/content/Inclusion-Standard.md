@@ -1,3 +1,6 @@
+
+# Inclusion Standard
+
 You disagree with something written on this page? Let us know here: https://github.com/inexorgame/inexor-core/issues/270
 
 ***

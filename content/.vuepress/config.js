@@ -13,15 +13,36 @@ module.exports = {
         sidebar: {
             '/wiki/': [
                 {
-                    title: 'Wiki',
+                    title: '🚀 Getting Started',
+                    collapsable: false,
                     children: [
                         '/wiki/',
+                        '/wiki/Get-Involved',
                         '/wiki/Code-of-Conduct',
                         '/wiki/Contact',
                         '/wiki/License-Policy',
                         '/wiki/Other-Projects',
                         '/wiki/Frequently-Asked-Questions',
                         '/wiki/The-Main-Theme',
+                    ],
+                },
+                {
+                    title: 'Development',
+                    children: [
+                        '/wiki/development/',
+                        // ['https://docs.inexor.org/core/master/', 'Generated Docs'],
+                        '/wiki/development/Build',
+                        '/wiki/development/CMake-System',
+                        '/wiki/development/Coding-Standards',
+                        '/wiki/development/Git-FAQ',
+                        '/wiki/development/GitHub-Issues',
+                        '/wiki/development/How-To-Contribute-Code',
+                        '/wiki/development/How-to-Contribute-Content',
+                        '/wiki/development/How-To-Debug',
+                        '/wiki/development/Platform-Support',
+                        '/wiki/development/Refactoring-The-Server',
+                        '/wiki/development/Travis-in-debug-mode',
+                        // '/wiki/development/[Windows]-add--windows_exe--to-PATH',
                     ],
                 },
                 {
@@ -37,24 +58,6 @@ module.exports = {
                     ],
                 },
                 {
-                    title: 'Development',
-                    children: [
-                        '/wiki/development/',
-                        '/wiki/development/Build',
-                        '/wiki/development/CMake-System',
-                        '/wiki/development/Coding-Standards',
-                        '/wiki/development/Git-FAQ',
-                        '/wiki/development/GitHub-Issues',
-                        '/wiki/development/How-To-Contribute-Code',
-                        '/wiki/development/How-to-Contribute-Content',
-                        '/wiki/development/How-To-Debug',
-                        '/wiki/development/Platform-Support',
-                        '/wiki/development/Refactoring-The-Server',
-                        '/wiki/development/Travis-in-debug-mode',
-                        '/wiki/development/[Windows]-add--windows_exe--to-PATH',
-                    ],
-                },
-                {
                     title: 'Features',
                     children: [
                         '/wiki/features/',
@@ -63,14 +66,6 @@ module.exports = {
                         '/wiki/features/Make-anything-more-dynamic',
                         '/wiki/features/Sauerbraten-Features',
                         '/wiki/features/Template-Feature',
-                    ],
-                },
-                {
-                    title: 'Get Involved',
-                    children: [
-                        '/wiki/get-involved/',
-                        '/wiki/get-involved/Features',
-                        '/wiki/get-involved/Recruiting',
                     ],
                 },
                 {
@@ -128,9 +123,7 @@ module.exports = {
                 },
                 {
                     title: 'Flex',
-                    children: [
-                        '/wiki/work-groups/flex/',
-                    ]
+                    children: ['/wiki/work-groups/flex/'],
                 },
                 {
                     title: 'Package',
@@ -140,7 +133,7 @@ module.exports = {
                         '/wiki/work-groups/package/Continuous-Integration',
                         '/wiki/work-groups/package/Packaging',
                         '/wiki/work-groups/package/Release-and-build-strategy',
-                    ]
+                    ],
                 },
                 {
                     title: 'Synchronization',
@@ -149,7 +142,7 @@ module.exports = {
                         '/wiki/work-groups/synchro/Inexor-Tree-API',
                         '/wiki/work-groups/synchro/Inexor-Tree-C---API',
                         '/wiki/work-groups/synchro/RPC-Node.js',
-                    ]
+                    ],
                 },
                 {
                     title: 'User Interface',

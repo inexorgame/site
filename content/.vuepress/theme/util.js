@@ -4,7 +4,7 @@ export const endingSlashRE = /\/$/
 export const outboundRE = /^(https?:|mailto:|tel:)/
 
 export function normalize (path) {
-  return decodeURI(path)
+  return path
     .replace(hashRE, '')
     .replace(extRE, '')
 }
@@ -54,9 +54,11 @@ export function isActive (route, path) {
 }
 
 export function resolvePage (pages, rawPath, base) {
-  if (base) {
-    rawPath = resolvePath(rawPath, base)
+  if (rawPath.includes('http')) return {
+    type: 'external-link',
+    path: rawPath
   }
+  if (base) rawPath = resolvePath(rawPath, base)
   const path = normalize(rawPath)
   for (let i = 0; i < pages.length; i++) {
     if (normalize(pages[i].path) === path) {
