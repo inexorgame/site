@@ -1,6 +1,8 @@
-# Inexor Documentation
+# Overview
 
-![Error:Inexor logo not found!](https://raw.githubusercontent.com/inexorgame/site/master/src/assets/logo_rendered/inexor_logo_600.png)
+![](https://raw.githubusercontent.com/inexorgame/site/master/src/assets/logo_rendered/inexor_logo_600.png)
+
+The goal of this project is to create a standalone fork of [Cube 2: Sauerbraten](http://sauerbraten.org/), establishing a bigger game audience and keeping the game alive for the future by enhancing and modernizing it.
 
 ## The Vision
 
@@ -16,8 +18,8 @@ Those who see it as enhancement when someone else starts working with their crea
 Inexor will always try to bring people together.
 
 _See also:_
-* _[[The Main Theme]]_
-* _[The Coding philosophy](https://github.com/inexorgame/inexor-core/wiki/Home/_edit#coding-philosophy)_
+* [The Main Theme](./The-Main-Theme.md)
+* [The Coding philosophy](https://github.com/inexorgame/inexor-core/wiki/Home/_edit#coding-philosophy)
 
 ## The Background
 
@@ -66,7 +68,6 @@ _We want to keep a playable state._
 See also:
 
 * [[Coding Standards]]
-* [[Overall Architecture]]
 * [[Features]]
 
 

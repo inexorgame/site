@@ -1,14 +1,15 @@
-# Existing Mods / Forks / Projects:
+# Prior Art - Related Projects
 
 At this point we collect existing mods, forks and other projects in the cube 2 universe. We think there are lots of good ideas which never got into sauerbraten. We list these ideas and may integrate these work into the fork.
 
 Jump to...
-* [Client scripts](#client-scripts)
-* [Client mods](#client-mods)
-* [Server mods](#server-mods)
-* [Standalone game/fork](#standalone-gamefork)
-* [Anything left](#anything-left)
-* [Community stuff](#community-stuff)
+- [Prior Art - Related Projects](#prior-art---related-projects)
+      - [Client scripts](#client-scripts)
+      - [Client mods](#client-mods)
+      - [Server Mods](#server-mods)
+      - [Standalone game/fork](#standalone-gamefork)
+      - [Anything left](#anything-left)
+      - [Community stuff](#community-stuff)
 
 ***
 

@@ -1,26 +1,37 @@
-# Get in touch
+# Contact
 
+If you want to talk to us in real-time, below you can find the best ways to get in touch.
 
-#### **IRC/Matrix** _(mainly used, **good for first contact, player questions and developer questions**)_
+## Text Chat 
 
-You have several options to connect to our room:
+Mainly used - this is where you will always find someone to talk to. Good for first contact and for getting involved.
+
+IRC and Telegram are connected and sync messages and media.
  * **[Riot.im #inexor](https://riot.im/app/#/room/#inexor:matrix.org) recommended**
  * Connect with every compatible [Matrix](https://matrix.org) client to #inexor:matrix.org
  * [Freenode web client](https://webchat.freenode.net/?channels=#inexor)
  * [Your personal IRC App: #inexor on chat.freenode.net:6697](irc://chat.freenode.net:6697/#inexor)
+ * [Telegram](https://t.me/inexor)
 
-#### **Pads** _(Task lists, cooperative writings, archive..)_
- * https://hackmd.io/CYFhFYCYCMGYEYC0A2e9yJAYwKYENE4AOWRPHCABiz2AE5hLIg==?both
 
-[**Mumble**](https://www.mumble.info/) _(for developer meetings, see below)_
- * nooblounge.net port 64738
+## Voice Chat
 
-#### **Social Media** _(**good for player questions**)_
-  * [Twitter](https://twitter.com/inexorgame)
-  * [Facebook](https://www.facebook.com/inexorgame)
-  * [YouTube](https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw)
+Mainly used for hacking together and biweekly meetings.
 
-# Meetings
+Using the [**Mumble**](https://www.mumble.info/) client:
+
+**Host:** nooblounge.net <br>
+**Port:** 64738
+
+## **Social Media** 
+
+Good for player questions or to see what we are up to.
+
+* [Twitter](https://twitter.com/inexorgame)
+* [Facebook](https://www.facebook.com/inexorgame)
+* [YouTube](https://www.youtube.com/channel/UCKOcY8wxvWq8pGLcESSpfhw)
+
+## Meetings
 
 We meet on [Mumble](https://github.com/mumble-voip/mumble) on "nooblounge.net", port 64738.
 
