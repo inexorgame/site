@@ -37,7 +37,6 @@ module.exports = {
                         '/wiki/development/Git-FAQ',
                         '/wiki/development/GitHub-Issues',
                         '/wiki/development/How-To-Contribute-Code',
-                        '/wiki/development/How-to-Contribute-Content',
                         '/wiki/development/How-To-Debug',
                         '/wiki/development/Platform-Support',
                         '/wiki/development/Refactoring-The-Server',

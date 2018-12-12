@@ -18,13 +18,6 @@ export default {
     async created() {
         let response = await fetch('https://api.github.com/orgs/inexorgame/members')
         this.members = await response.json()
-        this.members = await Promise.all(this.members.map(async member => {
-            let userResponse = await fetch(`https://api.github.com/users/${member.login}`)
-            return {
-                ...member,
-                ...await userResponse.json()
-            }
-        }))
     }
 }
 </script>
