@@ -1,12 +1,46 @@
 const tailwindcss = require('tailwindcss')
+const { colors } = require('./tailwind')
+
+const ogprefix = 'og: http://ogp.me/ns#'
+const title = 'Inexor'
+const description = 'Open Next Generation FPS Sandbox'
+const color = colors.purple
+const author = 'Inexor'
+const url = 'https://inexor.org/'
+const logo = '/assets/logo/inexor_cube_alpha.png'
 
 module.exports = {
-    title: 'Inexor',
-    description: 'Next generation engine for your sandbox needs',
+    title,
+    description,
     base: '/',
     host: 'localhost',
     postcss: {
         plugins: [tailwindcss('content/.vuepress/tailwind.js')],
+    },
+    head: [
+        ['link', { rel: 'icon', href: logo }],
+        ['meta', { name: 'theme-color', content: color }],
+        ['meta', { prefix: ogprefix, property: 'og:title', content: title }],
+        ['meta', { prefix: ogprefix, property: 'twitter:title', content: title }],
+        ['meta', { prefix: ogprefix, property: 'og:type', content: 'article' }],
+        ['meta', { prefix: ogprefix, property: 'og:url', content: url }],
+        ['meta', { prefix: ogprefix, property: 'og:description', content: description }],
+        ['meta', { prefix: ogprefix, property: 'og:image', content: logo }],
+        ['meta', { prefix: ogprefix, property: 'og:article:author', content: author }],
+        ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+        ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+        // ['link', { rel: 'apple-touch-icon', href: `/assets/apple-touch-icon.png` }],
+        // ['link', { rel: 'mask-icon', href: '/assets/safari-pinned-tab.svg', color: color }],
+        ['meta', { name: 'msapplication-TileImage', content: logo }],
+        ['meta', { name: 'msapplication-TileColor', content: color }],
+    ],
+    markdown: {
+        anchor: {
+            permalink: true,
+        },
+        config: md => {
+            md.use(require('markdown-it-decorate'))
+        },
     },
     themeConfig: {
         nav: [{ text: 'Team', link: '/team.md' }],
@@ -27,25 +61,42 @@ module.exports = {
                     ],
                 },
                 {
-                    title: 'Development',
+                    title: '💡 Features',
+                    children: [
+                        '/wiki/features/',
+                        '/wiki/features/Feature-Ideas',
+                        '/wiki/features/Sauerbraten-Features',
+                    ],
+                },
+                {
+                    title: '🕹️ Run',
+                    children: [
+                        '/wiki/run/',
+                        '/wiki/run/Command-Line-Options-And-Commands',
+                        '/wiki/run/How-to-host-a-server',
+                        '/wiki/run/Installing-inexor-as-an-end-user',
+                        '/wiki/run/Run-Inexor',
+                    ],
+                },
+                {
+                    title: '👨‍💻 Development',
                     children: [
                         '/wiki/development/',
-                        // ['https://docs.inexor.org/core/master/', 'Generated Docs'],
-                        '/wiki/development/Build',
-                        '/wiki/development/CMake-System',
+                        ['https://docs.inexor.org/core/master/', 'Generated Docs'],
+                        '/wiki/development/How-To-Contribute-Code',
                         '/wiki/development/Coding-Standards',
                         '/wiki/development/Git-FAQ',
                         '/wiki/development/GitHub-Issues',
-                        '/wiki/development/How-To-Contribute-Code',
+                        '/wiki/development/Build',
+                        '/wiki/development/CMake-System',
                         '/wiki/development/How-To-Debug',
-                        '/wiki/development/Platform-Support',
                         '/wiki/development/Refactoring-The-Server',
                         '/wiki/development/Travis-in-debug-mode',
                         // '/wiki/development/[Windows]-add--windows_exe--to-PATH',
                     ],
                 },
                 {
-                    title: 'Content',
+                    title: '📦 Content',
                     children: [
                         '/wiki/content/',
                         '/wiki/content/Directory-Structure',
@@ -56,109 +107,6 @@ module.exports = {
                         '/wiki/content/Supported-File-Formats',
                     ],
                 },
-                {
-                    title: 'Features',
-                    children: [
-                        '/wiki/features/',
-                        '/wiki/features/Feature-Ideas',
-                        '/wiki/features/',
-                        '/wiki/features/Make-anything-more-dynamic',
-                        '/wiki/features/Sauerbraten-Features',
-                        '/wiki/features/Template-Feature',
-                    ],
-                },
-                {
-                    title: 'Run',
-                    children: [
-                        '/wiki/run/',
-                        '/wiki/run/Command-Line-Options-And-Commands',
-                        '/wiki/run/How-to-host-a-server',
-                        '/wiki/run/Installing-inexor-as-an-end-user',
-                        '/wiki/run/Run-Inexor',
-                    ],
-                },
-                {
-                    title: 'Work Groups',
-                    collapsable: false,
-                    children: ['/wiki/work-groups/'],
-                },
-                {
-                    title: 'Community',
-                    children: ['/wiki/work-groups/community/', '/wiki/work-groups/community/Game-Community'],
-                },
-                {
-                    title: 'Engine',
-                    children: [
-                        '/wiki/work-groups/engine/',
-                        '/wiki/work-groups/engine/Ambient-Occlusion',
-                        '/wiki/work-groups/engine/Audio-Engine',
-                        '/wiki/work-groups/engine/Decentralized-server-list',
-                        '/wiki/work-groups/engine/Distributing-Content-System',
-                        '/wiki/work-groups/engine/Extendable-Map-Format',
-                        '/wiki/work-groups/engine/Improved-Selection',
-                        '/wiki/work-groups/engine/Logging',
-                        '/wiki/work-groups/engine/Mappers-Toolset',
-                        '/wiki/work-groups/engine/New-Sound-system-(refactoring)',
-                        '/wiki/work-groups/engine/Particle-System',
-                        '/wiki/work-groups/engine/Prefabs-and-Hiearchical-Instancing',
-                        '/wiki/work-groups/engine/Self-regulating-distributed-network',
-                        '/wiki/work-groups/engine/Shader-System',
-                        '/wiki/work-groups/engine/Version-Control-System',
-                        '/wiki/work-groups/engine/Weapon-System',
-                    ],
-                },
-                {
-                    title: 'Entities',
-                    children: [
-                        '/wiki/work-groups/entity/',
-                        '/wiki/work-groups/entity/3D-Visual-Scripting',
-                        '/wiki/work-groups/entity/Bezier-curve',
-                        '/wiki/work-groups/entity/Entity-System-API',
-                        '/wiki/work-groups/entity/Entity-System-Architecture',
-                        '/wiki/work-groups/entity/Entity-System-Introduction',
-                        '/wiki/work-groups/entity/Entity-System-Type-System',
-                        '/wiki/work-groups/entity/Gamemodes',
-                    ],
-                },
-                {
-                    title: 'Flex',
-                    children: ['/wiki/work-groups/flex/'],
-                },
-                {
-                    title: 'Package',
-                    children: [
-                        '/wiki/work-groups/package/',
-                        '/wiki/work-groups/package/Conan-best-practices',
-                        '/wiki/work-groups/package/Continuous-Integration',
-                        '/wiki/work-groups/package/Packaging',
-                        '/wiki/work-groups/package/Release-and-build-strategy',
-                    ],
-                },
-                {
-                    title: 'Synchronization',
-                    children: [
-                        '/wiki/work-groups/synchro/',
-                        '/wiki/work-groups/synchro/Inexor-Tree-API',
-                        '/wiki/work-groups/synchro/Inexor-Tree-C---API',
-                        '/wiki/work-groups/synchro/RPC-Node.js',
-                    ],
-                },
-                {
-                    title: 'User Interface',
-                    children: [
-                        '/wiki/work-groups/ui/',
-                        '/wiki/work-groups/ui/Edit-Menu-UIs',
-                        '/wiki/work-groups/ui/Head-Up-Display-(HUD)',
-                        '/wiki/work-groups/ui/HTML5-User-Interface',
-                        '/wiki/work-groups/ui/Keyboard-and-mouse-input-handling',
-                        '/wiki/work-groups/ui/Main-Menu-UI',
-                        '/wiki/work-groups/ui/Serverbrowser',
-                        '/wiki/work-groups/ui/UI-Components',
-                        '/wiki/work-groups/ui/User-interface-Menu',
-                        '/wiki/work-groups/ui/User-Interfaces',
-                    ],
-                },
-                // '/wiki/work-groups/website/',
             ],
         },
         // Assumes GitHub. Can also be a full GitLab url.

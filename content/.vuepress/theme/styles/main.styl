@@ -9,7 +9,6 @@
 @require './wrapper'
 @require './toc'
 
-@tailwind utilities
 
 @css {
     .button {
@@ -25,7 +24,13 @@
         @apply .text-2xl .uppercase .text-white .no-underline;
         border: none;
     }
+
+    .status-bubble {
+        @apply rounded-full px-2 leading-none text-gray-lightest uppercase font-bold border border-transparent;
+    }
 }
+
+@tailwind utilities
 
 .text-shadow-dark
     text-shadow 0 1px 1px rgba(16.1%, 16.1%, 16.1%, 0.75)
