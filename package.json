@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/inexorgame/site#readme",
   "devDependencies": {
+    "markdown-it-decorate": "^1.2.2",
     "tailwindcss": "^0.7.2",
     "vuepress": "^0.14.8"
   },

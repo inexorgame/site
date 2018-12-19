@@ -19,13 +19,71 @@
   - Decentralized (multiple) master servers
 
 ## Improved mapping functions
-  * Flow chart system for scripted maps **(WIP)**
-  * Cooperative lightmapping
+* Flow chart system for scripted maps **(WIP)**
+* Cooperative lightmapping
 
 ## Security
-  * Anti-DDoS
-  * Load balancing
-  * Security enhancements
+* Anti-DDoS
+* Load balancing
+* Security enhancements
+
+Sauerbraten is more or less a very static game. In future, we should reduce the core functionalities to a minimum but make things extendable. There are lots of possibilities which would increase the fun dramatically.
+
+## Dynamicification Possibilities
+
+* [New dynamic entity system](Entity System)
+* [New dynamic particle system](Particle System)
+* Unlimited types of weapons
+* Unlimited types of player models
+* [Dependency management/ingame downloader for content](./distributed-network/)
+* Unlimited, scriptable types of game modes
+* New dynamic 2D effect system
+  * [Destructible map geometry](https://www.youtube.com/watch?v=VPdKX7UhneY&index=2&list=PLCbZc-GgCGzLhkGS5l850tjCQrPUeapK6)
+* Location based effects
+* Customizable HUD
+* Movable objects (in multiplayer) 
+
+### Unlimited types of weapons
+
+* API for the weapon game logic
+  * reloading
+  * shot
+  * hud updates
+  * bouncer control
+* 3D Model Files
+  * 1st Person
+  * 3rd Person
+
+### Unlimited types of player models
+
+Currently there is a fixed number of player models. To make it more dynamic it would require to address player models by name instead of a number.
+
+* Player-Model Configuration (Name, Description)
+* 3D Model Files
+* Preview
+
+### Unlimited types of game modes
+
+* The game logic must be loaded dynamically (for example a javascript)
+* Game mode configuration
+  * spawn/respawn states
+    * team modifiers
+    * specify allowed weapons, ammo, reload time, ...
+    * specify health, armor, ...
+  * specify engine/physics modifiers
+* API for adding features to the HUD
+  * New elements on the HUD
+  * Minimap
+
+### Destructible geometry
+
+* Modify geometry
+ * Shot based
+ * Explosion based
+* Modify lightmaps
+* Synchronize geometry of all players
+* Synchronize lightmaps
+
 
 ## Misc
 * Replace single-player campaign mode by multi-player campaign mode (playable by a single player too)
@@ -36,49 +94,7 @@
 
 ## Idea pool:
   * [Quadropolis - Sauerbraten Updates Wishlist](http://quadropolis.us/node/3086)
-  * [Existing Mods/Forks/Projects](https://github.com/inexorgame/code/wiki/Other-Projects)
+  * [Existing Mods/Forks/Projects](../Other-Projects.md)
   * [https://poop.piratenpad.de/sauer-changes](https://poop.piratenpad.de/sauer-changes)
   * [Sauerworld Forum - Ideas for Sauerbraten](http://sauerworld.org/forum/index.php?board=4.0)
   * [Roadmap / Ideas Ticket](https://github.com/inexorgame/inexor-core/issues/514)
-
-
-## Legacy list:
-
-####  DONE
-
-| Subsystem    | Topic                                                    | [Core](Inexor-Core) | [Flex](Inexor-Flex) | [UI](Inexor-UI) |
-| ------------ | -------------------------------------------------------- | -------- | -------- | -------- |
-|              |
-| Synchronisation  | [Generic RPC Subsystem + Node.js integration](RPC-Node.js) | &#10003; | &#10003; |        |
-|              | [[Inexor-Tree]] (Proposal: [[Inexor Tree API]])          | &#10003; | &#10003; | &#10003; |
-| Overall      | [[Logging]]                                              | &#10003; | &#10003; |          |
-| Build        | [[Build]]                                                | &#10003; |          |          |
-|              |
-
-####  IN PROGRESS
-
-| Subsystem    | Topic                                                    | [Core](Inexor-Core) | [Flex](Inexor-Flex)  |[UI](Inexor-UI) |
-| ------------ | -------------------------------------------------------- | -------- | -------- | -------- |
-|              | 
-| UI           | [[HTML5 User Interface]]                                 | &#10003; | &#10003; |          |
-|              | [[Keyboard and mouse input handling]]                    | &#10003; | &#10003; | &#10003; |
-|              | [[User interface Menu]]                                  |          | &#10003; |          |
-| Entities     | New [[Entity System]]                                    | &#10003; | &#10003; |          |
-|              | [[Particle System]]                                      | &#10003; | &#10003; |          |
-|              | [[3D Visual Scripting]]                         | &#10003; | &#10003; |          |
-|              | [Bezier curve camera flights](Bezier-curve)              | &#10003; |          |          |
-| Rendering    | [[Shader System]]                                        | &#10003; | &#10003; |         |
-| Server       | [Server refactoring](Refactoring-The-Server)             | &#10003; |          |          |
-| Config       | [JSON configuration support](JSON-Implementation)        |          | &#10003; |          |
-| Editing      | [[Version Control System]]                               | &#10003; |          |          |
-| Audio        | [[New Sound system (refactoring)]]                       | &#10003; |          |          |
-| Release      | [[Release and build strategy]]                           | &#10003; | &#10003; |          | 
-| Overall      | [[Make anything more dynamic]]                           | &#10003; | &#10003; | &#10003; |
-| Content      | [[Distributing Content System]]                          |          | &#10003; |          |
-| World        | [[Extendable Map Format]]                                | &#10003; |          |          |
-| Rendering    | [[Dynamic Lighting]]                                     | &#10003; |          |          |
-| Editing      | [[Improved Selection]]                                   | &#10003; |          |          |
-|              | [[Mappers Toolset]]                                      | &#10003; | &#10003; | &#10003; |
-| Multiplayer  | [[Decentralized server list]]                            |          | &#10003; |          |
-| Multiplayer  | [[Self regulating distributed network]]                  |          | &#10003; | &#10003; |
-| Distribution | [[Packaging]]                                            |          |          |          |

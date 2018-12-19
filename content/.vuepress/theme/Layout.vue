@@ -9,7 +9,7 @@
         </Sidebar>
 
         <div class="custom-layout" v-if="$page.frontmatter.layout">
-            <component :is="$page.frontmatter.layout" />
+            <component :is="$page.frontmatter.layout" :sidebar-items="sidebarItems" />
         </div>
 
         <Home v-else-if="$page.frontmatter.home" />
@@ -27,15 +27,16 @@
 import Vue from 'vue'
 import nprogress from 'nprogress'
 import Home from './layouts/Home.vue'
-import Navbar from './Navbar.vue'
+import Feature from './layouts/Feature.vue'
 import Page from './layouts/Page.vue'
 import Post from './layouts/Post.vue'
+import Navbar from './Navbar.vue'
 import Sidebar from './Sidebar.vue'
 import SWUpdatePopup from './SWUpdatePopup.vue'
 import { resolveSidebarItems } from './util'
 
 export default {
-    components: { Home, Page, Sidebar, Navbar, SWUpdatePopup, Post },
+    components: { Home, Page, Sidebar, Navbar, SWUpdatePopup, Post, Feature },
 
     data() {
         return {
@@ -63,7 +64,7 @@ export default {
         shouldShowSidebar() {
             const { frontmatter } = this.$page
             return (
-                !frontmatter.layout &&
+                // !frontmatter.layout &&
                 !frontmatter.home &&
                 frontmatter.sidebar !== false &&
                 this.sidebarItems.length
