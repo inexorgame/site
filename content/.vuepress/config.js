@@ -43,7 +43,11 @@ module.exports = {
         },
     },
     themeConfig: {
-        nav: [{ text: 'Team', link: '/team.md' }],
+        nav: [
+            { text: 'Team', link: '/team.md' },
+            { text: 'Blog', link: '/blog/' },
+            { text: 'Wiki', link: '/wiki/' },
+        ],
         sidebar: {
             '/wiki/': [
                 {
