@@ -8,7 +8,7 @@ summary:    Our Hackathon 2017 is over - a look back and into the future.
 
 <img src="https://inexorgame.github.io/blog-media/2017/10/hackathon-banner.png">
 
-<br><br>
+---
 
 Our Hackathon 2017 is over and we would like to provide a quick overview of what we have done at this weekend.
 
@@ -32,7 +32,7 @@ Once again a huge "thank you" to the [FabLab Tuebingen](https://www.fablab-necka
    * fixed responsive design error in the navbar
  * many, many bug fixes and making things more robust
 
-<br>
+---
 
 ![Inexor Laptops: Website Improvements](https://inexorgame.github.io/blog-media/2017/10/hackathon-inexor-laptops-website-improvements.jpg)
 

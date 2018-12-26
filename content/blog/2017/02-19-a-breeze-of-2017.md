@@ -6,7 +6,7 @@ author:     Nooby
 summary:    Some of our plans for 2017.
 ---
 
-It has been [almost a year](https://inexor.org/blog/2016/03-19-doxylamine-alpha-edition) since we have updated this blog. This has been for various reasons, foremost it was not of priority to the team as we did concentrate on the game itself.
+It has been [almost a year](../2016/03-19-doxylamine-alpha-edition) since we have updated this blog. This has been for various reasons, foremost it was not of priority to the team as we did concentrate on the game itself.
 This post will start to explain a few changes we did implement last year and continues with some issues we are working on right now.
 
 
