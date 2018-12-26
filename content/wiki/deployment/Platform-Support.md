@@ -1,6 +1,6 @@
 | Branches | Issues                                                                   | Main developers |
 | -------- | ------------------------------------------------------------------------ | --------------- |
-| .        | [#108](/inexorgame/code/issues/108), [#385](/inexorgame/code/issues/385) | .               |
+| .        | [#108](https://github.com/inexorgame/code/issues/108), [#385](https://github.com/inexorgame/code/issues/385) | .               |
 
 
 # Disclaimer
@@ -29,7 +29,7 @@ This page **DOES _NOT_** tell you on which operating systems, compilers, compile
 
 
 # Configurations our team members are using
-<b>OS (on which we are testing regulary that Inexor is RUNNING):</b>
+**OS (on which we are testing regulary that Inexor is RUNNING):**
 <table>
     <tr><td><b>Name</b></td><td><b>Version</b></td><td><b>Maintainer(s)</b></td></tr>
     <tr><td>Windows </td><td>10 64bit</td><td> <a href="https://github.com/Croydon">Croydon (Nooby)</a> </td></tr>
@@ -40,7 +40,7 @@ This page **DOES _NOT_** tell you on which operating systems, compilers, compile
     <tr><td>Arch Linux </td><td>64bit</td><td> <a href="https://github.com/terencode">terencode</a> </td></tr>
 </table>
 
-<b>Compilers/IDEs (on which we are testing regulary that Inexor is BUILDABLE):</b>
+**Compilers/IDEs (on which we are testing regulary that Inexor is BUILDABLE):**
 
 <table>
     <tr><td><b>Name + Version</b></td><td><b>Maintainer(s)</b></td></tr>
@@ -50,7 +50,7 @@ This page **DOES _NOT_** tell you on which operating systems, compilers, compile
     <tr><td>Atom + Clang 4.0 + Arch Linux</td><td><a href="https://github.com/terencode">terencode</a></td></tr>
 </table>
 
-<b>We also have our CI running tests on all officially supported compilers + compiler-versions</b>.
+We also have our CI running tests on all officially supported compilers + compiler-versions.
 
 
 

@@ -82,4 +82,4 @@ We try to summarize some common question which may come up when thinking about t
 
 ### History
 
-You might be interested in the [Changelog](https://github.com/inexorgame/code/blob/master/changelog.md) [[Sauerbraten Features]] (this is where we started) [Ideas for Features](Feature-Ideas)
+You might be interested in the [Changelog](https://github.com/inexorgame/code/blob/master/changelog.md) [Sauerbraten Features]() (this is where we started) [Ideas for Features](Feature-Ideas)

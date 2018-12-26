@@ -24,9 +24,9 @@ To work and create cooperatively in a team rather than on your own.
 Those who see it as enhancement when someone else starts working with their creation will find their place in this project.  
 Inexor will always try to bring people together.
 
-See also:
-* [The Main Theme](./The-Main-Theme.md)
-* [The Development philosophy](https://github.com/inexorgame/inexor-core/wiki/Home/_edit#coding-philosophy)
+Want to join us?
+
+[Get involved](./Get-Involved.md)<!-- {.button} -->
 
 ## The Background
 
@@ -34,6 +34,9 @@ We did not start from scratch. We derived from the famous open-source game [Cube
 It's unique gameplay, friendly and creative community, elaborated engine features, ingame map editor and much more gave us a great head-start. One advantage is that we always have something to play with, even in times we consider ourselves unfinished. 
 
 The design ideas of Sauerbraten will live on in a new engine. We find the ideas of Sauerbraten worthy enough to be sustained in a new game. Everyone who really cared about the game knew that something had to follow it up.
+
+[See features we want to build](./features/)<!-- {.button} -->
+
 
 ## The Connection
 
@@ -49,24 +52,14 @@ Otherwise the upper parts are those which predominantly influence the finished g
 
 We have the time to iteratively create systems, and the freedom to improve their maintainability and usability until they are considered to be done.
 
-Generally speaking we want to create and renew stuff in ascending order, as those low-level changes have the most impact over the whole system.
-
----
-
 Developing software always includes thinking about the level of abstraction you want to keep in each layer.  
 So how do we define the cuts? How to cut the system into logical chunks?
 
-We created a list of [Features](./features/) to see how each part plays together and how they work in separation.
-
-[Get involved](./Get-Involved.md)<!-- {.button} -->
-
-
+Below you can find everything you need to get started with development
 ### Development
 
-* [[Build]]
-* [[Directory Structure]]
-* [[Contact]]
-* [[Coding Standards]]
-* [[Documentation]]
-* [[How To Debug]]
-* [FAQ](https://github.com/inexorgame/inexor-core/wiki/Frequently-Asked-Questions)
+* [Build](./development/Build.md)
+* [Directory Structure](./content/Directory-Structure.md)
+* [Coding Standards](./development/Coding-Standards.md)
+* [How To Debug](./development/How-To-Debug.md)
+* [FAQ](./Frequently-Asked-Questions.md)

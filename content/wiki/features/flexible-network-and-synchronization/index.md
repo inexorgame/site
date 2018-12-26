@@ -4,11 +4,15 @@ status: idea # idea | concept | specification | implemented
 authors: IAmNotHanni
 ---
 
+# Flexible Network for Synchronisation
+
+We don't want to limit ourselves to a few hardcoded server messages sent from client to server. We want an extensible messaging format, that allows to connect to the vast amount of datatypes associated with the game.
+
 ## Design decisions
 
 * Generic concept
 * Intuitive for programmers, modders and server owners
-* Extensible for modding, additional gamemode, 3rd party applications
+* Extensible for modding, additional gamemodes, 3rd party applications
 * Central place where to store data
 * Open
 
@@ -44,7 +48,7 @@ In **Inexor** everything is stored in the InexorTree. One would attach in Inexor
 
 ## Accessing the Inexor Tree
 ### C++
-[[Inexor Tree C++-API]]
+[Inexor Tree C++-API](./Inexor-Tree-C---API.md)
 
 ### NodeJS
 
@@ -89,7 +93,7 @@ Add a child node which is a container itself:
 
 ### REST API
 
-The REST API is available on the [[Inexor Client]] and on the [[Inexor Server]]. Additionally, parts of the REST API of the [[Inexor Server]] is public available.
+The REST API is available on the Inexor Client and on the Inexor Server. Additionally, parts of the REST API of the Inexor Server is public available.
 
 | HTTP Method   | URL                                          | Description   | Result         |
 | ------------- | -------------------------------------------- | ------------- | -------------- |

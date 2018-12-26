@@ -1,6 +1,6 @@
 Branches | Issues | Main developers
 -------- | ------ | ---
-[cef_fixex_prepr](/inexorgame/code/tree/cef_fixex_prepr) | ? | [@aschaeffer](/aschaeffer)
+[cef_fixex_prepr](https://github.com/inexorgame/code/tree/cef_fixex_prepr) | ? | [@aschaeffer](/aschaeffer)
 
 The HTML5/JavaScript user interface provides an menu component for loading and rendering menus. Menus are the glue between several user interface components.
 

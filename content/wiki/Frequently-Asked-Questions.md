@@ -88,7 +88,7 @@ LUA is indeed well known, but our specific GUI libs and stdlibs would not be.
 
 Python or Ruby (or Erlang or groovy ...) are certainly as excellent as node.js, but since we will be using JavaScript in the browser, better introduce just one language.
 
-Node.js is a different process next to Inexor. As this introduces some complexities to the API we are working on hiding these from the regular developer through the [[Inexor Tree]].  
+Node.js is a different process next to Inexor. As this introduces some complexities to the API we are working on hiding these from the regular developer through the [Inexor Tree](../flexible-network-and-synchronization/).
 The web browser uses http to comunicate with node.js.
 
 The distributed system also has some advantages:
@@ -98,4 +98,4 @@ The distributed system also has some advantages:
 3. The protocols designed in this process can replace enet in the future
 4. Since the GUI is simply web, we get a web GUI for servers and for clients for free. You can open it in a browser.
 
-See also [[Overall Architecture]] [[HTML5 User Interface]] and [[RPC Node.js]].
+See also [HTML5 User Interface](./features/ingame-web-ui/) and [RPC Node.js](./features/flexible-network-and-synchronization/RPC-Node.js.md).

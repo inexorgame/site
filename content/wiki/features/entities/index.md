@@ -6,7 +6,7 @@ authors: super-tux, aschaeffer
 
 Branches | Issues | Main developers
 --- | --- | --- 
-[NewEntities](/inexorgame/code/tree/NewEntities), [cef+entities](/inexorgame/code/tree/cef+entities), [rebased-cef+entities](/inexorgame/code/tree/rebased-cef+entities), [cef+ipc+entities](/inexorgame/code/tree/cef+ipc+entities), [cef+ipc+entities+bezier](/inexorgame/code/tree/cef+ipc+entities+bezier) |  [#111](/inexorgame/code/issues/111) | [@aschaeffer](/aschaeffer), [@super-tux](/super-tux) 
+[NewEntities](https://github.com/inexorgame/code/tree/NewEntities), [cef+entities](https://github.com/inexorgame/code/tree/cef+entities), [rebased-cef+entities](https://github.com/inexorgame/code/tree/rebased-cef+entities), [cef+ipc+entities](https://github.com/inexorgame/code/tree/cef+ipc+entities), [cef+ipc+entities+bezier](https://github.com/inexorgame/code/tree/cef+ipc+entities+bezier) |  [#111](https://github.com/inexorgame/code/issues/111) | [@aschaeffer](/aschaeffer), [@super-tux](/super-tux) 
 
 # Entities
 

@@ -157,7 +157,7 @@ Do `setenv MAKEFLAGS '-j 8'` or `export MAKEFLAGS='-j 8'` before building for ha
 
 ### Examples
 
-```shell
+```bash
 (mkdir build && cd build && conan install .. --build=missing && conan build ..) # Should work for any setting any compiler, any OS
 # By default conan install uses build_type `Release`.
 (mkdir build && cd build && conan install .. -s build_type=Debug --build=missing && conan build ..)

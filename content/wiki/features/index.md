@@ -1,14 +1,15 @@
 # Feature Overview
 
-
+This is an overview of all features, from ideation to implementation.
 
 <div class="break-out-page-width">
     <div class="flex justify-between items-start w-full p-4">
         <div>
             <div>
                 Filter:
+                <StatusBubble type="idea" />
                 <div class="flex">
-                    <div v-for="filter in availableFilters" class="status-bubble cursor-pointer mr-2" :class="getStatusFilterClass(filter)" @click="toggleFilter(filter)">{{filter}}</div>
+                    <div v-for="filter in availableFilters" class="status-bubble text-sm cursor-pointer mr-2" :class="getStatusFilterClass(filter)" @click="toggleFilter(filter)">{{filter}}</div>
                 </div>
             </div>
             <div class="my-2">
@@ -32,7 +33,7 @@
                     </router-link>
                 </h3>
                 <small>{{feature.lastUpdated}}</small>
-                <b class="mr-2">Status:</b> <span class="status-bubble" :class="getStatusClass(feature.frontmatter.status)">{{feature.frontmatter.status}}</span><br>
+                <b class="mr-2">Status:</b> <span class="status-bubble text-xs" :class="getStatusClass(feature.frontmatter.status)">{{feature.frontmatter.status}}</span><br>
                 <div v-if="getAuthors(feature).length">
                     <b class="mr-2">Authors:</b>
                     <span v-for="author in getAuthors(feature)" class="author">
@@ -45,14 +46,7 @@
 </div>
 
 <script>
-// use colors as defined here: https://tailwindcss.com/docs/colors/
-let STATUS_TYPE_COLORS = {
-    idea: 'blue-dark',
-    concept: 'yellow-dark',
-    specification: 'orange-dark',
-    implemented: 'green-dark',
-}
-const STATUS_TYPES = Object.keys(STATUS_TYPE_COLORS)
+import { STATUS_TYPE_COLORS, STATUS_TYPES } from '../../.vuepress/theme/constants'
 
 
 export default {

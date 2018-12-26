@@ -13,7 +13,7 @@ test
 
 Branches | Issues | Main developers
 --- | --- | --- 
-[hanni/3DVisualScripting](/inexorgame/code/tree/hanni/3DVisualScripting) |  [#99](/inexorgame/code/issues/99), [#111](/inexorgame/code/issues/111) | [@IAmNotHanni](/IAmNotHanni)
+[hanni/3DVisualScripting](https://github.com/inexorgame/code/tree/hanni/3DVisualScripting) |  [#99](https://github.com/inexorgame/code/issues/99), [#111](https://github.com/inexorgame/code/issues/111) | [@IAmNotHanni](/IAmNotHanni)
 
 ## Introduction
 This article was written for readers without any previous knowledge. It's objective is to introduce you to some important concepts of scripting languages and visual scripting. This lays the foundation for the understanding of Inexor's [visual scripting engine](https://github.com/inexorgame/inexor-core/wiki/%5BIntent%5D-Introduction).
@@ -21,7 +21,7 @@ This article was written for readers without any previous knowledge. It's object
 ## What is a script?
 Scripts allow you to write or change your program without having to re[compile](https://en.wikipedia.org/wiki/Compiler) the source code into a new executable file (like an .exe file). As instead, scripts are run by an [interpreter](https://en.wikipedia.org/wiki/Interpreter_(computing)). The executable file which contains this interpreter to make the script work is often referred as [runtime enviroment](https://en.wikipedia.org/wiki/Runtime_system). Once your runtime enviroment is set up and running you usually focus on writing scripts. Script code can be changed after the program in which the interpreter is embedded has been compiled. Script code can even be changed while the program is running. Changing the source code of your runtime enviroment and recompiling it should only be done when neccesary. The development of the scripting language and it's interpreter is usually not your job and is carried out by professionaly for you.
 
-[Scripting languages](https://en.wikipedia.org/wiki/Scripting_language) are usually easier to understand and faster to learn than high level programming languages like C++. One of the most popular scripting languages is [JavaScript](https://en.wikipedia.org/wiki/JavaScript), which runs in your browser while you are reading this. It was JavaScript which made the development of modern websites possible and every popular website uses it today. JavaScript quickly gained popularity for other uses due to the development of [NodeJS](https://nodejs.org/en/). NodeJS had a big impact on developers because it makes it possible to use JavaScript to write desktop applications! NodeJS runs on [Google's V8 engine](https://developers.google.com/v8/) which powers Google Chrome. Since [NodeJS](https://nodejs.org/en/) is integrated into Inexor we have the full power of Javascript available for us. For further information read about [[Inexor-Flex]].
+[Scripting languages](https://en.wikipedia.org/wiki/Scripting_language) are usually easier to understand and faster to learn than high level programming languages like C++. One of the most popular scripting languages is [JavaScript](https://en.wikipedia.org/wiki/JavaScript), which runs in your browser while you are reading this. It was JavaScript which made the development of modern websites possible and every popular website uses it today. JavaScript quickly gained popularity for other uses due to the development of [NodeJS](https://nodejs.org/en/). NodeJS had a big impact on developers because it makes it possible to use JavaScript to write desktop applications! NodeJS runs on [Google's V8 engine](https://developers.google.com/v8/) which powers Google Chrome. Since [NodeJS](https://nodejs.org/en/) is integrated into Inexor we have the full power of Javascript available for us. For further information read about [Inexor-Flex](../flexible-network-and-synchronization/).
 
 ## How are scripts being used in games?
 The big part of every modern game is created with scripts nowadays. **One of many benefits is that the development of the game is separated from the development of the game engine!** People who want to make games no longer have to deal with the technical part of programming. They just use the tools which have been created by the game engine developers to realize their projects.
@@ -156,5 +156,3 @@ In most visual scripting systems the **graph** is edited in a planar 2D window t
 ## Implementing a 3D visual scripting enviroment
 
 ![error: image not found!](https://raw.githubusercontent.com/inexorgame/artwork/master/intent/Intent_rendered_512px.png)
-
-see: [[INTENT 3D Visual Scripting System]]

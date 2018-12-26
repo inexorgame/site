@@ -32,7 +32,7 @@ This helps to work along with the [Mappers Toolset](../custom-weapons-and-tools/
 
 ## Design
 
-The style of the components should align with the design defined in [[Main-Menu-UI#design]]
+The style of the components should align with the design defined in [Main-Menu-UI](./Main-Menu-UI.md)
 
 
 ## Further planning
