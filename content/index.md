@@ -82,9 +82,21 @@ export default {
         docs() {
             return [
                 {
-                    link: './wiki/Contact.html',
+                    link: './wiki/',
+                    text: 'Wiki Overview',
+                },
+                {
+                    link: './wiki/Get-Involved.html',
                     text: 'Get Involved',
-                }
+                },
+                {
+                    link: './wiki/Contact.html',
+                    text: 'Contact',
+                },
+                {
+                    link: './wiki/features/',
+                    text: 'Features',
+                },
             ]
         }
     }
