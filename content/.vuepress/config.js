@@ -1,3 +1,4 @@
+require('isomorphic-fetch')
 const tailwindcss = require('tailwindcss')
 const { colors } = require('./tailwind')
 
