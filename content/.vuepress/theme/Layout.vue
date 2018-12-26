@@ -66,6 +66,7 @@ export default {
             return (
                 // !frontmatter.layout &&
                 !frontmatter.home &&
+                frontmatter.layout != 'post' &&
                 frontmatter.sidebar !== false &&
                 this.sidebarItems.length
             )
