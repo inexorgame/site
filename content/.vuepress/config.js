@@ -7,7 +7,7 @@ const description = 'Open Next Generation FPS Sandbox'
 const color = colors.purple
 const author = 'Inexor'
 const url = 'https://inexor.org/'
-const logo = '/assets/logo/inexor_cube_alpha.png'
+const logo = '/favicon.png'
 
 module.exports = {
     title,
