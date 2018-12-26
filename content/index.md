@@ -18,8 +18,8 @@ layout: home
             </small>
         </div>
     </h1>
-    <div class="w-3/4 flex">
-        <div class="w-1/3 px-2">
+    <div class="w-3/4 flex flex-wrap">
+        <div class="w-full md:w-1/2 px-2">
             <h3>Blog</h3>
             <div class="bg-gray-darkest-faded p-4 my-4 text-left">
                 <div v-for="post in latestPosts" class="my-4">
@@ -35,7 +35,7 @@ layout: home
                 </router-link>
             </div>
         </div>
-        <div class="w-1/3 px-2">
+        <div class="w-full md:w-1/2 px-2">
             <h3>Docs</h3>
             <div class="bg-gray-darkest-faded p-4 my-4 text-left">
                 <ul>
@@ -45,11 +45,6 @@ layout: home
                         </router-link>
                     </li>
                 </ul>
-            </div>
-        </div>
-        <div class="w-1/3 px-2">
-            <h3>Develop</h3>
-            <div class="bg-gray-darkest-faded p-4 my-4 text-left">
             </div>
         </div>
     </div>
@@ -68,33 +63,7 @@ Those who see it as enhancement when someone else starts working with their crea
 Inexor will always try to bring people together.
 
 <div class="flex justify-end">
-    <router-link to="wiki/get-involved/" class="button my-4">Get involved 👋</router-link>
-</div>
-
-<div class="break-out-full-width features text-center bg-orange-light flex flex-col items-center text-orange-darkest py-16 mb-8">
-    <h2 class="heading mb-8">
-        Features
-    </h2>
-    <div class="w-3/4 flex flex-wrap">
-        <div class="w-1/2 px-2">
-            <h3>World Editor</h3>
-            <div class="p-4 my-4 text-left">
-                A new base of building blocks for the world editor should result in the same feeling as the Sauerbraten one (quick editing, effortless transition between playing and editing), but also integrate all other kinds of resources, like sounds, textures, externally created models and particles. Furthermore full version control of the changes on this world is planned to be provided, including resolving conflicts on merge between different versions of the map.
-            </div>
-        </div>
-        <div class="w-1/2 px-2">
-            <h3>Community-Driven Content</h3>
-            <div class="p-4 my-4 text-left">
-                Together with a content distribution features, the Inexor Cloud, it is possible to share content persistently across the whole community. There is no login requiered to play Inexor, but as soon as one wants to upload content persistently or interact in social network features, one can login via numerous thirdparty services like facebook, github, or gmail. People are still able to upload content without being logged in, but (similar to Sauerbraten) only temporarily with players concurrently connected to the same server and only with more restrictions on the kind of content (e.g. textures and geometry are fine, while shaders or scripts and plugins are not).
-            </div>
-        </div>
-        <div class="w-1/2 px-2">
-            <h3>Dynamic Worlds</h3>
-            <div class="p-4 my-4 text-left">
-                The games take place on different community-provided servers. Extending the set of gamemodes is possible in different degrees. To some extend with the help of 3D Visual Scripting, which integrates seamlessly with the ingame editing of static geometry. This allows adding triggers and complex relations between game objects to the scene. Also materials and particle swarms will be create-able via that integrated API.
-            </div>
-        </div>
-    </div>
+    <router-link to="wiki/Get-Involved.html" class="button my-4">Get involved 👋</router-link>
 </div>
 
 <script>
