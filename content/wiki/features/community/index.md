@@ -8,9 +8,6 @@ authors: MartinMuzatko
 
 This page tries to describe how we can make ingame communication work with users and how they can interact with each other. How they can create and share content and invite others to work with them.
 
-
-<!-- TOC -->autoauto- [Ingame Community](#ingame-community)auto    - [Collaboration](#collaboration)auto        - [Fast onboarding](#fast-onboarding)auto        - [Publishing content](#publishing-content)auto        - [Retrieving content](#retrieving-content)auto    - [Account / Profile](#account--profile)auto        - [Public profile](#public-profile)auto    - [Clans](#clans)auto        - [Creating a Clan](#creating-a-clan)auto        - [Clan Content / Maps](#clan-content--maps)auto    - [Notifications](#notifications)auto    - [Personal Scoreboard](#personal-scoreboard)autoauto<!-- /TOC -->
-
 ## Collaboration
 
 This spans a lot more topics, as content creation and collaboration is a central topic for Inexor. Sauerbraten works in a somewhat peer-to-peer fashion, where maps are downloaded and shared ingame via edit mode.
@@ -21,7 +18,7 @@ We want users to get into the game as quickly as possible, but still allow for e
 Users can establish their place with the community. Allowing for easily sharing their contents, arranging games (duels, clan-fights, etc) or getting in touch with other players.
 
 > Inexor will end up being kind of a sandbox, and in fact it is already. Users should be able to create their own themes and distribute them among their friends.  
-> From [[The-Main-Theme]]
+> From [The-Main-Theme](../../The-Main-Theme.md)
 
 It is important to recite this here, to discuss the implementation details. At which points in the game can the user interact with the community? And how?
 

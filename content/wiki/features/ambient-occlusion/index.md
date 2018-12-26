@@ -6,7 +6,7 @@ authors: a-teammate
 
 Branches | Issues | Main developers
 --- | --- | --- 
-master |  [#128](/inexorgame/code/pull/128) | [@a-teammate](/a-teammate)
+master |  [#128](https://github.com/inexorgame/code/pull/128) | [@a-teammate](/a-teammate)
 
 ------------
 This will be dropped again in favor of dynamic lighting.

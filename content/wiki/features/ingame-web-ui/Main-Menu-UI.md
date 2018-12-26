@@ -1,32 +1,6 @@
 Main project page: https://github.com/inexorgame/inexor-core/wiki/User-Interfaces  
 The main menu provides the means to navigate the core contents of the game.
 
-<!-- TOC -->
-
-- [Main pages](#main-pages)
-- [Content components](#content-components)
-- [Further planning](#further-planning)
-- [Key indicators](#key-indicators)
-    - [First impression](#first-impression)
-    - [Involving users](#involving-users)
-- [Design](#design)
-    - [Examples](#examples)
-- [Pages](#pages)
-    - [Splash screen](#splash-screen)
-    - [Main Menu/Navigation](#main-menunavigation)
-        - [Context awareness](#context-awareness)
-        - [Dedicated Areas](#dedicated-areas)
-        - [Website-like](#website-like)
-        - [Context awareness](#context-awareness-1)
-    - [Server browser](#server-browser)
-    - [Settings](#settings)
-        - [Video](#video)
-    - [Profile/Account](#profileaccount)
-    - [Community](#community)
-    - [Own content (Recently created/worked on)](#own-content-recently-createdworked-on)
-
-<!-- /TOC -->
-
 ## Main pages
 
 * Splash screen
@@ -61,13 +35,13 @@ Since this part of the game is accountable the first impression, it is very impo
 ### Involving users
 
 The ingame community plays a central role, when it comes to collaboration.
-Community features are documented here: [[Game-Community]]
-Further implementation details how this is reflected in the menus, can be found further down in [[Main-Menu-UI#community]]
+Community features are documented here: [Game-Community](../community/)
+Further implementation details how this is reflected in the menus, can be found further down in [Main Menu - Community](./Main-Menu-UI.md#community).
 
 ## Design
 
 > In order to be unique, another FPS in gray and black is not what we are aiming for. But the opposite: it should be colorful and weird.  
-> From [[The-Main-Theme]]
+> From [The-Main-Theme](../../The-Main-Theme.md)
 
 We need to find a mix of offering the colorful weird UI we are looking for, but still allow for easy navigation.
 A good next step is to compare to other splash screens/main menus of other games that offer a similar experience what we aim for.

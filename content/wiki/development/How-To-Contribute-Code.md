@@ -1,10 +1,6 @@
-You might also be interested in [[How to Contribute Content]].
-
-***
-
 ### Git
 
-We divided the Project in [**only-code**](https://github.com/inexorgame/code) (the game itself) and [**only-data**](https://github.com/inexorgame/data) (game content like maps). 
+We divided the Project in [**only-code**](https://github.com/inexorgame/inexor-core) (the game itself) and [**only-data**](https://github.com/inexorgame/data) (game content like maps). 
 Why? Because checkouts and commits are much faster without binary blobs.
 
 Avoid committing binaries into the **code** repository, so the repository stays lightweight.
@@ -36,7 +32,7 @@ _If you don't understand the following steps, this [Git-Tutorial](http://pcottle
 2. Develop the feature in your branch
  * Checkout your branch
  * Develop your feature
- * Respect our [[Coding Standards]] (don't worry if you don't understand every detail, reviewing your work we will notify you about passages adaptions are needed)
+ * Respect our [Coding Standards](./Coding-Standards.md) (don't worry if you don't understand every detail, reviewing your work we will notify you about passages adaptions are needed)
  * At every logical step, commit your work to git
     * Commit often (but logically)
        * Your feature has to be merged into other branches as easy as possible

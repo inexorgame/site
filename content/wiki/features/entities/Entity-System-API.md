@@ -1,4 +1,4 @@
-The Entity System API is available on [[Inexor Core]] and [[Inexor Flex]]. The design of the API shall be similar (but not identical) on `Inexor Core` and `Inexor Flex` and easy to use (especially flex).
+The design of the API shall be similar (but not identical) on `Inexor Core` and `Inexor Flex` and easy to use (especially flex).
 
 `UUID`s are used for the identification of entity types and entity instances even across client or server boundaries.
 

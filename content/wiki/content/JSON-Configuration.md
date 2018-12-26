@@ -17,9 +17,8 @@ This page goes into details about our planned move from `.cfg`s to `.json`s.
 ## What will change?
 
 * We replace CubeScript with node.js scripting
-  * and have a nice [[Inexor Tree]] for interactions
 * We can load and save parts of this tree from/to JSON
-  * Persistent settings get saved on [Inexor-Flex](https://github.com/inexorgame/code/wiki/Overall-Architecture) side
+  * Persistent settings get saved on [Inexor-Flex](../features/flexible-network-and-synchronization/) side
 * Content generally has JSON configuration files
 
 ## Benefits
@@ -29,7 +28,7 @@ This page goes into details about our planned move from `.cfg`s to `.json`s.
   * JSON files are save to transmit to other people
   * Content distribution becomes permitted
 * User settings always get saved
-  * Even when the [Inexor-Kernel](https://github.com/inexorgame/code/wiki/Overall-Architecture) (C++-App) crashes
+  * Even when the [Inexor-Kernel](../features/flexible-network-and-synchronization/) (C++-App) crashes
 
 
 # Implementation

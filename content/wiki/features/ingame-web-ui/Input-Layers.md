@@ -6,7 +6,7 @@ status: idea # idea | concept | specification | implemented
 
 Branches | Issues | Main developers
 -------- | ------ | ---
-[cef_fixex_prepr](/inexorgame/code/tree/cef_fixex_prepr) | ? | [@aschaeffer](/aschaeffer)
+[cef_fixex_prepr](https://github.com/inexorgame/code/tree/cef_fixex_prepr) | ? | [@aschaeffer](/aschaeffer)
 
 The new user interface requires a redesign of the keyboard and mouse handling.
 

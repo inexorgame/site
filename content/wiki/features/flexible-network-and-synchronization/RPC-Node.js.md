@@ -7,7 +7,7 @@ authors: a-teammate, aschaeffer
 
 Branches | Issues | Main developers
 -------- | ------ | ---
-master, a_teammate/gluegen_cpp_api | [#51](/inexorgame/code/issues/51), [#311](/inexorgame/code/pull/311) | [@a_teammate](/a-teammate), [@aschaeffer](/aschaeffer)
+master, a_teammate/gluegen_cpp_api | [#51](https://github.com/inexorgame/code/issues/51), [#311](https://github.com/inexorgame/code/pull/311) | [@a_teammate](/a-teammate), [@aschaeffer](/aschaeffer)
 
 # Language-Agnostic Engine Platform
 
@@ -33,7 +33,7 @@ Choosing a multi-process design over a multi-threaded design gives us the follow
 * node.js has tons of shipped packages in its package managers
 
 The implementation therefore uses [gRPC](http://www.grpc.io/docs/) as underlying library, which is a language neutral framework with bindings in more than 10 languages (and its ecosystem is growing rapidly).  
-**This means our API ([[Inexor Tree]]) can be used 1:1 for many different purposes**:
+**This means our API (Inexor Tree can be used 1:1 for many different purposes**:
 
 * Different (Scripting) languages simultaneously
    * People want python? Easy
@@ -47,4 +47,4 @@ The implementation therefore uses [gRPC](http://www.grpc.io/docs/) as underlying
   * Currently we use TCP, unix-sockets/named-pipes would be more efficient (or shared_memory)
     * Lets see what gRPC comes up with next
 * Make multi RPC connections really work (currently only one is supported)
-* Extend the [[Inexor Tree]]
+* Extend the Inexor Tree

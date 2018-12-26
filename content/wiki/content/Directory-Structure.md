@@ -1,6 +1,6 @@
 Branches | Issues | Main developers
 -------- | ------ | ---
-master    | [#378](/inexorgame/inexor-core/issues/378) | @aschaeffer @a_teammate
+master    | [#378](https://github.com/inexorgame/inexor-core/issues/378) | @aschaeffer @a_teammate
 
 ## Inexor Files and Directories Structure
 

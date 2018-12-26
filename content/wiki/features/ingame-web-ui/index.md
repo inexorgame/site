@@ -33,11 +33,11 @@ Currently the following user interfaces are in development and are going to be p
 
 | User Interface | Project | Ingame | Standalone | Description |
 | --- | --- | --- | --- | --- |
-| Flex | [ui-flex](/inexorgame/ui-flex) | <ul><li>[ ] </li></ul> | <ul><li>[x] </li></ul> | Management of instances, media repositories, user interfaces, logging and updating Inexor |
-| HUD | [ui-client-hud](/inexorgame/ui-client-hud) | <ul><li>[x] </li></ul> | <ul><li>[ ] </li></ul> | Heads up display - providing context-relative information without mouse/keyboard input |
-| Main Menus | [ui-client-interface](/inexorgame/ui-client-interface) | <ul><li>[x] </li></ul> | <ul><li>[ ] </li></ul> | Ingame dialogs like settings, profile, community, server browser. See [[Main-Menu-UI]] |
-| Console | [ui-console](/inexorgame/ui-console) | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | The console prints text messages (chat or command output) and allows to input commands. The console is used in the game client but also in a web browser for managing game servers |
-| Editing UI | | <ul><li>[x] </li></ul> | <ul><li>[ ] </li></ul> | UI to navigate and manage the editing experience. Inspecting selected entities, textures, models, etc. See [[Edit-Menu-UIs]] |
+| Flex | [ui-flex](https://github.com/inexorgame/ui-flex) | <ul><li>[ ] </li></ul> | <ul><li>[x] </li></ul> | Management of instances, media repositories, user interfaces, logging and updating Inexor |
+| HUD | [ui-client-hud](https://github.com/inexorgame/ui-client-hud) | <ul><li>[x] </li></ul> | <ul><li>[ ] </li></ul> | Heads up display - providing context-relative information without mouse/keyboard input |
+| Main Menus | [ui-client-interface](https://github.com/inexorgame/ui-client-interface) | <ul><li>[x] </li></ul> | <ul><li>[ ] </li></ul> | Ingame dialogs like settings, profile, community, server browser. See [Main-Menu-UI](./Main-Menu-UI.md) |
+| Console | [ui-console](https://github.com/inexorgame/ui-console) | <ul><li>[x] </li></ul> | <ul><li>[x] </li></ul> | The console prints text messages (chat or command output) and allows to input commands. The console is used in the game client but also in a web browser for managing game servers |
+| Editing UI | | <ul><li>[x] </li></ul> | <ul><li>[ ] </li></ul> | UI to navigate and manage the editing experience. Inspecting selected entities, textures, models, etc. See [Edit-Menu-UIs](./Edit-Menu-UIs.md) |
 
 It's possible to extend Inexor to provide user interfaces as plugin. Here are some ideas:
 

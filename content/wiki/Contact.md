@@ -20,7 +20,8 @@ Mainly used for hacking together and biweekly meetings.
 
 Using the [**Mumble**](https://www.mumble.info/) client:
 
-**Host:** nooblounge.net <br>
+**Host:** nooblounge.net
+
 **Port:** 64738
 
 ## **Social Media** 

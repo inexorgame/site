@@ -6,7 +6,7 @@ authors: aschaeffer
 
 Branches | Issues | Main developers
 -------- | ------ | ---
-[grpc](/inexorgame/code/tree/grpc) | ? | [@aschaeffer](/aschaeffer)
+[grpc](https://github.com/inexorgame/code/tree/grpc) | ? | [@aschaeffer](/aschaeffer)
 
 # Decentralized Server List
 
@@ -48,8 +48,8 @@ Additionally, we want to implement a match-making service, to just join and laun
 
 ## Server list storage
 
-* Each server stores the list of other servers in it's own [[Inexor Tree]].
-* Each client stores the list of (all) servers in it's own [[Inexor Tree]].
+* Each server stores the list of other servers in it's own [Inexor Tree](../flexible-network-and-synchronization/).
+* Each client stores the list of (all) servers in it's own [Inexor Tree](../flexible-network-and-synchronization/).
 
 ## Server list synchronization
 

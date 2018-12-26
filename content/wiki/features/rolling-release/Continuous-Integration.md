@@ -19,8 +19,8 @@ Add the reference to the `dependencies.py` file, then
     * this can be done by going to the package overview and using the "Link" button
 
 ## More details
-Generally speaking, we are trying to build and test our applications on all [platforms (operating systems, compilers..) we support](https://github.com/inexorgame/inexor-core/wiki/Platform-Support).
+Generally speaking, we are trying to build and test our applications on all [platforms (operating systems, compilers..) we support](../../deployment/Platform-Support.md).
 
 ## References
-[[Conan best practices]]
+[Conan best practices](../../deployment/Conan-best-practices.md)
 

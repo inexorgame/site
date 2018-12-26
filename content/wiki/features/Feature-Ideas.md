@@ -31,8 +31,8 @@ Sauerbraten is more or less a very static game. In future, we should reduce the 
 
 ## Dynamicification Possibilities
 
-* [New dynamic entity system](Entity System)
-* [New dynamic particle system](Particle System)
+* [New dynamic entity system](./entities)
+* [New dynamic particle system](./entities/Particle-System.md)
 * Unlimited types of weapons
 * Unlimited types of player models
 * [Dependency management/ingame downloader for content](./distributed-network/)
