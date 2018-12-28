@@ -67,6 +67,7 @@ module.exports = {
                 },
                 {
                     title: '💡 Features',
+                    includeFeatures: true,
                     children: [
                         '/wiki/features/',
                         '/wiki/features/Feature-Ideas',
