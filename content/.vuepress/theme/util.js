@@ -114,25 +114,6 @@ function entriesToObject(entries) {
   return entries.reduce((obj, [k, v]) => ({ ...obj, [k]: v }), {})
 }
 
-// generate list of all features based on layout
-function injectFeaturesToSidebar(sidebar, site) {
-  let features = site.pages
-    .filter(page => page.frontmatter.layout == 'feature')
-    .map(({path}) => path)
-
-  return entriesToObject(
-    Object.entries(sidebar).map(entry => {
-      entry[1].map(section => {
-        if (!section.includeFeatures) return section
-        // extend children with features
-        section.children = [...section.children, ...features]
-        return section
-      }) 
-      return entry
-    })
-  )
-}
-
 export function resolveSidebarItems (page, route, site, localePath) {
   const { pages, themeConfig } = site
 
@@ -145,10 +126,8 @@ export function resolveSidebarItems (page, route, site, localePath) {
     return resolveHeaders(page)
   }
 
-  let sidebarConfig = localeConfig.sidebar || themeConfig.sidebar
+  const sidebarConfig = Object.assign({}, localeConfig.sidebar || themeConfig.sidebar)
   
-  sidebarConfig = injectFeaturesToSidebar(sidebarConfig, site)
-
   if (!sidebarConfig) {
     return []
   } else {
@@ -233,7 +212,16 @@ function resolveItem (item, pages, base, isNested) {
         'Consider using navbar + categories instead.'
       )
     }
-    const children = item.children || []
+
+    // generate list of all features based on layout
+    let features = pages
+      .filter(page => page.frontmatter.layout == 'feature')
+      .map(({path}) => path)
+
+    let children = item.children || []
+    if (item.includeFeatures) {
+      children = [...children, ...features]
+    }
     return {
       type: 'group',
       title: item.title,
