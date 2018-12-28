@@ -2,9 +2,22 @@
     <div class="page">
         <slot name="top"/>
 
-        <div class="container pt-16">
-            <div class="info custom-block"> 
-                {{$page.frontmatter}}
+        <div class="container">
+            <div class="bg-purple-lightest border-l-4 border-purple mt-16 mx-10 p-4"> 
+                <div class="text-xl mb-2 font-semibold">Feature</div>
+                <p>This page is a feature - something someone had thought of and wants to implement into Inexor. You can help with your knowledge and skills to make this happen!</p>
+                <p class="font-semibold">
+                    Status:
+                    <StatusBubble :type="$page.frontmatter.status" />
+                </p>
+                <div v-if="relatedPages.length">
+                    <p class="font-semibold">Related Pages:</p>
+                    <ul>
+                        <li v-for="page in relatedPages">
+                            <NavLink :item="page" />
+                        </li>
+                    </ul>
+                </div>
             </div>
             <Content :custom="false"/>
         </div>
@@ -39,13 +52,26 @@
 
 <script>
 import { resolvePage, normalize, outboundRE, endingSlashRE } from "../util"
-import StatusBubble from '../components/StatusBubble'
+import NavLink from '../NavLink'
 
 export default {
-    components: {StatusBubble},
+    components: {NavLink},
     props: ["sidebarItems"],
 
     computed: {
+        relatedPages() {
+            return this.$site.pages
+                .filter(page => {
+                    const pageRelatedPath = page.path.split('/').slice(0, -1).join('/')
+                    const hereRelatedPath = this.$page.path.split('/').slice(0, -1).join('/')
+                    if (page.path == this.$page.path) return false
+                    return hereRelatedPath == pageRelatedPath
+                })
+                .map(({path, title}) => ({
+                    link: path,
+                    text: title,
+                }))
+        },
         lastUpdated() {
             if (this.$page.lastUpdated) {
                 return new Date(this.$page.lastUpdated).toLocaleString(this.$lang);
