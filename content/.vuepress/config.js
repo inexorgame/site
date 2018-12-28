@@ -116,10 +116,10 @@ module.exports = {
             ],
         },
         // Assumes GitHub. Can also be a full GitLab url.
-        repo: 'inexorgame/inexor-core',
+        repo: 'inexorgame/site',
         // Customising the header label
         // Defaults to "GitHub"/"GitLab"/"Bitbucket" depending on `themeConfig.repo`
-        repoLabel: 'Contribute',
+        repoLabel: 'Github',
 
         // Optional options for generating "Edit this page" link
 
