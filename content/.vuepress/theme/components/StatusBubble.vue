@@ -1,5 +1,5 @@
 <template>
-    <div class="status-bubble text-sm" :class="getStatusClass()">{{type}}</div>
+    <span class="status-bubble text-sm" :class="getStatusClass()">{{type}}</span>
 </template>
 
 <script>

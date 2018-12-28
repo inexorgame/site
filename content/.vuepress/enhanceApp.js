@@ -1,5 +1,6 @@
 // import vuetify from 'vuetify'
 import formatDate from 'date-fns/format'
+import StatusBubble from './theme/components/StatusBubble'
 
 export default ({
     Vue, // the version of Vue being used in the VuePress app
@@ -11,4 +12,5 @@ export default ({
     Vue.filter('formatDate', (date) => {
         return formatDate(date, 'D.M.YYYY')
     })
+    Vue.component('StatusBubble', StatusBubble)
 }
