@@ -10,7 +10,7 @@
                     Status:
                     <StatusBubble :type="$page.frontmatter.status" />
                 </p>
-                <div v-if="relatedPages.length">
+                <div v-if="relatedPages.length && $page.frontmatter.status != 'template'">
                     <p class="font-semibold">Related Pages:</p>
                     <ul>
                         <li v-for="page in relatedPages">
