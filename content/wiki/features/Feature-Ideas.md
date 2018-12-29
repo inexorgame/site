@@ -1,3 +1,7 @@
+# Feature ideas
+
+This should give you a big picture of what we want to build.
+
 ## Free content / Packaging / Content delivery
 - All content is free, in order to make the game free (this makes the game itself forkable) **(WIP)**
 - Content can be delivered by servers / repositories
