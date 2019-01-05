@@ -54,6 +54,14 @@ layout: home
 
 Inexor is aiming to be an in-game multiplayer game creating sandbox.
 
+::: warning
+
+As of now, there is no downloadable executable that you can use to play around. We had a restart for the core engine, but the ideas and concepts will live on.
+
+Stay tuned for updates, [get in touch](./wiki/Contact.md) and check back later.
+
+:::
+
 The first games it will implement are the popular gamemodes of "Cube2: Sauerbraten". [Sauerbraten](http://sauerbraten.org/) started as an open-source DOOM-Clone with focus on old-school blazing fast multiplayer FPS action. Furthermore it added an intuative ingame multiplayer map creator to the mix, which quickly became its heart and breath. A lot of possibilities in its own scripting language made people extend Sauerbraten far beyond its limits, keeping it alive far beyond official development was halted.
 
 We want to create a game which allows people to **create** the game.
