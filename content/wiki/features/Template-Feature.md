@@ -28,7 +28,7 @@ Although, the sections below are not mandatory, they serve as a skeleton to orga
 We are using Netlify as our host. Netlify offers pull-request and branch based preview renders. For a  PR, you can edit the page on Github directly. Every page has an "improve this page" link embedded at the bottom.
 Just add `WIP` to your PRs title, as long as you are authoring new content to see new previews.
 
-::: note
+::: tip
 
 If you need more than one page to describe your feature, you can create a folder instead and place a `index.md` in there. Pages there are listed as related in the top of the page.
 Extra pages shouldn't be marked as "layout: feature" then.
@@ -55,4 +55,4 @@ Explain less known words. Explain what your feature can or will be able to do.
 ## Implementation 
 
 What can you do on your own? Where do you need help? Answer these questions here.
-how we are going to implement it** and give **technical details**.
+how we are going to implement it and give **technical details**.
