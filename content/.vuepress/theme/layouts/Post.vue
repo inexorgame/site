@@ -1,7 +1,10 @@
 <template>
     <div class="page">
 		<div class="container px-8 py-4">
-			<h1>{{$page.title}}</h1>
+			<h1 class="subtitle">{{$page.title}}</h1>
+            <small class="font-semibold text-lg mb-2 text-gray-dark">{{$page.frontmatter.date | formatDate}}</small>
+            <p class="text-gray-darkest text-xl">{{$page.frontmatter.summary}}</p>
+            <div>Author: <span class="font-normal text-gray-darkest">{{$page.frontmatter.author}}</span></div>
 		</div>
         <Content :custom="false"/>
 
@@ -20,7 +23,7 @@
 </template>
 
 <script>
-import { resolvePage, normalize, outboundRE, endingSlashRE } from "../util";
+import { normalize, outboundRE, endingSlashRE } from "../util";
 
 export default {
     props: ["sidebarItems"],
@@ -40,28 +43,6 @@ export default {
                 return this.$site.themeConfig.lastUpdated;
             }
             return "Last Updated";
-        },
-
-        prev() {
-            const prev = this.$page.frontmatter.prev;
-            if (prev === false) {
-                return;
-            } else if (prev) {
-                return resolvePage(this.$site.pages, prev, this.$route.path);
-            } else {
-                return resolvePrev(this.$page, this.sidebarItems);
-            }
-        },
-
-        next() {
-            const next = this.$page.frontmatter.next;
-            if (next === false) {
-                return;
-            } else if (next) {
-                return resolvePage(this.$site.pages, next, this.$route.path);
-            } else {
-                return resolveNext(this.$page, this.sidebarItems);
-            }
         },
 
         editLink() {
@@ -124,30 +105,6 @@ export default {
     }
 };
 
-function resolvePrev(page, items) {
-    return find(page, items, -1);
-}
-
-function resolveNext(page, items) {
-    return find(page, items, 1);
-}
-
-function find(page, items, offset) {
-    const res = [];
-    items.forEach(item => {
-        if (item.type === "group") {
-            res.push(...(item.children || []));
-        } else {
-            res.push(item);
-        }
-    });
-    for (let i = 0; i < res.length; i++) {
-        const cur = res[i];
-        if (cur.type === "page" && cur.path === page.path) {
-            return res[i + offset];
-        }
-    }
-}
 </script>
 
 <style lang="stylus">
