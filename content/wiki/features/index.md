@@ -5,19 +5,23 @@ This is an overview of all features, from ideation to implementation.
 <div class="break-out-page-width">
     <div class="flex justify-between items-start w-full p-4">
         <div>
-            <div>
+            <div class="flex">
                 Filter:
-                <StatusBubble type="idea" />
-                <div class="flex">
-                    <div v-for="filter in availableFilters" class="status-bubble text-sm cursor-pointer mr-2" :class="getStatusFilterClass(filter)" @click="toggleFilter(filter)">{{filter}}</div>
+                <div class="ml-2 flex-inline">
+                    <StatusBubble 
+                        v-for="filter in availableFilters" class="mr-2 cursor-pointer"
+                        @click.native="toggleFilter(filter)"
+                        :key="filter"
+                        :type="filter" :inverted="isFilterActive(filter)"
+                    />
                 </div>
             </div>
-            <div class="my-2">
+            <!-- <div class="my-2">
                 Sort:
                 <button class="p-2 border border-blue rounded">Name</button>
                 <button class="p-2 border border-blue rounded">Status</button>
                 <button class="p-2 border border-blue rounded">Updated</button>
-            </div>
+            </div> -->
         </div>
         <router-link to="Template-Feature.html" class="button my-4">Add new feature ➕</router-link>
     </div>
@@ -33,7 +37,7 @@ This is an overview of all features, from ideation to implementation.
                     </router-link>
                 </h3>
                 <small>{{feature.lastUpdated}}</small>
-                <b class="mr-2">Status:</b> <span class="status-bubble text-xs" :class="getStatusClass(feature.frontmatter.status)">{{feature.frontmatter.status}}</span><br>
+                <b class="mr-2">Status:</b> <StatusBubble :type="feature.frontmatter.status" />
                 <div v-if="getAuthors(feature).length">
                     <b class="mr-2">Authors:</b>
                     <span v-for="author in getAuthors(feature)" class="author">
@@ -75,13 +79,8 @@ export default {
                 // filter all non-string or empty strings ('' gets removed)
                 .filter(String)
         },
-        getStatusClass(status) {
-            return ['bg-' + (STATUS_TYPE_COLORS[status] || 'blue')]
-        },
-        getStatusFilterClass(status) {
-            let color = (STATUS_TYPE_COLORS[status] || 'blue')
-            if (!this.filters.includes(status)) return ['bg-white', `text-${color}`, `border-${color}` ]
-            return this.getStatusClass(status)
+        isFilterActive(status) {
+            return !this.filters.includes(status)
         },
         toggleFilter(filter) {
             if (this.filters.includes(filter)) return this.filters.splice(this.filters.indexOf(filter), 1)

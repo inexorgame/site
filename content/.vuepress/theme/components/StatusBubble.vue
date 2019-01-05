@@ -1,5 +1,5 @@
 <template>
-    <span class="status-bubble text-sm" :class="getStatusClass()">{{type}}</span>
+    <span class="status-bubble text-sm transition" :class="getStatusClass">{{type}}</span>
 </template>
 
 <script>
@@ -14,7 +14,7 @@ export default {
         },
         type: String,
     },
-    methods: {
+    computed: {
         getStatusClass() {
             let color = (STATUS_TYPE_COLORS[this.type] || 'blue')
             if (this.inverted) return ['bg-white', `text-${color}`, `border-${color}` ]
