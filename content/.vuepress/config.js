@@ -124,7 +124,7 @@ module.exports = {
         // Optional options for generating "Edit this page" link
 
         // if your docs are in a different repo from your main project:
-        docsRepo: 'inexorgame/inexor-core/wiki',
+        docsRepo: 'inexorgame/site',
         // defaults to false, set to true to enable
         editLinks: true,
         // custom text for edit link. Defaults to "Edit this page"
