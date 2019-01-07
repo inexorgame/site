@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import { resolvePage, normalize, outboundRE, endingSlashRE } from "../util";
+import { resolvePage, createEditLink } from "../util";
 
 export default {
     props: ["sidebarItems"],
@@ -91,9 +91,8 @@ export default {
                 docsRepo = repo
             } = this.$site.themeConfig;
 
-            let path = normalize(this.$page.path).replace('wiki/', '').replace('.md', '') + '/_edit';
             if (docsRepo && editLinks) {
-                return this.createEditLink(repo, docsRepo, docsDir, docsBranch, path);
+                return createEditLink(repo, docsRepo, docsDir, docsBranch, this.$page.path);
             }
         },
 
@@ -105,32 +104,6 @@ export default {
             );
         }
     },
-
-    methods: {
-        createEditLink(repo, docsRepo, docsDir, docsBranch, path) {
-            const bitbucket = /bitbucket.org/;
-            if (bitbucket.test(repo)) {
-                const base = outboundRE.test(docsRepo) ? docsRepo : repo;
-                return (
-                    base.replace(endingSlashRE, "") +
-                    `/${docsBranch}` +
-                    (docsDir ? "/" + docsDir.replace(endingSlashRE, "") : "") +
-                    path +
-                    `?mode=edit&spa=0&at=${docsBranch}&fileviewer=file-view-default`
-                );
-            }
-
-            const base = outboundRE.test(docsRepo)
-                ? docsRepo
-                : `https://github.com/${docsRepo}`;
-
-            return (
-                base.replace(endingSlashRE, "") +
-                (docsDir ? "/" : "") +
-                path
-            );
-        }
-    }
 };
 
 function resolvePrev(page, items) {

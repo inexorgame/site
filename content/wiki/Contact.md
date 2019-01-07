@@ -7,12 +7,11 @@ If you want to talk to us in real-time, below you can find the best ways to get 
 Mainly used - this is where you will always find someone to talk to. Good for first contact and for getting involved.
 
 IRC and Telegram are connected and sync messages and media.
- * **[Riot.im #inexor](https://riot.im/app/#/room/#inexor:matrix.org) recommended**
- * Connect with every compatible [Matrix](https://matrix.org) client to #inexor:matrix.org
+ * **[Telegram #inexor](https://t.me/inexor) recommended**
+ * [Riot.im #inexor](https://riot.im/app/#/room/#inexor:matrix.org)
+    * Connect with every compatible [Matrix](https://matrix.org) client to #inexor:matrix.org
  * [Freenode web client](https://webchat.freenode.net/?channels=#inexor)
- * [Your personal IRC App: #inexor on chat.freenode.net:6697](irc://chat.freenode.net:6697/#inexor)
- * [Telegram](https://t.me/inexor)
-
+    * [Your personal IRC App: #inexor on chat.freenode.net:6697](irc://chat.freenode.net:6697/#inexor)
 
 ## Voice Chat
 
