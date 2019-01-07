@@ -116,7 +116,7 @@ module.exports = {
             ],
         },
         // Assumes GitHub. Can also be a full GitLab url.
-        repo: 'inexorgame/site',
+        repo: 'inexorgame/inexor-core',
         // Customising the header label
         // Defaults to "GitHub"/"GitLab"/"Bitbucket" depending on `themeConfig.repo`
         repoLabel: 'Github',
@@ -125,6 +125,8 @@ module.exports = {
 
         // if your docs are in a different repo from your main project:
         docsRepo: 'inexorgame/site',
+        // where is the documentation located
+        docsDir: 'content',
         // defaults to false, set to true to enable
         editLinks: true,
         // custom text for edit link. Defaults to "Edit this page"
