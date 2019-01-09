@@ -20,12 +20,12 @@ Reason:
 
 Pictures are louder than words:
 
-Complete Album for comparison of some maps with and without AO: [http://www.bilderhoster.net/g/m3gld18a.html](http://www.bilderhoster.net/g/m3gld18a.html)
+Complete Album for comparison of some maps with and without AO: [https://www.bilderhoster.net/g/m3gld18a.html](https://www.bilderhoster.net/g/m3gld18a.html)
 
 No Ambient Occlusion:
-![without AO](http://www.bilderhoster.net/safeforgallerie/5wchcazj.jpg)
+![without AO](https://raw.githubusercontent.com/inexorgame/blog-media/master/2018/01/5wchcazj.jpg)
 With Ambient Occlusion:
-![with AO](http://www.bilderhoster.net/safeforgallerie/cs8y55xn.jpg)
+![with AO](https://raw.githubusercontent.com/inexorgame/blog-media/master/2018/01/cs8y55xn.jpg)
 
 ### Is it fps-expensive?
 No its not, unlike Tesseract, we implemented it into the current lightmap-system. 

@@ -6,10 +6,10 @@ Branches | Issues | Main developers
 
 Curves are very important in games and computer image processing. They can be used to align particles, create camera "drives" and much more. They are also easier to handle than static vertex data.
 We are currently implementing:
-* [Bézier curves](http://en.wikipedia.org/wiki/B%C3%A9zier_curve)
-* [Cubic Hermite splines](http://en.wikipedia.org/wiki/Cubic_Hermite_spline)
-* [B-splines](http://en.wikipedia.org/wiki/B-spline)
-* [Biarc splines](http://en.wikipedia.org/wiki/Biarc)
-* [Torus knots](http://en.wikipedia.org/wiki/Torus_knot)
+* [Bézier curves](https://en.wikipedia.org/wiki/B%C3%A9zier_curve)
+* [Cubic Hermite splines](https://en.wikipedia.org/wiki/Cubic_Hermite_spline)
+* [B-splines](https://en.wikipedia.org/wiki/B-spline)
+* [Biarc splines](https://en.wikipedia.org/wiki/Biarc)
+* [Torus knots](https://en.wikipedia.org/wiki/Torus_knot)
 
-[![Alt text for your video](http://img.youtube.com/vi/zqldiZ2Sht4/0.jpg)](http://www.youtube.com/watch?v=zqldiZ2Sht4)
+[![Alt text for your video](https://img.youtube.com/vi/zqldiZ2Sht4/0.jpg)](https://www.youtube.com/watch?v=zqldiZ2Sht4)

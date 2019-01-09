@@ -22,11 +22,11 @@ As a professional mapper, you have to configure a lot of aspects to have a tools
 ### Movement / Navigation
 * Floatspeed Changer
 
-![](http://i.imgur.com/4du3Ztw.png)
+![](https://raw.githubusercontent.com/inexorgame/blog-media/master/2018/01/4du3Ztw.png)
 
 * Information at your Fingertips
 
-![](http://i.imgur.com/ld7Eucb.png)
+![](https://raw.githubusercontent.com/inexorgame/blog-media/master/2018/01/ld7Eucb.png)
 
 Implementing this, requires better configuration of the key bindings.
 Depending on how you plan to implement several configurations (javascript?) this has to be configured.
@@ -46,7 +46,7 @@ At the core, editing specific parts of a map can be divided into these aspects o
 
 Inspired by Garry's mod, I had always the idea of having an editors toolbar, where you can switch between the different modes or tools
 
-![](http://i.imgur.com/b85gjcV.png)
+![](https://raw.githubusercontent.com/inexorgame/blog-media/master/2018/01/b85gjcV.png)
 
 `/blendpaintmode` or `/hmapedit` do nothing more than disabling other behavior of scroll (DeltaDoModifier).
 The idea is to move away from GUIs and move the information and modes perhaps even tools to the HUD to create something like an inventory. Where editing Cubes is the main and default tool.

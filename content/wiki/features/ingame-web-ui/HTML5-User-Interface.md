@@ -16,7 +16,7 @@ Branches | Issues | Main developers
 * Communicate with the Inexor application server (NodeJS) which is exposing the property tree as REST webservice
 * Server only: Provide a web user interface for administration
 
-[![Early demonstration of Inexor with HTML5 user interface](http://img.youtube.com/vi/eFMS_bXPDr8/0.jpg)](http://www.youtube.com/watch?v=eFMS_bXPDr8)
+[![Early demonstration of Inexor with HTML5 user interface](https://img.youtube.com/vi/eFMS_bXPDr8/0.jpg)](https://www.youtube.com/watch?v=eFMS_bXPDr8)
 
 
 ### Used Technologies
@@ -30,10 +30,10 @@ Branches | Issues | Main developers
 ##### CEF Resources
 
 * https://bitbucket.org/chromiumembedded/cef
-* http://coherent-labs.com/blog/what-developers-should-consider-when-using-chromium-embedded-framework-cef-in-their-games/
-* http://blog.erikd.org/2013/01/14/chromium-embedded-framework-3-bare-bones/
+* https://coherent-labs.com/blog/what-developers-should-consider-when-using-chromium-embedded-framework-cef-in-their-games/
+* https://blog.erikd.org/2013/01/14/chromium-embedded-framework-3-bare-bones/
 * https://bitbucket.org/chromiumembedded/cef/wiki/GeneralUsage
-* http://magpcss.org/ceforum/apidocs/index.html
+* https://magpcss.org/ceforum/apidocs/index.html
 
 #### AngularJS
 
@@ -48,9 +48,9 @@ Branches | Issues | Main developers
 
 * https://angularjs.org/
 * https://docs.angularjs.org/
-* http://ngmodules.org/
-* http://www.encodedna.com/angularjs/tutorial/my-favorite-angularjs-features.htm
-* http://code.tutsplus.com/tutorials/5-awesome-angularjs-features--net-25651
+* https://ngmodules.org/
+* https://www.encodedna.com/angularjs/tutorial/my-favorite-angularjs-features.htm
+* https://code.tutsplus.com/tutorials/5-awesome-angularjs-features--net-25651
 
 #### Bootstrap
 
@@ -58,7 +58,7 @@ Branches | Issues | Main developers
 
 ##### Bootstrap Resources
 
-* http://getbootstrap.com/
+* https://getbootstrap.com/
 * https://bootstrapbay.com/blog/reasons-to-use-bootstrap/
 
 #### Bower & RequireJS
