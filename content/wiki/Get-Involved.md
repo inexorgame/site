@@ -9,6 +9,7 @@ In general, if you are a creator, you will be able to help!
 ## What can you contribute?
 
 * **Content**
+  * [Blog posts and wiki articles](https://github.com/inexorgame/site/blob/master/CONTRIBUTING.md)
   * Textures
   * Map, Weapon and Player Models
   * Music and Sounds
