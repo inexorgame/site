@@ -9,7 +9,7 @@ summary:    Current state of Inexor in 2018 and outlook to 2019.
 Howdy folks! It has been mere two months since the last official news from our project, so I'll briefly cover what happened:
 
 - we've had another amazing hackathon in Stuttgart
-- decision has been made to restart the project
+- decision has been made to restart the project, while our principles will stay the same
 - the website got a major overhaul and the wiki and all of our internal structure changed
 
 This is a long story short. If you wish to dig deeper into why, we shall begin with
@@ -20,7 +20,7 @@ MartinMuzatko offered his house for a very [nice hackathon](https://github.com/i
 
 ![Hackathon photo](https://user-images.githubusercontent.com/3730888/51029227-07b39c80-1596-11e9-8951-6b8f3fc72b6a.jpg "Hackathon 2018")
 
-_From left to right: IAmNotHanni, Fohlen, westernheld, aschaeffer, MartinMuzatko, a-teammate, Croydon
+_From left to right: IAmNotHanni, Fohlen, westernheld, aschaeffer, MartinMuzatko, a-teammate, Croydon_
 
 Unfortunately movabo and koppiman did not make it to the photo.
 
