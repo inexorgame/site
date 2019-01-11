@@ -15,7 +15,9 @@ You can also distinguish an issue from a feature. Usually a feature can span mul
     <div class="flex justify-between items-start w-full p-4">
         <div>
             <div class="flex">
-                Filter:
+                <span class="label">
+                    Filter
+                </span>
                 <div class="ml-2 flex-inline">
                     <StatusBubble 
                         v-for="filter in availableFilters" class="mr-2 cursor-pointer"
