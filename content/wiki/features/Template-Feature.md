@@ -1,14 +1,17 @@
 ---
 layout: feature
 status: template # idea | concept | specification | implemented
-# authors: 
+# authors: # comma separated
 ---
 
 # Feature Template
 
 Use this template to create new features. Below you can find a fill-in-the-gaps checklist to make sure you create a well established concept.
+
 This section of your feature should contain a quick overview in 1-2 sentences, what it is about. In the title, put the name of your feature.
 Although, the sections below are not mandatory, they serve as a skeleton to organize your content.
+
+If you haven't already, you can read more about the [stages and process of a feature here](./Feature-Process.md). It is easy though - promise!
 
 <!-- Delete these instructions START -->
 
