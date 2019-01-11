@@ -16,7 +16,13 @@ This is a long story short. If you wish to dig deeper into why, we shall begin w
 
 ## Hackathon
 
-@Misan offered his house for a very [nice hackathon](https://github.com/inexorgame/inexor-core/issues/608). It took place from 23rd to 25th of November in Stuttgart. We have made a lot of decisions during this time span which influenced the later parts that will be covered. Also it was a cozy, familliar event!
+Misan offered his house for a very [nice hackathon](https://github.com/inexorgame/inexor-core/issues/608). It took place from 23rd to 25th of November in Stuttgart. We have made a lot of decisions during this time span which influenced the later parts that will be covered. Also it was a cozy, familliar event!
+
+![Hackathon photo](https://user-images.githubusercontent.com/3730888/51029227-07b39c80-1596-11e9-8951-6b8f3fc72b6a.jpg "Hackathon 2018")
+
+_From left to right: Hanni, Fohlen, westernheld, Hanack, Misan, a_teammate, Croydon_
+
+Unfortunately sanitizer and nothing did not make it to the photo.
 
 ## Project re-start
 
