@@ -28,6 +28,10 @@
     .status-bubble {
         @apply rounded-full px-2 leading-none text-gray-lightest uppercase font-bold border border-transparent;
     }
+
+    .label {
+        @apply text-gray-darker font-semibold
+    }
 }
 
 @tailwind utilities
@@ -89,7 +93,7 @@ body
     overflow-y auto
 
 .content
-    p
+    p, ul
         margin 1em 0
 
 .content:not(.custom)

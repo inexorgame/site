@@ -2,11 +2,21 @@
 
 This is an overview of all features, from ideation to implementation.
 
+::: tip Related pages and more about features
+
+ * [Process](./Feature-Process.md) - How to suggest, create, maintain and implement a feature
+ * [Overall Ideas](./Feature-Ideas.md) - Overall direction and big picture
+ * [Sauerbraten Features](./Sauerbraten-Features.md) - List of features from where we forked from
+
+:::
+
 <div class="break-out-page-width">
     <div class="flex justify-between items-start w-full p-4">
         <div>
             <div class="flex">
-                Filter:
+                <span class="label">
+                    Filter
+                </span>
                 <div class="ml-2 flex-inline">
                     <StatusBubble 
                         v-for="filter in availableFilters" class="mr-2 cursor-pointer"
