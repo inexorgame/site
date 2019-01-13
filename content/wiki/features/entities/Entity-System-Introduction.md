@@ -1,45 +1,38 @@
-## Entities itself
+# Introduction
+The development of a new entity system is an essential key for the future of Inexor! It is the foundation for many new features like the new particle system, the new sound system or the visual scripting enviroment. It also plays a central role in code refactoring. All those tasks can't be started until a new entity system has been developed! In order to accelerate Inexor's development we must resolve this blocking of follow-up projects as fast as possible!
 
-* consists of named attributes
- * like position, velocity, states, ...
-* attribute inheritance ?
-* entity graph
- * parent/child relationships between entities (particle modifier instances --[n:m]--> particle emitter instances)
-* event handling
- * publisher / subscriber pattern
- * triggers events
+## What is an entity ?
+An entity is a thing in the game world that fulfills a certain purpose:
 
-## Management of entity attributes
+![error: file not found!](https://raw.githubusercontent.com/inexorgame/visualisations/2d3f48d44960d4635f29a90e955fdfcfc25b1bab/wiki/wiki_particle_examples.jpg)
 
-* which attributes have to be persisted
-* which attributes have to be synchronized over network
-* specification of the data type of an attribute value
-* how to persist attributes (along with the map)
-* how to synchronize attributes over network (using network messages)
+* pickups
+* particles
+* sound sources
+* spawn points
+* light sources
+* projectiles
+* jumppads
+* player models
+* map models
+* ..
 
-## Entity emitter
+Please take a moment to realize that *everything* in the game is an entity.
 
-* Emits entities
-* Use case: pickup emitter for ammo:
- * spawns ammo pickup of a configurated type in a specific rate
- * bind the spawned pickup entity (add child)
- * as long as the child isn't picked up, don't spawn other pickups
+## What gives entities their purpose ?
+Entities can have connections to other entities which shall be called **relations**.
+Entities can store data in form of **attributes**. Every attribute of an entity has a name, data type and value.
+It is the combination of attributes and relations which gives entities their purpose and allows the game engine to control their behaviour.
 
-## Entity modifier
+## What is an entity system ?
+An entity system is the code which manages entities and their attributes and relations with a data model and gives them their functionality.
 
-* modify(entity)
-* modifies attributes of an entity
-* create events based on an entity
- * player entity near entity modifier
- * Flag stolen
- * Flag near player
- * Base captured
-* entity movement
- * Move along segmented paths (bezier curve)
-  * Path: Segments
-  * Segment: Start, End, Speed
-* Particle emitter configuration
+# What are the implementation metrics ?
+* fast
+* simple
+* flexible
+* well documented
+* object oriented design
 
-## Entity Type renderer
-
-* renders entity of a specific type
+# Source code design
+[Click here](https://github.com/inexorgame/entity-system/wiki/Code-design) to see some characteristics of Inexor's entity system's code.
