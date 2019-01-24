@@ -33,11 +33,14 @@ Good for player questions or to see what we are up to.
 
 ## Meetings
 
+Meetings take place regularely every 2 weeks (even calendar week numbers - 2,4,6 etc).
+
 We meet on [Mumble](https://github.com/mumble-voip/mumble) on "nooblounge.net", port 64738.
 
-Meetings take place when necessary and will be announced in the IRC channel.
+Meetings take place when necessary and will be announced in the IRC channel (Riot/Matrix) and Telegram.
 
 In advance to every meeting a pad will be created with topics to be discussed.
 
-_Protocols of old or upcoming meetings:_ 
-* Can be found here: https://hackmd.io/CYFhFYCYCMGYEYC0A2e9yJAYwKYENE4AOWRPHCABiz2AE5hLIg==?both
+<div class="flex justify-end">
+   <router-link to="./Meetings.html" class="button my-4">List of Meetings</router-link>
+</div>

@@ -59,6 +59,7 @@ module.exports = {
                         '/wiki/Get-Involved',
                         '/wiki/Code-of-Conduct',
                         '/wiki/Contact',
+                        '/wiki/Meetings',
                         '/wiki/License-Policy',
                         '/wiki/Other-Projects',
                         '/wiki/Frequently-Asked-Questions',
