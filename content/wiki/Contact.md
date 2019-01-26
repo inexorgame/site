@@ -33,14 +33,8 @@ Good for player questions or to see what we are up to.
 
 ## Meetings
 
-Meetings take place regularely every 2 weeks (even calendar week numbers - 2,4,6 etc).
-
-We meet on [Mumble](https://github.com/mumble-voip/mumble) on "nooblounge.net", port 64738.
-
-Meetings take place when necessary and will be announced in the IRC channel (Riot/Matrix) and Telegram.
-
-In advance to every meeting a pad will be created with topics to be discussed.
+We meet bi-weekly to discuss current progress and blocking points and how we can support each other. Newcomers are also invited to let us know how they want to get involved.
 
 <div class="flex justify-end">
-   <router-link to="./Meetings.html" class="button my-4">List of Meetings</router-link>
+   <router-link to="./Meetings.html" class="button my-4">Learn more</router-link>
 </div>
