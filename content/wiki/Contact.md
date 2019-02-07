@@ -33,11 +33,8 @@ Good for player questions or to see what we are up to.
 
 ## Meetings
 
-We meet on [Mumble](https://github.com/mumble-voip/mumble) on "nooblounge.net", port 64738.
+We meet bi-weekly to discuss current progress and blocking points and how we can support each other. Newcomers are also invited to let us know how they want to get involved.
 
-Meetings take place when necessary and will be announced in the IRC channel.
-
-In advance to every meeting a pad will be created with topics to be discussed.
-
-_Protocols of old or upcoming meetings:_ 
-* Can be found here: https://hackmd.io/CYFhFYCYCMGYEYC0A2e9yJAYwKYENE4AOWRPHCABiz2AE5hLIg==?both
+<div class="flex justify-end">
+   <router-link to="./Meetings.html" class="button my-4">Learn more</router-link>
+</div>
