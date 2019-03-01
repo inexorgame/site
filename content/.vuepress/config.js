@@ -39,9 +39,11 @@ module.exports = {
         anchor: {
             permalink: true,
         },
-        config: md => {
+        extendMarkdown: md => {
+            // use more markdown-it plugins!
             md.use(require('markdown-it-decorate'))
-        },
+            md.use(require('markdown-it-task-lists'), { enabled: true })
+        }
     },
     themeConfig: {
         nav: [
