@@ -39,7 +39,7 @@ module.exports = {
         anchor: {
             permalink: true,
         },
-        extendMarkdown: md => {
+        config: md => {
             // use more markdown-it plugins!
             md.use(require('markdown-it-decorate'))
             md.use(require('markdown-it-task-lists'), { enabled: true })
