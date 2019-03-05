@@ -16,7 +16,7 @@ Also thanks to tau for preparing his famous _Taulasch_ for us, it was very delic
 
 ## What we did
 
-We had lot's of fun cooking, prototyping, exploring Freiburg, and as well `@Fohlen` cut some cucumbers really well.
+We had lots of fun cooking, prototyping, exploring Freiburg, and as well `@Fohlen` cut some cucumbers really well :cocktail:.
 
 ![Inexor people hacking](https://raw.githubusercontent.com/inexorgame/blog-media/master/2019/03/inexor_hacking_from_above.jpg "inexor people hacking")
 
@@ -26,7 +26,7 @@ Let's dive right into what we accomplished this Hackathon:
 
 ### User stories
 
-`@martinmuzatko` and `@koppiman` wrote a myrad of usefull user stories, sorted and prioritized them, so that it will be straightforward to implenent a _"minimum viable prototype"_ from this list. 
+`@martinmuzatko` and `@koppiman` wrote a myriad of usefull user stories, sorted and prioritized them, so that it will be straightforward to implenent a _"minimum viable prototype"_ from this list. 
 
 ### User interfaces
 
@@ -34,7 +34,7 @@ Let's dive right into what we accomplished this Hackathon:
 
 ![Entity UI](https://raw.githubusercontent.com/inexorgame/blog-media/master/2019/03/entity_ui.png "Entity UI")
 
-The current UI let's you create entities and relations with attributes, as well as connect those. In the future it will be possible to display the [entity-system](https://github.com/inexorgame/entity-system) as a graph in the UI.
+The current UI lets you create entities and relations with attributes, as well as connect those. In the future it will be possible to display the [entity-system](https://github.com/inexorgame/entity-system) as a graph in the UI.
 
 ### Entity-System, Visual Scripting and Rendering
 
