@@ -30,7 +30,7 @@ Let's dive right into what we accomplished this Hackathon:
 
 ### User interfaces
 
-`@martinmuzatko` wrote a nice user interface for the [entity-system]() which you can see below:
+`@martinmuzatko` wrote a nice debugger interface for the [entity-system](https://github.com/inexorgame/entity-system/) which you can see below:
 
 ![Entity UI](https://raw.githubusercontent.com/inexorgame/blog-media/master/2019/03/entity_ui.png "Entity UI")
 
@@ -60,11 +60,11 @@ We also discussed what can be done in the future and came up with an agenda unti
 
 - Implement the basic connectors and processors as defined in the [specification](https://inexor.org/wiki/features/Entity-System.html) including the basic `REST-API`
 - Implement a first prototype of an octree-based world rendering
-- Think about thread pooling and ideally implement a solution
+- Implement a safer concurrency solution for everything outside the entity system's graph
 - Think about synchronisation (multiplayer)
 - Finish the work on the basic UI for the `entity-system`
 - `@koppiman` will talk with Medienschule Salzburg about a potential model contest for the first Inexor demo
 
-We would like to thank everyone who was involved, helped, discussed and had fun with us!
+We would like to thank everyone who was involved (heads up `@koenigr`), helped, discussed and had fun with us!
 
 PS: The detailed report can be found on [HackMD](https://hackmd.io/gS25VTU3S2WcuOR1X8XBIA)
