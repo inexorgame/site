@@ -42,7 +42,7 @@ The current UI lets you create entities and relations with attributes, as well a
 
 It is now possible to _reactively_ connect entities and processors, laying the foundation for the visual scripting. We collectively decided for [magnum](https://magnum.graphics/) as a rendering engine and even created a demoscene which interacts with the `entity-system`:
 
-![Entity Rendering Demo](https://raw.githubusercontent.com/inexorgame/blog-media/master/2019/03/triangle_example.png "Entity Rendering Demo")
+![Entity Rendering Demo](https://raw.githubusercontent.com/inexorgame/blog-media/master/2019/03/entity-renderer.gif "Entity Rendering Demo")
 
 This demo does the following:
 
