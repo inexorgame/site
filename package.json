@@ -23,7 +23,7 @@
     "isomorphic-fetch": "^2.2.1",
     "markdown-it-decorate": "^1.2.2",
     "tailwindcss": "^0.7.2",
-    "vuepress": "^0.14.9"
+    "vuepress": "^0.14.10"
   },
   "dependencies": {
     "date-fns": "^1.29.0",
