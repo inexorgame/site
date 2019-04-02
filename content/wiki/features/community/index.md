@@ -1,6 +1,6 @@
 ---
 layout: feature
-status: idea # idea | concept | specification | implemented
+status: specification # idea | concept | specification | implemented
 authors: MartinMuzatko
 ---
 
@@ -26,13 +26,16 @@ It is important to recite this here, to discuss the implementation details. At w
 
 It would be great to have a similar experience as Steam has with its workshop - where users can publish their own content, download others. This could work ingame as also as a website to see the content. This would allow us to offer something as [Quadropolis](http://quadropolis.us/) (which was the community hub of Sauerbraten) as our own service to our users.
 
-What kind of content?
+See [Implementation Server-Side](./Implementation-Server-Side.md) for more information on schema, client, etc.
+
+#### What kind of content?
 
 * Maps
 * Textures
 * Models
 * Sounds
 * Prefabs
+* Entities
 
 Maps can be published to be hosted by our content servers. This allows users to have one central place where they can share their maps easily. This is somewhat related to a **cloud** concept and can also get costly quite easily, when we consider what data we would need to store. However, this also comes with many benefits.
 

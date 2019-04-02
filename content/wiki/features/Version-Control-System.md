@@ -56,8 +56,18 @@ These are the features that are or will be supported by the VCS:
 
    Split the history of a map on purpose to make it easier to work on several ideas at once. Then use the merging feature to merge back into the main branch the ideas that worked out and discard the ones that didn't.
 
+7. **Push**
+
+   Push to remote [inexor cloud services](./community/).
+  
+8. **Pull**
+
+   Pull from remote [inexor cloud services](./community/).
+
 ## Basic usage of Inexor's VCS
 _TODO_
 
 ## Implementation of Inexor's VCS
 _TODO_
+
+Server-side, see [Community Implementation](./community/Implementation-Server-Side.md)
