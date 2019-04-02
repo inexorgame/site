@@ -1,0 +1,11 @@
+{
+  "788|vuepress>css-loader>cssnano>postcss-svgo>svgo>js-yaml": {
+    "ignore": 1
+  },
+  "788|vuepress>optimize-css-assets-webpack-plugin>cssnano>postcss-svgo>svgo>js-yaml": {
+    "ignore": 1
+  },
+  "786|vuepress>@babel/core>micromatch>braces": {
+    "ignore": 1
+  }
+}

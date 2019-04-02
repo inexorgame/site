@@ -3,5 +3,6 @@ node_js:
   - 10
 
 script:
-  - npm audit
+  - npm install -g npm-audit-resolver
+  - check-audit
 
