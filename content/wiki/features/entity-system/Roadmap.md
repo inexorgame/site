@@ -1,0 +1,43 @@
+## Roadmap
+
+- [ ] Entity System Core
+    - [x] Compile as library (Hanni, a_teammate)
+    - [ ] Google Test / Unit Tests (Hanni, a_teammate)
+    - [x] Folder Structure (Hanni, Hanack) [(#56)](https://github.com/inexorgame/entity-system/issues/56)
+    - [ ] Multithreading (Hanni)
+    - [ ] New data types for attributes: [(#55)](https://github.com/inexorgame/entity-system/issues/55)
+        - [ ] byte array (textures, binary data)
+        - [ ] vec2 (2x double, xy, uv)
+        - [x] vec3 (3x double, xyz, rgb)
+        - [x] vec4 (4x double, rgba)
+    - [x] Extend attributes with a list of features (see below for features on attributes like INPUT or OUTPUT)[(#54)](https://github.com/inexorgame/entity-system/issues/54)
+    - [ ] Data container abstraction
+        - [x] Class DataContainer as interface for the accessors
+        - [ ] Performance benchmarks
+- [ ] Entity System REST-API (Hanack)
+    - [x] Define the REST-API for the complete Entity System, see below
+    - [x] [Create a OpenAPI 3.0 (Swagger) definition file for the REST-API](https://raw.githubusercontent.com/inexorgame/entity-system/master/src/entity-system-openapi.yaml)
+    - [x] [Generate a HTTP/REST-Server-Stub from the OpenAPI definition file using openapi-generator](https://github.com/OpenAPITools/openapi-generator)
+    - [ ] Implement the Server-Stubs by calling the corresponding Entity System method [Restbed Conan Package](restbed/6eb385fa9051203f28bf96cc1844bbb5a9a6481f@inexorgame/stable)
+    - [ ] [Generate a .proto file from the OpenAPI definition file using openapi2proto](https://github.com/NYTimes/openapi2proto)
+    - [ ] [Generate a GRPC-Server from the .proto file using protoc](https://github.com/grpc/grpc/blob/master/examples/cpp/cpptutorial.md)
+- [ ] Entity System UI (Misan)
+    - [ ] Toolbar
+        - [ ] Clear Entity System (Clear)
+        - [ ] Load Entity System from JSON (Clear+Load)
+        - [ ] Load additional JSON (Load only)
+        - [ ] Save Entity System as JSON
+    - [ ] Tabs / ListViews
+        - [ ] List Entity Types
+        - [ ] List Entity Instances
+        - [ ] List Relationship Types
+        - [ ] List Relationship Instances
+    - [ ] CRUD
+        - [ ] CRUD Entity Types
+        - [ ] CRUD Entity Instances
+        - [ ] CRUD Relationship Types
+        - [ ] CRUD Relationship Instances
+    - [ ] Visualisation as Graph using sigma.js
+        - [ ] Entity Types & Relationship Types ( a.k.a. Inexor Type System )
+        - [ ] Entity Instances & Relationship Instances ( a.k.a. Inexor Game State )
+        - [ ] both
