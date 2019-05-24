@@ -1,6 +1,3 @@
-Branches | Issues | Main developers
---- | --- | --- 
-master |   | [@a-teammate](/a-teammate), [@aschaeffer](/aschaeffer)
 
 ## Motivation
 

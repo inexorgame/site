@@ -1,3 +1,5 @@
+# THIS IS FOR THE OLD DEVELOPMENT STREAM, WHICH WAS DISCONTINUED
+
 ### Media Repository
 
 Why `media repositories`?
