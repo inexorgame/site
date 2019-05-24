@@ -1,3 +1,5 @@
+# Supported File Formats
+
 ## Textures
 
   * png (recommended)
