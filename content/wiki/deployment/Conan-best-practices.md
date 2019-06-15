@@ -37,3 +37,29 @@ Note: We assume cmake and git being installed on any machine
 * Avoid `apt-get`
    * using apt is a) OS dependent b) gives you back all the problems we wanted to solve.
 * .. more to come
+
+# Create a new conan package
+
+## Step 0: Login 
+
+You have to be added to the bintray organisation inexorgame. Therefore login with your github account. You'll find your API key.
+
+## Step 1: Setup Remote
+
+```
+conan remote add inexor https://api.bintray.com/conan/inexorgame/inexor-conan
+```
+
+## Step 2: Setup Uploading using your API key
+
+```
+conan user -p <your_apikey_from_bintray_profile_page> -r inexor aschaeffer
+```
+
+## Step 3: Update and upload your conan package
+
+```
+cd <folder_with_conanfile.py>
+conan export . inexorgame/testing
+conan upload magnum_plugins/2019.01@inexorgame/testing -r inexor --all
+```
