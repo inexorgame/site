@@ -1,6 +1,8 @@
+# Supported File Formats
+
 ## Textures
 
-  * png (recommend)
+  * png (recommended)
   * tga
   * bmp
 
@@ -13,11 +15,6 @@
 ## Models
 Inexor can load the following file formats
 
-  * iqm (recommended)
-  * obj (recommended)
-  * md5
-  * md3
-  * md2
-  * smd
+  * gltf 2.0
 
 for skeletal and vertex animated characters, weapons, items, and world objects. Supports animation blending, procedural pitch animation, and ragdoll physics for skeletally-animated characters.

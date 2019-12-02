@@ -88,7 +88,7 @@ LUA is indeed well known, but our specific GUI libs and stdlibs would not be.
 
 Python or Ruby (or Erlang or groovy ...) are certainly as excellent as node.js, but since we will be using JavaScript in the browser, better introduce just one language.
 
-Node.js is a different process next to Inexor. As this introduces some complexities to the API we are working on hiding these from the regular developer through the [Inexor Tree](../flexible-network-and-synchronization/).
+Node.js is a different process next to Inexor. As this introduces some complexities to the API we are working on hiding these from the regular developer through the [Inexor Tree](./features//flexible-network-and-synchronization/).
 The web browser uses http to comunicate with node.js.
 
 The distributed system also has some advantages:
