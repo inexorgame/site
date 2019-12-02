@@ -1,3 +1,5 @@
+## Travis Debugging
+
 It is possible to activate debug capabilites for `inexorgame/code` using the following steps:
 
 1. [Get an API token](https://github.com/travis-ci/travis.rb#token) using the Travis CLI

@@ -59,7 +59,6 @@ Below you can find everything you need to get started with development
 ### Development
 
 * [Build](./development/Build.md)
-* [Directory Structure](./content/Directory-Structure.md)
-* [Coding Standards](./development/Coding-Standards.md)
+* [How to contribute Code](./development/How-To-Contribute-Code.md)
 * [How To Debug](./development/How-To-Debug.md)
 * [FAQ](./Frequently-Asked-Questions.md)
