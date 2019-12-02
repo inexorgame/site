@@ -21,6 +21,3 @@ Add the reference to the `dependencies.py` file, then
 ## More details
 Generally speaking, we are trying to build and test our applications on all [platforms (operating systems, compilers..) we support](../../deployment/Platform-Support.md).
 
-## References
-[Conan best practices](../../deployment/Conan-best-practices.md)
-

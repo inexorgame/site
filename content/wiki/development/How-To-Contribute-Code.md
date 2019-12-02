@@ -32,7 +32,7 @@ _If you don't understand the following steps, this [Git-Tutorial](http://pcottle
 2. Develop the feature in your branch
  * Checkout your branch
  * Develop your feature
- * Respect our [Coding Standards](./Coding-Standards.md) (don't worry if you don't understand every detail, reviewing your work we will notify you about passages adaptions are needed)
+ * Respect our [Coding Standards](#Coding-Standards) (don't worry if you don't understand every detail, reviewing your work we will notify you about passages adaptions are needed)
  * At every logical step, commit your work to git
     * Commit often (but logically)
        * Your feature has to be merged into other branches as easy as possible
@@ -49,3 +49,19 @@ _If you don't understand the following steps, this [Git-Tutorial](http://pcottle
 
 Experiments are allowed and encouraged. But: Don't be upset if your idea is getting outvoted by the other Inexor people. If a feature is not a core functionality or controversial, better develop it as a plugin.
 
+# Coding Standards
+**Develop modular, clean and document your work.**
+
+* Document your functions and its parameters
+* Test your functions in a file called <your_tested_filename>_test.cpp
+
+And generally speaking it is advised to produce
+* No spaghetti code
+* No code duplication
+* No overengineering
+* Refactor your work
+
+## Codestyle
+
+The Codestyle will be enforced by a common standard.
+The standard is chosen based on the particular language, if the language does not have a standard (e.g. C++), one will be chosen.

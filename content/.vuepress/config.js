@@ -93,33 +93,24 @@ module.exports = {
                         '/wiki/development/',
                         ['https://docs.inexor.org/core/master/', 'Generated Docs'],
                         '/wiki/development/How-To-Contribute-Code',
-                        '/wiki/development/Coding-Standards',
-                        '/wiki/development/Git-FAQ',
-                        '/wiki/development/GitHub-Issues',
                         '/wiki/development/Build',
-                        '/wiki/development/CMake-System',
                         '/wiki/development/How-To-Debug',
-                        '/wiki/development/Refactoring-The-Server',
-                        '/wiki/development/Travis-in-debug-mode',
-                        // '/wiki/development/[Windows]-add--windows_exe--to-PATH',
+                        '/wiki/development/Continous-Integration'
                     ],
                 },
                 {
                     title: '📦 Content',
                     children: [
                         '/wiki/content/',
-                        '/wiki/content/Directory-Structure',
-                        '/wiki/content/Free-Sources',
+                        '/wiki/content/Possible-Content-Sources',
                         '/wiki/content/Inclusion-Standard',
-                        '/wiki/content/JSON-Configuration',
-                        '/wiki/content/Media-Repositories',
-                        '/wiki/content/Supported-File-Formats',
+                        '/wiki/content/Supported-File-Formats'
                     ],
                 },
             ],
         },
         // Assumes GitHub. Can also be a full GitLab url.
-        repo: 'inexorgame/inexor-core',
+        repo: 'inexorgame/entity-system',
         // Customising the header label
         // Defaults to "GitHub"/"GitLab"/"Bitbucket" depending on `themeConfig.repo`
         repoLabel: 'Github',
@@ -133,6 +124,6 @@ module.exports = {
         // defaults to false, set to true to enable
         editLinks: true,
         // custom text for edit link. Defaults to "Edit this page"
-        editLinkText: 'Help us improve this page!',
+        editLinkText: 'Improve this page!',
     },
 }
