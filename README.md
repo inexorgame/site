@@ -1,8 +1,5 @@
 # site
 
-[![Build Status](https://travis-ci.org/inexorgame/site.svg?branch=master)](https://travis-ci.org/inexorgame/site)
-> The inexor-website
-
 ## Build Setup
 
 ``` bash
@@ -20,3 +17,6 @@ npm run build
 
 Check out [VuePress](https://vuepress.vuejs.org) for more
 
+## Deployment
+
+The pages are deployed via netlify
