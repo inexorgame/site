@@ -50,25 +50,79 @@ layout: home
     </div>
 </div>
 
-## The Vision
+## Vulkan API tech demo
 
-Inexor is aiming to be an in-game multiplayer game creating sandbox.
+[Get our latest tech demo here!](https://github.com/inexorgame/vulkan-renderer/releases/edit/v0.1-alpha.1)
 
-::: warning
+Join our discord! [https://discord.gg/acUW8k7](https://discord.gg/acUW8k7)
 
-As of now, there is no downloadable executable that you can use to play around. We had a restart for the core engine, but the ideas and concepts will live on.
+## What is Inexor?
+* Inexor will be a new first person shooter game which is based on a new octree-based game engine.
+* Inexor focuses on classic gameplay as we've seen in Cube2 or the Quake series.
+* Inexor will be written from ground up new in modern C++17.
+* You can contribute anything you want: code, content, ideas..
+* Inexor and all its content is 100% open source!
 
-Stay tuned for updates, [get in touch](./wiki/Contact.md) and check back later.
+## What is the point of Inexor?
+* We want to create a game which has classic gameplay but a very powerful embedded world editor.
+* Inexor is a sandbox: There is no separation between engine editor and the game itself. Creating the game is part of the game.
+* People's ideas for the game will no longer be limited by the underlying engine technology.
+* Players can express their map or game mode ideas without any restrictions by us, using a visual scripting enviroment - even collectively in multiplayer.
 
-:::
+## Who is behind Inexor?
+* A collective of game programmers, artists, or people who are very passionate about gaming.
+* There is no strict hierarchy behind this organisation.
+* Everybody is welcome.
+* Inexor will always try to bring people together.
 
-The first games it will implement are the popular gamemodes of "Cube2: Sauerbraten". [Sauerbraten](http://sauerbraten.org/) started as an open-source DOOM-Clone with focus on old-school blazing fast multiplayer FPS action. Furthermore it added an intuative ingame multiplayer map creator to the mix, which quickly became its heart and breath. A lot of possibilities in its own scripting language made people extend Sauerbraten far beyond its limits, keeping it alive far beyond official development was halted.
+## How to contribute?
+* Currently, we are in the process of writing the game engine.
+* Programmers and testers are most needed right now.
+* Artists and mappers are also welcome, but the time for creating maps has not come yet.
 
-We want to create a game which allows people to **create** the game.
-To have fun learning continuously more stuff as they dig deeper into making it their own. To work and create cooperatively in a team rather than on your own.
+## Why develop a new game engine?
+* We need a new octree-based game engine which is based on a task-based, multithreaded engine.
+* Vulkan API is a new graphics API which allows us to gain better performance.
 
-Those who see it as enhancement when someone else starts working with their creation will find their place in this project.
-Inexor will always try to bring people together.
+## How to get into contact?
+* Please join our discord server! Just search for `inexor`.
+* You can also write us: `info@inexor.org`.
+
+## When will Inexor be playable?
+* This depends on the speed of our progress.
+* We can't forsee this yet.
+
+## I found a bug in Inexor, what now?
+* Open a [ticket](https://github.com/inexorgame/vulkan-renderer).
+
+## Which systems will be supported?
+* This release contains files for Windows only.
+* We are working to get the [Linux build](https://github.com/inexorgame/vulkan-renderer/issues/19) working as fast as possible.
+* We might support Android in the future.
+* Because Apple decided not to support Vulkan API natively, we will not Mac OS.
+We are not planing on using [moltenVK](https://github.com/KhronosGroup/MoltenVK) to get our projects running on Mac OS either.
+
+## Is Inexor a fork of Cube2?
+* No, Inexor is a new code base which has no dependencies in cube-engine.
+
+## What will be different in Inexor compared with Cube2?
+* It is too early to answer this question as we're in the process of writing the game engine first.
+* The answer to this question will very much depend on your input.
+
+## Will you use any code parts from cube-engine?
+* No. Cube engine is single threaded. This was fine back in the day of its creation but nowadays it acts as a bottleneck for the gpu.
+
+## Will Inexor be compatible with Cube2 or other games?
+* No, because Inexor's objective is different.
+* We don't want to limit ourselves by supporting old technology?
+
+## Can I import my maps from Cube2 into Inexor?
+* We are working on a [map converter](https://github.com/inexorgame/cube2-map-importer).
+* It is not ready yet.
+
+## What's next?
+* **v0.1-alpha.2**: April 25th, 2020.
+
 
 <div class="flex justify-end">
     <router-link to="wiki/Get-Involved.html" class="button my-4">Get involved 👋</router-link>
