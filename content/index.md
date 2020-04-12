@@ -54,7 +54,7 @@ layout: home
 
 [Get our latest tech demo here!](https://github.com/inexorgame/vulkan-renderer/releases/edit/v0.1-alpha.1)
 
-Join our discord! https://discord.gg/acUW8k7
+Join our discord! [https://discord.gg/acUW8k7](https://discord.gg/acUW8k7)
 
 ## What is Inexor?
 * Inexor will be a new first person shooter game which is based on a new octree-based game engine.
