@@ -60,7 +60,7 @@ title: Inexor
 
 ## Vulkan API tech demo
 
-[Get our latest tech demo here!](https://github.com/inexorgame/vulkan-renderer/releases/edit/v0.1-alpha.1)
+[Get our latest tech demo here!](https://github.com/inexorgame/vulkan-renderer/releases/tag/v0.1-alpha.1)
 
 Join our discord! [https://discord.gg/acUW8k7](https://discord.gg/acUW8k7)
 
