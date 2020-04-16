@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Inexor - Next Gen FPS Sandbox
+title: Inexor
 ---
 <style lang="stylus">
     .intro
