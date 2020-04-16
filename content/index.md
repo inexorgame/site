@@ -1,9 +1,15 @@
 ---
 layout: home
+title: Inexor - Next Gen FPS Sandbox
 ---
 <style lang="stylus">
     .intro
-        background-image url("../assets/background_blur/cartel.jpg")
+        background-image url("../assets/background/turmoil.jpg")
+        background-position 0 60%
+        background-size cover
+    .clipped
+        clip-path: polygon(0% 2rem, 2rem 0%, calc(100% - 2rem) 0%, 100% 2rem, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 2rem 100%, 0% calc(100% - 2rem));
+        backdrop-filter: blur(5px) opacity(80%);
     /* .features
         background-image url("../assets/background_blur/averas.jpg") */
 </style>
@@ -18,33 +24,35 @@ layout: home
             </small>
         </div>
     </h1>
-    <div class="w-3/4 flex flex-wrap">
+    <div class="w-3/4 flex flex-wrap items-stretch">
         <div class="w-full md:w-1/2 px-2">
-            <h3>Blog</h3>
-            <div class="bg-gray-darkest-faded p-4 my-4 text-left">
-                <div v-for="post in latestPosts" class="my-4">
-                    <h4>
+            <div class="bg-gray-darkest-faded my-4 text-left clipped pb-12">
+                <h3 class="text-center bg-black-faded py-2">News</h3>
+                <div v-for="post in latestPosts" class="my-4 px-4">
+                    <h4 class="text-lg">
                         <router-link :to="post.path">
                             {{post.title}}
                         </router-link>
                     </h4>
                     {{post.frontmatter.date | formatDate}}
                 </div>
-                <router-link to="/blog/">
+                <router-link to="/blog/" class="px-4">
                     Browse all {{posts.length}} blogposts
                 </router-link>
             </div>
         </div>
         <div class="w-full md:w-1/2 px-2">
-            <h3>Docs</h3>
-            <div class="bg-gray-darkest-faded p-4 my-4 text-left">
-                <ul>
-                    <li v-for="doc in docs">
-                        <router-link :to="doc.link">
-                            {{doc.text}}
-                        </router-link>
-                    </li>
-                </ul>
+            <div class="bg-gray-darkest-faded my-4 text-left clipped pb-8">
+                <h3 class="text-center bg-black-faded py-2">Docs</h3>
+                <div class="px-4">
+                    <ul>
+                        <li v-for="doc in docs">
+                            <router-link :to="doc.link">
+                                {{doc.text}}
+                            </router-link>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 ---
 layout:     post
-date:       2019-12-15 17:00:00 +0200
+date:       2020-04-15 17:00:00 +0200
 author:     Hanni
 title:      Vulkan API renderer release v0.1-alpha.1
 summary:    v0.1-alpha.1
