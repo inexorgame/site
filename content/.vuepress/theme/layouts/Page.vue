@@ -150,7 +150,7 @@ function find(page, items, offset) {
         display: inline-block;
 
         a {
-            color: lighten($textColor, 25%);
+            color: var(--color-text-light);
             margin-right: 0.25rem;
         }
     }
@@ -161,7 +161,7 @@ function find(page, items, offset) {
 
         .prefix {
             font-weight: 500;
-            color: lighten($textColor, 25%);
+            color: var(--color-text-light);
         }
 
         .time {

@@ -1,4 +1,4 @@
-@tailwind preflight
+@tailwind base
 @tailwind components
 
 @require './config'
@@ -10,33 +10,46 @@
 @require './toc'
 
 
-@css {
-    .button {
-        @apply .bg-purple .inline-block .text-white .font-bold .py-2 .px-4 .border-b-4 .border-purple-dark .rounded;
-        cursor: pointer;
-    }
+.button
+    @apply bg-purple-400 inline-block text-white font-bold py-2 px-4 border-b-4 border-purple-700 cursor-pointer
 
-    .subtitle {
-        @apply .text-shadow-dark .text-purple-light;
-    }
+.subtitle
+    @apply text-shadow-700 text-purple-400
 
-    .heading {
-        @apply .text-2xl .uppercase .text-white .no-underline;
-        border: none;
-    }
+.heading
+    @apply text-2xl uppercase text-white no-underline
+    border none
 
-    .status-bubble {
-        @apply rounded-full px-2 leading-none text-gray-lightest uppercase font-bold border border-transparent;
-    }
+.status-bubble
+    @apply rounded-full px-2 leading-none text-gray-200 uppercase font-bold border border-transparent;
 
-    .label {
-        @apply text-gray-darker font-semibold
-    }
-}
+.label
+    @apply text-gray-800 font-semibold
+
+.intro
+    background-image url("../../../../assets/background/turmoil.jpg")
+    background-position 0 60%
+    background-size cover
+.clipped
+    clip-path: polygon(0% 2rem, 2rem 0%, calc(100% - 2rem) 0%, 100% 2rem, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 2rem 100%, 0% calc(100% - 2rem))
+.clipped-right
+    clip-path: polygon(0% 0%, 2rem 0%, calc(100% - 2rem) 0%, 100% 2rem, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 0 100%)
+.bg-blur
+    backdrop-filter: blur(5px) opacity(80%);
+.card
+    @apply bg-gray-faded-700 my-4 text-left clipped pb-8 bg-blur
+    background-image radial-gradient(circle at bottom, var(--color-purple-faded-700) 0%, transparent 70%)
+.title
+    @apply relative
+    &::before
+        @apply absolute top-0 w-full h-full clipped-right bg-blur
+        content ""
+        left 3rem
+        background-image radial-gradient(circle at bottom left, var(--color-purple-faded-700) 0%, transparent 70%)
 
 @tailwind utilities
 
-.text-shadow-dark
+.text-shadow-700
     text-shadow 0 1px 1px rgba(16.1%, 16.1%, 16.1%, 0.75)
 
 html, body
@@ -48,7 +61,8 @@ body
     -webkit-font-smoothing antialiased
     -moz-osx-font-smoothing grayscale
     font-size 16px
-    color $textColor
+    color var(--color-text-base)
+    background-color var(--color-background-base)
     overflow-x hidden
 
 .container
@@ -65,7 +79,7 @@ body
     left 0
     right 0
     height $navbarHeight
-    background-color #fff
+    background-color var(--color-background-base)
     box-sizing border-box
     border-bottom 1px solid $borderColor
 

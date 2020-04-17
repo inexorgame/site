@@ -1,11 +1,11 @@
 require('isomorphic-fetch')
 const tailwindcss = require('tailwindcss')
-const { colors } = require('./tailwind')
+const themeConfig = require('tailwindcss/defaultTheme')
 
 const ogprefix = 'og: http://ogp.me/ns#'
 const title = 'Inexor'
 const description = 'Open Next Generation FPS Sandbox'
-const color = colors.purple
+const color = themeConfig.colors.purple[500]
 const author = 'Inexor'
 const url = 'https://inexor.org/'
 const logo = '/favicon.png'
@@ -16,7 +16,9 @@ module.exports = {
     base: '/',
     host: 'localhost',
     postcss: {
-        plugins: [tailwindcss('content/.vuepress/tailwind.js')],
+        plugins: [
+            tailwindcss('content/.vuepress/tailwind.js'),
+        ],
     },
     head: [
         ['link', { rel: 'icon', href: logo }],

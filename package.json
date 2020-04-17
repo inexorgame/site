@@ -22,11 +22,15 @@
   "devDependencies": {
     "isomorphic-fetch": "^2.2.1",
     "markdown-it-decorate": "^1.2.2",
-    "tailwindcss": "^0.7.2",
+    "tailwindcss": "^1.2.0",
     "vuepress": "^0.14.10"
   },
   "dependencies": {
     "date-fns": "^1.29.0",
-    "markdown-it-task-lists": "^2.1.1"
+    "markdown-it-task-lists": "^2.1.1",
+    "postcss-custom-properties": "^9.1.1",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "tailwind-css-variables": "^2.0.3"
   }
 }

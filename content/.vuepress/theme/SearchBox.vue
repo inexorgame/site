@@ -161,7 +161,7 @@ export default {
   input
     cursor text
     width 10rem
-    color lighten($textColor, 25%)
+    color var(--color-text-light)
     display inline-block
     border 1px solid darken($borderColor, 10%)
     border-radius 2rem
@@ -193,7 +193,7 @@ export default {
     cursor pointer
     a
       white-space normal
-      color lighten($textColor, 35%)
+      color var(--color-text-light)
       .page-title
         font-weight 600
       .header

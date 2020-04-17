@@ -2,22 +2,10 @@
 layout: home
 title: Inexor
 ---
-<style lang="stylus">
-    .intro
-        background-image url("../assets/background/turmoil.jpg")
-        background-position 0 60%
-        background-size cover
-    .clipped
-        clip-path: polygon(0% 2rem, 2rem 0%, calc(100% - 2rem) 0%, 100% 2rem, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 2rem 100%, 0% calc(100% - 2rem));
-        backdrop-filter: blur(5px) opacity(80%);
-    /* .features
-        background-image url("../assets/background_blur/averas.jpg") */
-</style>
-
-<div class="break-out-full-width intro text-center bg-purple-darker flex flex-col items-center text-purple-lightest py-16 mb-8">
-    <h1 class="mb-8 flex items-center">
-        <img src="../assets/logo/inexor_cube_alpha.png" class="mr-8 w-24">
-        <div class="text-left flex flex-col uppercase text-white">
+<div class="break-out-full-width intro text-center bg-purple-100 flex flex-col items-center text-purple-100 py-16 mb-8">
+    <h1 class="mb-8 flex items-center title pr-8">
+        <img src="../assets/logo/inexor_cube_alpha.png" class="mr-8 w-24 relative">
+        <div class="text-left flex flex-col uppercase text-white relative">
             <span>Inexor</span>
             <small class="text-lg subtitle">
                 Open Next Generation FPS Sandbox
@@ -26,7 +14,7 @@ title: Inexor
     </h1>
     <div class="w-3/4 flex flex-wrap items-stretch">
         <div class="w-full md:w-1/2 px-2">
-            <div class="bg-gray-darkest-faded my-4 text-left clipped pb-12">
+            <div class="card">
                 <h3 class="text-center bg-black-faded py-2">News</h3>
                 <div v-for="post in latestPosts" class="my-4 px-4">
                     <h4 class="text-lg">
@@ -42,7 +30,7 @@ title: Inexor
             </div>
         </div>
         <div class="w-full md:w-1/2 px-2">
-            <div class="bg-gray-darkest-faded my-4 text-left clipped pb-8">
+            <div class="card">
                 <h3 class="text-center bg-black-faded py-2">Docs</h3>
                 <div class="px-4">
                     <ul>
