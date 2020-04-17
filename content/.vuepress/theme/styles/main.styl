@@ -30,6 +30,9 @@
     background-image url("../../../../assets/background/turmoil.jpg")
     background-position 0 60%
     background-size cover
+.clipped-relative
+    clip-path: polygon(0% 15%, 15% 0%, calc(100% - 15%) 0%, 100% 15%, 100% calc(100% - 15%), calc(100% - 15%) 100%, 15% 100%, 0% calc(100% - 15%))
+
 .clipped
     clip-path: polygon(0% 2rem, 2rem 0%, calc(100% - 2rem) 0%, 100% 2rem, 100% calc(100% - 2rem), calc(100% - 2rem) 100%, 2rem 100%, 0% calc(100% - 2rem))
 .clipped-right
@@ -46,6 +49,9 @@
         content ""
         left 3rem
         background-image radial-gradient(circle at bottom left, var(--color-purple-faded-700) 0%, transparent 70%)
+.color-mode-switch
+    @apply inline-flex w-6 h-6 bg-black clipped-relative cursor-pointer
+    background-image linear-gradient(45deg, var(--color-text-base) 50%, var(--color-background-base) 50%, var(--color-background-base) 100%)
 
 @tailwind utilities
 
