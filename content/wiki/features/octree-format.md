@@ -49,6 +49,15 @@ If the cube is `OCTANTS`, then we recurse down in the structure and start with t
 
 Each sibling is one cube, saved as explained before. If the cube again consits of 8 octants, they need to be saved in a predefined order. Regarding the image above, the cubes are saved clockwise, first with the lower z-values, starting with lowest values. Explicitly, the order of the 8 octants is as follows:
 
-| Order | X | Y | Z | |-------|--------|--------|--------| | 1. | lower | lower | lower | | 2. | lower | lower | higher | | 3. | lower | higher | lower | | 4. | lower | higher | higher | | 5. | higher | lower | lower | | 6. | higher | lower | higher | | 7. | higher | higher | lower | | 8. | higher | higher | higher |
+| Order | X | Y | Z |
+|-------|--------|--------|--------|
+| 1. | lower | lower | lower |
+| 2. | lower | lower | higher |
+| 3. | lower | higher | lower |
+| 4. | lower | higher | higher |
+| 5. | higher | lower | lower |
+| 6. | higher | lower | higher |
+| 7. | higher | higher | lower |
+| 8. | higher | higher | higher |
 
 Also, when the cube is indented, the edges are processed in the same order.

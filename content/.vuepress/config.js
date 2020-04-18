@@ -14,7 +14,6 @@ const contentPathPrefix = 'content/'
 const getChildren = parentPath => glob
     .sync(contentPathPrefix + parentPath + '/*.md')
     .map(path => {
-        console.log({ path })
         if (path.endsWith('README')) path = path.slice(0, -6)
         return `/${path}`.replace('.md', '').replace('index', '').replace(contentPathPrefix, '')
     })

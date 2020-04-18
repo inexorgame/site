@@ -4,7 +4,7 @@ status: specification # idea | concept | specification | implemented
 # authors: 
 ---
 
-# Inexor Package File Format (Proposal WIP)
+# Inexor Package File Format (Proposal, WIP)
 
 The Inexor package file format is used on many points across inexor. It is used for scripts, maps, texture-packs, and more.
 
