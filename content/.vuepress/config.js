@@ -1,7 +1,7 @@
 require('isomorphic-fetch')
 const tailwindcss = require('tailwindcss')
 const themeConfig = require('tailwindcss/defaultTheme')
-
+const glob = require('glob')
 const ogprefix = 'og: http://ogp.me/ns#'
 const title = 'Inexor'
 const description = 'Open Next Generation FPS Sandbox'
@@ -9,6 +9,16 @@ const color = themeConfig.colors.purple[500]
 const author = 'Inexor'
 const url = 'https://inexor.org/'
 const logo = '/favicon.png'
+const contentPathPrefix = 'content/'
+
+const getChildren = parentPath => glob
+    .sync(contentPathPrefix + parentPath + '/*.md')
+    .map(path => {
+        console.log({ path })
+        if (path.endsWith('README')) path = path.slice(0, -6)
+        return `/${path}`.replace('.md', '').replace('index', '').replace(contentPathPrefix, '')
+    })
+    .sort()
 
 module.exports = {
     title,
@@ -58,56 +68,20 @@ module.exports = {
                 {
                     title: '🚀 Getting Started',
                     collapsable: false,
-                    children: [
-                        '/wiki/',
-                        '/wiki/Get-Involved',
-                        '/wiki/Code-of-Conduct',
-                        '/wiki/Contact',
-                        '/wiki/Meetings',
-                        '/wiki/License-Policy',
-                        '/wiki/Other-Projects',
-                        '/wiki/Frequently-Asked-Questions',
-                        '/wiki/The-Main-Theme',
-                    ],
+                    children: getChildren('wiki'),
                 },
                 {
                     title: '💡 Features',
                     includeFeatures: true,
-                    children: [
-                        '/wiki/features/',
-                        '/wiki/features/Feature-Ideas',
-                        '/wiki/features/Sauerbraten-Features',
-                    ],
-                },
-                {
-                    title: '🕹️ Run',
-                    children: [
-                        '/wiki/run/',
-                        '/wiki/run/Command-Line-Options-And-Commands',
-                        '/wiki/run/How-to-host-a-server',
-                        '/wiki/run/Installing-inexor-as-an-end-user',
-                        '/wiki/run/Run-Inexor',
-                    ],
+                    children: getChildren('wiki/features'),
                 },
                 {
                     title: '👨‍💻 Development',
-                    children: [
-                        '/wiki/development/',
-                        ['https://docs.inexor.org/core/master/', 'Generated Docs'],
-                        '/wiki/development/How-To-Contribute-Code',
-                        '/wiki/development/Build',
-                        '/wiki/development/How-To-Debug',
-                        '/wiki/development/Continous-Integration'
-                    ],
+                    children: getChildren('wiki/development')
                 },
                 {
                     title: '📦 Content',
-                    children: [
-                        '/wiki/content/',
-                        '/wiki/content/Possible-Content-Sources',
-                        '/wiki/content/Inclusion-Standard',
-                        '/wiki/content/Supported-File-Formats'
-                    ],
+                    children: getChildren('wiki/content')
                 },
             ],
         },
