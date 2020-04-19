@@ -57,6 +57,7 @@ module.exports = {
         }
     },
     themeConfig: {
+        sidebarDepth: 4,
         nav: [
             { text: 'Team', link: '/team.md' },
             { text: 'Blog', link: '/blog/' },
