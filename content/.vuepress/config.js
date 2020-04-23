@@ -86,7 +86,7 @@ module.exports = {
             ],
         },
         // Assumes GitHub. Can also be a full GitLab url.
-        repo: 'inexorgame/entity-system',
+        repo: 'inexorgame',
         // Customising the header label
         // Defaults to "GitHub"/"GitLab"/"Bitbucket" depending on `themeConfig.repo`
         repoLabel: 'Github',

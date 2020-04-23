@@ -33,6 +33,7 @@
     "ramda": "^0.27.0",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
-    "tailwind-css-variables": "^2.0.3"
+    "tailwind-css-variables": "^2.0.3",
+    "vue-intersect": "^1.1.6"
   }
 }
