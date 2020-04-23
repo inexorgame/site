@@ -26,6 +26,25 @@
 .label
     @apply text-gray-800 font-semibold
 
+.bg-averas
+    background-image url("../../../../assets/background_blur/averas.jpg")
+.bg-cartel
+    background-image url("../../../../assets/background_blur/cartel.jpg")
+.bg-dust6
+    background-image url("../../../../assets/background_blur/dust6.jpg")
+.bg-haze
+    background-image url("../../../../assets/background_blur/haze.jpg")
+.bg-lager
+    background-image url("../../../../assets/background_blur/lager.jpg")
+.bg-laucin
+    background-image url("../../../../assets/background_blur/laucin.jpg")
+.bg-legacy
+    background-image url("../../../../assets/background_blur/legacy.jpg")
+.bg-pandora
+    background-image url("../../../../assets/background_blur/pandora.jpg")
+.bg-star
+    background-image url("../../../../assets/background_blur/star.jpg")
+
 .intro
     background-image url("../../../../assets/background/turmoil.jpg")
     background-position 0 60%
@@ -72,8 +91,7 @@ body
     overflow-x hidden
 
 .container
-    margin 0 auto
-    max-width $contentWidth
+    @apply mx-auto
 
 .page
     padding-left $sidebarWidth
@@ -187,6 +205,7 @@ h1
 h2
     font-size 1.65rem
     padding-bottom .3rem
+    @apply my-4
     border-bottom 1px solid $borderColor
 
 h3

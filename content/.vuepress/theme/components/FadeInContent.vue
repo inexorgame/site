@@ -1,5 +1,5 @@
 <template>
-    <Intersection @enter="visible = true" @leave="visible = false">
+    <Intersection @enter="visible = true">
         <div class="fade-in-section" :class="visible && 'fade-in-section--visible'">
             <slot />
         </div>
@@ -19,7 +19,7 @@ export default {
 <style lang="stylus">
 .fade-in-section
     opacity 0
-    transform translateY(20vh)
+    transform translateY(15vh)
     visibility hidden
     transition opacity 0.6s ease-out, transform 1.2s ease-out
     will-change opacity, visibility

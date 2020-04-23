@@ -2,7 +2,7 @@
     <div class="page">
         <slot name="top"/>
 
-        <div class="container pt-16">
+        <div class="pt-16">
             <Content :custom="false"/>
         </div>
 

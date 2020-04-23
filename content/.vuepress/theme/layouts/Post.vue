@@ -1,6 +1,6 @@
 <template>
     <div class="page">
-		<div class="container px-10 py-4">
+		<div class="px-10 py-4">
 			<h1 class="subtitle">{{$page.title}}</h1>
             <small class="font-semibold text-lg mb-2 text-gray-dark">{{$page.frontmatter.date | formatDate}}</small>
             <p class="text-gray-darkest text-xl">{{$page.frontmatter.summary}}</p>
