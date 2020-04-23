@@ -37,23 +37,6 @@ title: Inexor
         </div>
     </div>
 </div>
-<div class="break-out-full-width intro text-center bg-purple-100 flex flex-col items-center text-purple-100 py-16 mb-8 mt-64">
-    <h2 class="mb-8">Features</h2>
-    <div class="w-3/4 flex flex-wrap items-stretch">
-        <FadeInContent>
-            <img src="../assets/visual-scripting.png">
-        </FadeInContent>
-        <div class="w-full md:w-1/2 px-2">
-            <div class="card">
-                <h3 class="text-center bg-black-faded py-2">Visual Scripting</h3>
-                <p class="px-4">
-                    Design and create any game mode you can imagine. Connect interactive components together to open doors in a dungeon crawler. Equip a fort with automatic weapons to conquer with your friends.
-                </p>
-                <a class="mx-4 button">Learn more</a>
-            </div>
-        </div>
-    </div>
-</div>
 
 ## Vulkan API tech demo
 
@@ -80,6 +63,62 @@ Join our discord! [https://discord.gg/acUW8k7](https://discord.gg/acUW8k7)
 * Everybody is welcome.
 * Inexor will always try to bring people together.
 
+<div class="break-out-full-width text-center bg-purple-100 text-purple-100 my-8">
+    <div class="bg-averas bg-cover py-8">
+        <h2 class="my-8 inline-block">Features</h2>
+        <div class="container flex flex-wrap items-stretch">
+            <FadeInContent class="w-1/2">
+                <img src="../assets/visual-scripting.png">
+            </FadeInContent>
+            <div class="w-full md:w-1/2 px-2">
+                <div class="card">
+                    <h3 class="text-center bg-black-faded py-2">Visual Scripting</h3>
+                    <p class="px-4">
+                        Design and create any game mode you can imagine. 
+                        Connect interactive components together to open doors in a dungeon crawler.
+                        Equip a fort with automatic weapons to conquer with your friends.
+                    </p>
+                    <a class="mx-4 button">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-lager bg-cover py-16">
+        <div class="container flex flex-wrap items-stretch">
+            <div class="w-full md:w-1/2 px-2">
+                <div class="card">
+                    <h3 class="text-center bg-black-faded py-2">Ingame Editor</h3>
+                    <p class="px-4">
+                        Craft all the contents needed for maps cooperatively, ingame. 
+                        Quickly repeat a set of pillars with the prefab editors, or layer your buildings on top of terrain.
+                        With the ingame editor, building the game becomes part of the game.
+                    </p>
+                    <a class="mx-4 button">Learn more</a>
+                </div>
+            </div>
+            <FadeInContent class="w-1/2">
+                <img src="../assets/visual-scripting.png">
+            </FadeInContent>
+        </div>
+    </div>
+    <div class="bg-pandora bg-cover py-16">
+        <div class="container flex flex-wrap items-stretch">
+            <FadeInContent class="w-1/2">
+                <img src="../assets/visual-scripting.png">
+            </FadeInContent>
+            <div class="w-full md:w-1/2 px-2">
+                <div class="card">
+                    <h3 class="text-center bg-black-faded py-2">Community Platform</h3>
+                    <p class="px-4">
+                        Share content with everyone and re-use what others have made for your own worlds.
+                        Browse content, artists or join a server to exchange new ideas in real time.
+                    </p>
+                    <a class="mx-4 button">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 ## How to contribute?
 * Currently, we are in the process of writing the game engine.
 * Programmers and testers are most needed right now.
