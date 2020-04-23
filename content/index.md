@@ -3,15 +3,7 @@ layout: home
 title: Inexor
 ---
 <div class="break-out-full-width intro text-center bg-purple-100 flex flex-col items-center text-purple-100 py-16 mb-8">
-    <h1 class="mb-8 flex items-center title pr-8">
-        <img src="../assets/logo/inexor_cube_alpha.png" class="mr-8 w-24 relative">
-        <div class="text-left flex flex-col uppercase text-white relative">
-            <span>Inexor</span>
-            <small class="text-lg subtitle">
-                Open Next Generation FPS Sandbox
-            </small>
-        </div>
-    </h1>
+    <SiteLogo />
     <div class="w-3/4 flex flex-wrap items-stretch">
         <div class="w-full md:w-1/2 px-2">
             <div class="card">
@@ -41,6 +33,23 @@ title: Inexor
                         </li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="break-out-full-width intro text-center bg-purple-100 flex flex-col items-center text-purple-100 py-16 mb-8 mt-64">
+    <h2 class="mb-8">Features</h2>
+    <div class="w-3/4 flex flex-wrap items-stretch">
+        <FadeInContent>
+            <img src="../assets/visual-scripting.png">
+        </FadeInContent>
+        <div class="w-full md:w-1/2 px-2">
+            <div class="card">
+                <h3 class="text-center bg-black-faded py-2">Visual Scripting</h3>
+                <p class="px-4">
+                    Design and create any game mode you can imagine. Connect interactive components together to open doors in a dungeon crawler. Equip a fort with automatic weapons to conquer with your friends.
+                </p>
+                <a class="mx-4 button">Learn more</a>
             </div>
         </div>
     </div>

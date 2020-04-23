@@ -1,6 +1,8 @@
 // import vuetify from 'vuetify'
 import formatDate from 'date-fns/format'
 import StatusBubble from './theme/components/StatusBubble'
+import FadeInContent from './theme/components/FadeInContent'
+import SiteLogo from './theme/components/SiteLogo'
 
 export default ({
     Vue, // the version of Vue being used in the VuePress app
@@ -13,4 +15,6 @@ export default ({
         return formatDate(date, 'D.M.YYYY')
     })
     Vue.component('StatusBubble', StatusBubble)
+    Vue.component('FadeInContent', FadeInContent)
+    Vue.component('SiteLogo', SiteLogo)
 }

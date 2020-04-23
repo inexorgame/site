@@ -6543,6 +6543,11 @@ vue-hot-reload-api@^2.3.0:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.1.tgz#b2d3d95402a811602380783ea4f566eb875569a2"
 
+vue-intersect@^1.1.6:
+  version "1.1.6"
+  resolved "https://npmregistry.exa.sicon.io/vue-intersect/-/vue-intersect-1.1.6.tgz#2c349354bcf9221a006636cbe3f657f8e1282c1d"
+  integrity sha512-m9K48wkti8K0no0F8QdiShukenLDg80JS246Lf7QWgI0XOHkBkzn921FCwLtb49Jj14KK8itVZw4iOVxPc/PsA==
+
 vue-loader@^15.2.4:
   version "15.4.2"
   resolved "https://registry.yarnpkg.com/vue-loader/-/vue-loader-15.4.2.tgz#812bb26e447dd3b84c485eb634190d914ce125e2"
