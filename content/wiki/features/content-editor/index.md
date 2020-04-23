@@ -46,12 +46,13 @@ Depending on the size, shape and type of content, there are different tools and 
     * copy
     * paste
     * cut
+    * align
     * orientate (rotate, flip)
     * resize
     * set anchor/origin ()
     * change layer
     * mirror (axis)
-    * repeat (axis, multiple axis, diagonal )
+    * repeat (axis, multiple axis, diagonal, group)
 * [test](#test)
     * switch between editing and gaming
     * statistics/heatmap (placing enough cover)
