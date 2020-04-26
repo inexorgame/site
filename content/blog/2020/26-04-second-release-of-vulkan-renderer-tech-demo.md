@@ -3,7 +3,7 @@ layout:     post
 date:       2020-04-26 17:00:00 +0200
 author:     Hanni
 title:      Vulkan API renderer release v0.1-alpha.2
-summary:    v0.1-alpha.1
+summary:    v0.1-alpha.2
 ---
 Hello fellow hackers!
 
@@ -15,15 +15,14 @@ In this demo, we present a simple octree implementation which uses bistreams to 
 The implementation supports arbitrary indentations of octree geometry.
 Hold down left mouse button and move the mouse to rotate the octree.
 
-
 https://user-images.githubusercontent.com/7914428/80316970-33957880-8801-11ea-9099-fc49eb94e33e.jpg
 
 # We need your feedback! 
 Please join our discord! https://discord.gg/acUW8k7 and submit your logfiles.
 
 # Continuous integration
-Thanks to the effort of our contributors, we now have Github Actions and Travis CI!
-This marks an improtant contribution which ensures the overall quality of this project.
+Thanks to the effort of our contributors, we now have a working Github Actions and Travis CI!
+This will ensure the overall quality of this project.
 
 https://github.com/inexorgame/vulkan-renderer/actions
 
