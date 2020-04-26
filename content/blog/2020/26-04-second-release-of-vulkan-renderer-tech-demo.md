@@ -8,7 +8,7 @@ summary:    v0.1-alpha.2
 Hello fellow hackers!
 
 Let there be octree! We are happy to announce the release of our second Vulkan API tech demo.
-The release can be found here: https://github.com/inexorgame/vulkan-renderer/releases
+The release can be found [here](https://github.com/inexorgame/vulkan-renderer/releases).
 Please download the release and try it. Make sure to update your graphics drivers before testing!
 
 In this demo, we present a simple octree implementation which uses bistreams to store data.
@@ -19,7 +19,7 @@ Hold down left mouse button and move the mouse to rotate the octree.
 
 
 # We need your feedback! 
-Please join our discord! https://discord.gg/acUW8k7 and submit your logfiles.
+Please join our [https://discord.gg/acUW8k7](discord) and submit your logfiles.
 
 # Continuous integration
 Thanks to the effort of our contributors, we now have a working Github Actions and Travis CI!
