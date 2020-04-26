@@ -15,7 +15,8 @@ In this demo, we present a simple octree implementation which uses bistreams to 
 The implementation supports arbitrary indentations of octree geometry.
 Hold down left mouse button and move the mouse to rotate the octree.
 
-https://user-images.githubusercontent.com/7914428/80316970-33957880-8801-11ea-9099-fc49eb94e33e.jpg
+![Inexor v0.1-alpha.2 screenshot](https://user-images.githubusercontent.com/7914428/80316970-33957880-8801-11ea-9099-fc49eb94e33e.jpg "v0.1-alpha.2 screenshot")
+
 
 # We need your feedback! 
 Please join our discord! https://discord.gg/acUW8k7 and submit your logfiles.
