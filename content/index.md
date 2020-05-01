@@ -3,35 +3,37 @@ layout: home
 title: Inexor
 ---
 <div class="break-out-full-width intro text-center bg-purple-100 flex flex-col items-center text-purple-100 py-16 mb-8">
-    <SiteLogo />
-    <div class="w-3/4 flex flex-wrap items-stretch">
-        <div class="w-full md:w-1/2 px-2">
-            <div class="card">
-                <h3 class="text-center bg-black-faded py-2">News</h3>
-                <div v-for="post in latestPosts" class="my-4 px-4">
-                    <h4 class="text-lg">
-                        <router-link :to="post.path">
-                            {{post.title}}
-                        </router-link>
-                    </h4>
-                    {{post.frontmatter.date | formatDate}}
-                </div>
-                <router-link to="/blog/" class="px-4">
-                    Browse all {{posts.length}} blogposts
-                </router-link>
-            </div>
-        </div>
-        <div class="w-full md:w-1/2 px-2">
-            <div class="card">
-                <h3 class="text-center bg-black-faded py-2">Docs</h3>
-                <div class="px-4">
-                    <ul>
-                        <li v-for="doc in docs">
-                            <router-link :to="doc.link">
-                                {{doc.text}}
+    <div class="container">
+        <SiteLogo />
+        <div class="flex flex-wrap flex-column items-stretch justify-stretch">
+            <div class="w-full h-full md:w-1/2 px-4">
+                <div class="card h-full">
+                    <h3 class="text-center bg-black-faded py-2">News</h3>
+                    <div v-for="post in latestPosts" class="my-4 px-4">
+                        <h4 class="text-lg">
+                            <router-link :to="post.path">
+                                {{post.title}}
                             </router-link>
-                        </li>
-                    </ul>
+                        </h4>
+                        {{post.frontmatter.date | formatDate}}
+                    </div>
+                    <router-link to="/blog/" class="px-4">
+                        Browse all {{posts.length}} blogposts
+                    </router-link>
+                </div>
+            </div>
+            <div class="w-full h-full md:w-1/2 px-4">
+                <div class="card h-full">
+                    <h3 class="text-center bg-black-faded py-2">Docs</h3>
+                    <div class="px-4">
+                        <ul>
+                            <li v-for="doc in docs">
+                                <router-link :to="doc.link">
+                                    {{doc.text}}
+                                </router-link>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -63,58 +65,52 @@ Join our discord! [https://discord.gg/acUW8k7](https://discord.gg/acUW8k7)
 * Everybody is welcome.
 * Inexor will always try to bring people together.
 
-<div class="break-out-full-width text-center bg-purple-100 text-purple-100 my-8">
-    <div class="bg-averas bg-cover py-8">
-        <h2 class="my-8 inline-block">Features</h2>
-        <div class="container flex flex-wrap items-stretch">
-            <FadeInContent class="w-1/2">
-                <img src="../assets/visual-scripting.png">
-            </FadeInContent>
-            <div class="w-full md:w-1/2 px-2">
-                <div class="card">
-                    <h3 class="text-center bg-black-faded py-2">Visual Scripting</h3>
-                    <p class="px-4">
-                        Design and create any game mode you can imagine. 
-                        Connect interactive components together to open doors in a dungeon crawler.
-                        Equip a fort with automatic weapons to conquer with your friends.
-                    </p>
-                    <a class="mx-4 button">Learn more</a>
-                </div>
+<div class="break-out-full-width text-center bg-purple-100 text-purple-100 my-8 bg-averas bg-cover py-8">
+    <h2 class="my-8 inline-block">Features</h2>
+    <div class="container flex flex-wrap items-stretch my-16">
+        <FadeInContent class="w-1/2">
+            <img src="../assets/visual-scripting.png">
+        </FadeInContent>
+        <div class="w-full md:w-1/2 pl-16">
+            <div class="card">
+                <h3 class="text-center bg-black-faded py-2">Visual Scripting</h3>
+                <p class="px-4">
+                    Design and create any game mode you can imagine. 
+                    Connect interactive components together to open doors in a dungeon crawler.
+                    Equip a fort with automatic weapons to conquer with your friends.
+                </p>
+                <router-link to="/wiki/features/entity-system/Visual-Scriptings.md" class="mx-4 button">Learn more</router-link>
             </div>
         </div>
     </div>
-    <div class="bg-lager bg-cover py-16">
-        <div class="container flex flex-wrap items-stretch">
-            <div class="w-full md:w-1/2 px-2">
-                <div class="card">
-                    <h3 class="text-center bg-black-faded py-2">Ingame Editor</h3>
-                    <p class="px-4">
-                        Craft all the contents needed for maps cooperatively, ingame. 
-                        Quickly repeat a set of pillars with the prefab editors, or layer your buildings on top of terrain.
-                        With the ingame editor, building the game becomes part of the game.
-                    </p>
-                    <a class="mx-4 button">Learn more</a>
-                </div>
+    <div class="container flex flex-wrap items-stretch my-16">
+        <div class="w-full md:w-1/2 pr-16">
+            <div class="card">
+                <h3 class="text-center bg-black-faded py-2">Ingame Editor</h3>
+                <p class="px-4">
+                    Craft all the contents needed for maps cooperatively, ingame. 
+                    Quickly repeat a set of pillars with the prefab editors, or layer your buildings on top of terrain.
+                    With the ingame editor, building the game becomes part of the game.
+                </p>
+                <router-link to="/wiki/features/entity-system/Visual-Scriptings.md" class="mx-4 button">Learn more</router-link>
             </div>
-            <FadeInContent class="w-1/2">
-                <img src="../assets/visual-scripting.png">
-            </FadeInContent>
         </div>
+        <FadeInContent class="w-1/2">
+            <img src="../assets/map-editor.png">
+        </FadeInContent>
     </div>
-    <div class="bg-pandora bg-cover py-16">
-        <div class="container flex flex-wrap items-stretch">
-            <FadeInContent class="w-1/2">
-                <img src="../assets/visual-scripting.png">
-            </FadeInContent>
-            <div class="w-full md:w-1/2 px-2">
-                <div class="card">
-                    <h3 class="text-center bg-black-faded py-2">Community Platform</h3>
-                    <p class="px-4">
-                        Share content with everyone and re-use what others have made for your own worlds.
-                        Browse content, artists or join a server to exchange new ideas in real time.
-                    </p>
-                    <a class="mx-4 button">Learn more</a>
-                </div>
+    <div class="container flex flex-wrap items-stretch my-16">
+        <FadeInContent class="w-1/2">
+            <img src="../assets/community-platform.jpg">
+        </FadeInContent>
+        <div class="w-full md:w-1/2 pl-16">
+            <div class="card">
+                <h3 class="text-center bg-black-faded py-2">Community Platform</h3>
+                <p class="px-4">
+                    Share content with everyone and re-use what others have made for your own worlds.
+                    Browse content, artists or join a server to exchange new ideas in real time.
+                </p>
+                <router-link to="/wiki/features/entity-system/Visual-Scriptings.md" class="mx-4 button">Learn more</router-link>
             </div>
         </div>
     </div>
