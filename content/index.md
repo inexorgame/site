@@ -115,6 +115,7 @@ Join our discord! [https://discord.gg/acUW8k7](https://discord.gg/acUW8k7)
         </div>
     </div>
 </div>
+
 ## How to contribute?
 * Currently, we are in the process of writing the game engine.
 * Programmers and testers are most needed right now.
