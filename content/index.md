@@ -79,7 +79,7 @@ Join our discord! [https://discord.gg/acUW8k7](https://discord.gg/acUW8k7)
                     Connect interactive components together to open doors in a dungeon crawler.
                     Equip a fort with automatic weapons to conquer with your friends.
                 </p>
-                <router-link to="/wiki/features/entity-system/Visual-Scriptings.md" class="mx-4 button">Learn more</router-link>
+                <router-link to="/wiki/features/entity-system/Visual-Scriptings.html" class="mx-4 button">Learn more</router-link>
             </div>
         </div>
     </div>
@@ -92,7 +92,7 @@ Join our discord! [https://discord.gg/acUW8k7](https://discord.gg/acUW8k7)
                     Quickly repeat a set of pillars with the prefab editors, or layer your buildings on top of terrain.
                     With the ingame editor, building the game becomes part of the game.
                 </p>
-                <router-link to="/wiki/features/entity-system/Visual-Scriptings.md" class="mx-4 button">Learn more</router-link>
+                <router-link to="/wiki/features/content-editor/" class="mx-4 button">Learn more</router-link>
             </div>
         </div>
         <FadeInContent class="w-1/2">
@@ -110,7 +110,7 @@ Join our discord! [https://discord.gg/acUW8k7](https://discord.gg/acUW8k7)
                     Share content with everyone and re-use what others have made for your own worlds.
                     Browse content, artists or join a server to exchange new ideas in real time.
                 </p>
-                <router-link to="/wiki/features/entity-system/Visual-Scriptings.md" class="mx-4 button">Learn more</router-link>
+                <router-link to="/wiki/features/community/" class="mx-4 button">Learn more</router-link>
             </div>
         </div>
     </div>
