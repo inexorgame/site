@@ -75,7 +75,7 @@ Join our discord! [https://discord.gg/acUW8k7](https://discord.gg/acUW8k7)
             <div class="card">
                 <h3 class="text-center bg-black-faded py-2">Visual Scripting</h3>
                 <p class="px-4">
-                    Design and create any game mode you can imagine. 
+                    Design and create any game mode you can imagine.
                     Connect interactive components together to open doors in a dungeon crawler.
                     Equip a fort with automatic weapons to conquer with your friends.
                 </p>
@@ -88,7 +88,7 @@ Join our discord! [https://discord.gg/acUW8k7](https://discord.gg/acUW8k7)
             <div class="card">
                 <h3 class="text-center bg-black-faded py-2">Ingame Editor</h3>
                 <p class="px-4">
-                    Craft all the contents needed for maps cooperatively, ingame. 
+                    Craft all the contents needed for maps cooperatively, ingame.
                     Quickly repeat a set of pillars with the prefab editors, or layer your buildings on top of terrain.
                     With the ingame editor, building the game becomes part of the game.
                 </p>
@@ -162,7 +162,7 @@ We are not planing on using [moltenVK](https://github.com/KhronosGroup/MoltenVK)
 * It is not ready yet.
 
 ## What's next?
-* **v0.1-alpha.2**: April 25th, 2020.
+* **v0.1-alpha.3**: May 10th, 2020.
 
 
 <div class="flex justify-end">
