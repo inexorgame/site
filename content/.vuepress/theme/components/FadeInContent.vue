@@ -19,9 +19,9 @@ export default {
 <style lang="stylus">
 .fade-in-section
     opacity 0
-    transform translateY(15vh)
+    transform translateY(10vh)
     visibility hidden
-    transition opacity 0.6s ease-out, transform 1.2s ease-out
+    transition opacity 1s ease-out, transform 1s ease-out
     will-change opacity, visibility
     &--visible
         opacity 1
