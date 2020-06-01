@@ -22,15 +22,13 @@ authors: azkoonn
 	* useful for debugging as well
 
 ### Proposed tooling:
-* OpenAL Soft – https://openal-soft.org/
-* ALMixer
-* ogg Vorbis audio codec
-
-#### Alternatives for OpenAL Soft:
-* [rtaudio](https://www.music.mcgill.ca/~gary/rtaudio/)
-* [PortAudio](http://www.portaudio.com/)
-* [SoLoud](http://sol.gfxile.net/soloud/)
-* [AudioKit](https://audiokitpro.com/)
+* [ogg Vorbis audio codec](https://xiph.org/vorbis/)
+* Originally [OpenAL Soft](https://openal-soft.org/) as well as [ALMixer](https://playcontrol.net/opensource/ALmixer/)
+* Possible alternatives for OpenAL Soft:
+	* [rtaudio](https://www.music.mcgill.ca/~gary/rtaudio/)
+	* [PortAudio](http://www.portaudio.com/)
+	* [SoLoud](http://sol.gfxile.net/soloud/)
+	* [AudioKit](https://audiokitpro.com/)
 
 ## Music structure
 Unlike sounds, which are played back as a reaction to certain actions and events, music is only played back as a single instance in the background. While such separation of music and sounds is logical and should be maintained, instead of a single, simple, premixed track, Inexor is planned to utilize dynamic music compositions which react to in-game events.
