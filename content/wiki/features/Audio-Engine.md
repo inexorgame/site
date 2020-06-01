@@ -92,6 +92,8 @@ start evaluation:
 					end loop
 ```
 
+![Visual aid for the algorithm](/content/wiki/features/azkoonns_algorithm.png)
+
 Attenuation could also be based on the actual lenght of sum of rays that got through. There are two factors to consider, lowering volume and applying a low-pass filter. Expanding in a plane needs to be terminated once the virtual points and source/listener no longer see each other. Similarly, rather than in a loop, a given amount might be evaluated all at once with different priorities, perhaps unwanted jobs then be cancelled should they still be enqueued. Another consideration is using available left-over processing power until a deadline for filling the buffer is met (that could be useful on low power devices).
 This should produce fairly believable results at a fraction of the cost of actual raycasting all around the source.
 
