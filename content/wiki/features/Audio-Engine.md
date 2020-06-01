@@ -22,15 +22,15 @@ authors: azkoonn
 	* useful for debugging as well
 
 ### Proposed tooling:
-* OpenAL – https://openal-soft.org/
+* OpenAL Soft – https://openal-soft.org/
 * ALMixer
 * ogg Vorbis audio codec
 
-#### Alternatives:
-https://www.music.mcgill.ca/~gary/rtaudio/
-http://www.portaudio.com/
-http://sol.gfxile.net/soloud/
-https://audiokitpro.com/
+#### Alternatives for OpenAL Soft:
+* [rtaudio](https://www.music.mcgill.ca/~gary/rtaudio/)
+* [PortAudio](http://www.portaudio.com/)
+* [SoLoud](http://sol.gfxile.net/soloud/)
+* [AudioKit](https://audiokitpro.com/)
 
 ## Music structure
 Unlike sounds, which are played back as a reaction to certain actions and events, music is only played back as a single instance in the background. While such separation of music and sounds is logical and should be maintained, instead of a single, simple, premixed track, Inexor is planned to utilize dynamic music compositions which react to in-game events.
@@ -49,11 +49,15 @@ Sound engine would most likely need access to some sort of level geometry (compa
 Realistic 3D graphics in realtime are quite developed these days. 3D sound propagation however is still not really in the focus of development. Sadly, there is no open source library for this to this day. Time to change this!
 This would require our materials to sport their auditory behaviour besides their visual nature. This mean additional parameters for sound such as transmissiveness, reflectivity and attenuation, or absorption for different pitches. Another parameter than could be determined based on material as well as geometry is resonance – explosions could shake walls. This data could be useful in future for physics – harder materials are better conductors for sound and withstand more, but tend to fail in more vigurous manner.
 
-###Examples:
+### Examples:
 [Raya Space Station Scene – YouTube](https://www.youtube.com/watch?v=EWatzCC7rk0)
+
 [GSound Demonstration – YouTube](https://www.youtube.com/watch?v=buU8gPG2cHI)
+
 [RAYA - realtime game audio engine in Quake 3 – YouTube](https://www.youtube.com/watch?v=05EL5SumE_E)
+
 [GSOUND - website](http://gamma.cs.unc.edu/GSOUND/)
+
 [Raya - website](http://www.dsp.agh.edu.pl/en:resources:rayav)
 
 ### Be smart about it.
@@ -61,8 +65,8 @@ An obvious area of optimization would be dynamically adjusting the amount, dista
 
 #### Option A:
 CPU or GPGPU-based 3D sound propagation algorithm utilizing existing octree, perhaps limiting geometry complexity to a certain minimum cube size.
-	* Ray tracing: each sound source shoots out rays (self-explanatory).
-	* Path tracing: sound sources have associated geometric volume (based on a constant, their loudness or amount of free space around – the exact algorithm and its constraints are to be determined) which  - once hit by a ray – counts towards the output (perhaps with a fall off depending on how far from the actual point source it passes).
+* Ray tracing: each sound source shoots out rays (self-explanatory).
+* Path tracing: sound sources have associated geometric volume (based on a constant, their loudness or amount of free space around – the exact algorithm and its constraints are to be determined) which  - once hit by a ray – counts towards the output (perhaps with a fall off depending on how far from the actual point source it passes).
 
 #### Option B:
 azkoonn’s algorithm which offers theoretically perfect scalability: rays can be cast simultaneously and their number can be adjusted. In simple environments the effects could be believable with minimal effort.
@@ -70,22 +74,22 @@ azkoonn’s algorithm which offers theoretically perfect scalability: rays can b
 Pseudocode loop:
 ```
 start evaluation:
-check if line of sight is clear
-	play sound
-	#end loop
-else
-	attenuation=1
-	insert 3..16 virtual points in a circle around both source and listener
-	loop
-		move the points outwards by a given amount
-		check if line of sight of each pair is clear
-			play sound with given attenuation
-			#end loop
-		else
-			attenuation++
-			if attenuation >= maxAttenuation
-				play sound with maxAttenuation
-				#end loop
+	if line of sight is clear
+		play sound
+		end loop
+	else
+		attenuation=1
+		insert 3..16 virtual points in a circle around both source and listener
+		loop
+			move the points outwards by a given amount
+			if line of sight of each pair is clear
+				play sound with given attenuation
+				end loop
+			else
+				attenuation++
+				if attenuation >= maxAttenuation
+					play sound with maxAttenuation
+					end loop
 ```
 
 Attenuation could also be based on the actual lenght of sum of rays that got through. There are two factors to consider, lowering volume and applying a low-pass filter. Expanding in a plane needs to be terminated once the virtual points and source/listener no longer see each other. Similarly, rather than in a loop, a given amount might be evaluated all at once with different priorities, perhaps unwanted jobs then be cancelled should they still be enqueued. Another consideration is using available left-over processing power until a deadline for filling the buffer is met (that could be useful on low power devices).
