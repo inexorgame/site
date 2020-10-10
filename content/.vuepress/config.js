@@ -61,6 +61,7 @@ module.exports = {
         nav: [
             { text: 'Team', link: '/team.md' },
             { text: 'Blog', link: '/blog/' },
+            { text: 'Discord', link: 'https://discord.gg/jxuVNP' },
             { text: 'Wiki', link: '/wiki/' },
         ],
         sidebar: {
