@@ -1,26 +1,14 @@
-# Prior Art - Related Projects
+# Related Projects
 
-At this point we collect existing mods, forks and other projects in the cube 2 universe. We think there are lots of good ideas which never got into sauerbraten. We list these ideas and may integrate these work into the fork.
+Inexor originated from [cube-engine](http://cubeengine.com/) community. Here we collect a list of games and mods which are related to cube-engine or [Cube2: Sauerbraten](http://sauerbraten.org/).
 
-## Client scripts
-* [Nooblauncher](http://forge.nooblounge.net/projects/nooblauncher)
-  * Plugin system
-  * UI API
-  * Event based system
-  * > 50 plugins
-* [Zombie-Menu](https://github.com/zombie-crew/zombie-menu) [(Quadropolis node)](http://www.quadropolis.us/node/3716)
-  * > 60 in-game mini-tutorials/manuals
-  * playerlist with frequent commands
-  * made for managing MMO coop-maps
+## Cube2 Client mods
 
-## Client mods
 * [Sauerbraten Community Edition](https://github.com/sauerworld/community-edition)
   * automatic client-side demo recording
   * easy demo navigation
   * score hud and extended scoreboard
   * more game round information accessable via cubescript (e.g. tks, weapon accuracy)
-* [Sauerbraten Enhanced](https://sourceforge.net/projects/sauerenhanced/)
-  * New theme, improved UI
 * [SuperSauer](http://supersauer.blogspot.de)
   * Customizable background, skins, themes
   * Ingame playermodel-skin-switch
@@ -44,26 +32,6 @@ At this point we collect existing mods, forks and other projects in the cube 2 u
   * build images with cubes (best textures match)
   * 1st person minesweeper game mode
   * sokoban game mode with .sok level loader
-* [Nooblounge Client (NL-Admin-Client)](http://forge.nooblounge.net/projects/nl-adminclient) (not (yet ?) public)
-  * Bézier curve API
-  * ExtInfo API + ExtInfo scoreboard synchronisation
-  *  *TOOL* ExtInfo Console Application
-  * recording player particles
-  * customizable killcam
-  * game fraghud
-  * spectator overlay
-  * advanced scoreboard
-  * Console: auto completion + parameter help
-  * Visualisation player trace
-  * kill cam
-  * anti-cheat control
-  * admin focused improvements
-* [Sauerbomber](http://forge.nooblounge.net/projects/bomberman)
-  * predecessor of Inexor, difference: no gameplay breaking changes to the original client
-  * Game Mod Bomberman + Bomberman Team
-  * Native Race Mode in C++
-  * Native Hide and Seek Mode
-  * Configurable physics
 * [Fanatic Edition](https://github.com/fanaticclan/client)
   * Ingame IRC client
   * Blender Import/Export
@@ -74,33 +42,17 @@ At this point we collect existing mods, forks and other projects in the cube 2 u
   * Ultra fast calclight using player's position and radius
   * New and improved shot effects inclusive additional hudguns
   * Implemented [Marching Cubes](https://www.youtube.com/watch?v=TstJlsEKEHs) [by Wrack](https://github.com/wrack/sauerbraten)
-* [QuEd (Quality Edition)](https://github.com/quality-edition/QuEd)
-  * Extinfo data (including WhoIs & GeoIP)
-  * Design enhancements
-  * Demo recording
-  * In-game IRC
-* [Android Port](https://github.com/realuptime/sauerbraten_android)
 * [A port](https://github.com/thalieht/Sauerbraten_aMod)
 
-## Server Mods
-* [HopMod](https://code.google.com/p/hopmod/)
-  * Lua Integration
-  * Event based system
-  * Anticheats
-* [XSBS](http://xsbs.greghaynes.net) [(GitHub Repo)](https://github.com/greghaynes/xsbs)
-  * Python Integration
-  * Event based system
-* [NoobMod (C und LUA)](http://forge.nooblounge.net/projects/noobmod)
-  * Destructible Maps
-  * Geometry modification
-  * Load / save maps on server side
-  * Load entities from maps on server side
-  * Terrain Generation (3D/4D)
-  * L-Systems
-  * Cube Font - write text build out of cubes
-  * Outlawzone (modded gamemodes)
-  * MapBattle
-  * Event based moves detection system
+## Cube2 Client scripts
+
+* [Zombie-Menu](https://github.com/zombie-crew/zombie-menu)
+  * > 60 in-game mini-tutorials/manuals
+  * playerlist with frequent commands
+  * made for managing MMO coop-maps
+
+## Cube2 Server Mods
+
 * [Zeromod](https://github.com/andrius4669/zeromod-sauerbraten)
   * masterserver system extensions: ability to register and use any number of masterservers (for auth, serverlist and gbans purposes), directing specific auth domains to be handled by chosen masterservers, masterserver auth failover, privileges for masterserver auth (so it can be used in place of local auth)
   * coop: editmute, nodamage, autosendmap (after somebody did /sendmap), autosendmap on connect, serverside loadmap and savemap, race mode
@@ -118,6 +70,7 @@ At this point we collect existing mods, forks and other projects in the cube 2 u
   * lua integration
 
 ## Standalone game/fork
+
 * [Tesseract](http://tesseract.gg)
   * New graphics stack
   * New content
@@ -132,9 +85,6 @@ At this point we collect existing mods, forks and other projects in the cube 2 u
   * standalone web port of sauerbraten
   * All free content (Creative Commons)
   * problem: can't use content of sauer because of non-free content
-* [Marble Arena](http://www.marble-arena.com)
-  * control a marble throught diverse levels and collect stars
-  * maybe the only game using the cube 2 engine which isn't a ego shooter or RPG?
 * [AssaultCube](http://assault.cubers.net) ([GitHub Repo](https://github.com/assaultcube/AC)) (Original Cube Engine, not Cube 2)
   * realistic environments
   * only 40 MB package to download
@@ -150,19 +100,9 @@ At this point we collect existing mods, forks and other projects in the cube 2 u
   * aiming to become a game publishing hub
 * [Platinum Arts Sandbox Free 3D Game Maker](http://www.sandboxgamemaker.com)
   * create own games/modes/levels/landscapes
-* [SabiCube](https://github.com/sandsound/sabicube)
-  * single-player total conversion of Cube2: Sauerbraten with focus on adding rpg/adventure elements
-  * goal: make gamebuilding as fun as playing a game,help anyone making their own open-source rpg/adventure game, without prior knowledge of programming or 3D-modeling
-
-## Anything left
-* [Crapmod](http://crapmod.net)
-  * extended serverbrowser
-  * masterserver which allows modded servers
-* ["extinfo"](https://github.com/sauerbraten/extinfo)
-  * A Go package to query information ('extinfo') from a Sauerbraten game server
-  * A web app to use that can be found [here](https://github.com/sauerbraten/extinfo-web)
 
 ## Community stuff
+
 * News/Forums:
   * [Sauerworld](http://www.sauerworld.org)
 * Share Content/Scripts/Mods:
