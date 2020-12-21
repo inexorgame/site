@@ -1,4 +1,4 @@
-# Inclusion standard
+# How to contribute media
 
 If you want to contribute content to Inexor, make sure to follow these rules:
 
