@@ -44,7 +44,6 @@ The structure of Inexor can be displayed as follows:
 
 _**Most widely effecting parts on the bottom, most visible parts at the top**_
 
-![](./architecture.svg)
 
 Those bottom systems determine the major direction, while the higher parts have to act in the frame of the lower choices.
 
