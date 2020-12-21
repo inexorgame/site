@@ -1,3 +1,5 @@
+# Code of conduct
+
 This code of conduct outlines our expectations for participants within the Inexor community, as well as steps to reporting unacceptable behavior. We are committed to providing a welcoming and inspiring community for all and expect our code of conduct to be honored. Anyone who violates this code of conduct may be banned from the community.
 
 Our open source community strives to:
@@ -60,7 +62,3 @@ We all stand on the shoulders of giants across many open source communities. We'
 This Code of Conduct is based on the version 1.0 of the [TODO Group](http://todogroup.org/opencodeofconduct/), which is licensed under the terms of [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). All changes we have done and might do to this document are covered by this license as well.
 
 This document needs to be seen as a general statement on diversity, inclusion and reasonable communication and behavior within our community and beyond. It might contain flaws and doesn't claim to be perfect or to cover all possible inappropriate behavior. If you have any concerns, suggestions, additions or questions feel free to contact us at any time.
-
-Last update: 29.10.2015
-
-- The Inexor Team
