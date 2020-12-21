@@ -1,4 +1,4 @@
-# Media Repositories
+# Media repositories
 
 Inexor uses the following repositories for media assets:
 
@@ -9,3 +9,7 @@ Inexor uses the following repositories for media assets:
 ## Textures
 
 * [Inexor texture repository](https://github.com/inexorgame/textures)
+
+## Sounds
+
+* [Inexor's audioaugust project](https://github.com/inexorgame/audioaugust)
