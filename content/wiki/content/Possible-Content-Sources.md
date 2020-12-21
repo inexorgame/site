@@ -1,7 +1,8 @@
-We're collecting here some **content** sources, where you can get free stuff and which fits (mostly) our [license policy](License-Policy). However not all of the content of all of the sources does so, so please **check it everytime at your own**.
+# Possible sources for content
 
-Free resources
-==============
+Here we collect a list of **content** sources and tools, where you can get free stuff and which fits (mostly) our [license policy](License-Policy). However not all of the content of all of the sources does so, so please **check it everytime at your own**.
+
+## Free resources
 
 * [Inexor/Hanni's Audioaugust](https://github.com/inexorgame/audioaugust) - Sounds
 * [Minecraft's Sound Atrributions - Open Source licensed sounds in Minecraft](https://minecraft.net/en-us/attribution/sound/)
@@ -9,7 +10,7 @@ Free resources
 * [Blender Cloud Textures](https://cloud.blender.org/p/textures/about)
 * [Freezurbern.com](http://www.freezurbern.com/#skybox) - Skyboxes
 * [Opengameart.org](http://opengameart.org) - Icons, Sounds, Skyboxes, Textures...
- * [Pixar's Textures](http://opengameart.org/content/pixars-textures), see also [community.renderman.pixar.com](https://community.renderman.pixar.com/article/114/library-pixar-one-twenty-eight.html)
+* [Pixar's Textures](http://opengameart.org/content/pixars-textures), see also [community.renderman.pixar.com](https://community.renderman.pixar.com/article/114/library-pixar-one-twenty-eight.html)
 * [Sketchfab.com](https://sketchfab.com/models?features=downloadable) - Models
 * [Incompetech.com](http://incompetech.com/music/royalty-free/index.html) - Music
 * [Ozzed Game Music](http://ozzed.net) - Music
@@ -27,16 +28,57 @@ Free resources
 * [Nobiax Texture Pack](https://github.com/The-Yak/NobiaxTexturePack) - Textures
 * [Clara.io Free Models](https://clara.io/library) - Fast growing model pack
 
-Tools
-=====
+## 3D modelling
+
+* [Blender](https://www.blender.org) - Create models
+
+## Texture editing
+
+* [AwesomeBump](https://github.com/kmkolasinski/AwesomeBump) - Create normal, specular, parallax maps
+* [NeoTextureEdit](http://neotextureedit.sourceforge.net) - Create textures
+
+## General image editing
+
+* [GIMP](http://www.gimp.org/downloads/) - Free Photoshop alternative, create textures
+* [Paint.NET](https://www.getpaint.net/) - Free image editor
+
+## Vector graphics
+
+* [Inkscape](https://inkscape.org/) - Free vector graphics editor
+
+## Programming
+
+* [CMake](https://cmake.org/) - CMake build enviroment
+* [Conan](https://conan.io/) - Conan package manager
+* [MS Visual Studio](https://visualstudio.microsoft.com/) - Microsoft Visual Studio
+* [Valgrind](https://valgrind.org/) - Checks memory leaks
+* [Vulkan Memory Allocator](https://github.com/GPUOpen-LibrariesAndSDKs/VulkanMemoryAllocator) - Vulkan memory allocator library
+
+### Compilers
+
+* [clang](https://clang.llvm.org/) - Clang compiler
+* [gcc](https://gcc.gnu.org/) - gcc compiler
+
+### Code editors
+
+* [Atom.io](https://atom.io/) - Atom editor
+* [VS Code](https://code.visualstudio.com/) - Visual Studio Code editor
+* [Notepad++](https://notepad-plus-plus.org/downloads/) - Notepad++ editor
+
+### Vulkan/OpenGL debugging
+
+* [RenderDoc](https://renderdoc.org/) - Graphics debugger
+
+## Sound/Music editing
 
 * [Audacity](http://audacityteam.org) - Edit audio files
-* [AwesomeBump](https://github.com/kmkolasinski/AwesomeBump) - Create normal, specular, parallax maps
-* [Blender](https://www.blender.org) - Create models
-* [NeoTextureEdit](http://neotextureedit.sourceforge.net) - Create textures
-* [GIMP](http://www.gimp.org/downloads/) - Free Photoshop alternative, create textures
+* [VLC media player](https://www.videolan.org/vlc/) - Play various audio/video files
 
-Other
-=====
+## Converting media
+
+* [XMedia recode](https://www.xmedia-recode.de/) - Convert audio or videos
+* [HandBrake](https://handbrake.fr/) - convert audio or videos
+
+## Other
+
 * [Reddit Gamedev](https://www.reddit.com/r/gamedev/) - Forum/Tutorials
-* [Inexor Pads](https://piratenpad.de/p/Inexor_Pads)
