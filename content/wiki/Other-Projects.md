@@ -107,4 +107,3 @@ Inexor originated from [cube-engine](http://cubeengine.com/) community. Here we 
   * [Sauerworld](http://www.sauerworld.org)
 * Share Content/Scripts/Mods:
   * [Quadropolis](http://quadropolis.us)
-  * [Akimbo](http://ac-akimbo.net) (AssaultCube only)
