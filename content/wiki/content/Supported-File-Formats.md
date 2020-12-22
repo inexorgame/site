@@ -40,7 +40,7 @@ Inexor can load the following file formats
 
 The support for gltf files is based on [tinygltf](https://github.com/syoyo/tinygltf). Use gltf2 for skeletal and vertex animated characters, weapons, items, and world objects. It supports animation blending, procedural pitch animation, and ragdoll physics for skeletally-animated characters.
 
-![gltf](gltf_logo.png)
+![gltf](./gltf_logo.png)
 
 Inexor will not support [obj](https://en.wikipedia.org/wiki/Wavefront_.obj_file) file format because [gltf 2.0](https://www.khronos.org/gltf/) is the new open source standard for 3D art, whereas obj is very simple and outdated.
 There will also be no support for [fbx](https://en.wikipedia.org/wiki/FBX) or since it is not an open source format.
