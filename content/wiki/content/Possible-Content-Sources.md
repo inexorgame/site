@@ -1,6 +1,6 @@
 # Possible sources for content
 
-Here we collect a list of **content** sources and tools, where you can get free stuff and which fits (mostly) our [license policy](License-Policy). However not all of the content of all of the sources does so, so please **check it everytime at your own**.
+Here we collect a list of **content** sources and tools, where you can get free stuff and which fits (mostly) our [license policy](../License-Policy.html). However not all of the content of all of the sources does so, so please **check it everytime at your own**.
 
 ## Free resources
 
