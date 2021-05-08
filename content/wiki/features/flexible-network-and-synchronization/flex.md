@@ -48,7 +48,9 @@ The Command Line API allows humans and scripts to interact with a running local 
 flex/inexor &lt;command&gt; &lt;subcommand&gt; ...
 ```
 
+<!--
 A full list of available command can be found here: [Command Line Options And Commands](../../run/Command-Line-Options-And-Commands.md)
+-->
 
 The Command Line API is important for the desktop integration like the Linux `.desktop` files.
 

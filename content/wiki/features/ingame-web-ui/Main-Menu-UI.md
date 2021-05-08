@@ -40,8 +40,8 @@ Further implementation details how this is reflected in the menus, can be found 
 
 ## Design
 
-> In order to be unique, another FPS in gray and black is not what we are aiming for. But the opposite: it should be colorful and weird.  
-> From [The-Main-Theme](../../The-Main-Theme.md)
+> In order to be unique, another FPS in gray and black is not what we are aiming for. But the opposite: it should be colorful and weird.
+<!-- > From [The-Main-Theme](../../The-Main-Theme.md) -->
 
 We need to find a mix of offering the colorful weird UI we are looking for, but still allow for easy navigation.
 A good next step is to compare to other splash screens/main menus of other games that offer a similar experience what we aim for.

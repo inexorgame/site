@@ -6,7 +6,7 @@ authors: MartinMuzatko
 
 The edit menus provide the level-designer with tools to efficiently create new worlds.
 
-This helps to work along with the [Mappers Toolset](../custom-weapons-and-tools/Mappers-Toolset.md). How these tools and the menu is connected is not yet defined.
+This helps to work along with the Mappers Toolset. How these tools and the menu is connected is not yet defined.
 
 ## Menus
 

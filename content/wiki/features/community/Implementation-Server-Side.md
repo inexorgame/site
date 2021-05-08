@@ -5,8 +5,10 @@
 Contents are hosted on our community hub.
 Proposed urls for that are `api.inexor.org` or `community.inexor.org`.
 
+<!--
 The content distribution service should be dezentralized in the future, to match with the ideas of [Distributed Network](../distributed-network/).
-For now, we have a centralized approach, which can be further broken apart in the future. Maybe in a similar fashion how torrents work.
+-->
+For now, we have a centralized approach, which can be further broken apart. If feasible, we want to implement a dezentralized approach in the future. For example in a similar fashion how torrents work.
 
 ## Current Implementation
 

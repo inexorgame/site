@@ -39,13 +39,13 @@ Sauerbraten is more or less a very static game. In future, we should reduce the 
 * [New dynamic particle system](./entities/Particle-System.md)
 * Unlimited types of weapons
 * Unlimited types of player models
-* [Dependency management/ingame downloader for content](./distributed-network/)
+* Dependency management/ingame downloader for content
 * Unlimited, scriptable types of game modes
 * New dynamic 2D effect system
   * [Destructible map geometry](https://www.youtube.com/watch?v=VPdKX7UhneY&index=2&list=PLCbZc-GgCGzLhkGS5l850tjCQrPUeapK6)
 * Location based effects
 * Customizable HUD
-* Movable objects (in multiplayer) 
+* Movable objects (in multiplayer)
 
 ### Unlimited types of weapons
 

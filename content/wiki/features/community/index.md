@@ -18,7 +18,7 @@ We want users to get into the game as quickly as possible, but still allow for e
 Users can establish their place with the community. Allowing for easily sharing their contents, arranging games (duels, clan-fights, etc) or getting in touch with other players.
 
 > Inexor will end up being kind of a sandbox, and in fact it is already. Users should be able to create their own themes and distribute them among their friends.  
-> From [The-Main-Theme](../../The-Main-Theme.md)
+<!-- > From [The-Main-Theme](../../The-Main-Theme.md) -->
 
 It is important to recite this here, to discuss the implementation details. At which points in the game can the user interact with the community? And how?
 
@@ -83,7 +83,7 @@ Users can create and join clans to better organize themselves as a group. But wh
 * Have a chat spanning multiple servers with persistence
 * Prepare and manage clan fights
 * Easily join clan fights and get auto-assigned to the correct team
-* Create a clan-page to 
+* Create a clan-page to
   * promote content created within the group
   * list scoring within the clan
   * list members and type of membership

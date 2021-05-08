@@ -18,7 +18,7 @@ This is an overview of all features, from ideation to implementation.
                     Filter
                 </span>
                 <div class="ml-2 flex-inline">
-                    <StatusBubble 
+                    <StatusBubble
                         v-for="filter in availableFilters" class="mr-2 cursor-pointer"
                         @click.native="toggleFilter(filter)"
                         :key="filter"
@@ -39,7 +39,7 @@ This is an overview of all features, from ideation to implementation.
         Listing {{filteredFeatures.length}} features
     </h3>
     <transition-group name="list" tag="div" class="flex flex-wrap w-full">
-        <article v-for="(feature, index) in filteredFeatures" :key="index" class="w-1/3 p-2 list-item">
+        <article v-for="(feature, index) in filteredFeatures" :key="feature.key" class="w-1/3 p-2 list-item">
             <div class="bg-purple-lightest-faded border border-purple rounded p-4 h-full">
                 <h3 class="mb-4">
                     <router-link :to="feature.path">
@@ -117,7 +117,7 @@ export default {
     &-item
         position relative
 
-    &-move 
+    &-move
         transition all 600ms ease-in-out 50ms
     &-enter-active
         transition all 300ms ease-out

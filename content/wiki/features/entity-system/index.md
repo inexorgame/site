@@ -9,13 +9,13 @@ This article talks about the general concepts of the entity-system.
 
 If you would like to see the exhaustive list of entities covered by the entity-system, have a look below:
 
-- [Goals](./content/wiki/features/entity-system/Goals.md)
-- [Requirements](./content/wiki/features/entity-system/Requirements.md)
-- [Roadmap](./content/wiki/features/entity-system/Roadmap.md)
-- [Visual Scripting](./content/wiki/features/entity-system/Visual-Scriptings.md)
-- [Particles](./content/wiki/features/entity-system/Particles.md)
-- [REST-API](./content/wiki/features/entity-system/REST-API.md)
-- [Webservies](./content/wiki/features/entity-system/Webservices.md)
+- [Goals](./Goals.md)
+- [Requirements](./Requirements.md)
+- [Roadmap](./Roadmap.md)
+- [Visual Scripting](./Visual-Scriptings.md)
+- [Particles](./Particles.md)
+- [REST-API](./REST-API.md)
+- [Webservies](./Webservices.md)
 
 ### Entity System Type System (ESTS)
 
@@ -218,38 +218,38 @@ C) via a visitor
  we walkt the graph one time per time unit, systems interested in a particular node get called upon visit.
  Interest can be signaled via "tags".
  tags can have parents (i.e. texture-synchronized)?
- 
+
  #### Scheduling
- 
+
  fastflow pipeline chunks together with an event loop (like reactx cpp or boost asio): every x ms the dirty pipeline chunks get recommitted.
  Each pipeline can mean different systems creating different output values from different input.
  A system creating a new output invalidates the old output, i.e. making it dirty.
  The execution starts on entry points triggered by the event loop.
- 
+
  Q: how to exploit locality here?
- 
+
  #### Draft when
- 
+
  **Processors** declare input/output entity types. the output is optional
  == they can be relations
  processor vs relation: relation is an instance of a processor for a specific input/output entity.
- 
+
  Q: is a relation the interface for multiple processors?
  so all associated processors run?
  - one relation implies multiple logical operations - loose coupling between relation instance and applied operation
  Option A: make processors search for relations and operate all of them the same. multiple operations in different processors for the same entity produce the **same** output?
  - add `map relation, specific_thing_to_do` somewhere
- 
+
  **Modules** have different processes, have different entity-components
- 
+
  ###### Reactive Scheduling
- 
+
  A scheduling based on reaktive frameworks:
  - specify pipelines (this data will be used by this afterwards) (via fastflow?)
  - specify distribution in time of these pipelines using rx
- 
+
  rangev3 good for: you have data in layout x, make it so it is in layout y lazily.
                    (i.e. for dealing with stream input/outputs)
 
-Concurrency ABC: 
+Concurrency ABC:
 PCAM - Partition, Communication, Agglomeration, and Mapping

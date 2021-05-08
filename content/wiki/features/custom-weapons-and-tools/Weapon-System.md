@@ -39,4 +39,4 @@ and some static data for the visuals like:
 3. Make the adjustments in the code to use the weapon's TOML file instead of hardcoded variables
 4. Make adjustments in the code to let the visuals of the weapon can be configure-able, too
 
-For everything regarding the functionality, one need to make sure that everyone on the server is playing with the same `weapons-rifle-functionality.toml`, but that is lower priority: If the [Content System](../distributed-network/Distributing-Content-System.md) can be shared easily.. everyone gets the `weapons-rifle-functionality` from the server on round start.
+For everything regarding the functionality, one need to make sure that everyone on the server is playing with the same `weapons-rifle-functionality.toml`, but that is lower priority: If the Content Distribution System works and shares assets easily, everyone gets the `weapons-rifle-functionality` from the server on round start.
