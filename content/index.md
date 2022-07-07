@@ -49,7 +49,7 @@ Join our discord! [https://discord.gg/acUW8k7](https://discord.gg/acUW8k7)
 ## What is Inexor?
 * Inexor will be a new first person shooter game which is based on a new octree-based game engine.
 * Inexor focuses on classic gameplay as we've seen in Cube2 or the Quake series.
-* Inexor will be written from ground up new in modern C++17.
+* Inexor will be written from ground up new in modern C++20.
 * You can contribute anything you want: code, content, ideas..
 * Inexor and all its content is 100% open source!
 
